@@ -1,0 +1,12 @@
+.italic {
+	font-family: Georgia;
+	font-style: italic;
+}
+
+h1,
+.header {
+	@extend .green-text;
+	@extend .italic;
+	@extend .alpha;
+	font-weight: normal;
+}

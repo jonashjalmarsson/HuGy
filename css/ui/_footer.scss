@@ -1,0 +1,40 @@
+.pre-footer-padding {
+	height: 0px;
+}
+.pre-footer {
+	@extend .black;
+}
+.pre-footer-program {
+	@extend .black;
+	.program-icons {
+		@extend .nav;
+		@extend .nav--block;
+		@extend .nav--banner;
+		@extend .flush--bottom;
+		img {
+			max-height: 40px;
+		}
+	}
+}
+
+footer {
+	@extend .green;
+	.footer-div {
+		@extend .max-width--center;
+		/* if less than 4 widgets */
+		@for $i from 1 through 4 {
+			.widget:first-child:nth-last-child(#{$i}),
+			.widget:first-child:nth-last-child(#{$i}) ~ .widget {
+				width: 100%/$i }
+		} 
+		/* if more than 4 widgets */
+		@for $i from 5 through 8 {
+			.widget:first-child:nth-last-child(#{$i}),
+			.widget:first-child:nth-last-child(#{$i}) ~ .widget {
+				width: 200%/$i }
+		} 
+		.widget {
+			display: inline-block;
+		}
+	}
+}

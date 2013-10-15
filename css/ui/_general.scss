@@ -1,0 +1,24 @@
+body {
+	font-family: Trebuchet MS;
+}
+.hidden {
+	display: none;
+}
+.max-width--center {
+	max-width: $max-width;
+	margin: 0 auto;
+}
+.small-max-width--center {
+	max-width: $small-max-width;
+	margin: 0 auto;
+}
+.nounderline {
+	&, a {
+		text-decoration: none;
+	}
+}
+
+
+.content-wrapper {
+	margin-top: 90px;
+}

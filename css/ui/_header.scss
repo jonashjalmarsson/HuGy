@@ -1,0 +1,58 @@
+header {
+	width: 100%;
+}
+.top-wrapper {
+	@extend .black;
+	@extend .nounderline;
+	//position: relative;
+	.top {
+		@extend .max-width--center;
+		.logo-space {
+			@extend .one-fifth;
+			display: inline-block;
+			h1 {
+				@extend .visuallyhidden;
+			}
+			.logo {
+				//width: 250px;
+				//@extend .green;
+				//position: absolute;
+				//top: 12px;
+				//border-radius: $border-radius;
+				
+			}
+		}
+		.top-links-wrapper {
+			//padding-left: 250px;
+			//width: 100%;
+			@extend .four-fifths;
+			display: inline-block;
+			.quicklinks-wrapper {	
+				text-align: right;
+				.quicklinks {
+					@extend .nav;
+					@extend .nav--block;
+					@extend .flush--bottom;
+					img {
+						max-height: 24px;
+					}
+				} 
+			}
+			.top-navigation {
+				padding-left: 12px;
+				.top-menu-button,
+				.breadcrumb {
+					padding: 6px;
+					display: inline-block;
+				}
+				.breadcrumb {
+					margin-left: 12px;
+				}
+			}
+		}
+	}
+}
+
+.searchform {
+	@extend .visuallyhidden;
+}

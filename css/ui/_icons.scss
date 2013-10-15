@@ -1,0 +1,49 @@
+.clip {
+	background-image: url("../images/ikoner.svg");
+	display: inline-block;
+}
+.clip_48x48 {
+	@extend .clip;
+	width: 48px;
+	height: 48px;
+}
+.clip_30x30 {
+	@extend .clip;
+	width: 30px;
+	height: 30px;
+}
+.clip_24x24 {
+	@extend .clip;
+	width: 24px;
+	height: 24px;
+}
+.clip_20x20 {
+	@extend .clip;
+	width: 20px;
+	height: 20px;
+}
+.clip_16x16 {
+	@extend .clip;
+	width: 16px;
+	height: 16px;
+}
+.clip_12x12 {
+	@extend .clip;
+	width: 12px;
+	height: 12px;
+}
+
+.menu-icon {
+	@extend .clip_24x24;
+	background-position: -287px -440px;
+	vertical-align: text-bottom;
+	margin-right: 6px;
+	&.selected {
+		background-position: -287px -478px;
+	}
+}
+.home-icon {
+	@extend .clip_24x24;
+	background-position: -290px -355px;
+	vertical-align: text-bottom;
+}
