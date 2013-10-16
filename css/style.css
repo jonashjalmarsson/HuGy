@@ -3384,14 +3384,25 @@ header {
   margin-left: 12px;
 }
 
-.clip, .clip_48x48, .clip_30x30, .clip_24x24, .menu-icon, .home-icon, .clip_20x20, .clip_16x16, .clip_12x12 {
+.clip, .clip_80x80, .program-icon, .clip_48x48, .clip_40x40, .quick-icon, .clip_30x30, .clip_24x24, .menu-icon, .home-icon, .clip_20x20, .clip_16x16, .clip_12x12 {
   background-image: url("../images/ikoner.svg");
   display: inline-block;
+  background-repeat: no-repeat;
+}
+
+.clip_80x80, .program-icon {
+  width: 80px;
+  height: 80px;
 }
 
 .clip_48x48 {
   width: 48px;
   height: 48px;
+}
+
+.clip_40x40, .quick-icon {
+  width: 40px;
+  height: 40px;
 }
 
 .clip_30x30 {
@@ -3419,6 +3430,48 @@ header {
   height: 12px;
 }
 
+  /*
+.clip_80x80 {
+	@extend .clip;
+	width: 80px;
+	height: 80px;
+}
+.clip_48x48 {
+	@extend .clip;
+	width: 48px;
+	height: 48px;
+}
+.clip_40x40 {
+	@extend .clip;
+	width: 40px;
+	height: 40px;
+}
+.clip_30x30 {
+	@extend .clip;
+	width: 30px;
+	height: 30px;
+}
+.clip_24x24 {
+	@extend .clip;
+	width: 24px;
+	height: 24px;
+}
+.clip_20x20 {
+	@extend .clip;
+	width: 20px;
+	height: 20px;
+}
+.clip_16x16 {
+	@extend .clip;
+	width: 16px;
+	height: 16px;
+}
+.clip_12x12 {
+	@extend .clip;
+	width: 12px;
+	height: 12px;
+}
+*/
 .menu-icon {
   background-position: -287px -440px;
   vertical-align: text-bottom;
@@ -3431,6 +3484,305 @@ header {
 .home-icon {
   background-position: -290px -355px;
   vertical-align: text-bottom;
+}
+
+/* program ikoner */
+.program-icon {
+  background-image: url("../images/program-ikoner.svg");
+}
+
+#ie7 .program-icon,
+#ie8 .program-icon {
+  background-image: url("../images/program-ikoner.png");
+}
+
+.quick-icon {
+  background-image: url("../images/quick-ikoner.svg");
+}
+
+#ie7 .quick-icon,
+#ie8 .quick-icon {
+  background-image: url("../images/quick-ikoner.png");
+}
+
+.quick-1 {
+  background-position: 0px 0px;
+}
+.quick-1.hover, .quick-1:hover {
+  background-position: 0px -40px;
+}
+
+.program-1 {
+  background-position: 0px 0px;
+}
+.program-1.hover, .program-1:hover {
+  background-position: 0px -80px;
+}
+
+.quick-2 {
+  background-position: -40px 0px;
+}
+.quick-2.hover, .quick-2:hover {
+  background-position: -40px -40px;
+}
+
+.program-2 {
+  background-position: -80px 0px;
+}
+.program-2.hover, .program-2:hover {
+  background-position: -80px -80px;
+}
+
+.quick-3 {
+  background-position: -80px 0px;
+}
+.quick-3.hover, .quick-3:hover {
+  background-position: -80px -40px;
+}
+
+.program-3 {
+  background-position: -160px 0px;
+}
+.program-3.hover, .program-3:hover {
+  background-position: -160px -80px;
+}
+
+.quick-4 {
+  background-position: -120px 0px;
+}
+.quick-4.hover, .quick-4:hover {
+  background-position: -120px -40px;
+}
+
+.program-4 {
+  background-position: -240px 0px;
+}
+.program-4.hover, .program-4:hover {
+  background-position: -240px -80px;
+}
+
+.quick-5 {
+  background-position: -160px 0px;
+}
+.quick-5.hover, .quick-5:hover {
+  background-position: -160px -40px;
+}
+
+.program-5 {
+  background-position: -320px 0px;
+}
+.program-5.hover, .program-5:hover {
+  background-position: -320px -80px;
+}
+
+.quick-6 {
+  background-position: -200px 0px;
+}
+.quick-6.hover, .quick-6:hover {
+  background-position: -200px -40px;
+}
+
+.program-6 {
+  background-position: -400px 0px;
+}
+.program-6.hover, .program-6:hover {
+  background-position: -400px -80px;
+}
+
+.quick-7 {
+  background-position: -240px 0px;
+}
+.quick-7.hover, .quick-7:hover {
+  background-position: -240px -40px;
+}
+
+.program-7 {
+  background-position: -480px 0px;
+}
+.program-7.hover, .program-7:hover {
+  background-position: -480px -80px;
+}
+
+.quick-8 {
+  background-position: -280px 0px;
+}
+.quick-8.hover, .quick-8:hover {
+  background-position: -280px -40px;
+}
+
+.program-8 {
+  background-position: -560px 0px;
+}
+.program-8.hover, .program-8:hover {
+  background-position: -560px -80px;
+}
+
+.quick-9 {
+  background-position: -320px 0px;
+}
+.quick-9.hover, .quick-9:hover {
+  background-position: -320px -40px;
+}
+
+.program-9 {
+  background-position: -640px 0px;
+}
+.program-9.hover, .program-9:hover {
+  background-position: -640px -80px;
+}
+
+.quick-10 {
+  background-position: -360px 0px;
+}
+.quick-10.hover, .quick-10:hover {
+  background-position: -360px -40px;
+}
+
+.program-10 {
+  background-position: -720px 0px;
+}
+.program-10.hover, .program-10:hover {
+  background-position: -720px -80px;
+}
+
+.quick-11 {
+  background-position: -400px 0px;
+}
+.quick-11.hover, .quick-11:hover {
+  background-position: -400px -40px;
+}
+
+.program-11 {
+  background-position: -800px 0px;
+}
+.program-11.hover, .program-11:hover {
+  background-position: -800px -80px;
+}
+
+.quick-12 {
+  background-position: -440px 0px;
+}
+.quick-12.hover, .quick-12:hover {
+  background-position: -440px -40px;
+}
+
+.program-12 {
+  background-position: -880px 0px;
+}
+.program-12.hover, .program-12:hover {
+  background-position: -880px -80px;
+}
+
+.quick-13 {
+  background-position: -480px 0px;
+}
+.quick-13.hover, .quick-13:hover {
+  background-position: -480px -40px;
+}
+
+.program-13 {
+  background-position: -960px 0px;
+}
+.program-13.hover, .program-13:hover {
+  background-position: -960px -80px;
+}
+
+.quick-14 {
+  background-position: -520px 0px;
+}
+.quick-14.hover, .quick-14:hover {
+  background-position: -520px -40px;
+}
+
+.program-14 {
+  background-position: -1040px 0px;
+}
+.program-14.hover, .program-14:hover {
+  background-position: -1040px -80px;
+}
+
+.quick-15 {
+  background-position: -560px 0px;
+}
+.quick-15.hover, .quick-15:hover {
+  background-position: -560px -40px;
+}
+
+.program-15 {
+  background-position: -1120px 0px;
+}
+.program-15.hover, .program-15:hover {
+  background-position: -1120px -80px;
+}
+
+.quick-16 {
+  background-position: -600px 0px;
+}
+.quick-16.hover, .quick-16:hover {
+  background-position: -600px -40px;
+}
+
+.program-16 {
+  background-position: -1200px 0px;
+}
+.program-16.hover, .program-16:hover {
+  background-position: -1200px -80px;
+}
+
+.quick-17 {
+  background-position: -640px 0px;
+}
+.quick-17.hover, .quick-17:hover {
+  background-position: -640px -40px;
+}
+
+.program-17 {
+  background-position: -1280px 0px;
+}
+.program-17.hover, .program-17:hover {
+  background-position: -1280px -80px;
+}
+
+.quick-18 {
+  background-position: -680px 0px;
+}
+.quick-18.hover, .quick-18:hover {
+  background-position: -680px -40px;
+}
+
+.program-18 {
+  background-position: -1360px 0px;
+}
+.program-18.hover, .program-18:hover {
+  background-position: -1360px -80px;
+}
+
+.quick-19 {
+  background-position: -720px 0px;
+}
+.quick-19.hover, .quick-19:hover {
+  background-position: -720px -40px;
+}
+
+.program-19 {
+  background-position: -1440px 0px;
+}
+.program-19.hover, .program-19:hover {
+  background-position: -1440px -80px;
+}
+
+.quick-20 {
+  background-position: -760px 0px;
+}
+.quick-20.hover, .quick-20:hover {
+  background-position: -760px -40px;
+}
+
+.program-20 {
+  background-position: -1520px 0px;
+}
+.program-20.hover, .program-20:hover {
+  background-position: -1520px -80px;
 }
 
 .main-menu {

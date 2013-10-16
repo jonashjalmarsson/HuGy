@@ -32,7 +32,7 @@
 			while(has_sub_field('hg_quicklinks', 'option')):
 				$retValue .= "<li>";
 				$retValue .= "<a alt='" . get_sub_field('title') . "' href='" . get_sub_field('url') . "'>";
-				$retValue .= "<img title='" . get_sub_field('title') . "' src='" . get_sub_field('image') . "' data-hover-src='" . get_sub_field('hover-image') . "' />";
+				$retValue .= "<span class='quick-icon quick-" .get_sub_field("imageplace") . "'></span>";
 				$retValue .= "</a></li>";
 			endwhile;
 			$retValue .= "</ul></div>";
@@ -71,7 +71,7 @@
 				foreach($pages as $page) :
 					$retValue .= "<li>";
 					$retValue .= "<a alt='" . $page->post_title . "' href='" . get_page_link($page->ID) . "'>";
-					$retValue .= "<img title='" . $page->post_title . "' src='" . get_field("hg_bubbla",$page->ID) . "' data-hover-src='" . get_field("hg_pictogram",$page->ID) . "' />";
+					$retValue .= "<span class='program-icon program-" .get_field("hg_imageplace",$page->ID) . "'></span>";
 					$retValue .= "</a></li>";
 				endforeach;
 				$retValue .= "</ul>";

@@ -1,11 +1,33 @@
 .clip {
 	background-image: url("../images/ikoner.svg");
 	display: inline-block;
+	background-repeat: no-repeat;
+}
+$clip-sizes: 80 48 40 30 24 20 16 12;
+
+@each $size in $clip-sizes {
+    .clip_#{$size}x#{$size} {
+		@extend .clip;
+		width: #{$size}px;
+		height: #{$size}px;
+	}
+}
+
+  /*
+.clip_80x80 {
+	@extend .clip;
+	width: 80px;
+	height: 80px;
 }
 .clip_48x48 {
 	@extend .clip;
 	width: 48px;
 	height: 48px;
+}
+.clip_40x40 {
+	@extend .clip;
+	width: 40px;
+	height: 40px;
 }
 .clip_30x30 {
 	@extend .clip;
@@ -32,7 +54,7 @@
 	width: 12px;
 	height: 12px;
 }
-
+*/
 .menu-icon {
 	@extend .clip_24x24;
 	background-position: -287px -440px;
@@ -47,3 +69,43 @@
 	background-position: -290px -355px;
 	vertical-align: text-bottom;
 }
+
+/* program ikoner */
+.program-icon {
+	background-image: url("../images/program-ikoner.svg");
+}
+#ie7 .program-icon,
+#ie8 .program-icon {
+	background-image: url("../images/program-ikoner.png");
+}
+.quick-icon {
+	background-image: url("../images/quick-ikoner.svg");
+}
+#ie7 .quick-icon,
+#ie8 .quick-icon {
+	background-image: url("../images/quick-ikoner.png");
+}
+
+.quick-icon {
+	@extend .clip_40x40;
+}
+.program-icon {
+	@extend .clip_80x80;
+}
+
+@for $i from 0 through 19 {
+	.quick-#{$i+1} {
+		background-position: -$i*40px 0px; 
+		&.hover,
+		&:hover {
+			background-position: -$i*40px -40px; 
+		}
+	}
+	.program-#{$i+1} {
+		background-position: -$i*80px 0px; 
+		&.hover,
+		&:hover {
+			background-position: -$i*80px -80px; 
+		}
+	}
+} 

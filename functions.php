@@ -17,6 +17,7 @@
 
 	require_once( 'external/starkers-utilities.php' );
 	require_once( 'external/hugy-utilities.php' );
+	require_once( 'external/acf-includes.php' );
 
 	/* ========================================================================================================================
 	
