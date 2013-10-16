@@ -16,9 +16,9 @@
 <?php /* slideshow */ ?>
 <?php echo HuGy::get_slideshow(get_field('hg_slideshow',get_the_ID()),'slideshow'); ?>
 
-<h2><?php the_title(); ?></h2>
+<h1><?php the_title(); ?></h1>
 <?php the_content(); ?>
-<?php comments_template( '', true ); ?>
+<?php //comments_template( '', true ); ?>
 <?php endwhile; ?>
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>

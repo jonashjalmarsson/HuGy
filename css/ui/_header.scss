@@ -33,6 +33,9 @@ header {
 					@extend .nav;
 					@extend .nav--block;
 					@extend .flush--bottom;
+					& > li > a {
+						padding: 0;
+					}
 					img {
 						max-height: 24px;
 					}

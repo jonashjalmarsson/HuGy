@@ -11,6 +11,9 @@
 		@extend .nav--block;
 		@extend .nav--banner;
 		@extend .flush--bottom;
+		& > li > a {
+			padding: 0;
+		}
 		img {
 			max-height: 40px;
 		}

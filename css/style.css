@@ -3286,6 +3286,9 @@ h1,
   height: 0px;
 }
 
+.pre-footer-program .program-icons > li > a {
+  padding: 0;
+}
 .pre-footer-program .program-icons img {
   max-height: 40px;
 }
@@ -3368,6 +3371,9 @@ header {
 }
 .top-wrapper .top .top-links-wrapper .quicklinks-wrapper {
   text-align: right;
+}
+.top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks > li > a {
+  padding: 0;
 }
 .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks img {
   max-height: 24px;
