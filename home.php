@@ -8,7 +8,6 @@
  */
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
-<h2>home</h2>
 <?php echo HuGy::get_program_icons(); ?>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
@@ -17,4 +16,5 @@
 <?php //comments_template( '', true ); ?>
 <?php endwhile; ?>
 
+<div class="teaser-1 teaser-icon">Nyfiken på mer</div>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>

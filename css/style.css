@@ -813,7 +813,7 @@ textarea:focus {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf:after, .nav:after, .pre-footer-program .program-icons:after, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks:after {
+.cf:after, .nav:after, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks:after, .program-icons:after {
   content: "";
   display: table;
   clear: both;
@@ -917,7 +917,7 @@ h2, .beta {
   line-height: 1.6;
 }
 
-h3, .gamma {
+h3, .gamma, .teaser-1 {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 1;
@@ -935,7 +935,7 @@ h5, .epsilon, .main-menu-wrapper {
   line-height: 1.5;
 }
 
-h6, .zeta {
+h6, .zeta, .up-icon span {
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.71429;
@@ -1751,14 +1751,14 @@ label,
  * Demo: jsfiddle.net/inuitcss/Vnph4
  *
  */
-.nav, .pre-footer-program .program-icons, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks {
+.nav, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks, .program-icons {
   list-style: none;
   margin-left: 0;
 }
-.nav > li, .pre-footer-program .program-icons > li, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks > li,
+.nav > li, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks > li, .program-icons > li,
 .nav > li > a,
-.pre-footer-program .program-icons > li > a,
-.top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks > li > a {
+.top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks > li > a,
+.program-icons > li > a {
   display: inline-block;
   *display: inline;
   zoom: 1;
@@ -1793,7 +1793,7 @@ label,
    </ul>
  *
  */
-.nav--banner, .pre-footer-program .program-icons {
+.nav--banner, .program-icons {
   text-align: center;
 }
 
@@ -1808,7 +1808,7 @@ label,
    </ul>
  *
  */
-.nav--block, .pre-footer-program .program-icons, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks {
+.nav--block, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks, .program-icons {
   line-height: 1;
   /**
    * Remove whitespace caused by `inline-block`.
@@ -1817,11 +1817,11 @@ label,
   word-spacing: -0.43em;
   white-space: nowrap;
 }
-.nav--block > li, .pre-footer-program .program-icons > li, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks > li {
+.nav--block > li, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks > li, .program-icons > li {
   letter-spacing: normal;
   word-spacing: normal;
 }
-.nav--block > li > a, .pre-footer-program .program-icons > li > a, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks > li > a {
+.nav--block > li > a, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks > li > a, .program-icons > li > a {
   padding: 12px;
 }
 
@@ -2805,7 +2805,7 @@ label,
   margin-right: 0 !important;
 }
 
-.flush--bottom, .pre-footer-program .program-icons, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks {
+.flush--bottom, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks, .program-icons {
   margin-bottom: 0 !important;
 }
 
@@ -3099,10 +3099,10 @@ label,
   background-color: white;
 }
 
-.white-text, header {
+.white-text, .up-icon span, header, .teaser-1 {
   color: white;
 }
-.white-text a, header a {
+.white-text a, .up-icon span a, header a, .teaser-1 a {
   color: white;
 }
 
@@ -3296,11 +3296,21 @@ h1,
   height: 0px;
 }
 
-.pre-footer-program .program-icons > li > a {
-  padding: 0;
+.up-icon {
+  bottom: 40px;
+  position: fixed;
+  cursor: pointer;
+  right: 40px;
+  text-align: center;
+  z-index: 200;
 }
-.pre-footer-program .program-icons img {
-  max-height: 40px;
+.up-icon span {
+  display: inline-block;
+  margin: 20px 0 0;
+  transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  /* IE 9 */
+  -webkit-transform: rotate(180deg);
 }
 
 footer .footer-div {
@@ -3399,7 +3409,17 @@ header {
   margin-left: 12px;
 }
 
-.clip, .clip_80x80, .program-icon, .clip_48x48, .clip_40x40, .quick-icon, .clip_30x30, .clip_24x24, .menu-icon, .selected-menu-icon, .home-icon, .clip_20x20, .clip_16x16, .slideshow-navigation, .play-icon, article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-play, .pause-icon, article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-stop, .dot-icon, .active-dot-icon, article.page .slideshow-wrapper .slideshow .slidesjs-pagination .slidesjs-pagination-item a, .clip_12x12 {
+.teaser-1 {
+  bottom: 1%;
+  cursor: pointer;
+  left: 50%;
+  padding: 40px 10px 0;
+  position: fixed;
+  text-align: center;
+  z-index: 100;
+}
+
+.clip, .clip_80x80, .program-icon, .clip_48x48, .clip_40x40, .quick-icon, .clip_30x30, .clip_24x24, .menu-icon, .selected-menu-icon, .home-icon, .clip_20x20, .clip_16x16, .slideshow-navigation, .play-icon, article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-play, .pause-icon, article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-stop, .dot-icon, .active-dot-icon, article.page .slideshow-wrapper .slideshow .slidesjs-pagination .slidesjs-pagination-item a, .clip_12x12, .up-icon, .teaser-1 {
   background-image: url("../images/ikoner.svg");
   display: inline-block;
   background-repeat: no-repeat;
@@ -3478,6 +3498,18 @@ header {
 
 .active-dot-icon, article.page .slideshow-wrapper .slideshow .slidesjs-pagination .slidesjs-pagination-item a {
   background-position: -2px -82px;
+}
+
+.up-icon {
+  width: 39px;
+  height: 53px;
+  background-position: -311px -3px;
+}
+
+.teaser-1 {
+  width: 115px;
+  height: 157px;
+  background-position: -191px -2px;
 }
 
 /* program ikoner */
@@ -3813,4 +3845,11 @@ article.page .slideshow-wrapper .slideshow ul, article.page .slideshow-wrapper .
 }
 article.page .slideshow-wrapper .slideshow .slidesjs-pagination {
   margin: 0;
+}
+
+.program-icons > li > a {
+  padding: 0;
+}
+.program-icons img {
+  max-height: 40px;
 }

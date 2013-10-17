@@ -8,9 +8,7 @@
  */
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
-standard
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-
 <div class="slideshow-wrapper">
 	<?php /* slideshow */ ?>
 	<?php echo HuGy::get_slideshow(get_field('hg_slideshow',get_the_ID()),'program slideshow','slideshow'); ?>

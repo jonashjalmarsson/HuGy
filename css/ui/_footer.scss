@@ -6,20 +6,24 @@
 }
 .pre-footer-program {
 	@extend .black;
-	.program-icons {
-		@extend .nav;
-		@extend .nav--block;
-		@extend .nav--banner;
-		@extend .flush--bottom;
-		& > li > a {
-			padding: 0;
-		}
-		img {
-			max-height: 40px;
-		}
+}
+.up-icon {
+	bottom: 40px;
+	position: fixed;
+	cursor: pointer;
+	right: 40px;
+	text-align: center;
+	z-index: 200;
+	span {
+		@extend .white-text;
+		@extend .zeta;
+		display: inline-block;
+		margin: 20px 0 0;
+		transform:rotate(180deg);
+		-ms-transform:rotate(180deg); /* IE 9 */
+		-webkit-transform:rotate(180deg);
 	}
 }
-
 footer {
 	@extend .green;
 	.footer-div {

@@ -28,11 +28,49 @@
 				}
 			}           
 		});
+
+
+		$(".up-icon").hide().click( function() {
+			$("body").animate({ scrollTop: "0px" });
+		});
+		$(window).scroll(function() {
+			if ($("body").scrollTop() > 100)
+				$(".up-icon").fadeIn("slow");
+			else if ($("body").scrollTop() < 100)
+				$(".up-icon").fadeOut("slow");
+				
+			if ($("body").scrollTop() > 100)
+				$(".teaser-1").fadeOut("slow");
+			else if ($("body").scrollTop() < 100)
+				$(".teaser-1").fadeIn("slow");
+
+		});
+		
+		
+		if ($(".teaser-1").length > 0)
+		{
+			$(".teaser-1").hide().click( function() {
+				$("body").animate({ scrollTop: $(".page-wrapper").position().top });
+			});
+
+			$(".teaser-1").hide();
+			$(".teaser-1").css("left", ($(document).width() - $(".teaser-1").width()) / 2);
+			$(".teaser-1").css("bottom", 20);
+			$(".teaser-1").fadeIn("slow");
+		}
+
 		
 		/* do slideshow */
+		width = 1100;
+		height = 400;
+		if ($(".home").length > 0)
+		{
+			width = $(window).width();
+			height = $(window).height();
+		}
 		$(".slides").slidesjs({
-			width: 1100,
-			height: 400,
+			width: width,
+			height: height,
 			effect: {
 				fade: {
 					speed: 2000,

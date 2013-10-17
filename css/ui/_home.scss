@@ -1,0 +1,11 @@
+.teaser-1 {
+	@extend .white-text;
+	@extend .gamma;
+	bottom: 1%;
+	cursor: pointer;
+	left: 50%;
+	padding: 40px 10px 0;
+	position: fixed;
+	text-align: center;
+	z-index: 100;
+}
