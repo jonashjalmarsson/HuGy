@@ -1,8 +1,10 @@
 header {
 	width: 100%;
+	@extend .white-text;
 }
 .top-wrapper {
-	@extend .black;
+	@extend .black-background;
+	
 	@extend .nounderline;
 	//position: relative;
 	.top {
@@ -43,6 +45,13 @@ header {
 			}
 			.top-navigation {
 				padding-left: 12px;
+				.top-menu-button.selected {
+					@extend .darkgray;
+					border-radius: 4px 4px 0 0;
+					.menu-icon {
+						@extend .selected-menu-icon;
+					}
+				}
 				.top-menu-button,
 				.breadcrumb {
 					padding: 6px;

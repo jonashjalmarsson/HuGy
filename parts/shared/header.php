@@ -2,7 +2,7 @@
 	<div class="top-wrapper">
 		<div class="top">
 			<div class="logo-space">
-				<img class="logo" title="Hultsfreds gymnasium" src="<?php echo get_template_directory_uri() . "/images/hultsfreds-gymnasium.png"; ?>" />
+				<a href="<?php echo home_url(); ?>"><img class="logo" title="Hultsfreds gymnasium" src="<?php echo get_template_directory_uri() . "/images/hultsfreds-gymnasium.png"; ?>" /></a>
 				<h1><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 			</div><div class="top-links-wrapper">
 				<?php echo HuGy::get_quicklinks(); ?>
@@ -20,7 +20,7 @@
 	<?php 
 	if (is_home()) :
 		/* slideshow */
-		echo HuGy::get_slideshow(get_field('hg_firstpage_slideshow','option'),'firstpage slideshow','slideshow');
+		echo HuGy::get_slideshow(get_field('hg_firstpage_slideshow','option'),'firstpage slideshow','firstpage');
 	endif; ?>
 </header>
 <div class="page-wrapper">

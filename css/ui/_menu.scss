@@ -5,14 +5,13 @@
 .pre-footer,
 .main-menu {
 	@extend .one-whole;
-	@extend .black-background;
+	@extend .darkgray;
 }
 .main-menu .main-menu-wrapper {
 	@extend .hidden;
 }
 
 .main-menu-wrapper {	
-	@extend .black;
 	@extend .epsilon;
 	@extend .max-width--center;
 	@extend .nounderline;

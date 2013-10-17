@@ -2,6 +2,7 @@
 	background-image: url("../images/ikoner.svg");
 	display: inline-block;
 	background-repeat: no-repeat;
+	vertical-align: text-bottom;
 }
 $clip-sizes: 80 48 40 30 24 20 16 12;
 
@@ -13,62 +14,59 @@ $clip-sizes: 80 48 40 30 24 20 16 12;
 	}
 }
 
-  /*
-.clip_80x80 {
-	@extend .clip;
-	width: 80px;
-	height: 80px;
-}
-.clip_48x48 {
-	@extend .clip;
-	width: 48px;
-	height: 48px;
-}
-.clip_40x40 {
-	@extend .clip;
-	width: 40px;
-	height: 40px;
-}
-.clip_30x30 {
-	@extend .clip;
-	width: 30px;
-	height: 30px;
-}
-.clip_24x24 {
-	@extend .clip;
-	width: 24px;
-	height: 24px;
-}
-.clip_20x20 {
-	@extend .clip;
-	width: 20px;
-	height: 20px;
-}
-.clip_16x16 {
-	@extend .clip;
-	width: 16px;
-	height: 16px;
-}
-.clip_12x12 {
-	@extend .clip;
-	width: 12px;
-	height: 12px;
-}
-*/
 .menu-icon {
 	@extend .clip_24x24;
-	background-position: -287px -440px;
-	vertical-align: text-bottom;
 	margin-right: 6px;
-	&.selected {
-		background-position: -287px -478px;
-	}
+	background-position: -82px -42px;
+}
+.selected-menu-icon {
+	@extend .clip_24x24;
+	margin-right: 6px;
+	background-position: -122px -42px;
 }
 .home-icon {
 	@extend .clip_24x24;
-	background-position: -290px -355px;
-	vertical-align: text-bottom;
+	background-position: -2px -42px;
 }
+
+.slideshow-navigation {
+	@extend .clip_16x16;
+	margin: 6px;
+}
+.play-icon {
+	@extend .slideshow-navigation;
+	background-position: -62px -82px;
+}
+.pause-icon {
+	@extend .slideshow-navigation;
+	background-position: -92px -82px;
+}
+.dot-icon {
+	@extend .slideshow-navigation;
+	background-position: -32px -82px;
+}
+.active-dot-icon {
+	@extend .slideshow-navigation;
+	background-position: -2px -82px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* program ikoner */
 .program-icon {

@@ -1,4 +1,4 @@
-$black: #000!default;
+$black: rgba(0,0,0,0.8)!default;
 $white: #fff!default;
 $green: #14A585!default;
 $blue: #63C2C7!default;
@@ -8,7 +8,7 @@ $orange: #F18200!default;
 $red: #D9050D!default;
 $gray: #c4c4c4!default;
 $lightgray: #f4f4f4!default;
-$darkgray: #969696!default;
+$darkgray: rgb(100,100,100)!default;
 
 
 @mixin color($title, $bg, $text){
@@ -22,7 +22,14 @@ $darkgray: #969696!default;
 	.#{$title}-background {
 		background-color: $bg;
 	}
+	.#{$title}-text {
+		color: $bg;
+		a {
+			color: $bg;
+		}
+	}
 }
+
 
 @include color("black", $black, $white); 
 @include color("white", $white, $black); 
@@ -35,11 +42,3 @@ $darkgray: #969696!default;
 @include color("gray", $gray, $black); 
 @include color("lightgray", $lightgray, $black); 
 @include color("darkgray", $darkgray, $white); 
-
-
-.green-text {
-	color: $green;
-	a {
-		color: $green;
-	}
-}

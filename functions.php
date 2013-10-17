@@ -29,8 +29,18 @@
 
 	add_theme_support('post-thumbnails');
 	if ( function_exists( 'add_image_size' ) ) { 
-		add_image_size( 'program', 300, 9999 ); //300 pixels wide (and unlimited height)
-		add_image_size( 'slideshow', 1100, 400, true ); //(cropped)
+		$image_sizes = array();
+		$image_sizes["program"] = array("300","9999",false);
+		$image_sizes["slideshow"] = array("1100","400",true);
+		$image_sizes["firstpage"] = array("2000","9999",false);
+		
+		foreach($image_sizes as $key => $size) {
+			add_image_size( $key, $size[0], $size[1], $size[2] );
+		}
+		//add_image_size( 'program', 300, 9999 ); //300 pixels wide (and unlimited height)
+		//add_image_size( 'slideshow', 1100, 400, true ); //(cropped)
+		//add_image_size( 'firstpage', 2000, 9999 ); //(cropped)
+		
 	}
 	
 	register_nav_menus(array('primary' => 'Primary Navigation'));
