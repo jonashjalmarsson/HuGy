@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying news.
- * Template Name: Nyhetslista
+ * Template Name: HuGy Nyhetslista
  *
  * @package 	WordPress
  * @subpackage 	HuGy (Starkers)

@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying program page.
- * Template Name: Programsida
+ * Template Name: HuGy Programsida
  *
  * @package 	WordPress
  * @subpackage 	HuGy (Starkers)
