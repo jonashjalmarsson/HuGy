@@ -20,7 +20,7 @@
 	if (isset($picto) && is_array($picto) && count($picto) > 0)
 		$picto = "data-hover-src='" . $picto[0] . "'";
 	?>
-	<?php if (isset($bubbla)) : ?>
+	<?php if (isset($bubbla) && $bubbla != "") : ?>
 	<div class="picto">
 		<img title='<?php the_title(); ?>' src='<?php echo $bubbla; ?>' <?php echo $picto ?> />
 	</div>
