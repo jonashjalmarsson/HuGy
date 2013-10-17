@@ -233,7 +233,7 @@ if(function_exists("register_field_group"))
 				array (
 					'param' => 'page_template',
 					'operator' => '==',
-					'value' => 'page-program.php',
+					'value' => 'page-hugy-program.php',
 					'order_no' => 0,
 					'group_no' => 0,
 				),
@@ -248,5 +248,4 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 }
-
 ?>
