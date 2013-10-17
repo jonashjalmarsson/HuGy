@@ -30,7 +30,7 @@
 	add_theme_support('post-thumbnails');
 	if ( function_exists( 'add_image_size' ) ) { 
 		$image_sizes = array();
-		$image_sizes["program"] = array("300","9999",false);
+		$image_sizes["program"] = array("200","9999",false);
 		$image_sizes["slideshow"] = array("1100","400",true);
 		$image_sizes["firstpage"] = array("2000","9999",false);
 		

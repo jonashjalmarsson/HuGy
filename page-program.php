@@ -9,16 +9,17 @@
  */
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
-
+program
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-<?php /* pictogram */ ?>
+
 <div class="slideshow-wrapper">
+	<?php /* pictogram */ ?>
 	<div class="picto">
 		<img title='<?php the_title(); ?>' src='<?php echo wp_get_attachment_image_src( get_field('hg_bubbla',get_the_ID()), "program")[0]; ?>' data-hover-src='<?php echo wp_get_attachment_image_src( get_field('hg_pictogram',get_the_ID()), "program")[0] ?>' />
 	</div>
-<?php /* slideshow */ ?>
-<?php echo HuGy::get_slideshow(get_field('hg_slideshow',get_the_ID()),'program slideshow','slideshow'); ?>
+	<?php /* slideshow */ ?>
+	<?php echo HuGy::get_slideshow(get_field('hg_slideshow',get_the_ID()),'program slideshow','slideshow'); ?>
 </div>
 <div class="content-wrapper">
 	<h1><?php the_title(); ?></h1>
