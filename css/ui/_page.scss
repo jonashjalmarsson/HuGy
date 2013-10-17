@@ -1,3 +1,16 @@
-.content {
+.slideshow-wrapper {
+	position: relative;
+	.picto {
+		position: absolute;
+		right: 20px;
+		top: 20px;
+	}
+	.slideshow {
+	
+	}
+}
+
+.content-wrapper {
 	@extend .small-max-width--center;
 }
+

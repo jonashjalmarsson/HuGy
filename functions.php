@@ -28,6 +28,10 @@
 	======================================================================================================================== */
 
 	add_theme_support('post-thumbnails');
+	if ( function_exists( 'add_image_size' ) ) { 
+		add_image_size( 'program', 300, 9999 ); //300 pixels wide (and unlimited height)
+		add_image_size( 'slideshow', 1100, 400, true ); //(cropped)
+	}
 	
 	register_nav_menus(array('primary' => 'Primary Navigation'));
 	

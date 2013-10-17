@@ -201,7 +201,7 @@ if(function_exists("register_field_group"))
 				'label' => 'Bubbla',
 				'name' => 'hg_bubbla',
 				'type' => 'image',
-				'save_format' => 'url',
+				'save_format' => 'id',
 				'preview_size' => 'thumbnail',
 				'library' => 'all',
 			),
@@ -210,7 +210,7 @@ if(function_exists("register_field_group"))
 				'label' => 'Pictogram',
 				'name' => 'hg_pictogram',
 				'type' => 'image',
-				'save_format' => 'url',
+				'save_format' => 'id',
 				'preview_size' => 'thumbnail',
 				'library' => 'all',
 			),
@@ -248,4 +248,5 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 }
+
 ?>

@@ -91,6 +91,7 @@
 				$retValue .= "<ul class='slides'>";
 				foreach( $images as $image ) :
 					$url = $image["sizes"][$size];
+					
 					$retValue .= "<li>";
 					$retValue .= "<img src='" . $url ."' alt='" . $image['alt'] . "' />";
 					$retValue .= "<p>" . $image['caption'] . "</p>";
@@ -190,6 +191,7 @@
 				'before' => '',
 				'after' => '',
 				);
+					
 				$retValue .= "<nav class='main-menu-wrapper'>";
 				//$retValue .= wp_nav_menu($args);
 				

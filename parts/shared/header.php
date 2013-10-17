@@ -1,10 +1,4 @@
 <header>
-	<div class="top-logo-wrapper">
-		<div class="top-logo">
-			<div class="logo-wrapper">
-			</div>
-		</div>
-	</div>
 	<div class="top-wrapper">
 		<div class="top">
 			<div class="logo-space">
@@ -26,9 +20,9 @@
 	<?php 
 	if (is_home()) :
 		/* slideshow */
-		echo HuGy::get_slideshow(get_field('hg_firstpage_slideshow','option'),'firstpage slideshow');
+		echo HuGy::get_slideshow(get_field('hg_firstpage_slideshow','option'),'firstpage slideshow','slideshow');
 	endif; ?>
 </header>
-<div class="content-wrapper">
-<article class="content">
+<div class="page-wrapper">
+<article class="page">
 

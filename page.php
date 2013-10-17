@@ -18,7 +18,7 @@
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 <?php /* slideshow */
-	echo HuGy::get_slideshow(get_field('hg_slideshow',get_the_ID()),'page slideshow'); ?>
+	echo HuGy::get_slideshow(get_field('hg_slideshow',get_the_ID()),'page slideshow','slideshow'); ?>
 
 <h1><?php the_title(); ?></h1>
 <?php the_content(); ?>

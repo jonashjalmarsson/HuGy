@@ -3341,22 +3341,18 @@ body {
   display: none;
 }
 
-.max-width--center, footer .footer-div, .top-wrapper .top, .home .content, .main-menu-wrapper {
+.max-width--center, footer .footer-div, .top-wrapper .top, article.page, .main-menu-wrapper {
   max-width: 1100px;
   margin: 0 auto;
 }
 
-.small-max-width--center, .content {
+.small-max-width--center, .content-wrapper {
   max-width: 700px;
   margin: 0 auto;
 }
 
 .nounderline, .top-wrapper, .main-menu-wrapper, .nounderline a, .top-wrapper a, .main-menu-wrapper a {
   text-decoration: none;
-}
-
-.content-wrapper {
-  margin-top: 90px;
 }
 
 header {
@@ -3804,4 +3800,13 @@ header {
   margin: 3px;
   display: inline-block;
   border-radius: 4px;
+}
+
+.slideshow-wrapper {
+  position: relative;
+}
+.slideshow-wrapper .picto {
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
