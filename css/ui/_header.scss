@@ -3,9 +3,15 @@ header {
 	@extend .white-text;
 }
 .top-wrapper {
-	@extend .green-background;
-	background-image: url("../images/slide-layer.png");
-	background-repeat: repeat;
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	z-index: 100;
+	opacity: 0.9;
+
+	@extend .blue-background;
+	//background-image: url("../images/slide-layer.png");
+	//background-repeat: repeat;
 
 	@extend .nounderline;
 	//position: relative;
@@ -50,6 +56,12 @@ header {
 		}
 	}
 	.top-navigation-wrapper {
+		&.fixed {
+			position: fixed;
+			top: 0px;
+			width: 100%;
+			z-index: 100;
+		}
 		@extend .darkgray;
 		.top-navigation {
 			@extend .max-width--center;

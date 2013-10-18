@@ -3114,7 +3114,7 @@ label,
   color: white;
 }
 
-.green-background, .top-wrapper {
+.green-background {
   background-color: #14a585;
 }
 
@@ -3135,7 +3135,7 @@ label,
   color: rgba(0, 0, 0, 0.8);
 }
 
-.blue-background {
+.blue-background, .top-wrapper {
   background-color: #63c2c7;
 }
 
@@ -3263,7 +3263,7 @@ label,
 }
 
 .darkgray, .top-wrapper .top-navigation-wrapper {
-  background-color: #646464;
+  background-color: rgba(100, 100, 100, 0.8);
   color: white;
 }
 .darkgray a, .top-wrapper .top-navigation-wrapper a {
@@ -3271,14 +3271,14 @@ label,
 }
 
 .darkgray-background {
-  background-color: #646464;
+  background-color: rgba(100, 100, 100, 0.8);
 }
 
 .darkgray-text {
-  color: #646464;
+  color: rgba(100, 100, 100, 0.8);
 }
 .darkgray-text a {
-  color: #646464;
+  color: rgba(100, 100, 100, 0.8);
 }
 
 .italic, h1,
@@ -3380,8 +3380,11 @@ header {
 }
 
 .top-wrapper {
-  background-image: url("../images/slide-layer.png");
-  background-repeat: repeat;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: 100;
+  opacity: 0.9;
 }
 .top-wrapper .top .logo-space {
   display: inline-block;
@@ -3401,6 +3404,12 @@ header {
 }
 .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks img {
   max-height: 24px;
+}
+.top-wrapper .top-navigation-wrapper.fixed {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 100;
 }
 .top-wrapper .top-navigation-wrapper .top-navigation .top-menu-button.selected {
   border-radius: 4px 4px 0 0;
@@ -3840,10 +3849,6 @@ header {
 }
 .program-20.hover, .program-20:hover {
   background-position: -1520px -80px;
-}
-
-.main-menu {
-  border-bottom: 3px solid #7c1473;
 }
 
 .main-menu-wrapper ul {

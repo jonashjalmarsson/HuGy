@@ -19,7 +19,7 @@
 			</div>
 		</div>
 	</div>
-	<div class='main-menu'><?php //echo HuGy::get_main_navigation(); ?></div>
+	<!-- div class='main-menu'><?php //echo HuGy::get_main_navigation(); ?></div //-->
 	<?php get_search_form(); ?>
 	<?php 
 	if (is_home()) :

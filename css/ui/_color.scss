@@ -8,7 +8,7 @@ $orange: #F18200!default;
 $red: #D9050D!default;
 $gray: #c4c4c4!default;
 $lightgray: #f4f4f4!default;
-$darkgray: rgb(100,100,100)!default;
+$darkgray: rgba(100,100,100,0.8)!default;
 
 
 @mixin color($title, $bg, $text){
