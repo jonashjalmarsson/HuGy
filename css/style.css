@@ -3146,11 +3146,13 @@ label,
   color: #63c2c7;
 }
 
-.purple {
+.purple, .top-wrapper .top .top-links-wrapper .top-navigation .top-menu-button.selected, .pre-footer,
+.main-menu {
   background-color: #7c1473;
   color: white;
 }
-.purple a {
+.purple a, .top-wrapper .top .top-links-wrapper .top-navigation .top-menu-button.selected a, .pre-footer a,
+.main-menu a {
   color: white;
 }
 
@@ -3260,13 +3262,11 @@ label,
   color: #f4f4f4;
 }
 
-.darkgray, .top-wrapper .top .top-links-wrapper .top-navigation .top-menu-button.selected, .pre-footer,
-.main-menu {
+.darkgray {
   background-color: #646464;
   color: white;
 }
-.darkgray a, .top-wrapper .top .top-links-wrapper .top-navigation .top-menu-button.selected a, .pre-footer a,
-.main-menu a {
+.darkgray a {
   color: white;
 }
 
@@ -3413,10 +3413,27 @@ header {
   bottom: 1%;
   cursor: pointer;
   left: 50%;
-  padding: 40px 10px 0;
-  position: fixed;
+  line-height: 1.3em;
+  opacity: 0.8;
+  padding: 35px 10px 0;
+  position: absolute;
   text-align: center;
   z-index: 100;
+}
+
+.firstpage.slideshow {
+  position: relative;
+}
+.firstpage.slideshow .slide-layer {
+  background: url("../images/slide-layer.png") repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 90;
+}
+
+.slideshow {
+  overflow: hidden;
 }
 
 .clip, .clip_80x80, .program-icon, .clip_48x48, .clip_40x40, .quick-icon, .clip_30x30, .clip_24x24, .menu-icon, .selected-menu-icon, .home-icon, .clip_20x20, .clip_16x16, .slideshow-navigation, .play-icon, article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-play, .pause-icon, article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-stop, .dot-icon, .active-dot-icon, article.page .slideshow-wrapper .slideshow .slidesjs-pagination .slidesjs-pagination-item a, .clip_12x12, .up-icon, .teaser-1 {

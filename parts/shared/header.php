@@ -21,6 +21,8 @@
 	if (is_home()) :
 		/* slideshow */
 		echo HuGy::get_slideshow(get_field('hg_firstpage_slideshow','option'),'firstpage slideshow','firstpage');
+		echo "<div class='teaser-1 teaser-icon'><span>Nyfiken på mer</span></div>";
+
 	endif; ?>
 </header>
 <div class="page-wrapper">

@@ -46,7 +46,7 @@ header {
 			.top-navigation {
 				padding-left: 12px;
 				.top-menu-button.selected {
-					@extend .darkgray;
+					@extend .purple;
 					border-radius: 4px 4px 0 0;
 					.menu-icon {
 						@extend .selected-menu-icon;

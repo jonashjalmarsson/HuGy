@@ -4,8 +4,23 @@
 	bottom: 1%;
 	cursor: pointer;
 	left: 50%;
-	padding: 40px 10px 0;
-	position: fixed;
+	line-height: 1.3em;
+	opacity: 0.8;
+	padding: 35px 10px 0;
+	position: absolute;
 	text-align: center;
 	z-index: 100;
+}
+.firstpage.slideshow {
+	position: relative;
+	.slide-layer {
+		background: url("../images/slide-layer.png") repeat;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 90;
+	}
+}
+.slideshow {
+	overflow: hidden;
 }
