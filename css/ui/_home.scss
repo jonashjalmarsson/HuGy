@@ -24,3 +24,22 @@
 .slideshow {
 	overflow: hidden;
 }
+.home .page {
+	width: 100%;
+	max-width: 100%;
+}
+.posts-whole {
+	.posts-wrapper {
+		@extend .max-width--center;
+		.posts {
+			@extend .grid;
+			.post {
+				@extend .grid__item;
+				@extend .one-third;
+				.wp-post-image {
+					max-width: 100%;
+				}
+			}
+		}
+	}
+}

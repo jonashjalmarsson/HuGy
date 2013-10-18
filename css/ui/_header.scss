@@ -9,6 +9,7 @@ header {
 	//position: relative;
 	.top {
 		@extend .max-width--center;
+		margin-bottom: 12px;
 		.logo-space {
 			@extend .one-fifth;
 			display: inline-block;
@@ -29,6 +30,7 @@ header {
 			//width: 100%;
 			@extend .four-fifths;
 			display: inline-block;
+			float: right;
 			.quicklinks-wrapper {	
 				text-align: right;
 				.quicklinks {
@@ -43,23 +45,27 @@ header {
 					}
 				} 
 			}
-			.top-navigation {
-				padding-left: 12px;
-				.top-menu-button.selected {
-					@extend .purple;
-					border-radius: 4px 4px 0 0;
-					.menu-icon {
-						@extend .selected-menu-icon;
-					}
+		}
+	}
+	.top-navigation-wrapper {
+		@extend .darkgray;
+		.top-navigation {
+			@extend .max-width--center;
+
+			.top-menu-button.selected {
+				@extend .purple;
+				border-radius: 4px 4px 0 0;
+				.menu-icon {
+					@extend .selected-menu-icon;
 				}
-				.top-menu-button,
-				.breadcrumb {
-					padding: 6px;
-					display: inline-block;
-				}
-				.breadcrumb {
-					margin-left: 12px;
-				}
+			}
+			.top-menu-button,
+			.breadcrumb {
+				padding: 6px;
+				display: inline-block;
+			}
+			.breadcrumb {
+				margin-left: 12px;
 			}
 		}
 	}

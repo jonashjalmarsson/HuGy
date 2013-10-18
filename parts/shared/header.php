@@ -6,12 +6,16 @@
 				<h1><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 			</div><div class="top-links-wrapper">
 				<?php echo HuGy::get_quicklinks(); ?>
-				<div class="top-navigation">
+				
+			</div>
+		</div>
+		
+		<div class="top-navigation-wrapper">
+			<div class="top-navigation">
 					<div class="top-menu-button">
 						<a href="#menu" title="Öppna meny"><span class='menu-icon'></span>Meny</a>
 					</div>
 					<div class="breadcrumb"><?php echo HuGy::get_breadcrumb(); ?></div>
-				</div>
 			</div>
 		</div>
 	</div>

@@ -1710,7 +1710,7 @@ label,
 /**
  * Grid wrapper
  */
-.grid, .main-menu-wrapper .menu {
+.grid, .posts-whole .posts-wrapper .posts, .main-menu-wrapper .menu {
   margin-left: -24px;
   list-style: none;
   margin-bottom: 0;
@@ -1719,14 +1719,14 @@ label,
 /**
  * Very infrequently occuring grid wrappers as children of grid wrappers.
  */
-.grid > .grid, .main-menu-wrapper .menu > .grid, .main-menu-wrapper .grid > .menu, .main-menu-wrapper .menu > .menu {
+.grid > .grid, .posts-whole .posts-wrapper .posts > .grid, .main-menu-wrapper .menu > .grid, .posts-whole .posts-wrapper .grid > .posts, .posts-whole .posts-wrapper .posts > .posts, .main-menu-wrapper .posts-whole .posts-wrapper .menu > .posts, .posts-whole .posts-wrapper .main-menu-wrapper .menu > .posts, .main-menu-wrapper .grid > .menu, .posts-whole .posts-wrapper .main-menu-wrapper .posts > .menu, .main-menu-wrapper .posts-whole .posts-wrapper .posts > .menu, .main-menu-wrapper .menu > .menu {
   margin-left: 0;
 }
 
 /**
  * Grid
  */
-.grid__item, .main-menu-wrapper .menu > li {
+.grid__item, .posts-whole .posts-wrapper .posts .post, .main-menu-wrapper .menu > li {
   display: inline-block;
   width: 100%;
   padding-left: 24px;
@@ -1894,7 +1894,7 @@ label,
 /**
 * Thirds
 */
-.one-third, .two-sixths, .four-twelfths, .main-menu-wrapper .menu.cols-3 > li {
+.one-third, .two-sixths, .four-twelfths, .posts-whole .posts-wrapper .posts .post, .main-menu-wrapper .menu.cols-3 > li {
   width: 33.333%;
 }
 
@@ -3146,12 +3146,12 @@ label,
   color: #63c2c7;
 }
 
-.purple, .top-wrapper .top .top-links-wrapper .top-navigation .top-menu-button.selected, .pre-footer,
+.purple, .top-wrapper .top-navigation-wrapper .top-navigation .top-menu-button.selected, .pre-footer,
 .main-menu {
   background-color: #7c1473;
   color: white;
 }
-.purple a, .top-wrapper .top .top-links-wrapper .top-navigation .top-menu-button.selected a, .pre-footer a,
+.purple a, .top-wrapper .top-navigation-wrapper .top-navigation .top-menu-button.selected a, .pre-footer a,
 .main-menu a {
   color: white;
 }
@@ -3262,11 +3262,11 @@ label,
   color: #f4f4f4;
 }
 
-.darkgray {
+.darkgray, .top-wrapper .top-navigation-wrapper {
   background-color: #646464;
   color: white;
 }
-.darkgray a {
+.darkgray a, .top-wrapper .top-navigation-wrapper a {
   color: white;
 }
 
@@ -3361,7 +3361,7 @@ body {
   display: none;
 }
 
-.max-width--center, footer .footer-div, .top-wrapper .top, article.page, .main-menu-wrapper {
+.max-width--center, footer .footer-div, .top-wrapper .top, .top-wrapper .top-navigation-wrapper .top-navigation, article.page, .posts-whole .posts-wrapper, .main-menu-wrapper {
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -3379,11 +3379,15 @@ header {
   width: 100%;
 }
 
+.top-wrapper .top {
+  margin-bottom: 12px;
+}
 .top-wrapper .top .logo-space {
   display: inline-block;
 }
 .top-wrapper .top .top-links-wrapper {
   display: inline-block;
+  float: right;
 }
 .top-wrapper .top .top-links-wrapper .quicklinks-wrapper {
   text-align: right;
@@ -3394,18 +3398,15 @@ header {
 .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks img {
   max-height: 24px;
 }
-.top-wrapper .top .top-links-wrapper .top-navigation {
-  padding-left: 12px;
-}
-.top-wrapper .top .top-links-wrapper .top-navigation .top-menu-button.selected {
+.top-wrapper .top-navigation-wrapper .top-navigation .top-menu-button.selected {
   border-radius: 4px 4px 0 0;
 }
-.top-wrapper .top .top-links-wrapper .top-navigation .top-menu-button,
-.top-wrapper .top .top-links-wrapper .top-navigation .breadcrumb {
+.top-wrapper .top-navigation-wrapper .top-navigation .top-menu-button,
+.top-wrapper .top-navigation-wrapper .top-navigation .breadcrumb {
   padding: 6px;
   display: inline-block;
 }
-.top-wrapper .top .top-links-wrapper .top-navigation .breadcrumb {
+.top-wrapper .top-navigation-wrapper .top-navigation .breadcrumb {
   margin-left: 12px;
 }
 
@@ -3434,6 +3435,15 @@ header {
 
 .slideshow {
   overflow: hidden;
+}
+
+.home .page {
+  width: 100%;
+  max-width: 100%;
+}
+
+.posts-whole .posts-wrapper .posts .post .wp-post-image {
+  max-width: 100%;
 }
 
 .clip, .clip_80x80, .program-icon, .clip_48x48, .clip_40x40, .quick-icon, .clip_30x30, .clip_24x24, .menu-icon, .selected-menu-icon, .home-icon, .clip_20x20, .clip_16x16, .slideshow-navigation, .play-icon, article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-play, .pause-icon, article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-stop, .dot-icon, .active-dot-icon, article.page .slideshow-wrapper .slideshow .slidesjs-pagination .slidesjs-pagination-item a, .clip_12x12, .up-icon, .teaser-1 {
@@ -3488,7 +3498,7 @@ header {
   background-position: -82px -42px;
 }
 
-.selected-menu-icon, .top-wrapper .top .top-links-wrapper .top-navigation .top-menu-button.selected .menu-icon {
+.selected-menu-icon, .top-wrapper .top-navigation-wrapper .top-navigation .top-menu-button.selected .menu-icon {
   margin-right: 6px;
   background-position: -122px -42px;
 }

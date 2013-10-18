@@ -132,7 +132,15 @@
 				$(".teaser-1").fadeIn("slow");
 
 			if ($(window).height() - $("body").scrollTop() - $(".top-wrapper").height() > 0) {
-				$(".slideshow").height($(window).height() - $("body").scrollTop() - $(".top-wrapper").height());
+				$(".firstpage.slideshow").height($(window).height() - $("body").scrollTop() - $(".top-wrapper").height());
+			}
+
+			if ($("body").scrollTop() - $(".top").height() > 0) {
+				$("#wpadminbar").hide();
+				$(".top-navigation-wrapper").css("position","fixed").css("top","0px").css("width","100%").css("z-index","100");
+			}
+			else {
+				$(".top-navigation-wrapper").css("position","relative");
 			}
 		});
 		
