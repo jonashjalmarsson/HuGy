@@ -3,8 +3,10 @@ header {
 	@extend .white-text;
 }
 .top-wrapper {
-	@extend .black-background;
-	
+	@extend .green-background;
+	background-image: url("../images/slide-layer.png");
+	background-repeat: repeat;
+
 	@extend .nounderline;
 	//position: relative;
 	.top {

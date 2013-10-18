@@ -3076,7 +3076,7 @@ label,
   color: white;
 }
 
-.black-background, .top-wrapper {
+.black-background {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -3114,7 +3114,7 @@ label,
   color: white;
 }
 
-.green-background {
+.green-background, .top-wrapper {
   background-color: #14a585;
 }
 
@@ -3379,6 +3379,10 @@ header {
   width: 100%;
 }
 
+.top-wrapper {
+  background-image: url("../images/slide-layer.png");
+  background-repeat: repeat;
+}
 .top-wrapper .top .logo-space {
   display: inline-block;
 }

@@ -137,11 +137,13 @@
 
 			if ($("body").scrollTop() - $(".top").height() > 0) {
 				$("#wpadminbar").hide();
-				$(".top-navigation-wrapper, .main-menu").css("position","fixed").css("top","0px").css("width","100%").css("z-index","100");
-				$(".main-menu").css("top",$(".top-navigation-wrapper").height());
+				$(".top-navigation-wrapper").css("position","fixed").css("top","0px").css("width","100%").css("z-index","100");
+				$(".top-menu-button").addClass("fixed");
+				//$(".main-menu").css("top",$(".top-navigation-wrapper").height());
 			}
 			else {
 				$(".top-navigation-wrapper, .main-menu").css("position","relative");
+				$(".top-menu-button").removeClass("fixed");
 			}
 		});
 		
@@ -149,8 +151,14 @@
 		/* menu button */
 		$(".top-menu-button").toggle(function(ev) {
 			// open hover menu
-			$(".main-menu .main-menu-wrapper").slideDown("fast");
-			$(this).addClass("selected");
+			if ($(this).hasClass("fixed")) {
+				console.log($(".pre-footer").position().top);
+				$("body").animate({scrollTop: $(".pre-footer").position().top + $(".top-navigation-wrapper").height() },800);
+			}
+			else {
+				$(".main-menu .main-menu-wrapper").slideDown("fast");
+				$(this).addClass("selected");
+			}
 		},
 		function(ev) {
 			// close hover menu
