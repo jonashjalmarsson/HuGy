@@ -137,10 +137,11 @@
 
 			if ($("body").scrollTop() - $(".top").height() > 0) {
 				$("#wpadminbar").hide();
-				$(".top-navigation-wrapper").css("position","fixed").css("top","0px").css("width","100%").css("z-index","100");
+				$(".top-navigation-wrapper, .main-menu").css("position","fixed").css("top","0px").css("width","100%").css("z-index","100");
+				$(".main-menu").css("top",$(".top-navigation-wrapper").height());
 			}
 			else {
-				$(".top-navigation-wrapper").css("position","relative");
+				$(".top-navigation-wrapper, .main-menu").css("position","relative");
 			}
 		});
 		

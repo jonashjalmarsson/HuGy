@@ -3379,11 +3379,11 @@ header {
   width: 100%;
 }
 
-.top-wrapper .top {
-  margin-bottom: 12px;
-}
 .top-wrapper .top .logo-space {
   display: inline-block;
+}
+.top-wrapper .top .logo-space .logo {
+  padding-bottom: 12px;
 }
 .top-wrapper .top .top-links-wrapper {
   display: inline-block;
