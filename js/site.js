@@ -135,6 +135,8 @@
 				$(".firstpage.slideshow").height($(window).height() - $("body").scrollTop() - $(".top-wrapper").height());
 			}
 
+			$(".main-menu-button").removeClass("selected");
+
 			if ($("body").scrollTop() - $(".top").height() > 0) {
 				$("#wpadminbar").hide();
 				$(".top-navigation-wrapper").css("position","fixed").css("top","0px").css("width","100%").css("z-index","100");
@@ -151,14 +153,16 @@
 		/* menu button */
 		$(".top-menu-button").toggle(function(ev) {
 			// open hover menu
-			if ($(this).hasClass("fixed")) {
+			/*if ($(this).hasClass("fixed")) {
 				console.log($(".pre-footer").position().top);
 				$("body").animate({scrollTop: $(".pre-footer").position().top + $(".top-navigation-wrapper").height() },800);
 			}
 			else {
 				$(".main-menu .main-menu-wrapper").slideDown("fast");
 				$(this).addClass("selected");
-			}
+			}*/
+			$("body").animate({scrollTop: $(".pre-footer").position().top - $(".top-navigation-wrapper").height() },800);
+			$(this).addClass("selected");
 		},
 		function(ev) {
 			// close hover menu
