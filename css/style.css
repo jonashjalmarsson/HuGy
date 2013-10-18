@@ -3095,7 +3095,7 @@ label,
   color: rgba(0, 0, 0, 0.8);
 }
 
-.white-background {
+.white-background, .main-menu-wrapper .current_page_item > a {
   background-color: white;
 }
 
@@ -3106,11 +3106,11 @@ label,
   color: white;
 }
 
-.green, footer, .main-menu-wrapper .current_page_item > a {
+.green, footer {
   background-color: #14a585;
   color: white;
 }
-.green a, footer a, .main-menu-wrapper .current_page_item > a a {
+.green a, footer a {
   color: white;
 }
 
@@ -3160,10 +3160,10 @@ label,
   background-color: #7c1473;
 }
 
-.purple-text {
+.purple-text, .main-menu-wrapper .current_page_item > a {
   color: #7c1473;
 }
-.purple-text a {
+.purple-text a, .main-menu-wrapper .current_page_item > a a {
   color: #7c1473;
 }
 

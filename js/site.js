@@ -82,6 +82,7 @@
 		$("html").removeClass("no-js"); // to get no-js css when needed
 
 		
+		/*
 		$("header").prepend($("<div />").addClass("doit").html("do me").css("background","pink").css("position","absolute").css("z-index","1000").css("left","100px").css("top","300px"));
 		$("header").prepend($("<div />").addClass("showit").html("test").css("background","grey").css("position","absolute").css("z-index","1000").css("left","100px").css("top","100px"));
 		
@@ -105,7 +106,7 @@
 		}
 		 
 		runIt();
-		showIt();
+		showIt();*/
 		
 		
 		
