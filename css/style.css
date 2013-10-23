@@ -3087,11 +3087,11 @@ label,
   color: rgba(0, 0, 0, 0.8);
 }
 
-.white {
+.white, article.page .slideshow-wrapper {
   background-color: white;
   color: rgba(0, 0, 0, 0.8);
 }
-.white a {
+.white a, article.page .slideshow-wrapper a {
   color: rgba(0, 0, 0, 0.8);
 }
 
@@ -3373,6 +3373,39 @@ body {
 
 .nounderline, .top-wrapper, .main-menu-wrapper, .nounderline a, .top-wrapper a, .main-menu-wrapper a {
   text-decoration: none;
+}
+
+.drop-shadow, article.page .slideshow-wrapper {
+  position: relative;
+}
+
+.drop-shadow:before, article.page .slideshow-wrapper:before,
+.drop-shadow:after,
+article.page .slideshow-wrapper:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  height: 20%;
+  max-width: 300px;
+  -webkit-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+
+.drop-shadow:after, article.page .slideshow-wrapper:after {
+  right: 10px;
+  left: auto;
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  transform: rotate(3deg);
 }
 
 .header-wrapper {
@@ -3908,8 +3941,16 @@ article.page .slideshow-wrapper .slideshow ul, article.page .slideshow-wrapper .
   content: '';
   display: inline-block;
 }
+article.page .slideshow-wrapper .slideshow .slidesjs-navigation {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
 article.page .slideshow-wrapper .slideshow .slidesjs-pagination {
   margin: 0;
+  position: absolute;
+  bottom: 0;
+  left: 20px;
 }
 
 .program-icons > li > a {

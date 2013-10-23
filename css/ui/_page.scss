@@ -1,8 +1,11 @@
 .page-wrapper {
 	padding-top: 130px;
 }
+
 article.page{
 	.slideshow-wrapper {
+		@extend .drop-shadow;
+		@extend .white;
 		position: relative;
 		margin-top: 24px;
 		.picto {
@@ -15,11 +18,16 @@ article.page{
 			max-height: 300px;
 		}
 		.slideshow {
+			
 			ul, li, a {
 				content: '';
 				display: inline-block;
 			}
 			.slidesjs-navigation {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+
 				&.slidesjs-stop {
 					@extend .pause-icon;
 				}
@@ -33,6 +41,9 @@ article.page{
 			}
 			.slidesjs-pagination {
 				margin: 0;
+				position: absolute;
+				bottom: 0;
+				left: 20px;
 				.slidesjs-pagination-item a {
 					@extend .active-dot-icon;
 					&.active {
