@@ -1710,7 +1710,7 @@ label,
 /**
  * Grid wrapper
  */
-.grid, .posts-whole .posts-wrapper .posts, .main-menu-wrapper .menu {
+.grid, .modules-wrapper .module .items, .main-menu-wrapper .menu {
   margin-left: -24px;
   list-style: none;
   margin-bottom: 0;
@@ -1719,14 +1719,14 @@ label,
 /**
  * Very infrequently occuring grid wrappers as children of grid wrappers.
  */
-.grid > .grid, .posts-whole .posts-wrapper .posts > .grid, .main-menu-wrapper .menu > .grid, .posts-whole .posts-wrapper .grid > .posts, .posts-whole .posts-wrapper .posts > .posts, .main-menu-wrapper .posts-whole .posts-wrapper .menu > .posts, .posts-whole .posts-wrapper .main-menu-wrapper .menu > .posts, .main-menu-wrapper .grid > .menu, .posts-whole .posts-wrapper .main-menu-wrapper .posts > .menu, .main-menu-wrapper .posts-whole .posts-wrapper .posts > .menu, .main-menu-wrapper .menu > .menu {
+.grid > .grid, .modules-wrapper .module .items > .grid, .main-menu-wrapper .menu > .grid, .modules-wrapper .module .grid > .items, .modules-wrapper .module .items > .items, .main-menu-wrapper .modules-wrapper .module .menu > .items, .modules-wrapper .module .main-menu-wrapper .menu > .items, .main-menu-wrapper .grid > .menu, .modules-wrapper .module .main-menu-wrapper .items > .menu, .main-menu-wrapper .modules-wrapper .module .items > .menu, .main-menu-wrapper .menu > .menu {
   margin-left: 0;
 }
 
 /**
  * Grid
  */
-.grid__item, .posts-whole .posts-wrapper .posts .post, .main-menu-wrapper .menu > li {
+.grid__item, .modules-wrapper .module .items .item, .main-menu-wrapper .menu > li {
   display: inline-block;
   width: 100%;
   padding-left: 24px;
@@ -1894,7 +1894,7 @@ label,
 /**
 * Thirds
 */
-.one-third, .two-sixths, .four-twelfths, .posts-whole .posts-wrapper .posts .post, .main-menu-wrapper .menu.cols-3 > li {
+.one-third, .two-sixths, .four-twelfths, .modules-wrapper .module .items .item, .main-menu-wrapper .menu.cols-3 > li {
   width: 33.333%;
 }
 
@@ -3099,10 +3099,10 @@ label,
   background-color: white;
 }
 
-.white-text, .up-icon span, header, .teaser-1 {
+.white-text, .up-icon span, .header-wrapper, .teaser-1 {
   color: white;
 }
-.white-text a, .up-icon span a, header a, .teaser-1 a {
+.white-text a, .up-icon span a, .header-wrapper a, .teaser-1 a {
   color: white;
 }
 
@@ -3146,12 +3146,12 @@ label,
   color: #63c2c7;
 }
 
-.purple, .top-wrapper .top-navigation-wrapper .top-navigation .top-menu-button.selected, .pre-footer,
+.purple, .top-navigation-wrapper .top-navigation .top-menu-button.selected, .pre-footer,
 .main-menu {
   background-color: #7c1473;
   color: white;
 }
-.purple a, .top-wrapper .top-navigation-wrapper .top-navigation .top-menu-button.selected a, .pre-footer a,
+.purple a, .top-navigation-wrapper .top-navigation .top-menu-button.selected a, .pre-footer a,
 .main-menu a {
   color: white;
 }
@@ -3262,11 +3262,11 @@ label,
   color: #f4f4f4;
 }
 
-.darkgray, .top-wrapper .top-navigation-wrapper {
+.darkgray, .top-navigation-wrapper {
   background-color: rgba(100, 100, 100, 0.8);
   color: white;
 }
-.darkgray a, .top-wrapper .top-navigation-wrapper a {
+.darkgray a, .top-navigation-wrapper a {
   color: white;
 }
 
@@ -3361,7 +3361,7 @@ body {
   display: none;
 }
 
-.max-width--center, footer .footer-div, .top-wrapper .top, .top-wrapper .top-navigation-wrapper .top-navigation, article.page, .posts-whole .posts-wrapper, .main-menu-wrapper {
+.max-width--center, footer .footer-div, .top-wrapper .top, .top-navigation-wrapper .top-navigation, article.page, .modules-wrapper .module, .main-menu-wrapper {
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -3375,15 +3375,16 @@ body {
   text-decoration: none;
 }
 
-header {
+.header-wrapper {
+  background: transparent;
+  position: absolute;
+  top: 0px;
+  left: 0px;
   width: 100%;
+  z-index: 100;
 }
 
 .top-wrapper {
-  position: absolute;
-  top: 0px;
-  width: 100%;
-  z-index: 100;
   opacity: 0.9;
 }
 .top-wrapper .top .logo-space {
@@ -3405,21 +3406,26 @@ header {
 .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks img {
   max-height: 24px;
 }
-.top-wrapper .top-navigation-wrapper.fixed {
+
+.top-navigation-wrapper {
+  opacity: 0.9;
+}
+.top-navigation-wrapper.fixed {
   position: fixed;
   top: 0px;
+  left: 0px;
   width: 100%;
   z-index: 100;
 }
-.top-wrapper .top-navigation-wrapper .top-navigation .top-menu-button.selected {
+.top-navigation-wrapper .top-navigation .top-menu-button.selected {
   border-radius: 4px 4px 0 0;
 }
-.top-wrapper .top-navigation-wrapper .top-navigation .top-menu-button,
-.top-wrapper .top-navigation-wrapper .top-navigation .breadcrumb {
+.top-navigation-wrapper .top-navigation .top-menu-button,
+.top-navigation-wrapper .top-navigation .breadcrumb {
   padding: 6px;
   display: inline-block;
 }
-.top-wrapper .top-navigation-wrapper .top-navigation .breadcrumb {
+.top-navigation-wrapper .top-navigation .breadcrumb {
   margin-left: 12px;
 }
 
@@ -3455,7 +3461,26 @@ header {
   max-width: 100%;
 }
 
-.posts-whole .posts-wrapper .posts .post .wp-post-image {
+.modules-wrapper .module {
+  /*
+  	&.nyheter-module {
+  		.items {
+  			.item {
+  				overflow: hidden;
+  				position: relative;
+  				.item-content {
+  					position: absolute;	
+  					padding-left: 24px;
+  					top: 0;
+  					left: 0;
+  					z-index: 10;
+  				}
+  			}
+  		}
+  	}
+  	*/
+}
+.modules-wrapper .module .items .item .wp-post-image {
   max-width: 100%;
 }
 
@@ -3511,7 +3536,7 @@ header {
   background-position: -82px -42px;
 }
 
-.selected-menu-icon, .top-wrapper .top-navigation-wrapper .top-navigation .top-menu-button.selected .menu-icon {
+.selected-menu-icon, .top-navigation-wrapper .top-navigation .top-menu-button.selected .menu-icon {
   margin-right: 6px;
   background-position: -122px -42px;
 }
@@ -3860,6 +3885,10 @@ header {
   margin: 3px;
   display: inline-block;
   border-radius: 4px;
+}
+
+.page-wrapper {
+  padding-top: 130px;
 }
 
 article.page .slideshow-wrapper {

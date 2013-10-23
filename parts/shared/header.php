@@ -1,4 +1,4 @@
-<header>
+<header class="header-wrapper">
 	<div class="top-wrapper">
 		<div class="top">
 			<div class="logo-space">
@@ -10,15 +10,17 @@
 			</div>
 		</div>
 		
-		<div class="top-navigation-wrapper">
-			<div class="top-navigation">
-					<div class="top-menu-button">
-						<a href="#menu" title="Öppna meny"><span class='menu-icon'></span>Meny</a>
-					</div>
-					<div class="breadcrumb"><?php echo HuGy::get_breadcrumb(); ?></div>
-			</div>
+	</div>
+	
+	<div class="top-navigation-wrapper">
+		<div class="top-navigation">
+				<div class="top-menu-button">
+					<a href="#menu" title="Öppna meny"><span class='menu-icon'></span>Meny</a>
+				</div>
+				<div class="breadcrumb"><?php echo HuGy::get_breadcrumb(); ?></div>
 		</div>
 	</div>
+</header>
 	<!-- div class='main-menu'><?php //echo HuGy::get_main_navigation(); ?></div //-->
 	<?php get_search_form(); ?>
 	<?php 
@@ -28,7 +30,7 @@
 		echo "<div class='teaser-1 teaser-icon'><span>Nyfiken på mer</span></div>";
 
 	endif; ?>
-</header>
+
 <div class="page-wrapper">
 <article class="page">
 

@@ -193,6 +193,86 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 	register_field_group(array (
+		'id' => 'acf_moduler',
+		'title' => 'Moduler',
+		'fields' => array (
+			array (
+				'key' => 'field_5265193457019',
+				'label' => 'Innehåll',
+				'name' => 'hg_modules',
+				'type' => 'flexible_content',
+				'layouts' => array (
+					array (
+						'label' => 'Nyheter',
+						'name' => 'nyheter',
+						'display' => 'row',
+						'sub_fields' => array (
+						),
+					),
+					array (
+						'label' => 'Facebook',
+						'name' => 'facebook',
+						'display' => 'row',
+						'sub_fields' => array (
+						),
+					),
+					array (
+						'label' => 'Program',
+						'name' => 'program',
+						'display' => 'row',
+						'sub_fields' => array (
+						),
+					),
+					array (
+						'label' => 'Text',
+						'name' => 'text',
+						'display' => 'row',
+						'sub_fields' => array (
+							array (
+								'key' => 'field_52651cd97fd68',
+								'label' => 'text',
+								'name' => 'text',
+								'type' => 'wysiwyg',
+								'column_width' => '',
+								'default_value' => '',
+								'toolbar' => 'full',
+								'media_upload' => 'yes',
+							),
+						),
+					),
+				),
+				'button_label' => 'Lägg till modul',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'options_page',
+					'operator' => '==',
+					'value' => 'acf-options',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+			array (
+				array (
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'page-hugy-main.php',
+					'order_no' => 0,
+					'group_no' => 1,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
 		'id' => 'acf_programsida',
 		'title' => 'Programsida',
 		'fields' => array (

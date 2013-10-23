@@ -28,12 +28,12 @@
 	width: 100%;
 	max-width: 100%;
 }
-.posts-whole {
-	.posts-wrapper {
+.modules-wrapper {
+	.module {
 		@extend .max-width--center;
-		.posts {
+		.items {
 			@extend .grid;
-			.post {
+			.item {
 				@extend .grid__item;
 				@extend .one-third;
 				.wp-post-image {
@@ -41,5 +41,22 @@
 				}
 			}
 		}
+	/*
+		&.nyheter-module {
+			.items {
+				.item {
+					overflow: hidden;
+					position: relative;
+					.item-content {
+						position: absolute;	
+						padding-left: 24px;
+						top: 0;
+						left: 0;
+						z-index: 10;
+					}
+				}
+			}
+		}
+		*/
 	}
 }

@@ -102,7 +102,7 @@
 					}
 				endforeach;
 				$retValue .= "</ul>";
-			$retValue .= "</div>";
+			$retValue .= "</div></div>";
 			endif;
 			return $retValue;
 		}
@@ -227,6 +227,67 @@
 				}
 				$retValue .= "</nav>";
 			}
+			return $retValue;
+		}
+		
+		
+		function get_modules($page_id = "") {
+			$retValue = "";
+			if ($page_id != "") {
+				$field = $page_id;
+			}
+			else {
+				$field = 'option';
+			}
+
+			$retValue .= "<div class='modules-wrapper'>";
+			while (the_flexible_field("hg_modules",$field)) :
+				
+				$retValue .= "<div class='" . get_row_layout() . "-module module'>";
+				if (get_row_layout() == "facebook"):
+					$retValue .= "facebook";
+				elseif (get_row_layout() == "program"):
+					$retValue .= HuGy::get_program_icons();
+				elseif (get_row_layout() == "nyheter"):
+					$retValue .= HuGy::get_news();
+				elseif (get_row_layout() == "text"):
+					$retValue .= get_sub_field('text');
+				endif;
+				$retValue .= "</div>";
+			endwhile;
+			$retValue .= "</div>";
+			return $retValue;
+		}
+		
+		
+		function get_news() {
+			$retValue = "";
+			// The Query
+			$the_query = new WP_Query( array(
+											'post_type' => 'post',
+											'posts_per_page' => 3 ));
+
+			// The Loop
+			if ( $the_query->have_posts() ) {
+				$retValue .= "<div class='items'>";
+				while ( $the_query->have_posts() ) {
+					$retValue .= "<div class='item'>";
+					$the_query->the_post();
+					$retValue .= "<div class='item-img'>";
+					$retValue .=  get_the_post_thumbnail(get_the_ID(), 'news'); 
+					$retValue .= "</div>";
+					$retValue .= "<div class='item-content'>";
+					$retValue .= "<h2>" . get_the_title() . "</h2>";
+					$retValue .= get_the_content();
+					$retValue .= "</div>";
+					$retValue .= "</div>";
+				}
+				$retValue .= "</div>";
+			} else {
+				// no posts found
+			}
+			/* Restore original Post Data */
+			wp_reset_postdata();
 			return $retValue;
 		}
 	}
