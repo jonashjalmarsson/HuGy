@@ -62,7 +62,7 @@
 				'post_type' => 'page',
 				'post_status' => 'publish',
 				'meta_key' => '_wp_page_template',
-				'meta_value' => 'page-program.php'
+				'meta_value' => 'page-hugy-program.php'
 			); 
 			$pages = get_posts($args);
 			
