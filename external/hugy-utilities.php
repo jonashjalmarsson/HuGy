@@ -240,28 +240,36 @@
 				$field = 'option';
 			}
 
-			$retValue .= "<div class='modules-wrapper'>";
 			while (the_flexible_field("hg_modules",$field)) :
 				
-				$retValue .= "<div class='" . get_row_layout() . "-module module'>";
-				if (get_row_layout() == "facebook"):
-					$retValue .= "facebook";
-				elseif (get_row_layout() == "program"):
-					$retValue .= HuGy::get_program_icons();
-				elseif (get_row_layout() == "nyheter"):
-					$retValue .= HuGy::get_news();
-				elseif (get_row_layout() == "text"):
-					$retValue .= get_sub_field('text');
-				endif;
-				$retValue .= "</div>";
+				$retValue .= "<div class='" . get_row_layout() . "-module-wrapper module-wrapper'>";
+					$retValue .= "<div class='" . get_row_layout() . "-module module'>";
+					if (get_row_layout() == "facebook"):
+						$retValue .= "<h1>Vad händer mer...</h1><div class='facebook-wall facebook-$field'></div>";
+						$retValue .= "<script>(function($) {
+								$('.facebook-$field').facebook_wall({
+									id: '".get_sub_field("id",$field)."',
+									access_token: '".get_sub_field("accesstoken",$field)."',
+									limit: 6
+								});
+						})(jQuery);
+						</script>";
+					elseif (get_row_layout() == "program"):
+						$retValue .= HuGy::get_program_icons();
+					elseif (get_row_layout() == "nyheter"):
+						$retValue .= HuGy::get_news();
+					elseif (get_row_layout() == "text"):
+						$retValue .= get_sub_field('text');
+					endif;
+					$retValue .= "</div>";
+					$retValue .= "</div>";
 			endwhile;
-			$retValue .= "</div>";
 			return $retValue;
 		}
 		
 		
 		function get_news() {
-			$retValue = "";
+			$retValue = "<h1>Nytt på skolan</h1>";
 			// The Query
 			$the_query = new WP_Query( array(
 											'post_type' => 'post',
@@ -271,15 +279,15 @@
 			if ( $the_query->have_posts() ) {
 				$retValue .= "<div class='items'>";
 				while ( $the_query->have_posts() ) {
-					$retValue .= "<div class='item'>";
+					$retValue .= "<div class='item  ic_container'>";
 					$the_query->the_post();
-					$retValue .= "<div class='item-img'>";
+					//$retValue .= "<div class='item-img'>";
 					$retValue .=  get_the_post_thumbnail(get_the_ID(), 'news'); 
-					$retValue .= "</div>";
-					$retValue .= "<div class='item-content'>";
-					$retValue .= "<h2>" . get_the_title() . "</h2>";
-					$retValue .= get_the_content();
-					$retValue .= "</div>";
+					//$retValue .= "</div>";
+					$retValue .= "<div class='item-content  ic_caption'>";
+					$retValue .= "<a href='" . get_permalink() . "'><h2>" . get_the_title() . "</h2>";
+					$retValue .= get_the_excerpt();
+					$retValue .= "</a></div>";
 					$retValue .= "</div>";
 				}
 				$retValue .= "</div>";
