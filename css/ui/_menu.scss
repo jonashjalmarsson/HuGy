@@ -5,7 +5,7 @@
 .pre-footer,
 .main-menu {
 	@extend .one-whole;
-	@extend .purple;
+	@extend .black;
 }
 .main-menu .main-menu-wrapper {
 	@extend .hidden;
@@ -57,6 +57,6 @@
 	}
 	.current_page_item > a {
 		@extend .white-background;
-		@extend .purple-text;
+		@extend .black-text;
 	}
 }

@@ -10,8 +10,7 @@
 }
 .top-wrapper {
 
-	@extend .blue-background;
-	opacity: 0.9;
+	@extend .green-80-background;
 	//background-image: url("../images/slide-layer.png");
 	//background-repeat: repeat;
 
@@ -59,7 +58,6 @@
 	}
 }
 .top-navigation-wrapper {
-	opacity: 0.9;
 	&.fixed {
 		position: fixed;
 		top: 0px;
@@ -67,13 +65,12 @@
 		width: 100%;
 		z-index: 100;
 	}
-	@extend .darkgray;
+	@extend .black-50;
 	.top-navigation {
 		@extend .max-width--center;
 
 		.top-menu-button.selected {
-			@extend .purple;
-			border-radius: 4px 4px 0 0;
+			@extend .black;
 			.menu-icon {
 				@extend .selected-menu-icon;
 			}

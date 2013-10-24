@@ -3068,31 +3068,141 @@ label,
   }
 }
 /* endif */
-.black, .pre-footer, .pre-footer-program {
-  background-color: rgba(0, 0, 0, 0.8);
+.black, .pre-footer, .pre-footer-program, .top-navigation-wrapper .top-navigation .top-menu-button.selected,
+.main-menu {
+  background-color: black;
   color: white;
 }
-.black a, .pre-footer a, .pre-footer-program a {
+.black a, .pre-footer a, .pre-footer-program a, .top-navigation-wrapper .top-navigation .top-menu-button.selected a,
+.main-menu a {
   color: white;
 }
 
 .black-background {
+  background-color: black;
+}
+
+.black-text, .main-menu-wrapper .current_page_item > a {
+  color: black;
+}
+.black-text a, .main-menu-wrapper .current_page_item > a a {
+  color: black;
+}
+
+.black-10 {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+}
+.black-10 a {
+  color: white;
+}
+
+.black-10-background {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.black-20 {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+}
+.black-20 a {
+  color: white;
+}
+
+.black-20-background {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.black-30 {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+.black-30 a {
+  color: white;
+}
+
+.black-30-background {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.black-40 {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+.black-40 a {
+  color: white;
+}
+
+.black-40-background {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.black-50, .top-navigation-wrapper {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+.black-50 a, .top-navigation-wrapper a {
+  color: white;
+}
+
+.black-50-background {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.black-60 {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+.black-60 a {
+  color: white;
+}
+
+.black-60-background, .module-wrapper.facebook-module-wrapper {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.black-70 {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+.black-70 a {
+  color: white;
+}
+
+.black-70-background {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.black-80 {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+.black-80 a {
+  color: white;
+}
+
+.black-80-background {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.black-text {
-  color: rgba(0, 0, 0, 0.8);
+.black-90 {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
 }
-.black-text a {
-  color: rgba(0, 0, 0, 0.8);
+.black-90 a {
+  color: white;
+}
+
+.black-90-background {
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .white, article.page .slideshow-wrapper {
   background-color: white;
-  color: rgba(0, 0, 0, 0.8);
+  color: black;
 }
 .white a, article.page .slideshow-wrapper a {
-  color: rgba(0, 0, 0, 0.8);
+  color: black;
 }
 
 .white-background, .main-menu-wrapper .current_page_item > a {
@@ -3104,6 +3214,114 @@ label,
 }
 .white-text a, .up-icon span a, .header-wrapper a, .teaser-1 a, .module-wrapper.nyheter-module-wrapper h1 a, .module-wrapper.facebook-module-wrapper .facebook-module h1 a, .ic_caption a a {
   color: white;
+}
+
+.white-10 {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: black;
+}
+.white-10 a {
+  color: black;
+}
+
+.white-10-background {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.white-20 {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: black;
+}
+.white-20 a {
+  color: black;
+}
+
+.white-20-background {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.white-30 {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: black;
+}
+.white-30 a {
+  color: black;
+}
+
+.white-30-background {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.white-40 {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: black;
+}
+.white-40 a {
+  color: black;
+}
+
+.white-40-background {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.white-50 {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+}
+.white-50 a {
+  color: black;
+}
+
+.white-50-background {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.white-60 {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: black;
+}
+.white-60 a {
+  color: black;
+}
+
+.white-60-background {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.white-70 {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+}
+.white-70 a {
+  color: black;
+}
+
+.white-70-background {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.white-80 {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+}
+.white-80 a {
+  color: black;
+}
+
+.white-80-background {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.white-90 {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+}
+.white-90 a {
+  color: black;
+}
+
+.white-90-background {
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .green, footer {
@@ -3127,15 +3345,123 @@ label,
   color: #14a585;
 }
 
-.blue {
-  background-color: #63c2c7;
-  color: rgba(0, 0, 0, 0.8);
+.green-10 {
+  background-color: rgba(20, 165, 133, 0.1);
+  color: white;
 }
-.blue a {
-  color: rgba(0, 0, 0, 0.8);
+.green-10 a {
+  color: white;
 }
 
-.blue-background, .top-wrapper, .module-wrapper.facebook-module-wrapper {
+.green-10-background {
+  background-color: rgba(20, 165, 133, 0.1);
+}
+
+.green-20 {
+  background-color: rgba(20, 165, 133, 0.2);
+  color: white;
+}
+.green-20 a {
+  color: white;
+}
+
+.green-20-background {
+  background-color: rgba(20, 165, 133, 0.2);
+}
+
+.green-30 {
+  background-color: rgba(20, 165, 133, 0.3);
+  color: white;
+}
+.green-30 a {
+  color: white;
+}
+
+.green-30-background {
+  background-color: rgba(20, 165, 133, 0.3);
+}
+
+.green-40 {
+  background-color: rgba(20, 165, 133, 0.4);
+  color: white;
+}
+.green-40 a {
+  color: white;
+}
+
+.green-40-background {
+  background-color: rgba(20, 165, 133, 0.4);
+}
+
+.green-50 {
+  background-color: rgba(20, 165, 133, 0.5);
+  color: white;
+}
+.green-50 a {
+  color: white;
+}
+
+.green-50-background {
+  background-color: rgba(20, 165, 133, 0.5);
+}
+
+.green-60 {
+  background-color: rgba(20, 165, 133, 0.6);
+  color: white;
+}
+.green-60 a {
+  color: white;
+}
+
+.green-60-background {
+  background-color: rgba(20, 165, 133, 0.6);
+}
+
+.green-70 {
+  background-color: rgba(20, 165, 133, 0.7);
+  color: white;
+}
+.green-70 a {
+  color: white;
+}
+
+.green-70-background {
+  background-color: rgba(20, 165, 133, 0.7);
+}
+
+.green-80 {
+  background-color: rgba(20, 165, 133, 0.8);
+  color: white;
+}
+.green-80 a {
+  color: white;
+}
+
+.green-80-background, .top-wrapper {
+  background-color: rgba(20, 165, 133, 0.8);
+}
+
+.green-90 {
+  background-color: rgba(20, 165, 133, 0.9);
+  color: white;
+}
+.green-90 a {
+  color: white;
+}
+
+.green-90-background {
+  background-color: rgba(20, 165, 133, 0.9);
+}
+
+.blue {
+  background-color: #63c2c7;
+  color: black;
+}
+.blue a {
+  color: black;
+}
+
+.blue-background {
   background-color: #63c2c7;
 }
 
@@ -3146,13 +3472,119 @@ label,
   color: #63c2c7;
 }
 
-.purple, .top-navigation-wrapper .top-navigation .top-menu-button.selected, .pre-footer,
-.main-menu {
+.blue-10 {
+  background-color: rgba(99, 194, 199, 0.1);
+  color: black;
+}
+.blue-10 a {
+  color: black;
+}
+
+.blue-10-background {
+  background-color: rgba(99, 194, 199, 0.1);
+}
+
+.blue-20 {
+  background-color: rgba(99, 194, 199, 0.2);
+  color: black;
+}
+.blue-20 a {
+  color: black;
+}
+
+.blue-20-background {
+  background-color: rgba(99, 194, 199, 0.2);
+}
+
+.blue-30 {
+  background-color: rgba(99, 194, 199, 0.3);
+  color: black;
+}
+.blue-30 a {
+  color: black;
+}
+
+.blue-30-background {
+  background-color: rgba(99, 194, 199, 0.3);
+}
+
+.blue-40 {
+  background-color: rgba(99, 194, 199, 0.4);
+  color: black;
+}
+.blue-40 a {
+  color: black;
+}
+
+.blue-40-background {
+  background-color: rgba(99, 194, 199, 0.4);
+}
+
+.blue-50 {
+  background-color: rgba(99, 194, 199, 0.5);
+  color: black;
+}
+.blue-50 a {
+  color: black;
+}
+
+.blue-50-background {
+  background-color: rgba(99, 194, 199, 0.5);
+}
+
+.blue-60 {
+  background-color: rgba(99, 194, 199, 0.6);
+  color: black;
+}
+.blue-60 a {
+  color: black;
+}
+
+.blue-60-background {
+  background-color: rgba(99, 194, 199, 0.6);
+}
+
+.blue-70 {
+  background-color: rgba(99, 194, 199, 0.7);
+  color: black;
+}
+.blue-70 a {
+  color: black;
+}
+
+.blue-70-background {
+  background-color: rgba(99, 194, 199, 0.7);
+}
+
+.blue-80 {
+  background-color: rgba(99, 194, 199, 0.8);
+  color: black;
+}
+.blue-80 a {
+  color: black;
+}
+
+.blue-80-background {
+  background-color: rgba(99, 194, 199, 0.8);
+}
+
+.blue-90 {
+  background-color: rgba(99, 194, 199, 0.9);
+  color: black;
+}
+.blue-90 a {
+  color: black;
+}
+
+.blue-90-background {
+  background-color: rgba(99, 194, 199, 0.9);
+}
+
+.purple {
   background-color: #7c1473;
   color: white;
 }
-.purple a, .top-navigation-wrapper .top-navigation .top-menu-button.selected a, .pre-footer a,
-.main-menu a {
+.purple a {
   color: white;
 }
 
@@ -3160,19 +3592,127 @@ label,
   background-color: #7c1473;
 }
 
-.purple-text, .main-menu-wrapper .current_page_item > a {
+.purple-text {
   color: #7c1473;
 }
-.purple-text a, .main-menu-wrapper .current_page_item > a a {
+.purple-text a {
   color: #7c1473;
+}
+
+.purple-10 {
+  background-color: rgba(124, 20, 115, 0.1);
+  color: white;
+}
+.purple-10 a {
+  color: white;
+}
+
+.purple-10-background {
+  background-color: rgba(124, 20, 115, 0.1);
+}
+
+.purple-20 {
+  background-color: rgba(124, 20, 115, 0.2);
+  color: white;
+}
+.purple-20 a {
+  color: white;
+}
+
+.purple-20-background {
+  background-color: rgba(124, 20, 115, 0.2);
+}
+
+.purple-30 {
+  background-color: rgba(124, 20, 115, 0.3);
+  color: white;
+}
+.purple-30 a {
+  color: white;
+}
+
+.purple-30-background {
+  background-color: rgba(124, 20, 115, 0.3);
+}
+
+.purple-40 {
+  background-color: rgba(124, 20, 115, 0.4);
+  color: white;
+}
+.purple-40 a {
+  color: white;
+}
+
+.purple-40-background {
+  background-color: rgba(124, 20, 115, 0.4);
+}
+
+.purple-50 {
+  background-color: rgba(124, 20, 115, 0.5);
+  color: white;
+}
+.purple-50 a {
+  color: white;
+}
+
+.purple-50-background {
+  background-color: rgba(124, 20, 115, 0.5);
+}
+
+.purple-60 {
+  background-color: rgba(124, 20, 115, 0.6);
+  color: white;
+}
+.purple-60 a {
+  color: white;
+}
+
+.purple-60-background {
+  background-color: rgba(124, 20, 115, 0.6);
+}
+
+.purple-70 {
+  background-color: rgba(124, 20, 115, 0.7);
+  color: white;
+}
+.purple-70 a {
+  color: white;
+}
+
+.purple-70-background {
+  background-color: rgba(124, 20, 115, 0.7);
+}
+
+.purple-80 {
+  background-color: rgba(124, 20, 115, 0.8);
+  color: white;
+}
+.purple-80 a {
+  color: white;
+}
+
+.purple-80-background {
+  background-color: rgba(124, 20, 115, 0.8);
+}
+
+.purple-90 {
+  background-color: rgba(124, 20, 115, 0.9);
+  color: white;
+}
+.purple-90 a {
+  color: white;
+}
+
+.purple-90-background {
+  background-color: rgba(124, 20, 115, 0.9);
 }
 
 .yellow {
   background-color: #f6e528;
-  color: rgba(0, 0, 0, 0.8);
+  color: black;
 }
 .yellow a {
-  color: rgba(0, 0, 0, 0.8);
+  color: black;
 }
 
 .yellow-background {
@@ -3186,15 +3726,123 @@ label,
   color: #f6e528;
 }
 
-.orange {
-  background-color: #f18200;
-  color: rgba(0, 0, 0, 0.8);
+.yellow-10 {
+  background-color: rgba(246, 229, 40, 0.1);
+  color: black;
 }
-.orange a {
-  color: rgba(0, 0, 0, 0.8);
+.yellow-10 a {
+  color: black;
 }
 
-.orange-background, .module-wrapper.nyheter-module-wrapper {
+.yellow-10-background {
+  background-color: rgba(246, 229, 40, 0.1);
+}
+
+.yellow-20 {
+  background-color: rgba(246, 229, 40, 0.2);
+  color: black;
+}
+.yellow-20 a {
+  color: black;
+}
+
+.yellow-20-background {
+  background-color: rgba(246, 229, 40, 0.2);
+}
+
+.yellow-30 {
+  background-color: rgba(246, 229, 40, 0.3);
+  color: black;
+}
+.yellow-30 a {
+  color: black;
+}
+
+.yellow-30-background {
+  background-color: rgba(246, 229, 40, 0.3);
+}
+
+.yellow-40 {
+  background-color: rgba(246, 229, 40, 0.4);
+  color: black;
+}
+.yellow-40 a {
+  color: black;
+}
+
+.yellow-40-background {
+  background-color: rgba(246, 229, 40, 0.4);
+}
+
+.yellow-50 {
+  background-color: rgba(246, 229, 40, 0.5);
+  color: black;
+}
+.yellow-50 a {
+  color: black;
+}
+
+.yellow-50-background {
+  background-color: rgba(246, 229, 40, 0.5);
+}
+
+.yellow-60 {
+  background-color: rgba(246, 229, 40, 0.6);
+  color: black;
+}
+.yellow-60 a {
+  color: black;
+}
+
+.yellow-60-background {
+  background-color: rgba(246, 229, 40, 0.6);
+}
+
+.yellow-70 {
+  background-color: rgba(246, 229, 40, 0.7);
+  color: black;
+}
+.yellow-70 a {
+  color: black;
+}
+
+.yellow-70-background {
+  background-color: rgba(246, 229, 40, 0.7);
+}
+
+.yellow-80 {
+  background-color: rgba(246, 229, 40, 0.8);
+  color: black;
+}
+.yellow-80 a {
+  color: black;
+}
+
+.yellow-80-background {
+  background-color: rgba(246, 229, 40, 0.8);
+}
+
+.yellow-90 {
+  background-color: rgba(246, 229, 40, 0.9);
+  color: black;
+}
+.yellow-90 a {
+  color: black;
+}
+
+.yellow-90-background {
+  background-color: rgba(246, 229, 40, 0.9);
+}
+
+.orange {
+  background-color: #f18200;
+  color: black;
+}
+.orange a {
+  color: black;
+}
+
+.orange-background {
   background-color: #f18200;
 }
 
@@ -3203,6 +3851,114 @@ label,
 }
 .orange-text a {
   color: #f18200;
+}
+
+.orange-10 {
+  background-color: rgba(241, 130, 0, 0.1);
+  color: black;
+}
+.orange-10 a {
+  color: black;
+}
+
+.orange-10-background {
+  background-color: rgba(241, 130, 0, 0.1);
+}
+
+.orange-20 {
+  background-color: rgba(241, 130, 0, 0.2);
+  color: black;
+}
+.orange-20 a {
+  color: black;
+}
+
+.orange-20-background {
+  background-color: rgba(241, 130, 0, 0.2);
+}
+
+.orange-30 {
+  background-color: rgba(241, 130, 0, 0.3);
+  color: black;
+}
+.orange-30 a {
+  color: black;
+}
+
+.orange-30-background {
+  background-color: rgba(241, 130, 0, 0.3);
+}
+
+.orange-40 {
+  background-color: rgba(241, 130, 0, 0.4);
+  color: black;
+}
+.orange-40 a {
+  color: black;
+}
+
+.orange-40-background {
+  background-color: rgba(241, 130, 0, 0.4);
+}
+
+.orange-50 {
+  background-color: rgba(241, 130, 0, 0.5);
+  color: black;
+}
+.orange-50 a {
+  color: black;
+}
+
+.orange-50-background {
+  background-color: rgba(241, 130, 0, 0.5);
+}
+
+.orange-60 {
+  background-color: rgba(241, 130, 0, 0.6);
+  color: black;
+}
+.orange-60 a {
+  color: black;
+}
+
+.orange-60-background {
+  background-color: rgba(241, 130, 0, 0.6);
+}
+
+.orange-70 {
+  background-color: rgba(241, 130, 0, 0.7);
+  color: black;
+}
+.orange-70 a {
+  color: black;
+}
+
+.orange-70-background {
+  background-color: rgba(241, 130, 0, 0.7);
+}
+
+.orange-80 {
+  background-color: rgba(241, 130, 0, 0.8);
+  color: black;
+}
+.orange-80 a {
+  color: black;
+}
+
+.orange-80-background {
+  background-color: rgba(241, 130, 0, 0.8);
+}
+
+.orange-90 {
+  background-color: rgba(241, 130, 0, 0.9);
+  color: black;
+}
+.orange-90 a {
+  color: black;
+}
+
+.orange-90-background {
+  background-color: rgba(241, 130, 0, 0.9);
 }
 
 .red {
@@ -3224,61 +3980,112 @@ label,
   color: #d9050d;
 }
 
-.gray {
-  background-color: #c4c4c4;
-  color: rgba(0, 0, 0, 0.8);
-}
-.gray a {
-  color: rgba(0, 0, 0, 0.8);
-}
-
-.gray-background {
-  background-color: #c4c4c4;
-}
-
-.gray-text {
-  color: #c4c4c4;
-}
-.gray-text a {
-  color: #c4c4c4;
-}
-
-.lightgray {
-  background-color: #f4f4f4;
-  color: rgba(0, 0, 0, 0.8);
-}
-.lightgray a {
-  color: rgba(0, 0, 0, 0.8);
-}
-
-.lightgray-background {
-  background-color: #f4f4f4;
-}
-
-.lightgray-text {
-  color: #f4f4f4;
-}
-.lightgray-text a {
-  color: #f4f4f4;
-}
-
-.darkgray, .top-navigation-wrapper {
-  background-color: rgba(100, 100, 100, 0.8);
+.red-10 {
+  background-color: rgba(217, 5, 13, 0.1);
   color: white;
 }
-.darkgray a, .top-navigation-wrapper a {
+.red-10 a {
   color: white;
 }
 
-.darkgray-background {
-  background-color: rgba(100, 100, 100, 0.8);
+.red-10-background {
+  background-color: rgba(217, 5, 13, 0.1);
 }
 
-.darkgray-text {
-  color: rgba(100, 100, 100, 0.8);
+.red-20 {
+  background-color: rgba(217, 5, 13, 0.2);
+  color: white;
 }
-.darkgray-text a {
-  color: rgba(100, 100, 100, 0.8);
+.red-20 a {
+  color: white;
+}
+
+.red-20-background {
+  background-color: rgba(217, 5, 13, 0.2);
+}
+
+.red-30 {
+  background-color: rgba(217, 5, 13, 0.3);
+  color: white;
+}
+.red-30 a {
+  color: white;
+}
+
+.red-30-background {
+  background-color: rgba(217, 5, 13, 0.3);
+}
+
+.red-40 {
+  background-color: rgba(217, 5, 13, 0.4);
+  color: white;
+}
+.red-40 a {
+  color: white;
+}
+
+.red-40-background {
+  background-color: rgba(217, 5, 13, 0.4);
+}
+
+.red-50 {
+  background-color: rgba(217, 5, 13, 0.5);
+  color: white;
+}
+.red-50 a {
+  color: white;
+}
+
+.red-50-background {
+  background-color: rgba(217, 5, 13, 0.5);
+}
+
+.red-60 {
+  background-color: rgba(217, 5, 13, 0.6);
+  color: white;
+}
+.red-60 a {
+  color: white;
+}
+
+.red-60-background {
+  background-color: rgba(217, 5, 13, 0.6);
+}
+
+.red-70 {
+  background-color: rgba(217, 5, 13, 0.7);
+  color: white;
+}
+.red-70 a {
+  color: white;
+}
+
+.red-70-background {
+  background-color: rgba(217, 5, 13, 0.7);
+}
+
+.red-80 {
+  background-color: rgba(217, 5, 13, 0.8);
+  color: white;
+}
+.red-80 a {
+  color: white;
+}
+
+.red-80-background {
+  background-color: rgba(217, 5, 13, 0.8);
+}
+
+.red-90 {
+  background-color: rgba(217, 5, 13, 0.9);
+  color: white;
+}
+.red-90 a {
+  color: white;
+}
+
+.red-90-background {
+  background-color: rgba(217, 5, 13, 0.9);
 }
 
 .italic, h1,
@@ -3417,9 +4224,6 @@ article.page .slideshow-wrapper:after {
   z-index: 100;
 }
 
-.top-wrapper {
-  opacity: 0.9;
-}
 .top-wrapper .top .logo-space {
   display: inline-block;
 }
@@ -3440,18 +4244,12 @@ article.page .slideshow-wrapper:after {
   max-height: 24px;
 }
 
-.top-navigation-wrapper {
-  opacity: 0.9;
-}
 .top-navigation-wrapper.fixed {
   position: fixed;
   top: 0px;
   left: 0px;
   width: 100%;
   z-index: 100;
-}
-.top-navigation-wrapper .top-navigation .top-menu-button.selected {
-  border-radius: 4px 4px 0 0;
 }
 .top-navigation-wrapper .top-navigation .top-menu-button,
 .top-navigation-wrapper .top-navigation .breadcrumb {

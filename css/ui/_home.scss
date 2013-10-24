@@ -68,13 +68,13 @@
 		*/
 	}
 	&.nyheter-module-wrapper {
-		@extend .orange-background;
+		//@extend .orange-background;
 		h1 {
 			@extend .white-text;
 		}
 	}
 	&.facebook-module-wrapper {
-		@extend .blue-background;
+		@extend .black-60-background;
 		.facebook-module {
 			@extend .small-max-width--center;
 			h1 {
