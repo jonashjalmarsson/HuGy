@@ -231,6 +231,9 @@
 		}
 		
 		
+		/*
+		 * Return module built part of page
+		 */
 		function get_modules($page_id = "") {
 			$retValue = "";
 			if ($page_id != "") {
@@ -245,15 +248,19 @@
 				$retValue .= "<div class='" . get_row_layout() . "-module-wrapper module-wrapper'>";
 					$retValue .= "<div class='" . get_row_layout() . "-module module'>";
 					if (get_row_layout() == "facebook"):
-						$retValue .= "<h1>Vad händer mer...</h1><div class='facebook-wall facebook-$field'></div>";
-						$retValue .= "<script>(function($) {
+						$retValue .= "<h1>Vad händer mer...</h1>";
+						/*$retValue .= "<script>(function($) {
 								$('.facebook-$field').facebook_wall({
 									id: '".get_sub_field("id",$field)."',
 									access_token: '".get_sub_field("accesstoken",$field)."',
 									limit: 6
 								});
 						})(jQuery);
-						</script>";
+						</script>";*/
+						$retValue .= fb_feed(get_sub_field("id",$field),array('container' => 'div',
+													'container_class' => 'items',
+													'container_id' => 'fb-feed',
+													'echo' => false));
 					elseif (get_row_layout() == "program"):
 						$retValue .= HuGy::get_program_icons();
 					elseif (get_row_layout() == "nyheter"):
@@ -268,6 +275,9 @@
 		}
 		
 		
+		/*
+		 * Return news, used in get_modules()
+		 */
 		function get_news() {
 			$retValue = "<h1>Nytt på skolan</h1>";
 			// The Query
@@ -296,6 +306,32 @@
 			}
 			/* Restore original Post Data */
 			wp_reset_postdata();
+			return $retValue;
+		}
+		
+		
+		
+		/*
+		 * Return teasers, used on home right now
+		 */
+		function get_teasers($page_id = "") {
+			$retValue = "";
+			if ($page_id != "") {
+				$field = $page_id;
+			}
+			else {
+				$field = 'option';
+			}
+			$i = 2;
+			while (the_flexible_field("hg_firstpage_teaser_link",$field)) :
+				$retValue .= "<div class='" . get_row_layout() . "-" . $i++ . " teaser' style='position: absolute; z-index: 500; " . get_sub_field("x_align",$field) . ":" . get_sub_field("x_pos",$field) . "px; " . get_sub_field("y_align",$field) . ":" . get_sub_field("y_pos",$field) . "px;'>";
+				if (get_row_layout() == "teaser"):
+					$retValue .= "<a href='" . get_sub_field("link",$field) . "'>";
+					$retValue .= "<img src='" . get_sub_field("image",$field) . "' data-hover='" . get_sub_field("hover_image",$field) . "' />";
+					$retValue .= "</a>";
+				endif;
+				$retValue .= "</div>";
+			endwhile;
 			return $retValue;
 		}
 	}
