@@ -61,6 +61,7 @@
 				'offset' => 0,
 				'post_type' => 'page',
 				'post_status' => 'publish',
+				'posts_per_page' => -1,
 				'meta_key' => '_wp_page_template',
 				'meta_value' => 'page-hugy-program.php'
 			); 
@@ -257,10 +258,14 @@
 								});
 						})(jQuery);
 						</script>";*/
-						$retValue .= fb_feed(get_sub_field("id",$field),array('container' => 'div',
+						if (function_exists("fb_feed")) :
+							$retValue .= fb_feed(get_sub_field("id",$field),array('container' => 'div',
 													'container_class' => 'items',
 													'container_id' => 'fb-feed',
 													'echo' => false));
+						else :
+							$retValue .= "<div class='hidden'>Du beh&ouml;ver installera <i>Facebook Feed Grabber</i> f&ouml;r att detta ska fungera.</div>";
+						endif;
 					elseif (get_row_layout() == "program"):
 						$retValue .= HuGy::get_program_icons();
 					elseif (get_row_layout() == "nyheter"):
