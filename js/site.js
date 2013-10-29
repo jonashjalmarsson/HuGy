@@ -1,18 +1,8 @@
 
 jQuery(document).ready(function($) {
 	var myslideshow;
-	/* 
-	 * hover effect on news
-	 */
-	$(".nyheter-module").find(".item").each(function() {
-		$(this).capslide({
-			caption_color	: 'white',
-			caption_bgcolor	: 'black',
-			overlay_bgcolor : 'black',
-			border			: '',
-			showcaption	    : false
-			});
-	});
+	
+	
 	/*var hugy_queue = array();
 	$.fn.hugy_queue_animation = function(effect, timeout, count, times) {
 		hugy_queue[] = array($(this), effect, timeout, count, times, 0);
@@ -186,8 +176,32 @@ jQuery(document).ready(function($) {
 	
 	
 	
+	
+	
+	
+	
+	
+	
 	$("body,html").removeClass("no-js"); // to get no-js css when needed
 
+	
+	if ($("body").hasClass("home"))
+	{
+		$(".top-navigation-wrapper").hide();
+	}
+	
+	/* 
+	 * hover effect on news
+	 */
+	$(".nyheter-module").find(".item").each(function() {
+		$(this).capslide({
+			caption_color	: 'white',
+			caption_bgcolor	: 'black',
+			overlay_bgcolor : 'black',
+			border			: '',
+			showcaption	    : false
+			});
+	});
 	
 	/*
 	$("header").prepend($("<div />").addClass("doit").html("do me").css("background","pink").css("position","absolute").css("z-index","1000").css("left","100px").css("top","300px"));
@@ -237,8 +251,6 @@ jQuery(document).ready(function($) {
 				if ($(this).width() > $(window).width()) 
 					$(this).css("left",-($(this).width() - $(window).width())/2);
 			});
-			//$(".slidesjs-container").height($(window).height());
-			//myslideshow.setSize($(window).width(), $(window).height());
 			
 			/*$(".slides").options({
 				width: $(window).width(),
@@ -434,7 +446,8 @@ jQuery(document).ready(function($) {
 		$(".slides").width(width).height(height);
 	}
 	
-	setSizes();
+	setTimeout(setSizes,500);
+
 
 });
 
