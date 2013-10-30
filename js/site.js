@@ -241,12 +241,16 @@ jQuery(document).ready(function($) {
 			$(".slidesjs-control").width($(window).width()).height($(window).height());
 			
 			winProp = $(window).width() / $(window).height();
+			
 			$(".slidesjs-slide").each(function() {
-				if ($(this).width() / $(this).height() > winProp) 
-					$(this).height($(window).height()).css("width","initial");
-				else
-					$(this).width($(window).width()).css("height","initial");
-					
+				console.log($(this).attr("src"));
+				imgProp = $(this).width() / $(this).height();
+				if (imgProp > winProp) {
+					$(this).width(imgProp * $(window).height()).css("max-width",imgProp * $(window).height());
+				}
+				else {
+					$(this).width($(window).width()).css("max-width",$(window).width());
+				}
 					
 				if ($(this).width() > $(window).width()) 
 					$(this).css("left",-($(this).width() - $(window).width())/2);
