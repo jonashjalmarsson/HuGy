@@ -95,15 +95,10 @@
 					if (($image_sizes[$size][0] == "9999" || $image_sizes[$size][0] == $image["sizes"][$size."-width"] )
 					 && ($image_sizes[$size][1] == "9999" || $image_sizes[$size][1] == $image["sizes"][$size."-height"])) {
 						$url = $image["sizes"][$size];
-					
-						//$retValue .= "<li>";
 						$retValue .= "<img src='" . $url ."' alt='" . $image['alt'] . "' />";
-						//$retValue .= "<p>" . $image['caption'] . "</p>";
-						//$retValue .= "</li>";
 					}
 				endforeach;
-				$retValue .= "</ul>";
-			$retValue .= "</div></div>";
+				$retValue .= "</div></div>";
 			endif;
 			return $retValue;
 		}
