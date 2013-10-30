@@ -309,10 +309,6 @@ jQuery(document).ready(function($) {
 			$("#wpadminbar").hide();
 			$(".top-navigation-wrapper").addClass("fixed").css("top",($(window).scrollTop() - $(window).height())).show();
 		}
-		else if ($("body").hasClass("home") && ($(window).scrollTop() - $(window).height()) >= 0) {
-			$("#wpadminbar").hide();
-			$(".top-navigation-wrapper").addClass("fixed").css("top","0").show();
-		}
 		else if ($(window).scrollTop() - $(".top").height() <= 0) {
 			$("#wpadminbar").hide();
 			$(".top-navigation-wrapper, .top-menu-button").removeClass("fixed");
