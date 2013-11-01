@@ -42,6 +42,99 @@ if(function_exists("register_field_group"))
 				'preview_size' => 'thumbnail',
 				'library' => 'all',
 			),
+			array (
+				'key' => 'field_52736561eae27',
+				'label' => 'Kontakter',
+				'name' => 'hg_kontakter',
+				'type' => 'relationship',
+				'return_format' => 'object',
+				'post_type' => array (
+					0 => 'hugy_kontakt',
+				),
+				'taxonomy' => array (
+					0 => 'all',
+				),
+				'filters' => array (
+					0 => 'search',
+				),
+				'result_elements' => array (
+					0 => 'featured_image',
+					1 => 'post_type',
+					2 => 'post_title',
+				),
+				'max' => '',
+			),
+			array (
+				'key' => 'field_52738166ce668',
+				'label' => 'Relaterade',
+				'name' => 'hg_relaterade',
+				'type' => 'flexible_content',
+				'layouts' => array (
+					array (
+						'label' => 'Dokument',
+						'name' => 'dokument',
+						'display' => 'row',
+						'sub_fields' => array (
+							array (
+								'key' => 'field_527381ca844b9',
+								'label' => 'Dokument',
+								'name' => 'dokument',
+								'type' => 'file',
+								'column_width' => '',
+								'save_format' => 'object',
+								'library' => 'all',
+							),
+						),
+					),
+					array (
+						'label' => 'Länk',
+						'name' => 'lank',
+						'display' => 'row',
+						'sub_fields' => array (
+							array (
+								'key' => 'field_527381fd844bb',
+								'label' => 'Namn',
+								'name' => 'namn',
+								'type' => 'text',
+								'column_width' => '',
+								'default_value' => '',
+								'placeholder' => '',
+								'prepend' => '',
+								'append' => '',
+								'formatting' => 'html',
+								'maxlength' => '',
+							),
+							array (
+								'key' => 'field_52738209844bc',
+								'label' => 'Url',
+								'name' => 'url',
+								'type' => 'text',
+								'column_width' => '',
+								'default_value' => '',
+								'placeholder' => '',
+								'prepend' => '',
+								'append' => '',
+								'formatting' => 'html',
+								'maxlength' => '',
+							),
+							array (
+								'key' => 'field_52738210844bd',
+								'label' => 'Beskrivning',
+								'name' => 'beskrivning',
+								'type' => 'text',
+								'column_width' => '',
+								'default_value' => '',
+								'placeholder' => '',
+								'prepend' => '',
+								'append' => '',
+								'formatting' => 'html',
+								'maxlength' => '',
+							),
+						),
+					),
+				),
+				'button_label' => 'Ny rad',
+			),
 		),
 		'location' => array (
 			array (
@@ -298,6 +391,95 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 	register_field_group(array (
+		'id' => 'acf_kontakt',
+		'title' => 'Kontakt',
+		'fields' => array (
+			array (
+				'key' => 'field_5273576313976',
+				'label' => 'Telefon',
+				'name' => 'telefon',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_5273577313977',
+				'label' => 'Mobiltelefon',
+				'name' => 'mobiltelefon',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_5273577b13978',
+				'label' => 'E-post',
+				'name' => 'e-post',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_5273578413979',
+				'label' => 'Adress',
+				'name' => 'adress',
+				'type' => 'textarea',
+				'default_value' => '',
+				'placeholder' => '',
+				'maxlength' => '',
+				'formatting' => 'br',
+			),
+			array (
+				'key' => 'field_527357aa1397a',
+				'label' => 'Ansvar',
+				'name' => 'ansvar',
+				'type' => 'textarea',
+				'default_value' => '',
+				'placeholder' => '',
+				'maxlength' => '',
+				'formatting' => 'br',
+			),
+			array (
+				'key' => 'field_5273a3a928622',
+				'label' => 'Bild',
+				'name' => 'bild',
+				'type' => 'image',
+				'save_format' => 'object',
+				'preview_size' => 'thumbnail',
+				'library' => 'all',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'hugy_kontakt',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
 		'id' => 'acf_moduler',
 		'title' => 'Moduler',
 		'fields' => array (
@@ -447,4 +629,5 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 }
+
 ?>

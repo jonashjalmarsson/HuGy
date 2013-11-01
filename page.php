@@ -18,6 +18,7 @@
 	<?php the_content(); ?>
 	<?php //comments_template( '', true ); ?>
 </div>
+<?php echo HuGy::get_contacts(get_the_ID()); ?>
 <?php endwhile; ?>
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>

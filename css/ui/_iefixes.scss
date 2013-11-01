@@ -1,0 +1,67 @@
+.ie7, .ie8 {
+	.max-width--center {
+		width: $max-width;
+	}
+	.small-max-width--center {
+		width: $small-max-width;
+	}
+
+	.top-menu-button {
+		float: left;
+		widht: 180px;
+	}
+	.breadcrumb {
+		float: left;
+	}
+	.module-wrapper .module .items .item {
+		float: left;
+		width: (($max-width - 24 * 3)/3);
+	}
+
+	.main-menu-wrapper {	
+		.menu {
+			& > li {
+				float: left;
+			}
+			&.cols-2 {
+				& > li {
+					width: ($max-width - 24*2)/ 2;
+				}
+			}
+			&.cols-3 {
+				& > li {
+					width: ($max-width - 24*3) / 3;
+				}
+			}
+			&.cols-4 {
+				& > li {
+					width: ($max-width - 24*4) / 4;
+				}
+			}
+			&.cols-5 {
+				& > li {
+					width: ($max-width - 24*5) / 5;
+				}
+			}
+		}
+	}
+	footer {
+		.footer-div {
+			/* if less than 4 widgets */
+			@for $i from 1 through 4 {
+				.widget:first-child:nth-last-child(#{$i}),
+				.widget:first-child:nth-last-child(#{$i}) ~ .widget {
+					width: $max-width/$i }
+			} 
+			/* if more than 4 widgets */
+			@for $i from 5 through 8 {
+				.widget:first-child:nth-last-child(#{$i}),
+				.widget:first-child:nth-last-child(#{$i}) ~ .widget {
+					width: $max-width*2/$i }
+			} 
+			.widget {
+				float:left;
+			}
+		}
+	}	
+}

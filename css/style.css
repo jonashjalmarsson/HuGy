@@ -813,7 +813,11 @@ textarea:focus {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf:after, .nav:after, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks:after, .program-icons:after, .module-wrapper.facebook-module-wrapper .fb-feed-item .item-content:after, .module-wrapper.facebook-module-wrapper .fb-feed-item blockquote:after {
+.cf:after, .nav:after, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks:after, .program-icons:after, .island:after,
+.islet:after,
+.contacts-wrapper:after,
+.contacts-wrapper .contact .contact-data:after,
+.related-wrapper:after, .module-wrapper.facebook-module-wrapper .fb-feed-item .item-content:after, .module-wrapper.facebook-module-wrapper .fb-feed-item blockquote:after {
   content: "";
   display: table;
   clear: both;
@@ -839,19 +843,52 @@ pre,
 .form-fields > li,
 .media,
 .island,
-.islet {
+.islet,
+.contacts-wrapper,
+.contacts-wrapper .contact .contact-data,
+.related-wrapper {
   margin-bottom: 24px;
   margin-bottom: 1.5rem;
 }
-.islet h1, .islet h2, .islet h3, .islet h4, .islet h5, .islet h6, .islet hgroup, .islet
-ul, .islet ol, .islet dl, .islet
-blockquote, .islet p, .islet address, .islet
+.islet h1, .contacts-wrapper h1, .contacts-wrapper .contact .contact-data h1, .related-wrapper h1, .islet h2, .contacts-wrapper h2, .contacts-wrapper .contact .contact-data h2, .related-wrapper h2, .islet h3, .contacts-wrapper h3, .contacts-wrapper .contact .contact-data h3, .related-wrapper h3, .islet h4, .contacts-wrapper h4, .contacts-wrapper .contact .contact-data h4, .related-wrapper h4, .islet h5, .contacts-wrapper h5, .contacts-wrapper .contact .contact-data h5, .related-wrapper h5, .islet h6, .contacts-wrapper h6, .contacts-wrapper .contact .contact-data h6, .related-wrapper h6, .islet hgroup, .contacts-wrapper hgroup, .contacts-wrapper .contact .contact-data hgroup, .related-wrapper hgroup, .islet
+ul, .contacts-wrapper
+ul, .contacts-wrapper .contact .contact-data
+ul, .related-wrapper
+ul, .islet ol, .contacts-wrapper ol, .contacts-wrapper .contact .contact-data ol, .related-wrapper ol, .islet dl, .contacts-wrapper dl, .contacts-wrapper .contact .contact-data dl, .related-wrapper dl, .islet
+blockquote, .contacts-wrapper
+blockquote, .contacts-wrapper .contact .contact-data
+blockquote, .related-wrapper
+blockquote, .islet p, .contacts-wrapper p, .contacts-wrapper .contact .contact-data p, .related-wrapper p, .islet address, .contacts-wrapper address, .contacts-wrapper .contact .contact-data address, .related-wrapper address, .islet
+table, .contacts-wrapper
+table, .contacts-wrapper .contact .contact-data
+table, .related-wrapper
 table, .islet
-fieldset, .islet figure, .islet
-pre, .islet .form-fields > li, .islet
+fieldset, .contacts-wrapper
+fieldset, .contacts-wrapper .contact .contact-data
+fieldset, .related-wrapper
+fieldset, .islet figure, .contacts-wrapper figure, .contacts-wrapper .contact .contact-data figure, .related-wrapper figure, .islet
+pre, .contacts-wrapper
+pre, .contacts-wrapper .contact .contact-data
+pre, .related-wrapper
+pre, .islet .form-fields > li, .contacts-wrapper .form-fields > li, .related-wrapper .form-fields > li, .islet
+.media, .contacts-wrapper
+.media, .contacts-wrapper .contact .contact-data
+.media, .related-wrapper
 .media, .islet
+.island, .contacts-wrapper
+.island, .contacts-wrapper .contact .contact-data
+.island, .related-wrapper
 .island, .islet
-.islet {
+.islet, .contacts-wrapper
+.islet, .contacts-wrapper .contact .contact-data
+.islet, .related-wrapper
+.islet, .islet
+.contacts-wrapper, .contacts-wrapper
+.contacts-wrapper, .related-wrapper
+.contacts-wrapper, .contacts-wrapper .contact .contact-data, .islet
+.related-wrapper, .contacts-wrapper
+.related-wrapper, .related-wrapper
+.related-wrapper {
   margin-bottom: 12px;
   margin-bottom: 0.75rem;
 }
@@ -917,7 +954,7 @@ h2, .beta {
   line-height: 1.6;
 }
 
-h3, .gamma, .teaser-1 {
+h3, .gamma {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 1;
@@ -1710,7 +1747,7 @@ label,
 /**
  * Grid wrapper
  */
-.grid, .module-wrapper .module .items, .main-menu-wrapper .menu {
+.grid, .module-wrapper .module .items, .main-menu-wrapper .menu, article .block-wrapper {
   margin-left: -24px;
   list-style: none;
   margin-bottom: 0;
@@ -1719,7 +1756,7 @@ label,
 /**
  * Very infrequently occuring grid wrappers as children of grid wrappers.
  */
-.grid > .grid, .module-wrapper .module .items > .grid, .main-menu-wrapper .menu > .grid, .module-wrapper .module .grid > .items, .module-wrapper .module .items > .items, .main-menu-wrapper .module-wrapper .module .menu > .items, .module-wrapper .module .main-menu-wrapper .menu > .items, .main-menu-wrapper .grid > .menu, .module-wrapper .module .main-menu-wrapper .items > .menu, .main-menu-wrapper .module-wrapper .module .items > .menu, .main-menu-wrapper .menu > .menu {
+.grid > .grid, .module-wrapper .module .items > .grid, .main-menu-wrapper .menu > .grid, article .block-wrapper > .grid, .module-wrapper .module .grid > .items, .module-wrapper .module .items > .items, .main-menu-wrapper .module-wrapper .module .menu > .items, .module-wrapper .module .main-menu-wrapper .menu > .items, article .module-wrapper .module .block-wrapper > .items, .module-wrapper .module article .block-wrapper > .items, .main-menu-wrapper .grid > .menu, .module-wrapper .module .main-menu-wrapper .items > .menu, .main-menu-wrapper .module-wrapper .module .items > .menu, .main-menu-wrapper .menu > .menu, article .main-menu-wrapper .block-wrapper > .menu, .main-menu-wrapper article .block-wrapper > .menu, article .grid > .block-wrapper, .module-wrapper .module article .items > .block-wrapper, article .module-wrapper .module .items > .block-wrapper, .main-menu-wrapper article .menu > .block-wrapper, article .main-menu-wrapper .menu > .block-wrapper, article .block-wrapper > .block-wrapper {
   margin-left: 0;
 }
 
@@ -1727,7 +1764,8 @@ label,
  * Grid
  */
 .grid__item, .module-wrapper .module .items .fb-feed-item,
-.module-wrapper .module .items .item, .main-menu-wrapper .menu > li {
+.module-wrapper .module .items .item, .main-menu-wrapper .menu > li, article .block-wrapper .related-wrapper,
+article .block-wrapper .contacts-wrapper {
   display: inline-block;
   width: 100%;
   padding-left: 24px;
@@ -1863,6 +1901,47 @@ label,
   display: none;
 }
 
+/*------------------------------------*\
+    $ISLAND
+\*------------------------------------*/
+/**
+ * Simple, boxed off content, as per: csswizardry.com/2011/10/the-island-object
+ * E.g.:
+ *
+   <div class=island>
+       I am boxed off.
+   </div>
+ *
+ * Demo: jsfiddle.net/inuitcss/u8pV3
+ *
+ */
+.island,
+.islet,
+.contacts-wrapper,
+.contacts-wrapper .contact .contact-data,
+.related-wrapper {
+  display: block;
+}
+
+.island {
+  padding: 24px;
+}
+
+.island > :last-child,
+.islet > :last-child,
+.contacts-wrapper > :last-child,
+.contacts-wrapper .contact .contact-data > :last-child,
+.related-wrapper > :last-child {
+  margin-bottom: 0;
+}
+
+/**
+ * Just like `.island`, only smaller.
+ */
+.islet, .contacts-wrapper, .contacts-wrapper .contact .contact-data, .related-wrapper {
+  padding: 12px;
+}
+
 /**
  * Style trumps; helper and brand classes
  */
@@ -1888,7 +1967,8 @@ label,
 /**
 * Halves
 */
-.one-half, .two-quarters, .three-sixths, .four-eighths, .five-tenths, .six-twelfths, .main-menu-wrapper .menu.cols-2 > li {
+.one-half, .two-quarters, .three-sixths, .four-eighths, .five-tenths, .six-twelfths, .main-menu-wrapper .menu.cols-2 > li, article .block-wrapper .related-wrapper,
+article .block-wrapper .contacts-wrapper {
   width: 50%;
 }
 
@@ -2925,7 +3005,7 @@ label,
   margin-right: -24px !important;
   margin-left: -24px !important;
 }
-.islet .full-bleed {
+.islet .full-bleed, .contacts-wrapper .full-bleed, .contacts-wrapper .contact .contact-data .full-bleed, .related-wrapper .full-bleed {
   margin-right: -12px !important;
   margin-left: -12px !important;
 }
@@ -3084,10 +3164,10 @@ label,
   background-color: black;
 }
 
-.black-text, .main-menu-wrapper .current_page_item > a {
+.black-text, .contacts-wrapper, .main-menu-wrapper .current_page_item > a, .related-wrapper {
   color: black;
 }
-.black-text a, .main-menu-wrapper .current_page_item > a a {
+.black-text a, .contacts-wrapper a, .main-menu-wrapper .current_page_item > a a, .related-wrapper a {
   color: black;
 }
 
@@ -3103,6 +3183,17 @@ label,
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+.ie7 .black-10, ie8 .black-10 {
+  background-color: black;
+  color: white;
+}
+.ie7 .black-10 a, ie8 .black-10 a {
+  color: white;
+}
+.ie7 .black-10-background, ie8 .black-10-background {
+  background-color: black;
+}
+
 .black-20 {
   background-color: rgba(0, 0, 0, 0.2);
   color: white;
@@ -3115,6 +3206,17 @@ label,
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+.ie7 .black-20, ie8 .black-20 {
+  background-color: black;
+  color: white;
+}
+.ie7 .black-20 a, ie8 .black-20 a {
+  color: white;
+}
+.ie7 .black-20-background, ie8 .black-20-background {
+  background-color: black;
+}
+
 .black-30 {
   background-color: rgba(0, 0, 0, 0.3);
   color: white;
@@ -3123,8 +3225,19 @@ label,
   color: white;
 }
 
-.black-30-background {
+.black-30-background, .related-wrapper {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.ie7 .black-30, ie8 .black-30 {
+  background-color: black;
+  color: white;
+}
+.ie7 .black-30 a, ie8 .black-30 a {
+  color: white;
+}
+.ie7 .black-30-background, .ie7 .related-wrapper, ie8 .black-30-background, ie8 .related-wrapper {
+  background-color: black;
 }
 
 .black-40, .home .top-wrapper .logo-space {
@@ -3139,6 +3252,17 @@ label,
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+.ie7 .black-40, .ie7 .home .top-wrapper .logo-space, .home .top-wrapper .ie7 .logo-space, ie8 .black-40, ie8 .home .top-wrapper .logo-space, .home .top-wrapper ie8 .logo-space {
+  background-color: black;
+  color: white;
+}
+.ie7 .black-40 a, .ie7 .home .top-wrapper .logo-space a, .home .top-wrapper .ie7 .logo-space a, ie8 .black-40 a, ie8 .home .top-wrapper .logo-space a, .home .top-wrapper ie8 .logo-space a {
+  color: white;
+}
+.ie7 .black-40-background, ie8 .black-40-background {
+  background-color: black;
+}
+
 .black-50 {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
@@ -3149,6 +3273,17 @@ label,
 
 .black-50-background {
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.ie7 .black-50, ie8 .black-50 {
+  background-color: black;
+  color: white;
+}
+.ie7 .black-50 a, ie8 .black-50 a {
+  color: white;
+}
+.ie7 .black-50-background, ie8 .black-50-background {
+  background-color: black;
 }
 
 .black-60 {
@@ -3163,6 +3298,17 @@ label,
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+.ie7 .black-60, ie8 .black-60 {
+  background-color: black;
+  color: white;
+}
+.ie7 .black-60 a, ie8 .black-60 a {
+  color: white;
+}
+.ie7 .black-60-background, .ie7 .module-wrapper.facebook-module-wrapper, ie8 .black-60-background, ie8 .module-wrapper.facebook-module-wrapper {
+  background-color: black;
+}
+
 .black-70, .top-navigation-wrapper {
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
@@ -3173,6 +3319,17 @@ label,
 
 .black-70-background {
   background-color: rgba(0, 0, 0, 0.7);
+}
+
+.ie7 .black-70, .ie7 .top-navigation-wrapper, ie8 .black-70, ie8 .top-navigation-wrapper {
+  background-color: black;
+  color: white;
+}
+.ie7 .black-70 a, .ie7 .top-navigation-wrapper a, ie8 .black-70 a, ie8 .top-navigation-wrapper a {
+  color: white;
+}
+.ie7 .black-70-background, ie8 .black-70-background {
+  background-color: black;
 }
 
 .black-80 {
@@ -3187,6 +3344,17 @@ label,
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+.ie7 .black-80, ie8 .black-80 {
+  background-color: black;
+  color: white;
+}
+.ie7 .black-80 a, ie8 .black-80 a {
+  color: white;
+}
+.ie7 .black-80-background, ie8 .black-80-background {
+  background-color: black;
+}
+
 .black-90 {
   background-color: rgba(0, 0, 0, 0.9);
   color: white;
@@ -3199,22 +3367,33 @@ label,
   background-color: rgba(0, 0, 0, 0.9);
 }
 
-.white, .module-wrapper.facebook-module-wrapper .fb-feed-item .item-content, article.page .slideshow-wrapper {
-  background-color: white;
-  color: black;
-}
-.white a, .module-wrapper.facebook-module-wrapper .fb-feed-item .item-content a, article.page .slideshow-wrapper a {
-  color: black;
-}
-
-.white-background, .main-menu-wrapper .current_page_item > a {
-  background-color: white;
-}
-
-.white-text, .up-icon span, .header-wrapper, .teaser-1, .module-wrapper.nyheter-module-wrapper h1, .module-wrapper.facebook-module-wrapper h1, .ic_caption a {
+.ie7 .black-90, ie8 .black-90 {
+  background-color: black;
   color: white;
 }
-.white-text a, .up-icon span a, .header-wrapper a, .teaser-1 a, .module-wrapper.nyheter-module-wrapper h1 a, .module-wrapper.facebook-module-wrapper h1 a, .ic_caption a a {
+.ie7 .black-90 a, ie8 .black-90 a {
+  color: white;
+}
+.ie7 .black-90-background, ie8 .black-90-background {
+  background-color: black;
+}
+
+.white, .contacts-wrapper .contact .contact-data, .module-wrapper.facebook-module-wrapper .fb-feed-item .item-content, article.page .slideshow-wrapper {
+  background-color: white;
+  color: black;
+}
+.white a, .contacts-wrapper .contact .contact-data a, .module-wrapper.facebook-module-wrapper .fb-feed-item .item-content a, article.page .slideshow-wrapper a {
+  color: black;
+}
+
+.white-background, .main-menu-wrapper .current_page_item > a, article {
+  background-color: white;
+}
+
+.white-text, .up-icon span, .header-wrapper, .module-wrapper.nyheter-module-wrapper h1, .module-wrapper.facebook-module-wrapper h1, .ic_caption a {
+  color: white;
+}
+.white-text a, .up-icon span a, .header-wrapper a, .module-wrapper.nyheter-module-wrapper h1 a, .module-wrapper.facebook-module-wrapper h1 a, .ic_caption a a {
   color: white;
 }
 
@@ -3230,6 +3409,17 @@ label,
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+.ie7 .white-10, ie8 .white-10 {
+  background-color: #020202;
+  color: black;
+}
+.ie7 .white-10 a, ie8 .white-10 a {
+  color: black;
+}
+.ie7 .white-10-background, ie8 .white-10-background {
+  background-color: #020202;
+}
+
 .white-20 {
   background-color: rgba(255, 255, 255, 0.2);
   color: black;
@@ -3240,6 +3430,17 @@ label,
 
 .white-20-background {
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+.ie7 .white-20, ie8 .white-20 {
+  background-color: #020202;
+  color: black;
+}
+.ie7 .white-20 a, ie8 .white-20 a {
+  color: black;
+}
+.ie7 .white-20-background, ie8 .white-20-background {
+  background-color: #020202;
 }
 
 .white-30 {
@@ -3254,6 +3455,17 @@ label,
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+.ie7 .white-30, ie8 .white-30 {
+  background-color: #020202;
+  color: black;
+}
+.ie7 .white-30 a, ie8 .white-30 a {
+  color: black;
+}
+.ie7 .white-30-background, ie8 .white-30-background {
+  background-color: #020202;
+}
+
 .white-40 {
   background-color: rgba(255, 255, 255, 0.4);
   color: black;
@@ -3264,6 +3476,17 @@ label,
 
 .white-40-background {
   background-color: rgba(255, 255, 255, 0.4);
+}
+
+.ie7 .white-40, ie8 .white-40 {
+  background-color: #020202;
+  color: black;
+}
+.ie7 .white-40 a, ie8 .white-40 a {
+  color: black;
+}
+.ie7 .white-40-background, ie8 .white-40-background {
+  background-color: #020202;
 }
 
 .white-50 {
@@ -3278,6 +3501,17 @@ label,
   background-color: rgba(255, 255, 255, 0.5);
 }
 
+.ie7 .white-50, ie8 .white-50 {
+  background-color: #020202;
+  color: black;
+}
+.ie7 .white-50 a, ie8 .white-50 a {
+  color: black;
+}
+.ie7 .white-50-background, ie8 .white-50-background {
+  background-color: #020202;
+}
+
 .white-60 {
   background-color: rgba(255, 255, 255, 0.6);
   color: black;
@@ -3288,6 +3522,17 @@ label,
 
 .white-60-background {
   background-color: rgba(255, 255, 255, 0.6);
+}
+
+.ie7 .white-60, ie8 .white-60 {
+  background-color: #020202;
+  color: black;
+}
+.ie7 .white-60 a, ie8 .white-60 a {
+  color: black;
+}
+.ie7 .white-60-background, ie8 .white-60-background {
+  background-color: #020202;
 }
 
 .white-70 {
@@ -3302,6 +3547,17 @@ label,
   background-color: rgba(255, 255, 255, 0.7);
 }
 
+.ie7 .white-70, ie8 .white-70 {
+  background-color: #020202;
+  color: black;
+}
+.ie7 .white-70 a, ie8 .white-70 a {
+  color: black;
+}
+.ie7 .white-70-background, ie8 .white-70-background {
+  background-color: #020202;
+}
+
 .white-80 {
   background-color: rgba(255, 255, 255, 0.8);
   color: black;
@@ -3314,6 +3570,17 @@ label,
   background-color: rgba(255, 255, 255, 0.8);
 }
 
+.ie7 .white-80, ie8 .white-80 {
+  background-color: #020202;
+  color: black;
+}
+.ie7 .white-80 a, ie8 .white-80 a {
+  color: black;
+}
+.ie7 .white-80-background, ie8 .white-80-background {
+  background-color: #020202;
+}
+
 .white-90 {
   background-color: rgba(255, 255, 255, 0.9);
   color: black;
@@ -3324,6 +3591,17 @@ label,
 
 .white-90-background {
   background-color: rgba(255, 255, 255, 0.9);
+}
+
+.ie7 .white-90, ie8 .white-90 {
+  background-color: #020202;
+  color: black;
+}
+.ie7 .white-90 a, ie8 .white-90 a {
+  color: black;
+}
+.ie7 .white-90-background, ie8 .white-90-background {
+  background-color: #020202;
 }
 
 .green, footer {
@@ -3359,6 +3637,17 @@ label,
   background-color: rgba(20, 165, 133, 0.1);
 }
 
+.ie7 .green-10, ie8 .green-10 {
+  background-color: #020202;
+  color: white;
+}
+.ie7 .green-10 a, ie8 .green-10 a {
+  color: white;
+}
+.ie7 .green-10-background, ie8 .green-10-background {
+  background-color: #020202;
+}
+
 .green-20 {
   background-color: rgba(20, 165, 133, 0.2);
   color: white;
@@ -3371,6 +3660,17 @@ label,
   background-color: rgba(20, 165, 133, 0.2);
 }
 
+.ie7 .green-20, ie8 .green-20 {
+  background-color: #020202;
+  color: white;
+}
+.ie7 .green-20 a, ie8 .green-20 a {
+  color: white;
+}
+.ie7 .green-20-background, ie8 .green-20-background {
+  background-color: #020202;
+}
+
 .green-30 {
   background-color: rgba(20, 165, 133, 0.3);
   color: white;
@@ -3379,8 +3679,19 @@ label,
   color: white;
 }
 
-.green-30-background {
+.green-30-background, .contacts-wrapper {
   background-color: rgba(20, 165, 133, 0.3);
+}
+
+.ie7 .green-30, ie8 .green-30 {
+  background-color: #020202;
+  color: white;
+}
+.ie7 .green-30 a, ie8 .green-30 a {
+  color: white;
+}
+.ie7 .green-30-background, .ie7 .contacts-wrapper, ie8 .green-30-background, ie8 .contacts-wrapper {
+  background-color: #020202;
 }
 
 .green-40 {
@@ -3395,6 +3706,17 @@ label,
   background-color: rgba(20, 165, 133, 0.4);
 }
 
+.ie7 .green-40, ie8 .green-40 {
+  background-color: #020202;
+  color: white;
+}
+.ie7 .green-40 a, ie8 .green-40 a {
+  color: white;
+}
+.ie7 .green-40-background, ie8 .green-40-background {
+  background-color: #020202;
+}
+
 .green-50 {
   background-color: rgba(20, 165, 133, 0.5);
   color: white;
@@ -3405,6 +3727,17 @@ label,
 
 .green-50-background {
   background-color: rgba(20, 165, 133, 0.5);
+}
+
+.ie7 .green-50, ie8 .green-50 {
+  background-color: #020202;
+  color: white;
+}
+.ie7 .green-50 a, ie8 .green-50 a {
+  color: white;
+}
+.ie7 .green-50-background, ie8 .green-50-background {
+  background-color: #020202;
 }
 
 .green-60 {
@@ -3419,6 +3752,17 @@ label,
   background-color: rgba(20, 165, 133, 0.6);
 }
 
+.ie7 .green-60, ie8 .green-60 {
+  background-color: #020202;
+  color: white;
+}
+.ie7 .green-60 a, ie8 .green-60 a {
+  color: white;
+}
+.ie7 .green-60-background, ie8 .green-60-background {
+  background-color: #020202;
+}
+
 .green-70 {
   background-color: rgba(20, 165, 133, 0.7);
   color: white;
@@ -3429,6 +3773,17 @@ label,
 
 .green-70-background {
   background-color: rgba(20, 165, 133, 0.7);
+}
+
+.ie7 .green-70, ie8 .green-70 {
+  background-color: #020202;
+  color: white;
+}
+.ie7 .green-70 a, ie8 .green-70 a {
+  color: white;
+}
+.ie7 .green-70-background, ie8 .green-70-background {
+  background-color: #020202;
 }
 
 .green-80 {
@@ -3443,6 +3798,17 @@ label,
   background-color: rgba(20, 165, 133, 0.8);
 }
 
+.ie7 .green-80, ie8 .green-80 {
+  background-color: #020202;
+  color: white;
+}
+.ie7 .green-80 a, ie8 .green-80 a {
+  color: white;
+}
+.ie7 .green-80-background, .ie7 .top-wrapper, ie8 .green-80-background, ie8 .top-wrapper {
+  background-color: #020202;
+}
+
 .green-90 {
   background-color: rgba(20, 165, 133, 0.9);
   color: white;
@@ -3453,6 +3819,17 @@ label,
 
 .green-90-background {
   background-color: rgba(20, 165, 133, 0.9);
+}
+
+.ie7 .green-90, ie8 .green-90 {
+  background-color: #020202;
+  color: white;
+}
+.ie7 .green-90 a, ie8 .green-90 a {
+  color: white;
+}
+.ie7 .green-90-background, ie8 .green-90-background {
+  background-color: #020202;
 }
 
 .blue {
@@ -3486,6 +3863,17 @@ label,
   background-color: rgba(99, 194, 199, 0.1);
 }
 
+.ie7 .blue-10, ie8 .blue-10 {
+  background-color: #020202;
+  color: black;
+}
+.ie7 .blue-10 a, ie8 .blue-10 a {
+  color: black;
+}
+.ie7 .blue-10-background, ie8 .blue-10-background {
+  background-color: #020202;
+}
+
 .blue-20 {
   background-color: rgba(99, 194, 199, 0.2);
   color: black;
@@ -3496,6 +3884,17 @@ label,
 
 .blue-20-background {
   background-color: rgba(99, 194, 199, 0.2);
+}
+
+.ie7 .blue-20, ie8 .blue-20 {
+  background-color: #020202;
+  color: black;
+}
+.ie7 .blue-20 a, ie8 .blue-20 a {
+  color: black;
+}
+.ie7 .blue-20-background, ie8 .blue-20-background {
+  background-color: #020202;
 }
 
 .blue-30 {
@@ -3510,6 +3909,17 @@ label,
   background-color: rgba(99, 194, 199, 0.3);
 }
 
+.ie7 .blue-30, ie8 .blue-30 {
+  background-color: #020202;
+  color: black;
+}
+.ie7 .blue-30 a, ie8 .blue-30 a {
+  color: black;
+}
+.ie7 .blue-30-background, ie8 .blue-30-background {
+  background-color: #020202;
+}
+
 .blue-40 {
   background-color: rgba(99, 194, 199, 0.4);
   color: black;
@@ -3520,6 +3930,17 @@ label,
 
 .blue-40-background {
   background-color: rgba(99, 194, 199, 0.4);
+}
+
+.ie7 .blue-40, ie8 .blue-40 {
+  background-color: #020202;
+  color: black;
+}
+.ie7 .blue-40 a, ie8 .blue-40 a {
+  color: black;
+}
+.ie7 .blue-40-background, ie8 .blue-40-background {
+  background-color: #020202;
 }
 
 .blue-50 {
@@ -3534,6 +3955,17 @@ label,
   background-color: rgba(99, 194, 199, 0.5);
 }
 
+.ie7 .blue-50, ie8 .blue-50 {
+  background-color: #020202;
+  color: black;
+}
+.ie7 .blue-50 a, ie8 .blue-50 a {
+  color: black;
+}
+.ie7 .blue-50-background, ie8 .blue-50-background {
+  background-color: #020202;
+}
+
 .blue-60 {
   background-color: rgba(99, 194, 199, 0.6);
   color: black;
@@ -3544,6 +3976,17 @@ label,
 
 .blue-60-background {
   background-color: rgba(99, 194, 199, 0.6);
+}
+
+.ie7 .blue-60, ie8 .blue-60 {
+  background-color: #020202;
+  color: black;
+}
+.ie7 .blue-60 a, ie8 .blue-60 a {
+  color: black;
+}
+.ie7 .blue-60-background, ie8 .blue-60-background {
+  background-color: #020202;
 }
 
 .blue-70 {
@@ -3558,6 +4001,17 @@ label,
   background-color: rgba(99, 194, 199, 0.7);
 }
 
+.ie7 .blue-70, ie8 .blue-70 {
+  background-color: #020202;
+  color: black;
+}
+.ie7 .blue-70 a, ie8 .blue-70 a {
+  color: black;
+}
+.ie7 .blue-70-background, ie8 .blue-70-background {
+  background-color: #020202;
+}
+
 .blue-80 {
   background-color: rgba(99, 194, 199, 0.8);
   color: black;
@@ -3570,6 +4024,17 @@ label,
   background-color: rgba(99, 194, 199, 0.8);
 }
 
+.ie7 .blue-80, ie8 .blue-80 {
+  background-color: #020202;
+  color: black;
+}
+.ie7 .blue-80 a, ie8 .blue-80 a {
+  color: black;
+}
+.ie7 .blue-80-background, ie8 .blue-80-background {
+  background-color: #020202;
+}
+
 .blue-90 {
   background-color: rgba(99, 194, 199, 0.9);
   color: black;
@@ -3580,6 +4045,17 @@ label,
 
 .blue-90-background {
   background-color: rgba(99, 194, 199, 0.9);
+}
+
+.ie7 .blue-90, ie8 .blue-90 {
+  background-color: #020202;
+  color: black;
+}
+.ie7 .blue-90 a, ie8 .blue-90 a {
+  color: black;
+}
+.ie7 .blue-90-background, ie8 .blue-90-background {
+  background-color: #020202;
 }
 
 .purple {
@@ -3613,6 +4089,17 @@ label,
   background-color: rgba(124, 20, 115, 0.1);
 }
 
+.ie7 .purple-10, ie8 .purple-10 {
+  background-color: #020202;
+  color: white;
+}
+.ie7 .purple-10 a, ie8 .purple-10 a {
+  color: white;
+}
+.ie7 .purple-10-background, ie8 .purple-10-background {
+  background-color: #020202;
+}
+
 .purple-20 {
   background-color: rgba(124, 20, 115, 0.2);
   color: white;
@@ -3623,6 +4110,17 @@ label,
 
 .purple-20-background {
   background-color: rgba(124, 20, 115, 0.2);
+}
+
+.ie7 .purple-20, ie8 .purple-20 {
+  background-color: #020202;
+  color: white;
+}
+.ie7 .purple-20 a, ie8 .purple-20 a {
+  color: white;
+}
+.ie7 .purple-20-background, ie8 .purple-20-background {
+  background-color: #020202;
 }
 
 .purple-30 {
@@ -3637,6 +4135,17 @@ label,
   background-color: rgba(124, 20, 115, 0.3);
 }
 
+.ie7 .purple-30, ie8 .purple-30 {
+  background-color: #020202;
+  color: white;
+}
+.ie7 .purple-30 a, ie8 .purple-30 a {
+  color: white;
+}
+.ie7 .purple-30-background, ie8 .purple-30-background {
+  background-color: #020202;
+}
+
 .purple-40 {
   background-color: rgba(124, 20, 115, 0.4);
   color: white;
@@ -3647,6 +4156,17 @@ label,
 
 .purple-40-background {
   background-color: rgba(124, 20, 115, 0.4);
+}
+
+.ie7 .purple-40, ie8 .purple-40 {
+  background-color: #020202;
+  color: white;
+}
+.ie7 .purple-40 a, ie8 .purple-40 a {
+  color: white;
+}
+.ie7 .purple-40-background, ie8 .purple-40-background {
+  background-color: #020202;
 }
 
 .purple-50 {
@@ -3661,6 +4181,17 @@ label,
   background-color: rgba(124, 20, 115, 0.5);
 }
 
+.ie7 .purple-50, ie8 .purple-50 {
+  background-color: #020202;
+  color: white;
+}
+.ie7 .purple-50 a, ie8 .purple-50 a {
+  color: white;
+}
+.ie7 .purple-50-background, ie8 .purple-50-background {
+  background-color: #020202;
+}
+
 .purple-60 {
   background-color: rgba(124, 20, 115, 0.6);
   color: white;
@@ -3671,6 +4202,17 @@ label,
 
 .purple-60-background {
   background-color: rgba(124, 20, 115, 0.6);
+}
+
+.ie7 .purple-60, ie8 .purple-60 {
+  background-color: #020202;
+  color: white;
+}
+.ie7 .purple-60 a, ie8 .purple-60 a {
+  color: white;
+}
+.ie7 .purple-60-background, ie8 .purple-60-background {
+  background-color: #020202;
 }
 
 .purple-70 {
@@ -3685,6 +4227,17 @@ label,
   background-color: rgba(124, 20, 115, 0.7);
 }
 
+.ie7 .purple-70, ie8 .purple-70 {
+  background-color: #020202;
+  color: white;
+}
+.ie7 .purple-70 a, ie8 .purple-70 a {
+  color: white;
+}
+.ie7 .purple-70-background, ie8 .purple-70-background {
+  background-color: #020202;
+}
+
 .purple-80 {
   background-color: rgba(124, 20, 115, 0.8);
   color: white;
@@ -3697,6 +4250,17 @@ label,
   background-color: rgba(124, 20, 115, 0.8);
 }
 
+.ie7 .purple-80, ie8 .purple-80 {
+  background-color: #020202;
+  color: white;
+}
+.ie7 .purple-80 a, ie8 .purple-80 a {
+  color: white;
+}
+.ie7 .purple-80-background, ie8 .purple-80-background {
+  background-color: #020202;
+}
+
 .purple-90 {
   background-color: rgba(124, 20, 115, 0.9);
   color: white;
@@ -3707,6 +4271,17 @@ label,
 
 .purple-90-background {
   background-color: rgba(124, 20, 115, 0.9);
+}
+
+.ie7 .purple-90, ie8 .purple-90 {
+  background-color: #020202;
+  color: white;
+}
+.ie7 .purple-90 a, ie8 .purple-90 a {
+  color: white;
+}
+.ie7 .purple-90-background, ie8 .purple-90-background {
+  background-color: #020202;
 }
 
 .yellow {
@@ -3740,6 +4315,17 @@ label,
   background-color: rgba(246, 229, 40, 0.1);
 }
 
+.ie7 .yellow-10, ie8 .yellow-10 {
+  background-color: #020202;
+  color: black;
+}
+.ie7 .yellow-10 a, ie8 .yellow-10 a {
+  color: black;
+}
+.ie7 .yellow-10-background, ie8 .yellow-10-background {
+  background-color: #020202;
+}
+
 .yellow-20 {
   background-color: rgba(246, 229, 40, 0.2);
   color: black;
@@ -3750,6 +4336,17 @@ label,
 
 .yellow-20-background {
   background-color: rgba(246, 229, 40, 0.2);
+}
+
+.ie7 .yellow-20, ie8 .yellow-20 {
+  background-color: #020202;
+  color: black;
+}
+.ie7 .yellow-20 a, ie8 .yellow-20 a {
+  color: black;
+}
+.ie7 .yellow-20-background, ie8 .yellow-20-background {
+  background-color: #020202;
 }
 
 .yellow-30 {
@@ -3764,6 +4361,17 @@ label,
   background-color: rgba(246, 229, 40, 0.3);
 }
 
+.ie7 .yellow-30, ie8 .yellow-30 {
+  background-color: #020202;
+  color: black;
+}
+.ie7 .yellow-30 a, ie8 .yellow-30 a {
+  color: black;
+}
+.ie7 .yellow-30-background, ie8 .yellow-30-background {
+  background-color: #020202;
+}
+
 .yellow-40 {
   background-color: rgba(246, 229, 40, 0.4);
   color: black;
@@ -3774,6 +4382,17 @@ label,
 
 .yellow-40-background {
   background-color: rgba(246, 229, 40, 0.4);
+}
+
+.ie7 .yellow-40, ie8 .yellow-40 {
+  background-color: #020202;
+  color: black;
+}
+.ie7 .yellow-40 a, ie8 .yellow-40 a {
+  color: black;
+}
+.ie7 .yellow-40-background, ie8 .yellow-40-background {
+  background-color: #020202;
 }
 
 .yellow-50 {
@@ -3788,6 +4407,17 @@ label,
   background-color: rgba(246, 229, 40, 0.5);
 }
 
+.ie7 .yellow-50, ie8 .yellow-50 {
+  background-color: #020202;
+  color: black;
+}
+.ie7 .yellow-50 a, ie8 .yellow-50 a {
+  color: black;
+}
+.ie7 .yellow-50-background, ie8 .yellow-50-background {
+  background-color: #020202;
+}
+
 .yellow-60 {
   background-color: rgba(246, 229, 40, 0.6);
   color: black;
@@ -3798,6 +4428,17 @@ label,
 
 .yellow-60-background {
   background-color: rgba(246, 229, 40, 0.6);
+}
+
+.ie7 .yellow-60, ie8 .yellow-60 {
+  background-color: #020202;
+  color: black;
+}
+.ie7 .yellow-60 a, ie8 .yellow-60 a {
+  color: black;
+}
+.ie7 .yellow-60-background, ie8 .yellow-60-background {
+  background-color: #020202;
 }
 
 .yellow-70 {
@@ -3812,6 +4453,17 @@ label,
   background-color: rgba(246, 229, 40, 0.7);
 }
 
+.ie7 .yellow-70, ie8 .yellow-70 {
+  background-color: #020202;
+  color: black;
+}
+.ie7 .yellow-70 a, ie8 .yellow-70 a {
+  color: black;
+}
+.ie7 .yellow-70-background, ie8 .yellow-70-background {
+  background-color: #020202;
+}
+
 .yellow-80 {
   background-color: rgba(246, 229, 40, 0.8);
   color: black;
@@ -3824,6 +4476,17 @@ label,
   background-color: rgba(246, 229, 40, 0.8);
 }
 
+.ie7 .yellow-80, ie8 .yellow-80 {
+  background-color: #020202;
+  color: black;
+}
+.ie7 .yellow-80 a, ie8 .yellow-80 a {
+  color: black;
+}
+.ie7 .yellow-80-background, ie8 .yellow-80-background {
+  background-color: #020202;
+}
+
 .yellow-90 {
   background-color: rgba(246, 229, 40, 0.9);
   color: black;
@@ -3834,6 +4497,17 @@ label,
 
 .yellow-90-background {
   background-color: rgba(246, 229, 40, 0.9);
+}
+
+.ie7 .yellow-90, ie8 .yellow-90 {
+  background-color: #020202;
+  color: black;
+}
+.ie7 .yellow-90 a, ie8 .yellow-90 a {
+  color: black;
+}
+.ie7 .yellow-90-background, ie8 .yellow-90-background {
+  background-color: #020202;
 }
 
 .orange {
@@ -3867,6 +4541,17 @@ label,
   background-color: rgba(241, 130, 0, 0.1);
 }
 
+.ie7 .orange-10, ie8 .orange-10 {
+  background-color: #020200;
+  color: black;
+}
+.ie7 .orange-10 a, ie8 .orange-10 a {
+  color: black;
+}
+.ie7 .orange-10-background, ie8 .orange-10-background {
+  background-color: #020200;
+}
+
 .orange-20 {
   background-color: rgba(241, 130, 0, 0.2);
   color: black;
@@ -3877,6 +4562,17 @@ label,
 
 .orange-20-background {
   background-color: rgba(241, 130, 0, 0.2);
+}
+
+.ie7 .orange-20, ie8 .orange-20 {
+  background-color: #020200;
+  color: black;
+}
+.ie7 .orange-20 a, ie8 .orange-20 a {
+  color: black;
+}
+.ie7 .orange-20-background, ie8 .orange-20-background {
+  background-color: #020200;
 }
 
 .orange-30 {
@@ -3891,6 +4587,17 @@ label,
   background-color: rgba(241, 130, 0, 0.3);
 }
 
+.ie7 .orange-30, ie8 .orange-30 {
+  background-color: #020200;
+  color: black;
+}
+.ie7 .orange-30 a, ie8 .orange-30 a {
+  color: black;
+}
+.ie7 .orange-30-background, ie8 .orange-30-background {
+  background-color: #020200;
+}
+
 .orange-40 {
   background-color: rgba(241, 130, 0, 0.4);
   color: black;
@@ -3901,6 +4608,17 @@ label,
 
 .orange-40-background {
   background-color: rgba(241, 130, 0, 0.4);
+}
+
+.ie7 .orange-40, ie8 .orange-40 {
+  background-color: #020200;
+  color: black;
+}
+.ie7 .orange-40 a, ie8 .orange-40 a {
+  color: black;
+}
+.ie7 .orange-40-background, ie8 .orange-40-background {
+  background-color: #020200;
 }
 
 .orange-50 {
@@ -3915,6 +4633,17 @@ label,
   background-color: rgba(241, 130, 0, 0.5);
 }
 
+.ie7 .orange-50, ie8 .orange-50 {
+  background-color: #020200;
+  color: black;
+}
+.ie7 .orange-50 a, ie8 .orange-50 a {
+  color: black;
+}
+.ie7 .orange-50-background, ie8 .orange-50-background {
+  background-color: #020200;
+}
+
 .orange-60 {
   background-color: rgba(241, 130, 0, 0.6);
   color: black;
@@ -3925,6 +4654,17 @@ label,
 
 .orange-60-background {
   background-color: rgba(241, 130, 0, 0.6);
+}
+
+.ie7 .orange-60, ie8 .orange-60 {
+  background-color: #020200;
+  color: black;
+}
+.ie7 .orange-60 a, ie8 .orange-60 a {
+  color: black;
+}
+.ie7 .orange-60-background, ie8 .orange-60-background {
+  background-color: #020200;
 }
 
 .orange-70 {
@@ -3939,6 +4679,17 @@ label,
   background-color: rgba(241, 130, 0, 0.7);
 }
 
+.ie7 .orange-70, ie8 .orange-70 {
+  background-color: #020200;
+  color: black;
+}
+.ie7 .orange-70 a, ie8 .orange-70 a {
+  color: black;
+}
+.ie7 .orange-70-background, ie8 .orange-70-background {
+  background-color: #020200;
+}
+
 .orange-80 {
   background-color: rgba(241, 130, 0, 0.8);
   color: black;
@@ -3951,6 +4702,17 @@ label,
   background-color: rgba(241, 130, 0, 0.8);
 }
 
+.ie7 .orange-80, ie8 .orange-80 {
+  background-color: #020200;
+  color: black;
+}
+.ie7 .orange-80 a, ie8 .orange-80 a {
+  color: black;
+}
+.ie7 .orange-80-background, ie8 .orange-80-background {
+  background-color: #020200;
+}
+
 .orange-90 {
   background-color: rgba(241, 130, 0, 0.9);
   color: black;
@@ -3961,6 +4723,17 @@ label,
 
 .orange-90-background {
   background-color: rgba(241, 130, 0, 0.9);
+}
+
+.ie7 .orange-90, ie8 .orange-90 {
+  background-color: #020200;
+  color: black;
+}
+.ie7 .orange-90 a, ie8 .orange-90 a {
+  color: black;
+}
+.ie7 .orange-90-background, ie8 .orange-90-background {
+  background-color: #020200;
 }
 
 .red {
@@ -3994,6 +4767,17 @@ label,
   background-color: rgba(217, 5, 13, 0.1);
 }
 
+.ie7 .red-10, ie8 .red-10 {
+  background-color: #020001;
+  color: white;
+}
+.ie7 .red-10 a, ie8 .red-10 a {
+  color: white;
+}
+.ie7 .red-10-background, ie8 .red-10-background {
+  background-color: #020001;
+}
+
 .red-20 {
   background-color: rgba(217, 5, 13, 0.2);
   color: white;
@@ -4004,6 +4788,17 @@ label,
 
 .red-20-background {
   background-color: rgba(217, 5, 13, 0.2);
+}
+
+.ie7 .red-20, ie8 .red-20 {
+  background-color: #020102;
+  color: white;
+}
+.ie7 .red-20 a, ie8 .red-20 a {
+  color: white;
+}
+.ie7 .red-20-background, ie8 .red-20-background {
+  background-color: #020102;
 }
 
 .red-30 {
@@ -4018,6 +4813,17 @@ label,
   background-color: rgba(217, 5, 13, 0.3);
 }
 
+.ie7 .red-30, ie8 .red-30 {
+  background-color: #020102;
+  color: white;
+}
+.ie7 .red-30 a, ie8 .red-30 a {
+  color: white;
+}
+.ie7 .red-30-background, ie8 .red-30-background {
+  background-color: #020102;
+}
+
 .red-40 {
   background-color: rgba(217, 5, 13, 0.4);
   color: white;
@@ -4028,6 +4834,17 @@ label,
 
 .red-40-background {
   background-color: rgba(217, 5, 13, 0.4);
+}
+
+.ie7 .red-40, ie8 .red-40 {
+  background-color: #020202;
+  color: white;
+}
+.ie7 .red-40 a, ie8 .red-40 a {
+  color: white;
+}
+.ie7 .red-40-background, ie8 .red-40-background {
+  background-color: #020202;
 }
 
 .red-50 {
@@ -4042,6 +4859,17 @@ label,
   background-color: rgba(217, 5, 13, 0.5);
 }
 
+.ie7 .red-50, ie8 .red-50 {
+  background-color: #020202;
+  color: white;
+}
+.ie7 .red-50 a, ie8 .red-50 a {
+  color: white;
+}
+.ie7 .red-50-background, ie8 .red-50-background {
+  background-color: #020202;
+}
+
 .red-60 {
   background-color: rgba(217, 5, 13, 0.6);
   color: white;
@@ -4052,6 +4880,17 @@ label,
 
 .red-60-background {
   background-color: rgba(217, 5, 13, 0.6);
+}
+
+.ie7 .red-60, ie8 .red-60 {
+  background-color: #020202;
+  color: white;
+}
+.ie7 .red-60 a, ie8 .red-60 a {
+  color: white;
+}
+.ie7 .red-60-background, ie8 .red-60-background {
+  background-color: #020202;
 }
 
 .red-70 {
@@ -4066,6 +4905,17 @@ label,
   background-color: rgba(217, 5, 13, 0.7);
 }
 
+.ie7 .red-70, ie8 .red-70 {
+  background-color: #020202;
+  color: white;
+}
+.ie7 .red-70 a, ie8 .red-70 a {
+  color: white;
+}
+.ie7 .red-70-background, ie8 .red-70-background {
+  background-color: #020202;
+}
+
 .red-80 {
   background-color: rgba(217, 5, 13, 0.8);
   color: white;
@@ -4078,6 +4928,17 @@ label,
   background-color: rgba(217, 5, 13, 0.8);
 }
 
+.ie7 .red-80, ie8 .red-80 {
+  background-color: #020202;
+  color: white;
+}
+.ie7 .red-80 a, ie8 .red-80 a {
+  color: white;
+}
+.ie7 .red-80-background, ie8 .red-80-background {
+  background-color: #020202;
+}
+
 .red-90 {
   background-color: rgba(217, 5, 13, 0.9);
   color: white;
@@ -4088,6 +4949,36 @@ label,
 
 .red-90-background {
   background-color: rgba(217, 5, 13, 0.9);
+}
+
+.ie7 .red-90, ie8 .red-90 {
+  background-color: #020202;
+  color: white;
+}
+.ie7 .red-90 a, ie8 .red-90 a {
+  color: white;
+}
+.ie7 .red-90-background, ie8 .red-90-background {
+  background-color: #020202;
+}
+
+.contacts-wrapper .contact {
+  margin-bottom: 12px;
+  position: relative;
+}
+.contacts-wrapper .contact .contact-data {
+  box-shadow: 2px 2px 10px #666;
+  display: none;
+  left: 40px;
+  position: absolute;
+  top: 10px;
+  z-index: 200;
+}
+.contacts-wrapper .contact span {
+  display: block;
+}
+.contacts-wrapper .contact:hover .contact-data {
+  display: block;
 }
 
 .italic, h1,
@@ -4267,13 +5158,13 @@ article.page .slideshow-wrapper:after {
 
 .teaser-1 {
   bottom: 1%;
-  cursor: pointer;
   left: 50%;
-  line-height: 1.3em;
+}
+
+.teaser {
+  cursor: pointer;
   opacity: 0.8;
-  padding: 35px 10px 0;
   position: absolute;
-  text-align: center;
   z-index: 100;
 }
 
@@ -4297,7 +5188,8 @@ article.page .slideshow-wrapper:after {
 
 .home .top-wrapper {
   background: transparent;
-  position: relative;
+  position: absolute;
+  z-index: 100;
 }
 .home .top-wrapper .logo-space {
   border-radius: 6px;
@@ -4306,6 +5198,7 @@ article.page .slideshow-wrapper:after {
   position: absolute;
   top: 36px;
   width: 300px;
+  z-index: 100;
 }
 .home .page {
   width: 100%;
@@ -4407,6 +5300,10 @@ article.page .slideshow-wrapper:after {
   vertical-align: text-bottom;
 }
 
+.ie7 .clip, .ie7 .clip_80x80, .ie7 .program-icon, .ie7 .clip_48x48, .ie7 .clip_40x40, .ie7 .quick-icon, .ie7 .clip_30x30, .ie7 .clip_24x24, .ie7 .menu-icon, .ie7 .selected-menu-icon, .ie7 .home-icon, .ie7 .clip_20x20, .ie7 .clip_16x16, .ie7 .slideshow-navigation, .ie7 .play-icon, .ie7 article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-play, article.page .slideshow-wrapper .slideshow .ie7 .slidesjs-navigation.slidesjs-play, .ie7 .pause-icon, .ie7 article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-stop, article.page .slideshow-wrapper .slideshow .ie7 .slidesjs-navigation.slidesjs-stop, .ie7 .dot-icon, .ie7 .active-dot-icon, .ie7 article.page .slideshow-wrapper .slideshow .slidesjs-pagination .slidesjs-pagination-item a, article.page .slideshow-wrapper .slideshow .slidesjs-pagination .slidesjs-pagination-item .ie7 a, .ie7 .clip_12x12, .ie7 .up-icon, .ie7 .teaser-1, ie8 .clip, ie8 .clip_80x80, ie8 .program-icon, ie8 .clip_48x48, ie8 .clip_40x40, ie8 .quick-icon, ie8 .clip_30x30, ie8 .clip_24x24, ie8 .menu-icon, ie8 .selected-menu-icon, ie8 .home-icon, ie8 .clip_20x20, ie8 .clip_16x16, ie8 .slideshow-navigation, ie8 .play-icon, ie8 article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-play, article.page .slideshow-wrapper .slideshow ie8 .slidesjs-navigation.slidesjs-play, ie8 .pause-icon, ie8 article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-stop, article.page .slideshow-wrapper .slideshow ie8 .slidesjs-navigation.slidesjs-stop, ie8 .dot-icon, ie8 .active-dot-icon, ie8 article.page .slideshow-wrapper .slideshow .slidesjs-pagination .slidesjs-pagination-item a, article.page .slideshow-wrapper .slideshow .slidesjs-pagination .slidesjs-pagination-item ie8 a, ie8 .clip_12x12, ie8 .up-icon, ie8 .teaser-1 {
+  background-image: url("../images/ikoner.png");
+}
+
 .clip_80x80, .program-icon {
   width: 80px;
   height: 80px;
@@ -4498,8 +5395,7 @@ article.page .slideshow-wrapper:after {
   background-image: url("../images/program-ikoner.svg");
 }
 
-#ie7 .program-icon,
-#ie8 .program-icon {
+.ie7 .program-icon, ie8 .program-icon {
   background-image: url("../images/program-ikoner.png");
 }
 
@@ -4507,8 +5403,7 @@ article.page .slideshow-wrapper:after {
   background-image: url("../images/quick-ikoner.svg");
 }
 
-#ie7 .quick-icon,
-#ie8 .quick-icon {
+.ie7 .quick-icon, ie8 .quick-icon {
   background-image: url("../images/quick-ikoner.png");
 }
 
@@ -4792,6 +5687,86 @@ article.page .slideshow-wrapper:after {
   background-position: -1520px -80px;
 }
 
+.ie7 .max-width--center, .ie7 footer .footer-div, footer .ie7 .footer-div, .ie7 .top-wrapper .top, .top-wrapper .ie7 .top, .ie7 .top-navigation-wrapper .top-navigation, .top-navigation-wrapper .ie7 .top-navigation, .ie7 article.page, .ie7 .module-wrapper .module, .module-wrapper .ie7 .module, .ie7 .main-menu-wrapper, .ie8 .max-width--center, .ie8 footer .footer-div, footer .ie8 .footer-div, .ie8 .top-wrapper .top, .top-wrapper .ie8 .top, .ie8 .top-navigation-wrapper .top-navigation, .top-navigation-wrapper .ie8 .top-navigation, .ie8 article.page, .ie8 .module-wrapper .module, .module-wrapper .ie8 .module, .ie8 .main-menu-wrapper {
+  width: 1100px;
+}
+.ie7 .small-max-width--center, .ie7 article.page .content-wrapper, article.page .ie7 .content-wrapper, .ie8 .small-max-width--center, .ie8 article.page .content-wrapper, article.page .ie8 .content-wrapper {
+  width: 700px;
+}
+.ie7 .top-menu-button, .ie8 .top-menu-button {
+  float: left;
+  widht: 180px;
+}
+.ie7 .breadcrumb, .ie8 .breadcrumb {
+  float: left;
+}
+.ie7 .module-wrapper .module .items .item, .ie8 .module-wrapper .module .items .item {
+  float: left;
+  width: 342.66667px;
+}
+.ie7 .main-menu-wrapper .menu > li, .ie8 .main-menu-wrapper .menu > li {
+  float: left;
+}
+.ie7 .main-menu-wrapper .menu.cols-2 > li, .ie8 .main-menu-wrapper .menu.cols-2 > li {
+  width: 526px;
+}
+.ie7 .main-menu-wrapper .menu.cols-3 > li, .ie8 .main-menu-wrapper .menu.cols-3 > li {
+  width: 342.66667px;
+}
+.ie7 .main-menu-wrapper .menu.cols-4 > li, .ie8 .main-menu-wrapper .menu.cols-4 > li {
+  width: 251px;
+}
+.ie7 .main-menu-wrapper .menu.cols-5 > li, .ie8 .main-menu-wrapper .menu.cols-5 > li {
+  width: 196px;
+}
+.ie7 footer .footer-div, .ie8 footer .footer-div {
+  /* if less than 4 widgets */
+  /* if more than 4 widgets */
+}
+.ie7 footer .footer-div .widget:first-child:nth-last-child(1),
+.ie7 footer .footer-div .widget:first-child:nth-last-child(1) ~ .widget, .ie8 footer .footer-div .widget:first-child:nth-last-child(1),
+.ie8 footer .footer-div .widget:first-child:nth-last-child(1) ~ .widget {
+  width: 1100px;
+}
+.ie7 footer .footer-div .widget:first-child:nth-last-child(2),
+.ie7 footer .footer-div .widget:first-child:nth-last-child(2) ~ .widget, .ie8 footer .footer-div .widget:first-child:nth-last-child(2),
+.ie8 footer .footer-div .widget:first-child:nth-last-child(2) ~ .widget {
+  width: 550px;
+}
+.ie7 footer .footer-div .widget:first-child:nth-last-child(3),
+.ie7 footer .footer-div .widget:first-child:nth-last-child(3) ~ .widget, .ie8 footer .footer-div .widget:first-child:nth-last-child(3),
+.ie8 footer .footer-div .widget:first-child:nth-last-child(3) ~ .widget {
+  width: 366.66667px;
+}
+.ie7 footer .footer-div .widget:first-child:nth-last-child(4),
+.ie7 footer .footer-div .widget:first-child:nth-last-child(4) ~ .widget, .ie8 footer .footer-div .widget:first-child:nth-last-child(4),
+.ie8 footer .footer-div .widget:first-child:nth-last-child(4) ~ .widget {
+  width: 275px;
+}
+.ie7 footer .footer-div .widget:first-child:nth-last-child(5),
+.ie7 footer .footer-div .widget:first-child:nth-last-child(5) ~ .widget, .ie8 footer .footer-div .widget:first-child:nth-last-child(5),
+.ie8 footer .footer-div .widget:first-child:nth-last-child(5) ~ .widget {
+  width: 440px;
+}
+.ie7 footer .footer-div .widget:first-child:nth-last-child(6),
+.ie7 footer .footer-div .widget:first-child:nth-last-child(6) ~ .widget, .ie8 footer .footer-div .widget:first-child:nth-last-child(6),
+.ie8 footer .footer-div .widget:first-child:nth-last-child(6) ~ .widget {
+  width: 366.66667px;
+}
+.ie7 footer .footer-div .widget:first-child:nth-last-child(7),
+.ie7 footer .footer-div .widget:first-child:nth-last-child(7) ~ .widget, .ie8 footer .footer-div .widget:first-child:nth-last-child(7),
+.ie8 footer .footer-div .widget:first-child:nth-last-child(7) ~ .widget {
+  width: 314.28571px;
+}
+.ie7 footer .footer-div .widget:first-child:nth-last-child(8),
+.ie7 footer .footer-div .widget:first-child:nth-last-child(8) ~ .widget, .ie8 footer .footer-div .widget:first-child:nth-last-child(8),
+.ie8 footer .footer-div .widget:first-child:nth-last-child(8) ~ .widget {
+  width: 275px;
+}
+.ie7 footer .footer-div .widget, .ie8 footer .footer-div .widget {
+  float: left;
+}
+
 .main-menu-wrapper ul {
   margin-left: 24px;
   list-style-type: none;
@@ -4804,7 +5779,13 @@ article.page .slideshow-wrapper:after {
 }
 
 .page-wrapper {
-  padding-top: 130px;
+  padding-top: 110px;
+  background: url("../images/background.png") repeat;
+  padding-bottom: 30px;
+}
+
+article {
+  box-shadow: 0px 0px 15px #999;
 }
 
 article.page .slideshow-wrapper {
@@ -4841,4 +5822,11 @@ article.page .slideshow-wrapper .slideshow .slidesjs-pagination {
 }
 .program-icons img {
   max-height: 40px;
+}
+
+.related-wrapper {
+  margin-bottom: 12px;
+}
+.related-wrapper a {
+  display: block;
 }

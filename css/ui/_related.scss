@@ -1,0 +1,10 @@
+
+.related-wrapper {
+	@extend .black-text;
+	@extend .black-30-background;
+	@extend .islet;
+	margin-bottom: 12px;
+	a {
+		display: block;
+	}
+}

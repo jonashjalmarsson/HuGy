@@ -324,7 +324,7 @@
 			}
 			$i = 2;
 			while (the_flexible_field("hg_firstpage_teaser_link",$field)) :
-				$retValue .= "<div class='" . get_row_layout() . "-" . $i++ . " teaser' style='position: absolute; z-index: 500; " . get_sub_field("x_align",$field) . ":" . get_sub_field("x_pos",$field) . "px; " . get_sub_field("y_align",$field) . ":" . get_sub_field("y_pos",$field) . "px;'>";
+				$retValue .= "<div class='" . get_row_layout() . "-" . $i++ . " teaser' style='" . get_sub_field("x_align",$field) . ":" . get_sub_field("x_pos",$field) . "px; " . get_sub_field("y_align",$field) . ":" . get_sub_field("y_pos",$field) . "px;'>";
 				if (get_row_layout() == "teaser"):
 					$retValue .= "<a href='" . get_sub_field("link",$field) . "'>";
 					$retValue .= "<img src='" . get_sub_field("image",$field) . "' data-hover='" . get_sub_field("hover_image",$field) . "' />";
@@ -332,6 +332,93 @@
 				endif;
 				$retValue .= "</div>";
 			endwhile;
+			return $retValue;
+		}
+		
+		
+		
+		/*
+		 * Return related
+		 */
+		function get_related($page_id = "") {
+			$retValue = "";
+			if ($page_id != "") {
+				$field = $page_id;
+			}
+			else {
+				$field = 'option';
+			}
+			$i = 0;
+			//if (has_sub_field("hg_relaterade",$field)) :
+			$retValue .= "<div class='related-wrapper'>";
+			while (the_flexible_field("hg_relaterade",$field)) :
+				//$retValue .= "<div class='" . get_row_layout() . "-" . $i++ . " relaterad'>";
+				if (get_row_layout() == "dokument"):
+					$doc = get_sub_field("dokument",$field);
+					
+					$retValue .= "<a href='" . $doc["url"]. "' title='" . $doc["description"] . "' >";
+					$retValue .= $doc["title"];
+					$retValue .= "</a>";
+				elseif (get_row_layout() == "lank"):
+					$retValue .= "<a href='" . get_sub_field("url",$field) . "' title='" . get_sub_field("beskrivning",$field) . "'>";
+					$retValue .= get_sub_field("namn",$field);
+					$retValue .= "</a>";					
+				endif;
+				//$retValue .= "</div>";
+			endwhile;
+			$retValue .= "</div>";
+			//endif;
+			return $retValue;
+		}
+		
+		
+		
+		/*
+		 * Return contacts
+		 */
+		function get_contacts($page_id = "") {
+			$retValue = "";
+			if ($page_id != "") {
+				$field = $page_id;
+			}
+			else {
+				$field = 'option';
+			}
+			$contacts = get_field('hg_kontakter',$page_id);
+			if ($contacts != "") :
+				$retValue .= "<div class='contacts-wrapper'>";
+				foreach ($contacts as $contact) :
+					$retValue .= "<div class='contact contact-".$contact->ID."'>";
+					if (get_the_post_thumbnail($contact->ID) != "")
+						$retValue .= "<img src='" . get_the_post_thumbnail($contact->ID) . "' />";
+
+					$retValue .= "<a href='" . get_post_permalink($contact->ID) . "'>";
+					$retValue .= "<span class='title'>" . get_the_title($contact->ID) . "</span>";
+					$retValue .= "</a>";
+					if (get_field("ansvar",$contact->ID))
+						$retValue .= "<span class='ansvar'>" . get_field("ansvar",$contact->ID) . "</span>";
+					$retValue .= "<div class='contact-data'>";
+
+					$telefon = get_field("telefon",$contact->ID);
+					if ($telefon)
+						$retValue .= "<span class='telefon'>TELEFON: <a href='tel:$telefon'>$telefon</a></span>";
+
+					$mobiltelefon = get_field("mobiltelefon",$contact->ID);	
+					if ($mobiltelefon)
+						$retValue .= "<span class='mobiltelefon'>MOBIL: <a href='tel:$mobiltelefon'>$mobiltelefon</a></span>";
+					
+					$epost = get_field("e-post",$contact->ID);	
+					if ($epost)
+						$retValue .= "<span class='epost'>E-POST: <a href='mailto:$epost'>$epost</a></span>";
+					
+					if (get_field("adress",$contact->ID))
+						$retValue .= "<span class='adress'>" . get_field("adress",$contact->ID) . "</span>";
+					
+					$retValue .= "</div>";
+					$retValue .= "</div>";
+				endforeach;
+				$retValue .= "</div>";
+			endif;
 			return $retValue;
 		}
 	}

@@ -1,14 +1,11 @@
 .teaser-1 {
-	@extend .white-text;
-	@extend .gamma;
 	bottom: 1%;
-	cursor: pointer;
 	left: 50%;
-	line-height: 1.3em;
+}
+.teaser {
+	cursor: pointer;
 	opacity: 0.8;
-	padding: 35px 10px 0;
 	position: absolute;
-	text-align: center;
 	z-index: 100;
 }
 .firstpage.slideshow {
@@ -36,7 +33,8 @@
 .home {
 	.top-wrapper {
 		background: transparent;
-		position: relative;
+		position: absolute;
+		z-index: 100;
 		.logo-space {
 			border-radius: 6px;
 			left: 36px;
@@ -44,6 +42,7 @@
 			position: absolute;
 			top: 36px;
 			width: 300px;
+			z-index: 100;
 			@extend .black-40;
 		}
 	}

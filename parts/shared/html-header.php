@@ -13,26 +13,26 @@
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico"/>
 		<?php wp_head(); ?>
 		<style><?php
-		if (get_option("hg_program_icons_svg","option")) { ?>
+		if (get_field("hg_program_icons_svg","option") != "") { ?>
 			.program-icon {
-				background-image: <?php echo get_option("hg_program_icons_svg","option"); ?>
+				background-image: <?php echo get_field("hg_program_icons_svg","option"); ?>
 			}
 		<?php }
-		if (get_option("hg_program_icons_png","option")) { ?>
+		if (get_field("hg_program_icons_png","option") != "") { ?>
 			#ie7 .program-icon,
 			#ie8 .program-icon {
-				background-image: <?php echo get_option("hg_program_icons_svg","option"); ?>
+				background-image: <?php echo get_field("hg_program_icons_svg","option"); ?>
 			}
 		<?php }
-		if (get_option("hg_quick_icons_svg","option")) { ?>
+		if (get_field("hg_quick_icons_svg","option") != "") { ?>
 			.quick-icon {
-				background-image: <?php echo get_option("hg_quick_icons_svg","option"); ?>
+				background-image: <?php echo get_field("hg_quick_icons_svg","option"); ?>
 			}
 		<?php }
-		if (get_option("hg_quick_icons_png","option")) { ?>
+		if (get_field("hg_quick_icons_png","option") != "") { ?>
 			#ie7 .quick-icon,
 			#ie8 .quick-icon {
-				background-image: <?php echo get_option("hg_quick_icons_svg","option"); ?>
+				background-image: <?php echo get_field("hg_quick_icons_svg","option"); ?>
 			}
 		<?php } ?>
 		</style>

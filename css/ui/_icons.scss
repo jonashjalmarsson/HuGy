@@ -4,6 +4,12 @@
 	background-repeat: no-repeat;
 	vertical-align: text-bottom;
 }
+.ie7, ie8 {
+	.clip {
+		background-image: url("../images/ikoner.png");
+	}
+}
+
 $clip-sizes: 80 48 40 30 24 20 16 12;
 
 @each $size in $clip-sizes {
@@ -83,18 +89,20 @@ $clip-sizes: 80 48 40 30 24 20 16 12;
 .program-icon {
 	background-image: url("../images/program-ikoner.svg");
 }
-#ie7 .program-icon,
-#ie8 .program-icon {
-	background-image: url("../images/program-ikoner.png");
+.ie7, ie8 {
+	.program-icon {
+		background-image: url("../images/program-ikoner.png");
+	}
 }
+
 .quick-icon {
 	background-image: url("../images/quick-ikoner.svg");
 }
-#ie7 .quick-icon,
-#ie8 .quick-icon {
-	background-image: url("../images/quick-ikoner.png");
+.ie7, ie8 {
+	.quick-icon {
+		background-image: url("../images/quick-ikoner.png");
+	}
 }
-
 .quick-icon {
 	@extend .clip_40x40;
 }
