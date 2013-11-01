@@ -5817,6 +5817,9 @@ article.page .slideshow-wrapper .slideshow .slidesjs-pagination {
   left: 20px;
 }
 
+.program-icons {
+  white-space: normal;
+}
 .program-icons > li > a {
   padding: 0;
 }

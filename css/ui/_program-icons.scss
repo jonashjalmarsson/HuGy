@@ -3,6 +3,7 @@
 	@extend .nav--block;
 	@extend .nav--banner;
 	@extend .flush--bottom;
+	white-space: normal;
 	& > li > a {
 		padding: 0;
 	}
