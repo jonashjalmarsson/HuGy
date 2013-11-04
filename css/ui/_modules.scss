@@ -1,0 +1,105 @@
+
+.module-wrapper {
+	padding-top: 24px;
+	padding-bottom: 24px;
+	.module {
+	
+	}
+	&.nyheter-module-wrapper {
+		.module {
+			@extend .max-width--center;
+			overflow: hidden;
+		}
+		h1 {
+			@extend .black-text;
+		}
+		.items {
+			width: $max-width;
+			@extend .grid;
+			.item {
+				@extend .grid__item;
+				@extend .one-third;
+				position: relative;
+				.wp-post-image {
+					max-width: 100%;
+				}
+
+				.item-content {
+					@extend .white-40;
+					@extend .one-whole;
+					bottom: 6px;
+					left: 24px;
+					
+					position: absolute;
+					z-index: 100;
+					
+					a {
+						@extend .nounderline;
+					}
+					h2 {
+						@extend .gamma;
+						@extend .islet;
+						@extend .flush--bottom;
+					}
+				}
+			}
+		}
+	}
+	&.facebook-module-wrapper {
+		.module {
+			@extend .small-max-width--center;
+		}
+
+		/* facebook colors */
+		background: #3b5998 url('../images/facebook.png') no-repeat 90% 100%;
+		/*border-bottom: 1px solid #133783;
+		box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .52);*/
+		
+		h1 {
+			@extend .white-text;
+		}
+		.fb-page-name {
+			@extend .hidden;
+		}
+		.fb-feed-item {
+			background: rgba(230,230,230,0.9);
+			margin-bottom: 2px;
+			.item-content {
+				@extend .cf;
+				overflow: hidden;
+				padding: 12px;
+			}
+			img {
+				float: left;
+				margin-right: 12px;
+			}
+			blockquote {
+				@extend .cf;
+				quotes: "";
+				padding: 6px;
+				border: 1px solid #ccc;
+				background: rgba(230,230,230,0.7);
+			}
+			.caption {
+				@extend .hidden;
+			}
+			
+			&.fb-item-2,
+			&.fb-item-3,
+			&.fb-item-4,
+			&.fb-item-5,
+			&.fb-item-6,
+			&.fb-item-7,
+			&.fb-item-8,
+			&.fb-item-9 {
+				@extend .hidden;
+			}
+		}
+		.fb-loader {
+			@extend .islet;
+			@extend .hidden;
+			background: rgba(230,230,230,0.9) url('../images/fb-loader.gif') no-repeat center center;
+		}
+
+	}
+}

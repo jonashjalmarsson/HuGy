@@ -242,7 +242,7 @@
 			while (the_flexible_field("hg_modules",$field)) :
 				
 				$retValue .= "<div class='" . get_row_layout() . "-module-wrapper module-wrapper'>";
-					$retValue .= "<div class='" . get_row_layout() . "-module module'>";
+					$retValue .= "<div class='" . get_row_layout() . "-module module' data-fb-url='http://www.facebook.com/" . get_sub_field("id",$field) . "'>";
 					if (get_row_layout() == "facebook"):
 						$retValue .= "<h1>Vad händer mer...</h1>";
 						/*$retValue .= "<script>(function($) {
@@ -258,6 +258,7 @@
 													'container_class' => 'items',
 													'container_id' => 'fb-feed',
 													'echo' => false));
+							$retValue .= "<div class='fb-loader'></div>";
 						else :
 							$retValue .= "<div class='hidden'>Du beh&ouml;ver installera <i>Facebook Feed Grabber</i> f&ouml;r att detta ska fungera.</div>";
 						endif;
