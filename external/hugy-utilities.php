@@ -289,14 +289,14 @@
 			if ( $the_query->have_posts() ) {
 				$retValue .= "<div class='items'>";
 				while ( $the_query->have_posts() ) {
-					$retValue .= "<div class='item  ic_container'>";
+					$retValue .= "<div class='item'>";
 					$the_query->the_post();
 					//$retValue .= "<div class='item-img'>";
 					$retValue .=  get_the_post_thumbnail(get_the_ID(), 'news'); 
 					//$retValue .= "</div>";
-					$retValue .= "<div class='item-content  ic_caption'>";
+					$retValue .= "<div class='item-content'>";
 					$retValue .= "<a href='" . get_permalink() . "'><h2>" . get_the_title() . "</h2>";
-					$retValue .= get_the_excerpt();
+					//$retValue .= get_the_excerpt();
 					$retValue .= "</a></div>";
 					$retValue .= "</div>";
 				}
@@ -350,23 +350,26 @@
 			}
 			$i = 0;
 			//if (has_sub_field("hg_relaterade",$field)) :
-			$retValue .= "<div class='related-wrapper'>";
+			$retValue .= "<div class='related-wrapper'><h2>Relaterat</h2><div class='related'>";
 			while (the_flexible_field("hg_relaterade",$field)) :
 				//$retValue .= "<div class='" . get_row_layout() . "-" . $i++ . " relaterad'>";
 				if (get_row_layout() == "dokument"):
 					$doc = get_sub_field("dokument",$field);
-					
 					$retValue .= "<a href='" . $doc["url"]. "' title='" . $doc["description"] . "' >";
 					$retValue .= $doc["title"];
 					$retValue .= "</a>";
 				elseif (get_row_layout() == "lank"):
 					$retValue .= "<a href='" . get_sub_field("url",$field) . "' title='" . get_sub_field("beskrivning",$field) . "'>";
 					$retValue .= get_sub_field("namn",$field);
-					$retValue .= "</a>";					
+					$retValue .= "</a>";
+				elseif (get_row_layout() == "rubrik"):
+					$retValue .= "<span class='heading'>";
+					$retValue .= get_sub_field("rubrik",$field);
+					$retValue .= "</span>";
 				endif;
 				//$retValue .= "</div>";
 			endwhile;
-			$retValue .= "</div>";
+			$retValue .= "</div></div>";
 			//endif;
 			return $retValue;
 		}
@@ -386,7 +389,7 @@
 			}
 			$contacts = get_field('hg_kontakter',$page_id);
 			if ($contacts != "") :
-				$retValue .= "<div class='contacts-wrapper'>";
+				$retValue .= "<div class='contacts-wrapper'><h2>Kontakter</h2><div class='contacts'>";
 				foreach ($contacts as $contact) :
 					$retValue .= "<div class='contact contact-".$contact->ID."'>";
 					if (get_the_post_thumbnail($contact->ID) != "")
@@ -395,9 +398,21 @@
 					$retValue .= "<a href='" . get_post_permalink($contact->ID) . "'>";
 					$retValue .= "<span class='title'>" . get_the_title($contact->ID) . "</span>";
 					$retValue .= "</a>";
+					$titel = get_field("titel",$contact->ID);	
+					if ($titel)
+						$retValue .= "<span class='titel'>$titel</span>";
+					$retValue .= "<div class='contact-data'>";
+
 					if (get_field("ansvar",$contact->ID))
 						$retValue .= "<span class='ansvar'>" . get_field("ansvar",$contact->ID) . "</span>";
-					$retValue .= "<div class='contact-data'>";
+
+					$arbetsplats = get_field("arbetsplats",$contact->ID);	
+					if ($arbetsplats)
+						$retValue .= "<span class='arbetsplats'>$arbetsplats</span>";
+
+					$beskrivning = get_field("beskrivning",$contact->ID);	
+					if ($beskrivning)
+						$retValue .= "<span class='beskrivning'>$beskrivning</span>";
 
 					$telefon = get_field("telefon",$contact->ID);
 					if ($telefon)
@@ -410,14 +425,14 @@
 					$epost = get_field("e-post",$contact->ID);	
 					if ($epost)
 						$retValue .= "<span class='epost'>E-POST: <a href='mailto:$epost'>$epost</a></span>";
-					
+						
 					if (get_field("adress",$contact->ID))
 						$retValue .= "<span class='adress'>" . get_field("adress",$contact->ID) . "</span>";
 					
 					$retValue .= "</div>";
 					$retValue .= "</div>";
 				endforeach;
-				$retValue .= "</div>";
+				$retValue .= "</div></div>";
 			endif;
 			return $retValue;
 		}

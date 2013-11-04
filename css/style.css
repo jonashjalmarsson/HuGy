@@ -11,6 +11,7 @@
  */
 /**
   *  Setup
+ 
   */
 /*
  * enable modules
@@ -813,11 +814,12 @@ textarea:focus {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf:after, .nav:after, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks:after, .program-icons:after, .island:after,
+.cf:after, .nav:after, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks:after, .program-icons:after, .media:after, .island:after, article:after,
 .islet:after,
-.contacts-wrapper:after,
-.contacts-wrapper .contact .contact-data:after,
-.related-wrapper:after, .module-wrapper.facebook-module-wrapper .fb-feed-item .item-content:after, .module-wrapper.facebook-module-wrapper .fb-feed-item blockquote:after {
+.contacts-wrapper .contacts:after,
+.contacts-wrapper .contacts .contact .contact-data:after,
+.module-wrapper.nyheter-module-wrapper .items .item .item-content h2:after,
+.related-wrapper .related:after, .module-wrapper.facebook-module-wrapper .fb-feed-item .item-content:after, .module-wrapper.facebook-module-wrapper .fb-feed-item blockquote:after {
   content: "";
   display: table;
   clear: both;
@@ -843,52 +845,60 @@ pre,
 .form-fields > li,
 .media,
 .island,
+article,
 .islet,
-.contacts-wrapper,
-.contacts-wrapper .contact .contact-data,
-.related-wrapper {
+.contacts-wrapper .contacts,
+.contacts-wrapper .contacts .contact .contact-data,
+.module-wrapper.nyheter-module-wrapper .items .item .item-content h2,
+.related-wrapper .related {
   margin-bottom: 24px;
   margin-bottom: 1.5rem;
 }
-.islet h1, .contacts-wrapper h1, .contacts-wrapper .contact .contact-data h1, .related-wrapper h1, .islet h2, .contacts-wrapper h2, .contacts-wrapper .contact .contact-data h2, .related-wrapper h2, .islet h3, .contacts-wrapper h3, .contacts-wrapper .contact .contact-data h3, .related-wrapper h3, .islet h4, .contacts-wrapper h4, .contacts-wrapper .contact .contact-data h4, .related-wrapper h4, .islet h5, .contacts-wrapper h5, .contacts-wrapper .contact .contact-data h5, .related-wrapper h5, .islet h6, .contacts-wrapper h6, .contacts-wrapper .contact .contact-data h6, .related-wrapper h6, .islet hgroup, .contacts-wrapper hgroup, .contacts-wrapper .contact .contact-data hgroup, .related-wrapper hgroup, .islet
-ul, .contacts-wrapper
-ul, .contacts-wrapper .contact .contact-data
-ul, .related-wrapper
-ul, .islet ol, .contacts-wrapper ol, .contacts-wrapper .contact .contact-data ol, .related-wrapper ol, .islet dl, .contacts-wrapper dl, .contacts-wrapper .contact .contact-data dl, .related-wrapper dl, .islet
-blockquote, .contacts-wrapper
-blockquote, .contacts-wrapper .contact .contact-data
-blockquote, .related-wrapper
-blockquote, .islet p, .contacts-wrapper p, .contacts-wrapper .contact .contact-data p, .related-wrapper p, .islet address, .contacts-wrapper address, .contacts-wrapper .contact .contact-data address, .related-wrapper address, .islet
-table, .contacts-wrapper
-table, .contacts-wrapper .contact .contact-data
-table, .related-wrapper
+.islet h1, .contacts-wrapper .contacts h1, .contacts-wrapper .contacts .contact .contact-data h1, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 h1, .related-wrapper .related h1, .islet h2, .contacts-wrapper .contacts h2, .contacts-wrapper .contacts .contact .contact-data h2, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 h2, .related-wrapper .related h2, .islet h3, .contacts-wrapper .contacts h3, .contacts-wrapper .contacts .contact .contact-data h3, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 h3, .related-wrapper .related h3, .islet h4, .contacts-wrapper .contacts h4, .contacts-wrapper .contacts .contact .contact-data h4, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 h4, .related-wrapper .related h4, .islet h5, .contacts-wrapper .contacts h5, .contacts-wrapper .contacts .contact .contact-data h5, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 h5, .related-wrapper .related h5, .islet h6, .contacts-wrapper .contacts h6, .contacts-wrapper .contacts .contact .contact-data h6, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 h6, .related-wrapper .related h6, .islet hgroup, .contacts-wrapper .contacts hgroup, .contacts-wrapper .contacts .contact .contact-data hgroup, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 hgroup, .related-wrapper .related hgroup, .islet
+ul, .contacts-wrapper .contacts
+ul, .contacts-wrapper .contacts .contact .contact-data
+ul, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2
+ul, .related-wrapper .related
+ul, .islet ol, .contacts-wrapper .contacts ol, .contacts-wrapper .contacts .contact .contact-data ol, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 ol, .related-wrapper .related ol, .islet dl, .contacts-wrapper .contacts dl, .contacts-wrapper .contacts .contact .contact-data dl, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 dl, .related-wrapper .related dl, .islet
+blockquote, .contacts-wrapper .contacts
+blockquote, .contacts-wrapper .contacts .contact .contact-data
+blockquote, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2
+blockquote, .related-wrapper .related
+blockquote, .islet p, .contacts-wrapper .contacts p, .contacts-wrapper .contacts .contact .contact-data p, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 p, .related-wrapper .related p, .islet address, .contacts-wrapper .contacts address, .contacts-wrapper .contacts .contact .contact-data address, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 address, .related-wrapper .related address, .islet
+table, .contacts-wrapper .contacts
+table, .contacts-wrapper .contacts .contact .contact-data
+table, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2
+table, .related-wrapper .related
 table, .islet
-fieldset, .contacts-wrapper
-fieldset, .contacts-wrapper .contact .contact-data
-fieldset, .related-wrapper
-fieldset, .islet figure, .contacts-wrapper figure, .contacts-wrapper .contact .contact-data figure, .related-wrapper figure, .islet
-pre, .contacts-wrapper
-pre, .contacts-wrapper .contact .contact-data
-pre, .related-wrapper
-pre, .islet .form-fields > li, .contacts-wrapper .form-fields > li, .related-wrapper .form-fields > li, .islet
-.media, .contacts-wrapper
-.media, .contacts-wrapper .contact .contact-data
-.media, .related-wrapper
+fieldset, .contacts-wrapper .contacts
+fieldset, .contacts-wrapper .contacts .contact .contact-data
+fieldset, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2
+fieldset, .related-wrapper .related
+fieldset, .islet figure, .contacts-wrapper .contacts figure, .contacts-wrapper .contacts .contact .contact-data figure, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 figure, .related-wrapper .related figure, .islet
+pre, .contacts-wrapper .contacts
+pre, .contacts-wrapper .contacts .contact .contact-data
+pre, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2
+pre, .related-wrapper .related
+pre, .islet .form-fields > li, .contacts-wrapper .contacts .form-fields > li, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .form-fields > li, .related-wrapper .related .form-fields > li, .islet
+.media, .contacts-wrapper .contacts
+.media, .contacts-wrapper .contacts .contact .contact-data
+.media, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2
+.media, .related-wrapper .related
 .media, .islet
-.island, .contacts-wrapper
-.island, .contacts-wrapper .contact .contact-data
-.island, .related-wrapper
+.island, .contacts-wrapper .contacts
+.island, .contacts-wrapper .contacts .contact .contact-data
+.island, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2
+.island, .related-wrapper .related
 .island, .islet
-.islet, .contacts-wrapper
-.islet, .contacts-wrapper .contact .contact-data
-.islet, .related-wrapper
-.islet, .islet
-.contacts-wrapper, .contacts-wrapper
-.contacts-wrapper, .related-wrapper
-.contacts-wrapper, .contacts-wrapper .contact .contact-data, .islet
-.related-wrapper, .contacts-wrapper
-.related-wrapper, .related-wrapper
-.related-wrapper {
+article, .contacts-wrapper .contacts
+article, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2
+article, .related-wrapper .related
+article, .islet
+.islet, .contacts-wrapper .contacts
+.islet, .contacts-wrapper .contacts .contact .contact-data
+.islet, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2
+.islet, .related-wrapper .related
+.islet, .islet .contacts-wrapper .contacts, .contacts-wrapper .islet .contacts, .contacts-wrapper .contacts .contacts, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .contacts-wrapper .contacts, .contacts-wrapper .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .contacts, .related-wrapper .related .contacts-wrapper .contacts, .contacts-wrapper .related-wrapper .related .contacts, .contacts-wrapper .contacts .contact .contact-data, .islet .module-wrapper.nyheter-module-wrapper .items .item .item-content h2, .module-wrapper.nyheter-module-wrapper .items .item .item-content .islet h2, .contacts-wrapper .contacts .module-wrapper.nyheter-module-wrapper .items .item .item-content h2, .module-wrapper.nyheter-module-wrapper .items .item .item-content .contacts-wrapper .contacts h2, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 h2, .related-wrapper .related .module-wrapper.nyheter-module-wrapper .items .item .item-content h2, .module-wrapper.nyheter-module-wrapper .items .item .item-content .related-wrapper .related h2, .islet .related-wrapper .related, .related-wrapper .islet .related, .contacts-wrapper .contacts .related-wrapper .related, .related-wrapper .contacts-wrapper .contacts .related, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .related-wrapper .related, .related-wrapper .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .related, .related-wrapper .related .related {
   margin-bottom: 12px;
   margin-bottom: 0.75rem;
 }
@@ -954,7 +964,7 @@ h2, .beta {
   line-height: 1.6;
 }
 
-h3, .gamma {
+h3, .gamma, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 1;
@@ -1747,7 +1757,7 @@ label,
 /**
  * Grid wrapper
  */
-.grid, .module-wrapper .module .items, .main-menu-wrapper .menu, article .block-wrapper {
+.grid, .module-wrapper.nyheter-module-wrapper .items, .main-menu-wrapper .menu, article .block-wrapper {
   margin-left: -24px;
   list-style: none;
   margin-bottom: 0;
@@ -1756,15 +1766,14 @@ label,
 /**
  * Very infrequently occuring grid wrappers as children of grid wrappers.
  */
-.grid > .grid, .module-wrapper .module .items > .grid, .main-menu-wrapper .menu > .grid, article .block-wrapper > .grid, .module-wrapper .module .grid > .items, .module-wrapper .module .items > .items, .main-menu-wrapper .module-wrapper .module .menu > .items, .module-wrapper .module .main-menu-wrapper .menu > .items, article .module-wrapper .module .block-wrapper > .items, .module-wrapper .module article .block-wrapper > .items, .main-menu-wrapper .grid > .menu, .module-wrapper .module .main-menu-wrapper .items > .menu, .main-menu-wrapper .module-wrapper .module .items > .menu, .main-menu-wrapper .menu > .menu, article .main-menu-wrapper .block-wrapper > .menu, .main-menu-wrapper article .block-wrapper > .menu, article .grid > .block-wrapper, .module-wrapper .module article .items > .block-wrapper, article .module-wrapper .module .items > .block-wrapper, .main-menu-wrapper article .menu > .block-wrapper, article .main-menu-wrapper .menu > .block-wrapper, article .block-wrapper > .block-wrapper {
+.grid > .grid, .module-wrapper.nyheter-module-wrapper .items > .grid, .main-menu-wrapper .menu > .grid, article .block-wrapper > .grid, .module-wrapper.nyheter-module-wrapper .grid > .items, .module-wrapper.nyheter-module-wrapper .items > .items, .main-menu-wrapper .module-wrapper.nyheter-module-wrapper .menu > .items, .module-wrapper.nyheter-module-wrapper .main-menu-wrapper .menu > .items, article .module-wrapper.nyheter-module-wrapper .block-wrapper > .items, .module-wrapper.nyheter-module-wrapper article .block-wrapper > .items, .main-menu-wrapper .grid > .menu, .module-wrapper.nyheter-module-wrapper .main-menu-wrapper .items > .menu, .main-menu-wrapper .module-wrapper.nyheter-module-wrapper .items > .menu, .main-menu-wrapper .menu > .menu, article .main-menu-wrapper .block-wrapper > .menu, .main-menu-wrapper article .block-wrapper > .menu, article .grid > .block-wrapper, .module-wrapper.nyheter-module-wrapper article .items > .block-wrapper, article .module-wrapper.nyheter-module-wrapper .items > .block-wrapper, .main-menu-wrapper article .menu > .block-wrapper, article .main-menu-wrapper .menu > .block-wrapper, article .block-wrapper > .block-wrapper {
   margin-left: 0;
 }
 
 /**
  * Grid
  */
-.grid__item, .module-wrapper .module .items .fb-feed-item,
-.module-wrapper .module .items .item, .main-menu-wrapper .menu > li, article .block-wrapper .related-wrapper,
+.grid__item, .module-wrapper.nyheter-module-wrapper .items .item, .main-menu-wrapper .menu > li, article .block-wrapper .related-wrapper,
 article .block-wrapper .contacts-wrapper {
   display: inline-block;
   width: 100%;
@@ -1902,6 +1911,65 @@ article .block-wrapper .contacts-wrapper {
 }
 
 /*------------------------------------*\
+    $MEDIA
+\*------------------------------------*/
+/**
+ * Place any image- and text-like content side-by-side, as per:
+ * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+ * E.g.:
+ *
+   <div class=media>
+       <img src=http://placekitten.com/200/300 alt="" class=media__img>
+       <p class=media__body>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+   </div>
+ *
+ * Demo: jsfiddle.net/inuitcss/cf4Qs
+ *
+ */
+.media {
+  display: block;
+}
+
+.media__img {
+  float: left;
+  margin-right: 24px;
+}
+
+/**
+ * Reversed image location (right instead of left).
+ */
+.media__img--rev {
+  float: right;
+  margin-left: 24px;
+}
+
+.media__img img,
+.media__img--rev img {
+  display: block;
+}
+
+.media__body {
+  overflow: hidden;
+}
+
+.media__body,
+.media__body > :last-child {
+  margin-bottom: 0;
+}
+
+/**
+ * `.img`s in `.islet`s need an appropriately sized margin.
+ */
+.islet .media__img, .contacts-wrapper .contacts .media__img, .contacts-wrapper .contacts .contact .contact-data .media__img, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .media__img, .related-wrapper .related .media__img {
+  margin-right: 12px;
+}
+
+.islet .media__img--rev, .contacts-wrapper .contacts .media__img--rev, .contacts-wrapper .contacts .contact .contact-data .media__img--rev, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .media__img--rev, .related-wrapper .related .media__img--rev {
+  margin-left: 12px;
+}
+
+/*------------------------------------*\
     $ISLAND
 \*------------------------------------*/
 /**
@@ -1915,30 +1983,32 @@ article .block-wrapper .contacts-wrapper {
  * Demo: jsfiddle.net/inuitcss/u8pV3
  *
  */
-.island,
+.island, article,
 .islet,
-.contacts-wrapper,
-.contacts-wrapper .contact .contact-data,
-.related-wrapper {
+.contacts-wrapper .contacts,
+.contacts-wrapper .contacts .contact .contact-data,
+.module-wrapper.nyheter-module-wrapper .items .item .item-content h2,
+.related-wrapper .related {
   display: block;
 }
 
-.island {
+.island, article {
   padding: 24px;
 }
 
-.island > :last-child,
+.island > :last-child, article > :last-child,
 .islet > :last-child,
-.contacts-wrapper > :last-child,
-.contacts-wrapper .contact .contact-data > :last-child,
-.related-wrapper > :last-child {
+.contacts-wrapper .contacts > :last-child,
+.contacts-wrapper .contacts .contact .contact-data > :last-child,
+.module-wrapper.nyheter-module-wrapper .items .item .item-content h2 > :last-child,
+.related-wrapper .related > :last-child {
   margin-bottom: 0;
 }
 
 /**
  * Just like `.island`, only smaller.
  */
-.islet, .contacts-wrapper, .contacts-wrapper .contact .contact-data, .related-wrapper {
+.islet, .contacts-wrapper .contacts, .contacts-wrapper .contacts .contact .contact-data, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2, .related-wrapper .related {
   padding: 12px;
 }
 
@@ -1959,7 +2029,7 @@ article .block-wrapper .contacts-wrapper {
 /**
 * Whole
 */
-.one-whole, .pre-footer,
+.one-whole, .module-wrapper.nyheter-module-wrapper .items .item .item-content, .pre-footer,
 .main-menu {
   width: 100%;
 }
@@ -1975,8 +2045,7 @@ article .block-wrapper .contacts-wrapper {
 /**
 * Thirds
 */
-.one-third, .two-sixths, .four-twelfths, .module-wrapper .module .items .fb-feed-item,
-.module-wrapper .module .items .item, .main-menu-wrapper .menu.cols-3 > li {
+.one-third, .two-sixths, .four-twelfths, .module-wrapper.nyheter-module-wrapper .items .item, .main-menu-wrapper .menu.cols-3 > li {
   width: 33.333%;
 }
 
@@ -2096,7 +2165,7 @@ article .block-wrapper .contacts-wrapper {
  * Demo: jsfiddle.net/inuitcss/WS4Ge
  *
  */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 680px) {
   /**
   * Whole
   */
@@ -2220,7 +2289,7 @@ article .block-wrapper .contacts-wrapper {
     width: 91.666%;
   }
 }
-@media only screen and (min-width: 481px) and (max-width: 1023px) {
+@media only screen and (min-width: 681px) and (max-width: 1023px) {
   /**
   * Whole
   */
@@ -2344,7 +2413,7 @@ article .block-wrapper .contacts-wrapper {
     width: 91.666%;
   }
 }
-@media only screen and (min-width: 481px) {
+@media only screen and (min-width: 681px) {
   /**
   * Whole
   */
@@ -2887,7 +2956,7 @@ article .block-wrapper .contacts-wrapper {
   margin-right: 0 !important;
 }
 
-.flush--bottom, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks, .program-icons {
+.flush--bottom, .contacts-wrapper h2, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2, .program-icons, .related-wrapper h2 {
   margin-bottom: 0 !important;
 }
 
@@ -3005,7 +3074,7 @@ article .block-wrapper .contacts-wrapper {
   margin-right: -24px !important;
   margin-left: -24px !important;
 }
-.islet .full-bleed, .contacts-wrapper .full-bleed, .contacts-wrapper .contact .contact-data .full-bleed, .related-wrapper .full-bleed {
+.islet .full-bleed, .contacts-wrapper .contacts .full-bleed, .contacts-wrapper .contacts .contact .contact-data .full-bleed, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .full-bleed, .related-wrapper .related .full-bleed {
   margin-right: -12px !important;
   margin-left: -12px !important;
 }
@@ -3071,7 +3140,7 @@ article .block-wrapper .contacts-wrapper {
   width: 1px !important;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 680px) {
   .accessibility--palm,
   .visuallyhidden--palm {
     border: 0 !important;
@@ -3084,7 +3153,7 @@ article .block-wrapper .contacts-wrapper {
     width: 1px !important;
   }
 }
-@media only screen and (min-width: 481px) and (max-width: 1023px) {
+@media only screen and (min-width: 681px) and (max-width: 1023px) {
   .accessibility--lap,
   .visuallyhidden--lap {
     border: 0 !important;
@@ -3097,7 +3166,7 @@ article .block-wrapper .contacts-wrapper {
     width: 1px !important;
   }
 }
-@media only screen and (min-width: 481px) {
+@media only screen and (min-width: 681px) {
   .accessibility--lap-and-up,
   .visuallyhidden--lap-and-up {
     border: 0 !important;
@@ -3164,10 +3233,10 @@ article .block-wrapper .contacts-wrapper {
   background-color: black;
 }
 
-.black-text, .contacts-wrapper, .main-menu-wrapper .current_page_item > a, .related-wrapper {
+.black-text, .contacts-wrapper .contacts, .module-wrapper.nyheter-module-wrapper h1, .main-menu-wrapper .current_page_item > a, .related-wrapper .related {
   color: black;
 }
-.black-text a, .contacts-wrapper a, .main-menu-wrapper .current_page_item > a a, .related-wrapper a {
+.black-text a, .contacts-wrapper .contacts a, .module-wrapper.nyheter-module-wrapper h1 a, .main-menu-wrapper .current_page_item > a a, .related-wrapper .related a {
   color: black;
 }
 
@@ -3225,7 +3294,7 @@ article .block-wrapper .contacts-wrapper {
   color: white;
 }
 
-.black-30-background, .related-wrapper {
+.black-30-background, .related-wrapper .related {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -3236,15 +3305,15 @@ article .block-wrapper .contacts-wrapper {
 .ie7 .black-30 a, ie8 .black-30 a {
   color: white;
 }
-.ie7 .black-30-background, .ie7 .related-wrapper, ie8 .black-30-background, ie8 .related-wrapper {
+.ie7 .black-30-background, .ie7 .related-wrapper .related, .related-wrapper .ie7 .related, ie8 .black-30-background, ie8 .related-wrapper .related, .related-wrapper ie8 .related {
   background-color: black;
 }
 
-.black-40, .home .top-wrapper .logo-space {
+.black-40, .home .top-wrapper .top .logo-space {
   background-color: rgba(0, 0, 0, 0.4);
   color: white;
 }
-.black-40 a, .home .top-wrapper .logo-space a {
+.black-40 a, .home .top-wrapper .top .logo-space a {
   color: white;
 }
 
@@ -3252,11 +3321,11 @@ article .block-wrapper .contacts-wrapper {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.ie7 .black-40, .ie7 .home .top-wrapper .logo-space, .home .top-wrapper .ie7 .logo-space, ie8 .black-40, ie8 .home .top-wrapper .logo-space, .home .top-wrapper ie8 .logo-space {
+.ie7 .black-40, .ie7 .home .top-wrapper .top .logo-space, .home .top-wrapper .top .ie7 .logo-space, ie8 .black-40, ie8 .home .top-wrapper .top .logo-space, .home .top-wrapper .top ie8 .logo-space {
   background-color: black;
   color: white;
 }
-.ie7 .black-40 a, .ie7 .home .top-wrapper .logo-space a, .home .top-wrapper .ie7 .logo-space a, ie8 .black-40 a, ie8 .home .top-wrapper .logo-space a, .home .top-wrapper ie8 .logo-space a {
+.ie7 .black-40 a, .ie7 .home .top-wrapper .top .logo-space a, .home .top-wrapper .top .ie7 .logo-space a, ie8 .black-40 a, ie8 .home .top-wrapper .top .logo-space a, .home .top-wrapper .top ie8 .logo-space a {
   color: white;
 }
 .ie7 .black-40-background, ie8 .black-40-background {
@@ -3294,7 +3363,7 @@ article .block-wrapper .contacts-wrapper {
   color: white;
 }
 
-.black-60-background, .module-wrapper.facebook-module-wrapper {
+.black-60-background {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -3305,7 +3374,7 @@ article .block-wrapper .contacts-wrapper {
 .ie7 .black-60 a, ie8 .black-60 a {
   color: white;
 }
-.ie7 .black-60-background, .ie7 .module-wrapper.facebook-module-wrapper, ie8 .black-60-background, ie8 .module-wrapper.facebook-module-wrapper {
+.ie7 .black-60-background, ie8 .black-60-background {
   background-color: black;
 }
 
@@ -3378,11 +3447,11 @@ article .block-wrapper .contacts-wrapper {
   background-color: black;
 }
 
-.white, .contacts-wrapper .contact .contact-data, .module-wrapper.facebook-module-wrapper .fb-feed-item .item-content, article.page .slideshow-wrapper {
+.white, .contacts-wrapper .contacts .contact .contact-data, article.page .slideshow-wrapper {
   background-color: white;
   color: black;
 }
-.white a, .contacts-wrapper .contact .contact-data a, .module-wrapper.facebook-module-wrapper .fb-feed-item .item-content a, article.page .slideshow-wrapper a {
+.white a, .contacts-wrapper .contacts .contact .contact-data a, article.page .slideshow-wrapper a {
   color: black;
 }
 
@@ -3390,10 +3459,10 @@ article .block-wrapper .contacts-wrapper {
   background-color: white;
 }
 
-.white-text, .up-icon span, .header-wrapper, .module-wrapper.nyheter-module-wrapper h1, .module-wrapper.facebook-module-wrapper h1, .ic_caption a {
+.white-text, .up-icon span, .header-wrapper, .module-wrapper.facebook-module-wrapper h1 {
   color: white;
 }
-.white-text a, .up-icon span a, .header-wrapper a, .module-wrapper.nyheter-module-wrapper h1 a, .module-wrapper.facebook-module-wrapper h1 a, .ic_caption a a {
+.white-text a, .up-icon span a, .header-wrapper a, .module-wrapper.facebook-module-wrapper h1 a {
   color: white;
 }
 
@@ -3466,11 +3535,11 @@ article .block-wrapper .contacts-wrapper {
   background-color: #020202;
 }
 
-.white-40 {
+.white-40, .module-wrapper.nyheter-module-wrapper .items .item .item-content {
   background-color: rgba(255, 255, 255, 0.4);
   color: black;
 }
-.white-40 a {
+.white-40 a, .module-wrapper.nyheter-module-wrapper .items .item .item-content a {
   color: black;
 }
 
@@ -3478,11 +3547,11 @@ article .block-wrapper .contacts-wrapper {
   background-color: rgba(255, 255, 255, 0.4);
 }
 
-.ie7 .white-40, ie8 .white-40 {
+.ie7 .white-40, .ie7 .module-wrapper.nyheter-module-wrapper .items .item .item-content, .module-wrapper.nyheter-module-wrapper .items .item .ie7 .item-content, ie8 .white-40, ie8 .module-wrapper.nyheter-module-wrapper .items .item .item-content, .module-wrapper.nyheter-module-wrapper .items .item ie8 .item-content {
   background-color: #020202;
   color: black;
 }
-.ie7 .white-40 a, ie8 .white-40 a {
+.ie7 .white-40 a, .ie7 .module-wrapper.nyheter-module-wrapper .items .item .item-content a, .module-wrapper.nyheter-module-wrapper .items .item .ie7 .item-content a, ie8 .white-40 a, ie8 .module-wrapper.nyheter-module-wrapper .items .item .item-content a, .module-wrapper.nyheter-module-wrapper .items .item ie8 .item-content a {
   color: black;
 }
 .ie7 .white-40-background, ie8 .white-40-background {
@@ -3612,15 +3681,15 @@ article .block-wrapper .contacts-wrapper {
   color: white;
 }
 
-.green-background {
+.green-background, body {
   background-color: #14a585;
 }
 
-.green-text, h1,
+.green-text, .contacts-wrapper h2, h1,
 .header {
   color: #14a585;
 }
-.green-text a, h1 a,
+.green-text a, .contacts-wrapper h2 a, h1 a,
 .header a {
   color: #14a585;
 }
@@ -3679,7 +3748,7 @@ article .block-wrapper .contacts-wrapper {
   color: white;
 }
 
-.green-30-background, .contacts-wrapper {
+.green-30-background, .contacts-wrapper .contacts {
   background-color: rgba(20, 165, 133, 0.3);
 }
 
@@ -3690,7 +3759,7 @@ article .block-wrapper .contacts-wrapper {
 .ie7 .green-30 a, ie8 .green-30 a {
   color: white;
 }
-.ie7 .green-30-background, .ie7 .contacts-wrapper, ie8 .green-30-background, ie8 .contacts-wrapper {
+.ie7 .green-30-background, .ie7 .contacts-wrapper .contacts, .contacts-wrapper .ie7 .contacts, ie8 .green-30-background, ie8 .contacts-wrapper .contacts, .contacts-wrapper ie8 .contacts {
   background-color: #020202;
 }
 
@@ -4962,11 +5031,14 @@ article .block-wrapper .contacts-wrapper {
   background-color: #020202;
 }
 
-.contacts-wrapper .contact {
+.contacts-wrapper h2 {
+  font-weight: normal;
+}
+.contacts-wrapper .contacts .contact {
   margin-bottom: 12px;
   position: relative;
 }
-.contacts-wrapper .contact .contact-data {
+.contacts-wrapper .contacts .contact .contact-data {
   box-shadow: 2px 2px 10px #666;
   display: none;
   left: 40px;
@@ -4974,15 +5046,15 @@ article .block-wrapper .contacts-wrapper {
   top: 10px;
   z-index: 200;
 }
-.contacts-wrapper .contact span {
+.contacts-wrapper .contacts .contact span {
   display: block;
 }
-.contacts-wrapper .contact:hover .contact-data {
+.contacts-wrapper .contacts .contact:hover .contact-data {
   display: block;
 }
 
-.italic, h1,
-.header, .main-menu-wrapper .menu-head {
+.italic, .contacts-wrapper h2, h1,
+.header, .main-menu-wrapper .menu-head, .related-wrapper h2, .related-wrapper .related .heading {
   font-family: Georgia;
   font-style: italic;
 }
@@ -5053,22 +5125,27 @@ footer .footer-div .widget {
   display: inline-block;
 }
 
+@media only screen and (max-width: 680px) {
+  .footer-div .widget {
+    width: 100% !important;
+  }
+}
 body {
   font-family: Trebuchet MS;
 }
 
 .hidden, .firstpage.slideshow .slidesjs-play,
 .firstpage.slideshow .slidesjs-stop,
-.firstpage.slideshow .slidesjs-pagination, .module-wrapper.facebook-module-wrapper .fb-page-name, .module-wrapper.facebook-module-wrapper .fb-feed-item .caption, .main-menu .main-menu-wrapper {
+.firstpage.slideshow .slidesjs-pagination, .module-wrapper.facebook-module-wrapper .fb-page-name, .module-wrapper.facebook-module-wrapper .fb-feed-item .caption, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-2, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-3, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-4, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-5, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-6, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-7, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-8, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-9, .main-menu .main-menu-wrapper {
   display: none;
 }
 
-.max-width--center, footer .footer-div, .top-wrapper .top, .top-navigation-wrapper .top-navigation, article.page, .module-wrapper .module, .main-menu-wrapper {
+.max-width--center, footer .footer-div, .top-wrapper .top, .top-navigation-wrapper .top-navigation, article.page, .module-wrapper.nyheter-module-wrapper .module, .main-menu-wrapper {
   max-width: 1100px;
   margin: 0 auto;
 }
 
-.small-max-width--center, article.page .content-wrapper {
+.small-max-width--center, .module-wrapper.facebook-module-wrapper .module, article.page .content-wrapper {
   max-width: 700px;
   margin: 0 auto;
 }
@@ -5188,10 +5265,12 @@ article.page .slideshow-wrapper:after {
 
 .home .top-wrapper {
   background: transparent;
-  position: absolute;
   z-index: 100;
 }
-.home .top-wrapper .logo-space {
+.home .top-wrapper .top {
+  position: relative;
+}
+.home .top-wrapper .top .logo-space {
   border-radius: 6px;
   left: 36px;
   padding: 24px;
@@ -5212,16 +5291,38 @@ article.page .slideshow-wrapper:after {
   padding-top: 24px;
   padding-bottom: 24px;
 }
-.module-wrapper .module .items .fb-feed-item,
-.module-wrapper .module .items .item {
-  margin-bottom: 24px;
+.module-wrapper.nyheter-module-wrapper .module {
+  overflow: hidden;
 }
-.module-wrapper .module .items .fb-feed-item .wp-post-image,
-.module-wrapper .module .items .item .wp-post-image {
+.module-wrapper.nyheter-module-wrapper .items {
+  width: 1100px;
+}
+.module-wrapper.nyheter-module-wrapper .items .item {
+  position: relative;
+}
+.module-wrapper.nyheter-module-wrapper .items .item .wp-post-image {
   max-width: 100%;
 }
+.module-wrapper.nyheter-module-wrapper .items .item .item-content {
+  bottom: 6px;
+  left: 24px;
+  position: absolute;
+  z-index: 100;
+}
+.module-wrapper.nyheter-module-wrapper .items .item .item-content a {
+  text-decoration: none;
+}
+.module-wrapper.facebook-module-wrapper {
+  /* facebook colors */
+  background: #3b5998 url("../images/facebook.png") no-repeat 90% 100%;
+  /*border-bottom: 1px solid #133783;
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .52);*/
+}
+.module-wrapper.facebook-module-wrapper .fb-feed-item {
+  background: rgba(230, 230, 230, 0.9);
+  margin-bottom: 2px;
+}
 .module-wrapper.facebook-module-wrapper .fb-feed-item .item-content {
-  height: 240px;
   overflow: hidden;
   padding: 12px;
 }
@@ -5233,64 +5334,7 @@ article.page .slideshow-wrapper:after {
   quotes: "";
   padding: 6px;
   border: 1px solid #ccc;
-  background: #eee;
-}
-
-/*
- * News hover effect
- */
-.ic_container {
-  vertical-align: baseline;
-  margin: 0px;
-  position: relative;
-  /*-moz-border-radius:10px;
-  -webkit-border-radius:10px;
-  -khtml-border-radius:10px;
-  -moz-box-shadow: 0 1px 3px #888;
-  -webkit-box-shadow: 0 1px 3px #888;*/
-}
-
-.overlay {
-  opacity: 0.3;
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
-}
-
-.ic_caption {
-  position: absolute;
-  opacity: 0.6;
-  overflow: hidden;
-  margin: 0px;
-  padding: 6px;
-  left: 24px;
-  right: 0px;
-  cursor: default;
-  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60);
-}
-
-.ic_category {
-  text-transform: uppercase;
-  font-size: 11px;
-  letter-spacing: 3px;
-  padding: 5px;
-  margin: 0px;
-}
-
-.ic_caption h3 {
-  padding: 0px 5px 5px 5px;
-  margin: 0px;
-  font-size: 18px;
-}
-
-.ic_text {
-  padding: 0px;
-  margin: 0px;
-  text-align: justify;
-  font-size: 11px;
+  background: rgba(230, 230, 230, 0.7);
 }
 
 .clip, .clip_80x80, .program-icon, .clip_48x48, .clip_40x40, .quick-icon, .clip_30x30, .clip_24x24, .menu-icon, .selected-menu-icon, .home-icon, .clip_20x20, .clip_16x16, .slideshow-navigation, .play-icon, article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-play, .pause-icon, article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-stop, .dot-icon, .active-dot-icon, article.page .slideshow-wrapper .slideshow .slidesjs-pagination .slidesjs-pagination-item a, .clip_12x12, .up-icon, .teaser-1 {
@@ -5687,10 +5731,10 @@ article.page .slideshow-wrapper:after {
   background-position: -1520px -80px;
 }
 
-.ie7 .max-width--center, .ie7 footer .footer-div, footer .ie7 .footer-div, .ie7 .top-wrapper .top, .top-wrapper .ie7 .top, .ie7 .top-navigation-wrapper .top-navigation, .top-navigation-wrapper .ie7 .top-navigation, .ie7 article.page, .ie7 .module-wrapper .module, .module-wrapper .ie7 .module, .ie7 .main-menu-wrapper, .ie8 .max-width--center, .ie8 footer .footer-div, footer .ie8 .footer-div, .ie8 .top-wrapper .top, .top-wrapper .ie8 .top, .ie8 .top-navigation-wrapper .top-navigation, .top-navigation-wrapper .ie8 .top-navigation, .ie8 article.page, .ie8 .module-wrapper .module, .module-wrapper .ie8 .module, .ie8 .main-menu-wrapper {
+.ie7 .max-width--center, .ie7 footer .footer-div, footer .ie7 .footer-div, .ie7 .top-wrapper .top, .top-wrapper .ie7 .top, .ie7 .top-navigation-wrapper .top-navigation, .top-navigation-wrapper .ie7 .top-navigation, .ie7 article.page, .ie7 .module-wrapper.nyheter-module-wrapper .module, .module-wrapper.nyheter-module-wrapper .ie7 .module, .ie7 .main-menu-wrapper, .ie8 .max-width--center, .ie8 footer .footer-div, footer .ie8 .footer-div, .ie8 .top-wrapper .top, .top-wrapper .ie8 .top, .ie8 .top-navigation-wrapper .top-navigation, .top-navigation-wrapper .ie8 .top-navigation, .ie8 article.page, .ie8 .module-wrapper.nyheter-module-wrapper .module, .module-wrapper.nyheter-module-wrapper .ie8 .module, .ie8 .main-menu-wrapper {
   width: 1100px;
 }
-.ie7 .small-max-width--center, .ie7 article.page .content-wrapper, article.page .ie7 .content-wrapper, .ie8 .small-max-width--center, .ie8 article.page .content-wrapper, article.page .ie8 .content-wrapper {
+.ie7 .small-max-width--center, .ie7 .module-wrapper.facebook-module-wrapper .module, .module-wrapper.facebook-module-wrapper .ie7 .module, .ie7 article.page .content-wrapper, article.page .ie7 .content-wrapper, .ie8 .small-max-width--center, .ie8 .module-wrapper.facebook-module-wrapper .module, .module-wrapper.facebook-module-wrapper .ie8 .module, .ie8 article.page .content-wrapper, article.page .ie8 .content-wrapper {
   width: 700px;
 }
 .ie7 .top-menu-button, .ie8 .top-menu-button {
@@ -5778,9 +5822,14 @@ article.page .slideshow-wrapper:after {
   border-radius: 4px;
 }
 
+@media only screen and (max-width: 680px) {
+  .menu.cols-2 > li, .menu.cols-3 > li, .menu.cols-4 > li, .menu.cols-5 > li {
+    width: 100% !important;
+  }
+}
 .page-wrapper {
   padding-top: 110px;
-  background: url("../images/background.png") repeat;
+  background: white url("../images/background.png") repeat;
   padding-bottom: 30px;
 }
 
@@ -5818,6 +5867,7 @@ article.page .slideshow-wrapper .slideshow .slidesjs-pagination {
 }
 
 .program-icons {
+  padding: 12px 0;
   white-space: normal;
 }
 .program-icons > li > a {
@@ -5827,9 +5877,22 @@ article.page .slideshow-wrapper .slideshow .slidesjs-pagination {
   max-height: 40px;
 }
 
-.related-wrapper {
+.pre-footer-program .program-icons {
+  border-top: 5px dotted #333;
+  border-bottom: 5px dotted #333;
+  background: #222;
+}
+
+.related-wrapper h2 {
+  color: #666;
+  font-weight: normal;
+}
+.related-wrapper .related {
   margin-bottom: 12px;
 }
-.related-wrapper a {
+.related-wrapper .related .heading {
+  font-weight: bold;
+}
+.related-wrapper .related a {
   display: block;
 }

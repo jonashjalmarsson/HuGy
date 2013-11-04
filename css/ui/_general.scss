@@ -1,5 +1,7 @@
 body {
+	@extend .green-background;
 	font-family: Trebuchet MS;
+	
 }
 .hidden {
 	display: none;

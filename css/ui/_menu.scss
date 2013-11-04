@@ -60,3 +60,16 @@
 		@extend .black-text;
 	}
 }
+@include media-query(palm){
+	.menu {
+		&.cols-2,
+		&.cols-3,
+		&.cols-4,
+		&.cols-5 {
+			& > li {
+				width:100%!important;
+			}
+		}
+	}
+			
+}

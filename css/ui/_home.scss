@@ -33,17 +33,20 @@
 .home {
 	.top-wrapper {
 		background: transparent;
-		position: absolute;
 		z-index: 100;
-		.logo-space {
-			border-radius: 6px;
-			left: 36px;
-			padding: 24px;
-			position: absolute;
-			top: 36px;
-			width: 300px;
-			z-index: 100;
-			@extend .black-40;
+		.top {
+			position: relative;
+			
+			.logo-space {
+				border-radius: 6px;
+				left: 36px;
+				padding: 24px;
+				position: absolute;
+				top: 36px;
+				width: 300px;
+				z-index: 100;
+				@extend .black-40;
+			}
 		}
 	}
 	.page {
@@ -59,29 +62,58 @@
 	padding-top: 24px;
 	padding-bottom: 24px;
 	.module {
-		@extend .max-width--center;
-		.items {
-			@extend .grid;
-			.fb-feed-item,
-			.item {
-				@extend .grid__item;
-				@extend .one-third;
-				margin-bottom: 24px;
-				.wp-post-image {
-					max-width: 100%;
-				}
-			}
-		}
 	
 	}
 	&.nyheter-module-wrapper {
-		//@extend .orange-background;
+		.module {
+			@extend .max-width--center;
+			overflow: hidden;
+		}
 		h1 {
-			@extend .white-text;
+			@extend .black-text;
+		}
+		.items {
+			width: $max-width;
+			@extend .grid;
+			.item {
+				@extend .grid__item;
+				@extend .one-third;
+				position: relative;
+				.wp-post-image {
+					max-width: 100%;
+				}
+
+				.item-content {
+					@extend .white-40;
+					@extend .one-whole;
+					bottom: 6px;
+					left: 24px;
+					
+					position: absolute;
+					z-index: 100;
+					
+					a {
+						text-decoration: none;
+					}
+					h2 {
+						@extend .gamma;
+						@extend .islet;
+						@extend .flush--bottom;
+					}
+				}
+			}
 		}
 	}
 	&.facebook-module-wrapper {
-		@extend .black-60-background;
+		.module {
+			@extend .small-max-width--center;
+		}
+
+		/* facebook colors */
+		background: #3b5998 url('../images/facebook.png') no-repeat 90% 100%;
+		/*border-bottom: 1px solid #133783;
+		box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .52);*/
+		
 		h1 {
 			@extend .white-text;
 		}
@@ -89,10 +121,10 @@
 			@extend .hidden;
 		}
 		.fb-feed-item {
+			background: rgba(230,230,230,0.9);
+			margin-bottom: 2px;
 			.item-content {
 				@extend .cf;
-				@extend .white;
-				height: 240px;
 				overflow: hidden;
 				padding: 12px;
 			}
@@ -105,9 +137,20 @@
 				quotes: "";
 				padding: 6px;
 				border: 1px solid #ccc;
-				background: #eee;
+				background: rgba(230,230,230,0.7);
 			}
 			.caption {
+				@extend .hidden;
+			}
+			
+			&.fb-item-2,
+			&.fb-item-3,
+			&.fb-item-4,
+			&.fb-item-5,
+			&.fb-item-6,
+			&.fb-item-7,
+			&.fb-item-8,
+			&.fb-item-9 {
 				@extend .hidden;
 			}
 		}
@@ -115,59 +158,4 @@
 	}
 }
 
-/*
- * News hover effect
- */
-.ic_container{
-    vertical-align:baseline;
-    margin:0px;
-    position:relative;
-    /*-moz-border-radius:10px;
-    -webkit-border-radius:10px;
-    -khtml-border-radius:10px;
-    -moz-box-shadow: 0 1px 3px #888;
-    -webkit-box-shadow: 0 1px 3px #888;*/
-}
-.overlay{
-    opacity:0.3;
-    position:absolute;
-    top:0px;
-    bottom:0px;
-    left:0px;
-    right:0px;
-    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
-}
-.ic_caption{
-    position:absolute;    
-    opacity:0.6;   
-    overflow:hidden;
-    margin:0px;
-    padding:6px;
-    left:24px;
-    right:0px;
-    cursor:default;
-    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=60);
-	a {
-		@extend .white-text;
-	}
-}
-.ic_category{
-    text-transform:uppercase;
-    font-size:11px;
-    letter-spacing:3px;
-    padding:5px;
-    margin:0px;
-}
-.ic_caption h3{
-    padding:0px 5px 5px 5px;
-    margin:0px;
-    font-size:18px;
-}
-.ic_text{
-    padding:0px;
-    margin:0px;
-    text-align:justify;
-    font-size:11px;
-
-}
 

@@ -45,3 +45,11 @@ footer {
 		}
 	}
 }
+@include media-query(palm){
+	.footer-div {
+		.widget {
+			width:100%!important;
+		}
+	}
+			
+}
