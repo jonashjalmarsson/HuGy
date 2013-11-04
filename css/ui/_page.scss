@@ -1,5 +1,5 @@
 .page-wrapper {
-	padding-top: 110px;
+	padding-top: 180px;
 	background: white url("../images/background.png") repeat;
 	padding-bottom: 30px;
 }
@@ -72,5 +72,7 @@ article.page{
 
 	.content-wrapper {
 		@extend .small-max-width--center;
+		margin-top: 24px;
+		margin-bottom: 24px;
 	}
 }

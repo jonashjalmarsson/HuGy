@@ -5312,6 +5312,7 @@ article.page .slideshow-wrapper:after {
 }
 .home .page-wrapper {
   padding-top: 0px;
+  background: white;
 }
 
 .clip, .clip_80x80, .program-icon, .clip_48x48, .clip_40x40, .quick-icon, .clip_30x30, .clip_24x24, .menu-icon, .selected-menu-icon, .home-icon, .clip_20x20, .clip_16x16, .slideshow-navigation, .play-icon, article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-play, .pause-icon, article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-stop, .dot-icon, .active-dot-icon, article.page .slideshow-wrapper .slideshow .slidesjs-pagination .slidesjs-pagination-item a, .clip_12x12, .up-icon, .teaser-1 {
@@ -5863,7 +5864,7 @@ article.page .slideshow-wrapper:after {
 }
 
 .page-wrapper {
-  padding-top: 110px;
+  padding-top: 180px;
   background: white url("../images/background.png") repeat;
   padding-bottom: 30px;
 }
@@ -5899,6 +5900,10 @@ article.page .slideshow-wrapper .slideshow .slidesjs-pagination {
   position: absolute;
   bottom: 0;
   left: 20px;
+}
+article.page .content-wrapper {
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 .program-icons {
