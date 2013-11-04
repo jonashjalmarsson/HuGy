@@ -1,12 +1,11 @@
 <header class="header-wrapper">
 	<div class="top-wrapper">
 		<div class="top">
-			<div class="logo-space">
+			<div class="top-links-wrapper">
+				<?php echo HuGy::get_quicklinks(); ?>
+			</div><div class="logo-space">
 				<a href="<?php echo home_url(); ?>"><img class="logo" title="Hultsfreds gymnasium" src="<?php echo get_template_directory_uri() . "/images/hultsfreds-gymnasium.png"; ?>" /></a>
 				<h1><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-			</div><div class="top-links-wrapper">
-				<?php echo HuGy::get_quicklinks(); ?>
-				
 			</div>
 		</div>
 		

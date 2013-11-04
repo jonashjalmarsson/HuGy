@@ -5,8 +5,6 @@
 }
 article {
 	@extend .white-background;
-	@extend .island;
-	box-shadow: 0px 0px 15px #999;
 	.block-wrapper {
 		@extend .grid;
 		.related-wrapper,
@@ -15,6 +13,10 @@ article {
 			@extend .one-half;
 		}
 	}
+}
+.page article.page{
+ 	@extend .island;
+	box-shadow: 0px 0px 15px #999;
 }
 article.page{
 	.slideshow-wrapper {

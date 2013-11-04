@@ -96,3 +96,9 @@ article.page {
 	@extend .max-width--center;
 }
 
+@include media-query(palm){
+	.logo-space,
+	.top-links-wrapper {
+		width: 100%!important;
+	}
+}

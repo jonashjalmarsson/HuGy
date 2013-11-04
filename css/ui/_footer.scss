@@ -28,6 +28,7 @@ footer {
 	@extend .green;
 	.footer-div {
 		@extend .max-width--center;
+		padding: 24px 0;
 		/* if less than 4 widgets */
 		@for $i from 1 through 4 {
 			.widget:first-child:nth-last-child(#{$i}),

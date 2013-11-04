@@ -15,13 +15,19 @@
 	@extend .epsilon;
 	@extend .max-width--center;
 	@extend .nounderline;
+	padding: 24px 0;
 	.menu-head {
 		@extend .delta;
 		@extend .italic;
 	}
 	ul {
-		margin-left: 24px;
 		list-style-type: none;
+		&.children {
+			margin-left: 0px;	 
+			.children {
+				margin-left: 24px;
+			}
+		}
 	}
 	.menu {
 		a {

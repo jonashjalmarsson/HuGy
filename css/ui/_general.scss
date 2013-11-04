@@ -6,6 +6,9 @@ body {
 .hidden {
 	display: none;
 }
+.force-hidden {
+	display: none!important;
+}
 .max-width--center {
 	max-width: $max-width;
 	margin: 0 auto;

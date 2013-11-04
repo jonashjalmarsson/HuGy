@@ -21,14 +21,21 @@
 		max-width: initial;
 	}
 
-	.slidesjs-play,
-	.slidesjs-stop,
 	.slidesjs-pagination {
-		@extend .hidden;
+		@extend .force-hidden;
+		z-index: 200;
 	}
 }
 .slideshow {
 	overflow: hidden;
+	.slidesjs-play,
+	.slidesjs-stop {
+		@extend .force-hidden;
+		z-index: 200;
+	}
+	.slidesjs-pagination {
+		z-index: 200;
+	}
 }
 .home {
 	.top-wrapper {
@@ -93,7 +100,7 @@
 					z-index: 100;
 					
 					a {
-						text-decoration: none;
+						@extend .nounderline;
 					}
 					h2 {
 						@extend .gamma;

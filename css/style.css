@@ -11,7 +11,6 @@
  */
 /**
   *  Setup
- 
   */
 /*
  * enable modules
@@ -814,7 +813,7 @@ textarea:focus {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf:after, .nav:after, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks:after, .program-icons:after, .media:after, .island:after, article:after,
+.cf:after, .nav:after, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks:after, .program-icons:after, .media:after, .island:after, .page article.page:after,
 .islet:after,
 .contacts-wrapper .contacts:after,
 .contacts-wrapper .contacts .contact .contact-data:after,
@@ -845,7 +844,7 @@ pre,
 .form-fields > li,
 .media,
 .island,
-article,
+.page article.page,
 .islet,
 .contacts-wrapper .contacts,
 .contacts-wrapper .contacts .contact .contact-data,
@@ -889,11 +888,7 @@ pre, .islet .form-fields > li, .contacts-wrapper .contacts .form-fields > li, .m
 .island, .contacts-wrapper .contacts .contact .contact-data
 .island, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2
 .island, .related-wrapper .related
-.island, .islet
-article, .contacts-wrapper .contacts
-article, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2
-article, .related-wrapper .related
-article, .islet
+.island, .islet .page article.page, .page .islet article.page, .contacts-wrapper .contacts .page article.page, .page .contacts-wrapper .contacts article.page, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .page article.page, .page .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 article.page, .related-wrapper .related .page article.page, .page .related-wrapper .related article.page, .islet
 .islet, .contacts-wrapper .contacts
 .islet, .contacts-wrapper .contacts .contact .contact-data
 .islet, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2
@@ -1983,7 +1978,7 @@ article .block-wrapper .contacts-wrapper {
  * Demo: jsfiddle.net/inuitcss/u8pV3
  *
  */
-.island, article,
+.island, .page article.page,
 .islet,
 .contacts-wrapper .contacts,
 .contacts-wrapper .contacts .contact .contact-data,
@@ -1992,11 +1987,11 @@ article .block-wrapper .contacts-wrapper {
   display: block;
 }
 
-.island, article {
+.island, .page article.page {
   padding: 24px;
 }
 
-.island > :last-child, article > :last-child,
+.island > :last-child, .page article.page > :last-child,
 .islet > :last-child,
 .contacts-wrapper .contacts > :last-child,
 .contacts-wrapper .contacts .contact .contact-data > :last-child,
@@ -5086,6 +5081,7 @@ h1,
 }
 
 footer .footer-div {
+  padding: 24px 0;
   /* if less than 4 widgets */
   /* if more than 4 widgets */
 }
@@ -5134,10 +5130,13 @@ body {
   font-family: Trebuchet MS;
 }
 
-.hidden, .firstpage.slideshow .slidesjs-play,
-.firstpage.slideshow .slidesjs-stop,
-.firstpage.slideshow .slidesjs-pagination, .module-wrapper.facebook-module-wrapper .fb-page-name, .module-wrapper.facebook-module-wrapper .fb-feed-item .caption, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-2, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-3, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-4, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-5, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-6, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-7, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-8, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-9, .main-menu .main-menu-wrapper {
+.hidden, .module-wrapper.facebook-module-wrapper .fb-page-name, .module-wrapper.facebook-module-wrapper .fb-feed-item .caption, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-2, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-3, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-4, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-5, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-6, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-7, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-8, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-9, .main-menu .main-menu-wrapper {
   display: none;
+}
+
+.force-hidden, .firstpage.slideshow .slidesjs-pagination, .slideshow .slidesjs-play,
+.slideshow .slidesjs-stop {
+  display: none !important;
 }
 
 .max-width--center, footer .footer-div, .top-wrapper .top, .top-navigation-wrapper .top-navigation, article.page, .module-wrapper.nyheter-module-wrapper .module, .main-menu-wrapper {
@@ -5150,7 +5149,7 @@ body {
   margin: 0 auto;
 }
 
-.nounderline, .top-wrapper, .main-menu-wrapper, .nounderline a, .top-wrapper a, .main-menu-wrapper a {
+.nounderline, .top-wrapper, .module-wrapper.nyheter-module-wrapper .items .item .item-content a, .main-menu-wrapper, .nounderline a, .top-wrapper a, .module-wrapper.nyheter-module-wrapper .items .item .item-content a a, .main-menu-wrapper a {
   text-decoration: none;
 }
 
@@ -5233,6 +5232,12 @@ article.page .slideshow-wrapper:after {
   margin-left: 12px;
 }
 
+@media only screen and (max-width: 680px) {
+  .logo-space,
+  .top-links-wrapper {
+    width: 100% !important;
+  }
+}
 .teaser-1 {
   bottom: 1%;
   left: 50%;
@@ -5258,9 +5263,19 @@ article.page .slideshow-wrapper:after {
 .firstpage.slideshow img {
   max-width: initial;
 }
+.firstpage.slideshow .slidesjs-pagination {
+  z-index: 200;
+}
 
 .slideshow {
   overflow: hidden;
+}
+.slideshow .slidesjs-play,
+.slideshow .slidesjs-stop {
+  z-index: 200;
+}
+.slideshow .slidesjs-pagination {
+  z-index: 200;
 }
 
 .home .top-wrapper {
@@ -5308,9 +5323,6 @@ article.page .slideshow-wrapper:after {
   left: 24px;
   position: absolute;
   z-index: 100;
-}
-.module-wrapper.nyheter-module-wrapper .items .item .item-content a {
-  text-decoration: none;
 }
 .module-wrapper.facebook-module-wrapper {
   /* facebook colors */
@@ -5811,9 +5823,17 @@ article.page .slideshow-wrapper:after {
   float: left;
 }
 
+.main-menu-wrapper {
+  padding: 24px 0;
+}
 .main-menu-wrapper ul {
-  margin-left: 24px;
   list-style-type: none;
+}
+.main-menu-wrapper ul.children {
+  margin-left: 0px;
+}
+.main-menu-wrapper ul.children .children {
+  margin-left: 24px;
 }
 .main-menu-wrapper .menu a {
   padding: 3px;
@@ -5833,7 +5853,7 @@ article.page .slideshow-wrapper:after {
   padding-bottom: 30px;
 }
 
-article {
+.page article.page {
   box-shadow: 0px 0px 15px #999;
 }
 
