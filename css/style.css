@@ -5213,15 +5213,19 @@ article.page .slideshow-wrapper:after {
   left: 0px;
   width: 100%;
   z-index: 100;
+  background-color: transparent !important;
 }
 
 .header-wrapper {
-  background-color: transparent !important;
+  background-color: white !important;
   width: 100%;
 }
 
 .contacts-wrapper .contacts .contact .header-wrapper.contact-data .logo-space, .header-wrapper.white .logo-space, article.page .header-wrapper.slideshow-wrapper .logo-space {
   background-color: rgba(255, 255, 255, 0.4) !important;
+}
+.contacts-wrapper .contacts .contact .header-wrapper.contact-data .top-wrapper, .header-wrapper.white .top-wrapper, article.page .header-wrapper.slideshow-wrapper .top-wrapper {
+  background-color: transparent !important;
 }
 
 .top-wrapper .top .logo-space {
@@ -5247,14 +5251,14 @@ article.page .slideshow-wrapper:after {
 }
 
 .top-navigation-wrapper.fixed {
-  box-shadow: 0px 0px 10px black;
+  box-shadow: 0px 0px 10px #999;
   position: fixed;
   top: 0px;
   left: 0px;
   width: 100%;
   z-index: 1000;
 }
-.top-navigation-wrapper .top-navigation .top-menu-button.selected {
+.top-navigation-wrapper.selected {
   box-shadow: none !important;
 }
 .top-navigation-wrapper .top-navigation .top-menu-button,
@@ -5337,9 +5341,6 @@ article.page .slideshow-wrapper:after {
   top: 36px;
   width: auto;
   z-index: 100;
-}
-.home .top-wrapper .top .logo-space img {
-  max-width: 150%;
 }
 .home .page {
   width: 100%;
