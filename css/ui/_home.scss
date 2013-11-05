@@ -16,6 +16,8 @@
 		top: 0;
 		left: 0;
 		z-index: 90;
+		width: 4000px;
+		height: 4000px;
 	}
 	img {
 		max-width: initial;
@@ -74,7 +76,9 @@
 		.top-wrapper {
 			.top {
 				.logo-space {
-					width: auto!important;
+					width: 60%!important;
+					padding: 6px;
+					margin-top: 24px;
 					img {
 						max-width: 100%;
 					}
@@ -82,7 +86,7 @@
 			}
 		}
 		.teaser:not(.teaser-1) {
-			display: none;
+			display: none!important;
 		}
 	}
 }

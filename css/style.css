@@ -2296,7 +2296,7 @@ article .block-wrapper .contacts-wrapper {
     width: 91.666%;
   }
 }
-@media only screen and (min-width: 681px) and (max-width: 1023px) {
+@media only screen and (min-width: 681px) and (max-width: 1147px) {
   /**
   * Whole
   */
@@ -2544,7 +2544,7 @@ article .block-wrapper .contacts-wrapper {
     width: 91.666%;
   }
 }
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1147px) {
   /**
   * Whole
   */
@@ -2668,7 +2668,7 @@ article .block-wrapper .contacts-wrapper {
     width: 91.666%;
   }
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1148px) {
   /**
   * Whole
   */
@@ -3160,7 +3160,7 @@ article .block-wrapper .contacts-wrapper {
     width: 1px !important;
   }
 }
-@media only screen and (min-width: 681px) and (max-width: 1023px) {
+@media only screen and (min-width: 681px) and (max-width: 1147px) {
   .accessibility--lap,
   .visuallyhidden--lap {
     border: 0 !important;
@@ -3186,7 +3186,7 @@ article .block-wrapper .contacts-wrapper {
     width: 1px !important;
   }
 }
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1147px) {
   .accessibility--portable,
   .visuallyhidden--portable {
     border: 0 !important;
@@ -3199,7 +3199,7 @@ article .block-wrapper .contacts-wrapper {
     width: 1px !important;
   }
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1148px) {
   .accessibility--desk,
   .visuallyhidden--desk {
     border: 0 !important;
@@ -5097,6 +5097,9 @@ footer .footer-div .footer-container {
   /* if less than 4 widgets */
   /* if more than 4 widgets */
 }
+footer .footer-div .footer-container .widget {
+  overflow: hidden;
+}
 footer .footer-div .footer-container .widget:first-child:nth-last-child(1),
 footer .footer-div .footer-container .widget:first-child:nth-last-child(1) ~ .widget {
   width: 100%;
@@ -5151,11 +5154,17 @@ body {
   display: none !important;
 }
 
-.max-width--center, footer .footer-div, .top-wrapper .top, .top-navigation-wrapper .top-navigation, article.page, .main-menu-wrapper, .module-wrapper.nyheter-module-wrapper .module {
+.max-width--center, footer .footer-div, .top-wrapper .top, .top-navigation-wrapper .top-navigation, .main-menu-wrapper, .module-wrapper.nyheter-module-wrapper .module, .page article.page {
   max-width: 1100px;
   margin: 0 auto;
 }
 
+@media only screen and (max-width: 1147px) {
+  .max-width--center, footer .footer-div, .top-wrapper .top, .top-navigation-wrapper .top-navigation, .main-menu-wrapper, .module-wrapper.nyheter-module-wrapper .module, .page article.page {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
 .small-max-width--center, .module-wrapper.facebook-module-wrapper .module, article.page .content-wrapper {
   max-width: 700px;
   margin: 0 auto;
@@ -5198,13 +5207,17 @@ article.page .slideshow-wrapper:after {
   transform: rotate(3deg);
 }
 
-.header-wrapper {
-  background: transparent;
+.home .header-wrapper {
   position: absolute;
   top: 0px;
   left: 0px;
   width: 100%;
   z-index: 100;
+}
+
+.header-wrapper {
+  background: transparent;
+  width: 100%;
 }
 
 .top-wrapper .top .logo-space {
@@ -5219,6 +5232,7 @@ article.page .slideshow-wrapper:after {
 }
 .top-wrapper .top .top-links-wrapper .quicklinks-wrapper {
   text-align: right;
+  overflow: hidden;
 }
 .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks > li > a {
   padding: 0;
@@ -5249,6 +5263,14 @@ article.page .slideshow-wrapper:after {
   .top-links-wrapper {
     width: 100% !important;
   }
+
+  .top-navigation-wrapper .top-navigation .top-menu-button, .top-navigation-wrapper .top-navigation .breadcrumb {
+    display: block;
+  }
+
+  .top-navigation-wrapper .top-navigation .breadcrumb {
+    margin-left: 0px;
+  }
 }
 .teaser-1 {
   bottom: 1%;
@@ -5271,6 +5293,8 @@ article.page .slideshow-wrapper:after {
   top: 0;
   left: 0;
   z-index: 90;
+  width: 4000px;
+  height: 4000px;
 }
 .firstpage.slideshow img {
   max-width: initial;
@@ -5320,13 +5344,15 @@ article.page .slideshow-wrapper:after {
 
 @media only screen and (max-width: 680px) {
   .home .top-wrapper .top .logo-space {
-    width: auto !important;
+    width: 60% !important;
+    padding: 6px;
+    margin-top: 24px;
   }
   .home .top-wrapper .top .logo-space img {
     max-width: 100%;
   }
   .home .teaser:not(.teaser-1) {
-    display: none;
+    display: none !important;
   }
 }
 .clip, .clip_80x80, .program-icon, .clip_48x48, .clip_40x40, .quick-icon, .clip_30x30, .clip_24x24, .menu-icon, .selected-menu-icon, .home-icon, .clip_20x20, .clip_16x16, .slideshow-navigation, .play-icon, article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-play, .pause-icon, article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-stop, .dot-icon, .active-dot-icon, article.page .slideshow-wrapper .slideshow .slidesjs-pagination .slidesjs-pagination-item a, .clip_12x12, .up-icon, .teaser-1 {
@@ -5723,7 +5749,7 @@ article.page .slideshow-wrapper:after {
   background-position: -1520px -80px;
 }
 
-.ie7 .max-width--center, .ie7 footer .footer-div, footer .ie7 .footer-div, .ie7 .top-wrapper .top, .top-wrapper .ie7 .top, .ie7 .top-navigation-wrapper .top-navigation, .top-navigation-wrapper .ie7 .top-navigation, .ie7 article.page, .ie7 .main-menu-wrapper, .ie7 .module-wrapper.nyheter-module-wrapper .module, .module-wrapper.nyheter-module-wrapper .ie7 .module, .ie8 .max-width--center, .ie8 footer .footer-div, footer .ie8 .footer-div, .ie8 .top-wrapper .top, .top-wrapper .ie8 .top, .ie8 .top-navigation-wrapper .top-navigation, .top-navigation-wrapper .ie8 .top-navigation, .ie8 article.page, .ie8 .main-menu-wrapper, .ie8 .module-wrapper.nyheter-module-wrapper .module, .module-wrapper.nyheter-module-wrapper .ie8 .module {
+.ie7 .max-width--center, .ie7 footer .footer-div, footer .ie7 .footer-div, .ie7 .top-wrapper .top, .top-wrapper .ie7 .top, .ie7 .top-navigation-wrapper .top-navigation, .top-navigation-wrapper .ie7 .top-navigation, .ie7 .main-menu-wrapper, .ie7 .module-wrapper.nyheter-module-wrapper .module, .module-wrapper.nyheter-module-wrapper .ie7 .module, .ie7 .page article.page, .page .ie7 article.page, .ie8 .max-width--center, .ie8 footer .footer-div, footer .ie8 .footer-div, .ie8 .top-wrapper .top, .top-wrapper .ie8 .top, .ie8 .top-navigation-wrapper .top-navigation, .top-navigation-wrapper .ie8 .top-navigation, .ie8 .main-menu-wrapper, .ie8 .module-wrapper.nyheter-module-wrapper .module, .module-wrapper.nyheter-module-wrapper .ie8 .module, .ie8 .page article.page, .page .ie8 article.page {
   width: 1100px;
 }
 .ie7 .small-max-width--center, .ie7 .module-wrapper.facebook-module-wrapper .module, .module-wrapper.facebook-module-wrapper .ie7 .module, .ie7 article.page .content-wrapper, article.page .ie7 .content-wrapper, .ie8 .small-max-width--center, .ie8 .module-wrapper.facebook-module-wrapper .module, .module-wrapper.facebook-module-wrapper .ie8 .module, .ie8 article.page .content-wrapper, article.page .ie8 .content-wrapper {
@@ -5878,7 +5904,7 @@ article.page .slideshow-wrapper:after {
 }
 
 .page-wrapper {
-  padding-top: 180px;
+  padding-top: 30px;
   background: white url("../images/background.png") repeat;
   padding-bottom: 30px;
 }

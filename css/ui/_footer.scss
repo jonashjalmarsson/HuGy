@@ -37,6 +37,7 @@ footer {
 			}
 			.widget {
 				@extend .grid__item;
+				overflow: hidden;
 			}
 			/* if less than 4 widgets */
 			@for $i from 1 through 4 {

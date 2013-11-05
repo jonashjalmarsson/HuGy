@@ -244,25 +244,35 @@ jQuery(document).ready(function($) {
 		{
 			$(".teaser-1").css("left", ($(document).width() - $(".teaser-1").width()) / 2);
 			$(".slideshow").width($(window).width()).height($(window).height());
-			$(".slide-layer").width($(window).width()).height($(window).height());
+			//$(".slide-layer").width($(window).width()).height($(window).height());
 			$(".slidesjs-container").width($(window).width()).height($(window).height());
 			$(".slidesjs-control").width($(window).width()).height($(window).height());
 			
 			winProp = $(window).width() / $(window).height();
 			
-			$(".slidesjs-slide").each(function() {
-				imgProp = $(this).width() / $(this).height();
-				if (imgProp > winProp) {
-					$(this).height('auto').width(imgProp * $(window).height()).css("max-width",imgProp * $(window).height());
-				}
-				else {
-					$(this).height('auto').width($(window).width()).css("max-width",$(window).width());
-				}
-					
-				if ($(this).width() > $(window).width()) 
-					$(this).css("left",-($(this).width() - $(window).width())/2);
-			});
-			
+			if (fixedImage) {
+				imgProp = $(".slidesjs-slide").width() / $(".slidesjs-slide").height();
+				console.log(imgProp);
+				if (imgProp > winProp) 
+					$(".slidesjs-control").css('background-size','auto 100%');
+				else
+					$(".slidesjs-control").css('background-size','100% auto');
+				
+			}
+			else {
+				$(".slidesjs-slide").each(function() {
+					imgProp = $(this).width() / $(this).height();
+					if (imgProp > winProp) {
+						$(this).height('auto').width(imgProp * $(window).height()).css("max-width",imgProp * $(window).height());
+					}
+					else {
+						$(this).height('auto').width($(window).width()).css("max-width",$(window).width());
+					}
+						
+					if ($(this).width() > $(window).width()) 
+						$(this).css("left",-($(this).width() - $(window).width())/2);
+				});
+			}			
 			/*$(".slides").options({
 				width: $(window).width(),
 				height: $(window).height() });*/

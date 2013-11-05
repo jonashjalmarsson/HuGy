@@ -1,12 +1,14 @@
-.header-wrapper {
-	@extend .white-text;
-	background: transparent;
+.home .header-wrapper {
 	position: absolute;
 	top: 0px;
 	left: 0px;
 	width: 100%;
 	z-index: 100;
-
+}
+.header-wrapper {
+	@extend .white-text;
+	background: transparent;
+	width: 100%;
 }
 .top-wrapper {
 
@@ -42,6 +44,7 @@
 			float: right;
 			.quicklinks-wrapper {	
 				text-align: right;
+				overflow: hidden;
 				.quicklinks {
 					@extend .nav;
 					@extend .nav--block;
@@ -92,13 +95,15 @@
 	@extend .visuallyhidden;
 }
 
-article.page {
-	@extend .max-width--center;
-}
-
 @include media-query(palm){
 	.logo-space,
 	.top-links-wrapper {
 		width: 100%!important;
+	}
+	.top-navigation-wrapper .top-navigation .top-menu-button, .top-navigation-wrapper .top-navigation .breadcrumb {
+		display: block;
+	}
+	.top-navigation-wrapper .top-navigation .breadcrumb {
+		margin-left: 0px;
 	}
 }
