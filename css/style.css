@@ -5233,7 +5233,7 @@ article.page .slideshow-wrapper:after {
   top: 0px;
   left: 0px;
   width: 100%;
-  z-index: 100;
+  z-index: 1000;
 }
 .top-navigation-wrapper .top-navigation .top-menu-button,
 .top-navigation-wrapper .top-navigation .breadcrumb {
@@ -5266,7 +5266,7 @@ article.page .slideshow-wrapper:after {
   position: relative;
 }
 .firstpage.slideshow .slide-layer {
-  background: url("../images/slide-layer.png") repeat;
+  background: url("../images/slide-layer.png") repeat fixed;
   position: absolute;
   top: 0;
   left: 0;
@@ -5303,8 +5303,11 @@ article.page .slideshow-wrapper:after {
   padding: 24px;
   position: absolute;
   top: 36px;
-  width: 300px;
+  width: auto;
   z-index: 100;
+}
+.home .top-wrapper .top .logo-space img {
+  max-width: 150%;
 }
 .home .page {
   width: 100%;
@@ -5315,6 +5318,17 @@ article.page .slideshow-wrapper:after {
   background: white;
 }
 
+@media only screen and (max-width: 680px) {
+  .home .top-wrapper .top .logo-space {
+    width: auto !important;
+  }
+  .home .top-wrapper .top .logo-space img {
+    max-width: 80%;
+  }
+  .home .teaser:not(.teaser-1) {
+    display: none;
+  }
+}
 .clip, .clip_80x80, .program-icon, .clip_48x48, .clip_40x40, .quick-icon, .clip_30x30, .clip_24x24, .menu-icon, .selected-menu-icon, .home-icon, .clip_20x20, .clip_16x16, .slideshow-navigation, .play-icon, article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-play, .pause-icon, article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-stop, .dot-icon, .active-dot-icon, article.page .slideshow-wrapper .slideshow .slidesjs-pagination .slidesjs-pagination-item a, .clip_12x12, .up-icon, .teaser-1 {
   background-image: url("../images/ikoner.svg");
   display: inline-block;
@@ -5833,7 +5847,7 @@ article.page .slideshow-wrapper:after {
   bottom: 6px;
   left: 24px;
   position: absolute;
-  z-index: 100;
+  z-index: 99;
 }
 .module-wrapper.facebook-module-wrapper {
   /* facebook colors */

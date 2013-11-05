@@ -1,6 +1,7 @@
 
 jQuery(document).ready(function($) {
 	var myslideshow;
+	var fixedImage = false;
 	
 	$("html").removeClass("no-js").addClass("js"); // to get no-js css when needed
 	
@@ -312,7 +313,9 @@ jQuery(document).ready(function($) {
 		if ($("body").hasClass("home") && ($(window).scrollTop() - $(window).height() + $(".top-navigation-wrapper").height()) < 0) {
 			$(".top-navigation-wrapper").addClass("fixed").css("top","0").hide();
 			// slideshow scroll effect firstpage
-			$(".slidesjs-container").css("top",$(window).scrollTop());
+			//$(".slidesjs-container").css("top",$(window).scrollTop());
+			if (!fixedImage)
+				$(".slidesjs-container").css("top",$(window).scrollTop());
 		}
 		// begin show menu when close to slideshow end
 		else if ($("body").hasClass("home") && ($(window).scrollTop() - $(window).height()) < 0) {
@@ -330,7 +333,7 @@ jQuery(document).ready(function($) {
 		}
 		// else show menu
 		else { // if ($(window).scrollTop() - $(".top").height() > 0) {
-			$(".top-navigation-wrapper, .top-menu-button").addClass("fixed").css("top","0");
+			$(".top-navigation-wrapper, .top-menu-button").addClass("fixed").show().css("top","0");
 			$(".top-menu-button").removeClass("selected");
 			$(".top-navigation-wrapper").removeClass("selected");
 		}
@@ -453,7 +456,10 @@ jQuery(document).ready(function($) {
 		setTimeout(setSizes,500);
 	}
 	else if ($(".slides").find("img").length == 1) {
-		$(".slides img").css('position','absolute').addClass('slidesjs-slide').wrap("<div class='slidesjs-container' style='overflow: hidden; position: relative;'><div class='slidesjs-control' style='position: relative;'></div></div>");
+		fixedImage = true;
+		//$(".slides img").css('position','absolute').addClass('slidesjs-slide').wrap("<div class='slidesjs-container' style='overflow: hidden; position: relative;'><div class='slidesjs-control' style='position: relative;'></div></div>");
+		$(".slides img").hide().css('position','absolute').addClass('slidesjs-slide').wrap("<div class='slidesjs-container' style='overflow: hidden; position: relative;'><div class='slidesjs-control' style='position: relative;'></div></div>");
+		$(".slidesjs-control").css('background-image','url(' + $(".slides img").attr('src') + ')').css('background-position', 'top center').css('background-attachment', 'fixed').css('background-repeat', 'no-repeat');
 		setSizes();
 	}
 

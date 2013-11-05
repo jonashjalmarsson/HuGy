@@ -11,7 +11,7 @@
 .firstpage.slideshow {
 	position: relative;
 	.slide-layer {
-		background: url("../images/slide-layer.png") repeat;
+		background: url("../images/slide-layer.png") repeat fixed;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -50,9 +50,12 @@
 				padding: 24px;
 				position: absolute;
 				top: 36px;
-				width: 300px;
+				width: auto;
 				z-index: 100;
 				@extend .black-40;
+				img {
+					max-width: 150%;
+				}
 			}
 		}
 	}
@@ -66,5 +69,21 @@
 	}
 }
 
-
+@include media-query(palm){
+	.home {
+		.top-wrapper {
+			.top {
+				.logo-space {
+					width: auto!important;
+					img {
+						max-width: 80%;
+					}
+				}
+			}
+		}
+		.teaser:not(.teaser-1) {
+			display: none;
+		}
+	}
+}
 
