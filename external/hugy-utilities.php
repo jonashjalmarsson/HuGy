@@ -83,7 +83,7 @@
 		
 		
 		/*
-		 *
+		 * Get slideshow images
 		 */
 		function get_slideshow($images, $wrapper_class_name = "slideshow", $size = "thumbnail") {
 			global $image_sizes;
@@ -99,6 +99,28 @@
 					}
 				endforeach;
 				$retValue .= "</div></div>";
+			endif;
+			return $retValue;
+		}
+
+
+		/*
+		 * Get first image of slideshow images
+		 */
+		function get_first_image($images, $wrapper_class_name = "wp-post-image", $size = "thumbnail") {
+			global $image_sizes;
+			$retValue = "";
+			if( $images ): 
+				$retValue .= "<div class='$wrapper_class_name'>";
+				foreach( $images as $image ) :
+					if (($image_sizes[$size][0] == "9999" || $image_sizes[$size][0] == $image["sizes"][$size."-width"] )
+					 && ($image_sizes[$size][1] == "9999" || $image_sizes[$size][1] == $image["sizes"][$size."-height"])) {
+						$url = $image["sizes"][$size];
+						$retValue .= "<img src='" . $url ."' alt='" . $image['alt'] . "' />";
+						break;
+					}
+				endforeach;
+				$retValue .= "</div>";
 			endif;
 			return $retValue;
 		}
@@ -293,7 +315,8 @@
 					$retValue .= "<div class='item'>";
 					$the_query->the_post();
 					//$retValue .= "<div class='item-img'>";
-					$retValue .=  get_the_post_thumbnail(get_the_ID(), 'news'); 
+					//$retValue .=  get_the_post_thumbnail(get_the_ID(), 'news'); 
+					$retValue .=  HuGy::get_first_image(get_field('hg_slideshow',get_the_ID()),'wp-post-image','news');
 					//$retValue .= "</div>";
 					$retValue .= "<div class='item-content'>";
 					$retValue .= "<a href='" . get_permalink() . "'><h2>" . get_the_title() . "</h2>";
@@ -350,7 +373,7 @@
 				$field = 'option';
 			}
 			$i = 0;
-			//if (has_sub_field("hg_relaterade",$field)) :
+			if (get_field("hg_relaterade",$field)) :
 			$retValue .= "<div class='related-wrapper'><h2>Relaterat</h2><div class='related'>";
 			while (the_flexible_field("hg_relaterade",$field)) :
 				//$retValue .= "<div class='" . get_row_layout() . "-" . $i++ . " relaterad'>";
@@ -371,7 +394,7 @@
 				//$retValue .= "</div>";
 			endwhile;
 			$retValue .= "</div></div>";
-			//endif;
+			endif;
 			return $retValue;
 		}
 		

@@ -813,7 +813,8 @@ textarea:focus {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf:after, .nav:after, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks:after, .program-icons:after, .media:after, .island:after, .page article.page:after,
+.cf:after, .nav:after, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks:after, .program-icons:after, .media:after, .island:after, .single article.page:after,
+.page article.page:after,
 .islet:after,
 .contacts-wrapper .contacts:after,
 .contacts-wrapper .contacts .contact .contact-data:after,
@@ -845,6 +846,7 @@ pre,
 .form-fields > li,
 .media,
 .island,
+.single article.page,
 .page article.page,
 .islet,
 .contacts-wrapper .contacts,
@@ -897,7 +899,17 @@ pre, .islet .form-fields > li, .contacts-wrapper .contacts .form-fields > li, .m
 .island, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2
 .island, .module-wrapper.facebook-module-wrapper .fb-loader
 .island, .related-wrapper .related
-.island, .islet .page article.page, .page .islet article.page, .contacts-wrapper .contacts .page article.page, .page .contacts-wrapper .contacts article.page, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .page article.page, .page .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 article.page, .module-wrapper.facebook-module-wrapper .fb-loader .page article.page, .page .module-wrapper.facebook-module-wrapper .fb-loader article.page, .related-wrapper .related .page article.page, .page .related-wrapper .related article.page, .islet
+.island, .islet .single article.page, .single .islet article.page, .contacts-wrapper .contacts .single article.page, .single .contacts-wrapper .contacts article.page, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .single article.page, .single .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 article.page, .module-wrapper.facebook-module-wrapper .fb-loader .single article.page, .single .module-wrapper.facebook-module-wrapper .fb-loader article.page, .related-wrapper .related .single article.page, .single .related-wrapper .related article.page,
+.islet .page article.page,
+.page .islet article.page,
+.contacts-wrapper .contacts .page article.page,
+.page .contacts-wrapper .contacts article.page,
+.module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .page article.page,
+.page .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 article.page,
+.module-wrapper.facebook-module-wrapper .fb-loader .page article.page,
+.page .module-wrapper.facebook-module-wrapper .fb-loader article.page,
+.related-wrapper .related .page article.page,
+.page .related-wrapper .related article.page, .islet
 .islet, .contacts-wrapper .contacts
 .islet, .contacts-wrapper .contacts .contact .contact-data
 .islet, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2
@@ -1988,7 +2000,8 @@ article .block-wrapper .contacts-wrapper {
  * Demo: jsfiddle.net/inuitcss/u8pV3
  *
  */
-.island, .page article.page,
+.island, .single article.page,
+.page article.page,
 .islet,
 .contacts-wrapper .contacts,
 .contacts-wrapper .contacts .contact .contact-data,
@@ -1998,11 +2011,13 @@ article .block-wrapper .contacts-wrapper {
   display: block;
 }
 
-.island, .page article.page {
+.island, .single article.page,
+.page article.page {
   padding: 24px;
 }
 
-.island > :last-child, .page article.page > :last-child,
+.island > :last-child, .single article.page > :last-child,
+.page article.page > :last-child,
 .islet > :last-child,
 .contacts-wrapper .contacts > :last-child,
 .contacts-wrapper .contacts .contact .contact-data > :last-child,
@@ -5154,13 +5169,15 @@ body {
   display: none !important;
 }
 
-.max-width--center, footer .footer-div, .top-wrapper .top, .top-navigation-wrapper .top-navigation, .main-menu-wrapper, .module-wrapper.nyheter-module-wrapper .module, .page article.page {
+.max-width--center, footer .footer-div, .top-wrapper .top, .top-navigation-wrapper .top-navigation, .main-menu-wrapper, .module-wrapper.nyheter-module-wrapper .module, .single article.page,
+.page article.page {
   max-width: 1100px;
   margin: 0 auto;
 }
 
 @media only screen and (max-width: 1147px) {
-  .max-width--center, footer .footer-div, .top-wrapper .top, .top-navigation-wrapper .top-navigation, .main-menu-wrapper, .module-wrapper.nyheter-module-wrapper .module, .page article.page {
+  .max-width--center, footer .footer-div, .top-wrapper .top, .top-navigation-wrapper .top-navigation, .main-menu-wrapper, .module-wrapper.nyheter-module-wrapper .module, .single article.page,
+  .page article.page {
     margin-left: 12px;
     margin-right: 12px;
   }
@@ -5767,7 +5784,11 @@ article.page .slideshow-wrapper:after {
   background-position: -1520px -80px;
 }
 
-.ie7 .max-width--center, .ie7 footer .footer-div, footer .ie7 .footer-div, .ie7 .top-wrapper .top, .top-wrapper .ie7 .top, .ie7 .top-navigation-wrapper .top-navigation, .top-navigation-wrapper .ie7 .top-navigation, .ie7 .main-menu-wrapper, .ie7 .module-wrapper.nyheter-module-wrapper .module, .module-wrapper.nyheter-module-wrapper .ie7 .module, .ie7 .page article.page, .page .ie7 article.page, .ie8 .max-width--center, .ie8 footer .footer-div, footer .ie8 .footer-div, .ie8 .top-wrapper .top, .top-wrapper .ie8 .top, .ie8 .top-navigation-wrapper .top-navigation, .top-navigation-wrapper .ie8 .top-navigation, .ie8 .main-menu-wrapper, .ie8 .module-wrapper.nyheter-module-wrapper .module, .module-wrapper.nyheter-module-wrapper .ie8 .module, .ie8 .page article.page, .page .ie8 article.page {
+.ie7 .max-width--center, .ie7 footer .footer-div, footer .ie7 .footer-div, .ie7 .top-wrapper .top, .top-wrapper .ie7 .top, .ie7 .top-navigation-wrapper .top-navigation, .top-navigation-wrapper .ie7 .top-navigation, .ie7 .main-menu-wrapper, .ie7 .module-wrapper.nyheter-module-wrapper .module, .module-wrapper.nyheter-module-wrapper .ie7 .module, .ie7 .single article.page, .single .ie7 article.page,
+.ie7 .page article.page,
+.page .ie7 article.page, .ie8 .max-width--center, .ie8 footer .footer-div, footer .ie8 .footer-div, .ie8 .top-wrapper .top, .top-wrapper .ie8 .top, .ie8 .top-navigation-wrapper .top-navigation, .top-navigation-wrapper .ie8 .top-navigation, .ie8 .main-menu-wrapper, .ie8 .module-wrapper.nyheter-module-wrapper .module, .module-wrapper.nyheter-module-wrapper .ie8 .module, .ie8 .single article.page, .single .ie8 article.page,
+.ie8 .page article.page,
+.page .ie8 article.page {
   width: 1100px;
 }
 .ie7 .small-max-width--center, .ie7 .module-wrapper.facebook-module-wrapper .module, .module-wrapper.facebook-module-wrapper .ie7 .module, .ie7 article.page .content-wrapper, article.page .ie7 .content-wrapper, .ie8 .small-max-width--center, .ie8 .module-wrapper.facebook-module-wrapper .module, .module-wrapper.facebook-module-wrapper .ie8 .module, .ie8 article.page .content-wrapper, article.page .ie8 .content-wrapper {
@@ -5869,6 +5890,7 @@ article.page .slideshow-wrapper:after {
 @media only screen and (max-width: 680px) {
   .menu.cols-2 > li, .menu.cols-3 > li, .menu.cols-4 > li, .menu.cols-5 > li {
     width: 100% !important;
+    padding-top: 24px;
   }
 }
 .module-wrapper {
@@ -5927,6 +5949,7 @@ article.page .slideshow-wrapper:after {
   padding-bottom: 30px;
 }
 
+.single article.page,
 .page article.page {
   box-shadow: 0px 0px 15px #999;
 }

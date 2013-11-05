@@ -166,6 +166,15 @@ if(function_exists("register_field_group"))
 					'group_no' => 0,
 				),
 			),
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'post',
+					'order_no' => 0,
+					'group_no' => 1,
+				),
+			),
 		),
 		'options' => array (
 			'position' => 'normal',
@@ -683,5 +692,4 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 }
-
 ?>
