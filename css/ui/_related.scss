@@ -15,8 +15,9 @@
 		.heading {
 			@extend .italic;
 			font-weight: bold;
+			margin-top: 6px;
 		}
-		a {
+		span, a {
 			display: block;
 		}
 	}

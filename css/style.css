@@ -1762,7 +1762,7 @@ label,
 /**
  * Grid wrapper
  */
-.grid, .main-menu-wrapper .menu, .module-wrapper.nyheter-module-wrapper .items, article .block-wrapper {
+.grid, footer .footer-div .footer-container, .main-menu-wrapper .menu, .module-wrapper.nyheter-module-wrapper .items, article .block-wrapper {
   margin-left: -24px;
   list-style: none;
   margin-bottom: 0;
@@ -1771,14 +1771,14 @@ label,
 /**
  * Very infrequently occuring grid wrappers as children of grid wrappers.
  */
-.grid > .grid, .main-menu-wrapper .menu > .grid, .module-wrapper.nyheter-module-wrapper .items > .grid, article .block-wrapper > .grid, .main-menu-wrapper .grid > .menu, .main-menu-wrapper .menu > .menu, .module-wrapper.nyheter-module-wrapper .main-menu-wrapper .items > .menu, .main-menu-wrapper .module-wrapper.nyheter-module-wrapper .items > .menu, article .main-menu-wrapper .block-wrapper > .menu, .main-menu-wrapper article .block-wrapper > .menu, .module-wrapper.nyheter-module-wrapper .grid > .items, .main-menu-wrapper .module-wrapper.nyheter-module-wrapper .menu > .items, .module-wrapper.nyheter-module-wrapper .main-menu-wrapper .menu > .items, .module-wrapper.nyheter-module-wrapper .items > .items, article .module-wrapper.nyheter-module-wrapper .block-wrapper > .items, .module-wrapper.nyheter-module-wrapper article .block-wrapper > .items, article .grid > .block-wrapper, .main-menu-wrapper article .menu > .block-wrapper, article .main-menu-wrapper .menu > .block-wrapper, .module-wrapper.nyheter-module-wrapper article .items > .block-wrapper, article .module-wrapper.nyheter-module-wrapper .items > .block-wrapper, article .block-wrapper > .block-wrapper {
+.grid > .grid, footer .footer-div .footer-container > .grid, .main-menu-wrapper .menu > .grid, .module-wrapper.nyheter-module-wrapper .items > .grid, article .block-wrapper > .grid, footer .footer-div .grid > .footer-container, footer .footer-div .footer-container > .footer-container, .main-menu-wrapper footer .footer-div .menu > .footer-container, footer .footer-div .main-menu-wrapper .menu > .footer-container, .module-wrapper.nyheter-module-wrapper footer .footer-div .items > .footer-container, footer .footer-div .module-wrapper.nyheter-module-wrapper .items > .footer-container, article footer .footer-div .block-wrapper > .footer-container, footer .footer-div article .block-wrapper > .footer-container, .main-menu-wrapper .grid > .menu, footer .footer-div .main-menu-wrapper .footer-container > .menu, .main-menu-wrapper footer .footer-div .footer-container > .menu, .main-menu-wrapper .menu > .menu, .module-wrapper.nyheter-module-wrapper .main-menu-wrapper .items > .menu, .main-menu-wrapper .module-wrapper.nyheter-module-wrapper .items > .menu, article .main-menu-wrapper .block-wrapper > .menu, .main-menu-wrapper article .block-wrapper > .menu, .module-wrapper.nyheter-module-wrapper .grid > .items, footer .footer-div .module-wrapper.nyheter-module-wrapper .footer-container > .items, .module-wrapper.nyheter-module-wrapper footer .footer-div .footer-container > .items, .main-menu-wrapper .module-wrapper.nyheter-module-wrapper .menu > .items, .module-wrapper.nyheter-module-wrapper .main-menu-wrapper .menu > .items, .module-wrapper.nyheter-module-wrapper .items > .items, article .module-wrapper.nyheter-module-wrapper .block-wrapper > .items, .module-wrapper.nyheter-module-wrapper article .block-wrapper > .items, article .grid > .block-wrapper, footer .footer-div article .footer-container > .block-wrapper, article footer .footer-div .footer-container > .block-wrapper, .main-menu-wrapper article .menu > .block-wrapper, article .main-menu-wrapper .menu > .block-wrapper, .module-wrapper.nyheter-module-wrapper article .items > .block-wrapper, article .module-wrapper.nyheter-module-wrapper .items > .block-wrapper, article .block-wrapper > .block-wrapper {
   margin-left: 0;
 }
 
 /**
  * Grid
  */
-.grid__item, .main-menu-wrapper .menu > li, .module-wrapper.nyheter-module-wrapper .items .item, article .block-wrapper .related-wrapper,
+.grid__item, footer .footer-div .footer-container .widget, .main-menu-wrapper .menu > li, .module-wrapper.nyheter-module-wrapper .items .item, article .block-wrapper .related-wrapper,
 article .block-wrapper .contacts-wrapper {
   display: inline-block;
   width: 100%;
@@ -5061,7 +5061,7 @@ article .block-wrapper .contacts-wrapper {
 }
 
 .italic, .contacts-wrapper h2, h1,
-.header, .main-menu-wrapper .menu-head, .related-wrapper h2, .related-wrapper .related .heading {
+.header, footer .footer-div .footer-container h2, .main-menu-wrapper .menu-head, .related-wrapper h2, .related-wrapper .related .heading {
   font-family: Georgia;
   font-style: italic;
 }
@@ -5092,44 +5092,44 @@ h1,
   -webkit-transform: rotate(180deg);
 }
 
-footer .footer-div {
-  padding: 24px 0;
+footer .footer-div .footer-container {
+  padding-top: 24px;
   /* if less than 4 widgets */
   /* if more than 4 widgets */
 }
-footer .footer-div .widget:first-child:nth-last-child(1),
-footer .footer-div .widget:first-child:nth-last-child(1) ~ .widget {
+footer .footer-div .footer-container .widget:first-child:nth-last-child(1),
+footer .footer-div .footer-container .widget:first-child:nth-last-child(1) ~ .widget {
   width: 100%;
 }
-footer .footer-div .widget:first-child:nth-last-child(2),
-footer .footer-div .widget:first-child:nth-last-child(2) ~ .widget {
+footer .footer-div .footer-container .widget:first-child:nth-last-child(2),
+footer .footer-div .footer-container .widget:first-child:nth-last-child(2) ~ .widget {
   width: 50%;
 }
-footer .footer-div .widget:first-child:nth-last-child(3),
-footer .footer-div .widget:first-child:nth-last-child(3) ~ .widget {
+footer .footer-div .footer-container .widget:first-child:nth-last-child(3),
+footer .footer-div .footer-container .widget:first-child:nth-last-child(3) ~ .widget {
   width: 33.33333%;
 }
-footer .footer-div .widget:first-child:nth-last-child(4),
-footer .footer-div .widget:first-child:nth-last-child(4) ~ .widget {
+footer .footer-div .footer-container .widget:first-child:nth-last-child(4),
+footer .footer-div .footer-container .widget:first-child:nth-last-child(4) ~ .widget {
   width: 25%;
 }
-footer .footer-div .widget:first-child:nth-last-child(5),
-footer .footer-div .widget:first-child:nth-last-child(5) ~ .widget {
+footer .footer-div .footer-container .widget:first-child:nth-last-child(5),
+footer .footer-div .footer-container .widget:first-child:nth-last-child(5) ~ .widget {
   width: 40%;
 }
-footer .footer-div .widget:first-child:nth-last-child(6),
-footer .footer-div .widget:first-child:nth-last-child(6) ~ .widget {
+footer .footer-div .footer-container .widget:first-child:nth-last-child(6),
+footer .footer-div .footer-container .widget:first-child:nth-last-child(6) ~ .widget {
   width: 33.33333%;
 }
-footer .footer-div .widget:first-child:nth-last-child(7),
-footer .footer-div .widget:first-child:nth-last-child(7) ~ .widget {
+footer .footer-div .footer-container .widget:first-child:nth-last-child(7),
+footer .footer-div .footer-container .widget:first-child:nth-last-child(7) ~ .widget {
   width: 28.57143%;
 }
-footer .footer-div .widget:first-child:nth-last-child(8),
-footer .footer-div .widget:first-child:nth-last-child(8) ~ .widget {
+footer .footer-div .footer-container .widget:first-child:nth-last-child(8),
+footer .footer-div .footer-container .widget:first-child:nth-last-child(8) ~ .widget {
   width: 25%;
 }
-footer .footer-div .widget {
+footer .footer-div .footer-container .widget {
   display: inline-block;
 }
 
@@ -5323,7 +5323,7 @@ article.page .slideshow-wrapper:after {
     width: auto !important;
   }
   .home .top-wrapper .top .logo-space img {
-    max-width: 80%;
+    max-width: 100%;
   }
   .home .teaser:not(.teaser-1) {
     display: none;
@@ -5946,7 +5946,8 @@ article.page .content-wrapper {
 }
 .related-wrapper .related .heading {
   font-weight: bold;
+  margin-top: 6px;
 }
-.related-wrapper .related a {
+.related-wrapper .related span, .related-wrapper .related a {
   display: block;
 }

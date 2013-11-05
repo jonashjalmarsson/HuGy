@@ -56,6 +56,16 @@
 		'before_title'  => '<h2 class="widgettitle">',
 		'after_title'   => '</h2>' ); 
 	register_sidebar($args);
+	$args = array(
+		'name'          => 'Footer2',
+		'id'            => 'footer-2',
+		'description'   => 'Place widgets in footer an all pages.',
+		'class'         => '',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widgettitle">',
+		'after_title'   => '</h2>' ); 
+	register_sidebar($args);
 		
 	/* ========================================================================================================================
 	
