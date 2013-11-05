@@ -25,6 +25,11 @@ $clip-sizes: 80 48 40 30 24 20 16 12;
 	margin-right: 6px;
 	background-position: -82px -42px;
 }
+.white .menu-icon {
+	@extend .clip_24x24;
+	margin-right: 6px;
+	background-position: -82px -2px;
+}
 .selected-menu-icon {
 	@extend .clip_24x24;
 	margin-right: 6px;
@@ -33,6 +38,10 @@ $clip-sizes: 80 48 40 30 24 20 16 12;
 .home-icon {
 	@extend .clip_24x24;
 	background-position: -2px -42px;
+}
+.white .home-icon {
+	@extend .clip_24x24;
+	background-position: -2px -2px;
 }
 
 .slideshow-navigation {

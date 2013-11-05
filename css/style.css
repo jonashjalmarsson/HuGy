@@ -3454,11 +3454,11 @@ article .block-wrapper .contacts-wrapper {
   background-color: black;
 }
 
-.white, .contacts-wrapper .contacts .contact .contact-data, article.page .slideshow-wrapper {
+.white, .contacts-wrapper .contacts .contact .contact-data, .white.header-wrapper, .white.header-wrapper .top-navigation-wrapper, article.page .slideshow-wrapper {
   background-color: white;
   color: black;
 }
-.white a, .contacts-wrapper .contacts .contact .contact-data a, article.page .slideshow-wrapper a {
+.white a, .contacts-wrapper .contacts .contact .contact-data a, .white.header-wrapper a, .white.header-wrapper .top-navigation-wrapper a, article.page .slideshow-wrapper a {
   color: black;
 }
 
@@ -5170,7 +5170,7 @@ body {
   margin: 0 auto;
 }
 
-.nounderline, .top-wrapper, .main-menu-wrapper, .module-wrapper.nyheter-module-wrapper .items .item .item-content a, .nounderline a, .top-wrapper a, .main-menu-wrapper a, .module-wrapper.nyheter-module-wrapper .items .item .item-content a a {
+.nounderline, .header-wrapper a, .main-menu-wrapper, .module-wrapper.nyheter-module-wrapper .items .item .item-content a, .nounderline a, .header-wrapper a a, .main-menu-wrapper a, .module-wrapper.nyheter-module-wrapper .items .item .item-content a a {
   text-decoration: none;
 }
 
@@ -5216,8 +5216,12 @@ article.page .slideshow-wrapper:after {
 }
 
 .header-wrapper {
-  background: transparent;
+  background-color: transparent !important;
   width: 100%;
+}
+
+.contacts-wrapper .contacts .contact .header-wrapper.contact-data .logo-space, .header-wrapper.white .logo-space, article.page .header-wrapper.slideshow-wrapper .logo-space {
+  background-color: rgba(255, 255, 255, 0.4) !important;
 }
 
 .top-wrapper .top .logo-space {
@@ -5243,12 +5247,15 @@ article.page .slideshow-wrapper:after {
 }
 
 .top-navigation-wrapper.fixed {
-  box-shadow: 0 3px 10px black;
+  box-shadow: 0px 0px 10px black;
   position: fixed;
   top: 0px;
   left: 0px;
   width: 100%;
   z-index: 1000;
+}
+.top-navigation-wrapper .top-navigation .top-menu-button.selected {
+  box-shadow: none !important;
 }
 .top-navigation-wrapper .top-navigation .top-menu-button,
 .top-navigation-wrapper .top-navigation .breadcrumb {
@@ -5387,7 +5394,7 @@ article.page .slideshow-wrapper:after {
   height: 30px;
 }
 
-.clip_24x24, .menu-icon, .selected-menu-icon, .home-icon {
+.clip_24x24, .menu-icon, .white .menu-icon, .contacts-wrapper .contacts .contact .contact-data .menu-icon, article.page .slideshow-wrapper .menu-icon, .selected-menu-icon, .home-icon, .white .home-icon, .contacts-wrapper .contacts .contact .contact-data .home-icon, article.page .slideshow-wrapper .home-icon {
   width: 24px;
   height: 24px;
 }
@@ -5412,6 +5419,11 @@ article.page .slideshow-wrapper:after {
   background-position: -82px -42px;
 }
 
+.white .menu-icon, .contacts-wrapper .contacts .contact .contact-data .menu-icon, article.page .slideshow-wrapper .menu-icon {
+  margin-right: 6px;
+  background-position: -82px -2px;
+}
+
 .selected-menu-icon, .top-navigation-wrapper .top-navigation .top-menu-button.selected .menu-icon {
   margin-right: 6px;
   background-position: -122px -42px;
@@ -5419,6 +5431,10 @@ article.page .slideshow-wrapper:after {
 
 .home-icon {
   background-position: -2px -42px;
+}
+
+.white .home-icon, .contacts-wrapper .contacts .contact .contact-data .home-icon, article.page .slideshow-wrapper .home-icon {
+  background-position: -2px -2px;
 }
 
 .slideshow-navigation, .play-icon, article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-play, .pause-icon, article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-stop, .dot-icon, .active-dot-icon, article.page .slideshow-wrapper .slideshow .slidesjs-pagination .slidesjs-pagination-item a {

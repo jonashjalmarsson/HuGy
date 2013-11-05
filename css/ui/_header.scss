@@ -7,16 +7,30 @@
 }
 .header-wrapper {
 	@extend .white-text;
-	background: transparent;
+	background-color: transparent!important;
 	width: 100%;
 }
+.header-wrapper {
+	a {
+		@extend .nounderline;
+	}
+}
+.white.header-wrapper {
+	@extend .white;
+	.logo-space {
+		background-color: rgba(255, 255, 255, 0.4)!important;
+	}
+	.top-navigation-wrapper {
+		@extend .white;
+	}
+}
+	
+	
 .top-wrapper {
-
 	@extend .green-80-background;
 	//background-image: url("../images/slide-layer.png");
 	//background-repeat: repeat;
-
-	@extend .nounderline;
+	
 	//position: relative;
 	.top {
 		@extend .max-width--center;
@@ -63,7 +77,7 @@
 }
 .top-navigation-wrapper {
 	&.fixed {
-		box-shadow: 0 3px 10px $black;
+		box-shadow: 0px 0px 10px $black;
 		position: fixed;
 		top: 0px;
 		left: 0px;
@@ -75,6 +89,7 @@
 		@extend .max-width--center;
 
 		.top-menu-button.selected {
+			box-shadow: none!important;
 			@extend .black;
 			.menu-icon {
 				@extend .selected-menu-icon;

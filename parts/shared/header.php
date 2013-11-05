@@ -1,4 +1,4 @@
-<header class="header-wrapper">
+<header class="white header-wrapper">
 	<div class="top-wrapper">
 		<div class="top">
 			<div class="top-links-wrapper">
