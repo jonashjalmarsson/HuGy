@@ -209,6 +209,24 @@ jQuery(document).ready(function($) {
 		}		
 	});
 		
+		
+	/* 
+	 * hover effect on facebook
+	 */
+	$(".contacts").find('.contact').each(function() {
+		$(this).hover(function(ev) {
+				ev.preventDefault();
+				ev.stopPropagation();
+				ev.stopImmediatePropagation();
+				$(this).find('.contact-data').hide().show('fade','slow');
+			},
+			function(ev) {
+				ev.preventDefault();
+				ev.stopPropagation();
+				ev.stopImmediatePropagation();
+				$(this).find('.contact-data').show().hide('fade','fast');
+			});
+	});
 	
 	
 	/*

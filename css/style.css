@@ -5225,6 +5225,7 @@ article.page .slideshow-wrapper:after {
 }
 .top-wrapper .top .logo-space .logo {
   padding-bottom: 12px;
+  padding-top: 12px;
 }
 .top-wrapper .top .top-links-wrapper {
   display: inline-block;
