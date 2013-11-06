@@ -4,14 +4,11 @@
 .pre-footer {
 	@extend .black;
 }
-.pre-footer-program {
-	@extend .black;
-}
 .up-icon {
-	bottom: 40px;
+	bottom: 20px;
 	position: fixed;
 	cursor: pointer;
-	right: 40px;
+	right: 20px;
 	text-align: center;
 	z-index: 200;
 	span {
@@ -34,6 +31,7 @@ footer {
 			@extend .grid;
 			h2 {
 				@extend .italic;
+				@extend .flush--bottom;
 			}
 			.widget {
 				@extend .grid__item;

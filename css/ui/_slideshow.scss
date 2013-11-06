@@ -14,32 +14,33 @@
 		.slides {
 			line-height: 0;
 		}
-		/* only on firstpage */
-		&.firstpage {
-			margin-bottom: 36px;
-			position: relative;
-			.slide-layer {
-				background: url("../images/slide-layer.png") repeat fixed;
-				position: absolute;
-				top: 0;
-				left: 0;
-				z-index: 90;
-				width: 4000px;
-				height: 4000px;
-			}
-			img {
-				max-width: initial;
-			}
 
-			.slidesjs-pagination {
-				@extend .force-hidden;
-				z-index: 200;
-			}
-		}
 		
 	}
 }
+/* only on firstpage */
+.slideshow.firstpage {
+	margin-bottom: 36px;
+	position: relative;
+	overflow: hidden;
+	.slide-layer {
+		background: url("../images/slide-layer.png") repeat fixed;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 90;
+		width: 4000px;
+		height: 4000px;
+	}
+	img {
+		max-width: initial;
+	}
 
+	.slidesjs-pagination {
+		@extend .force-hidden;
+		z-index: 200;
+	}
+}
 article.page{
 	.slideshow-wrapper {
 		@extend .drop-shadow;

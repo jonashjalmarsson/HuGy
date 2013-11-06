@@ -1,3 +1,4 @@
+
 .program-icons {
 	@extend .nav;
 	@extend .nav--block;
@@ -12,8 +13,7 @@
 		max-height: 40px;
 	}
 }
-.pre-footer-program .program-icons {
-	border-top: 5px dotted #333;
-	border-bottom: 5px dotted #333;
-	background: #222;
+.pre-footer-program {
+	//@extend .black;
+	@extend .green-40;
 }
