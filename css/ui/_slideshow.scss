@@ -20,7 +20,6 @@
 }
 /* only on firstpage */
 .slideshow.firstpage {
-	margin-bottom: 36px;
 	position: relative;
 	overflow: hidden;
 	.slide-layer {
@@ -54,6 +53,12 @@ article.page{
 			z-index: 100;
 			max-width: 300px;
 			max-height: 300px;
+			@include media-query(palm) {
+				& {
+					max-width: 80px;
+					max-height: 80px;
+				}
+			}
 		}
 		.slideshow {
 			

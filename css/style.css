@@ -3473,11 +3473,11 @@ article .block-wrapper .contacts-wrapper {
   background-color: black;
 }
 
-.white, .contacts-wrapper .contacts .contact .contact-data, .white.header-wrapper, .white.header-wrapper .top-navigation-wrapper, .slideshow-wrapper .slideshow {
+.white, .contacts-wrapper .contacts .contact .contact-data, .white.header-wrapper, .white.header-wrapper .top-navigation-wrapper, .module-wrapper.facebook-module-wrapper .fb-feed-item, .slideshow-wrapper .slideshow {
   background-color: white;
   color: black;
 }
-.white a, .contacts-wrapper .contacts .contact .contact-data a, .white.header-wrapper a, .white.header-wrapper .top-navigation-wrapper a, .slideshow-wrapper .slideshow a {
+.white a, .contacts-wrapper .contacts .contact .contact-data a, .white.header-wrapper a, .white.header-wrapper .top-navigation-wrapper a, .module-wrapper.facebook-module-wrapper .fb-feed-item a, .slideshow-wrapper .slideshow a {
   color: black;
 }
 
@@ -5288,13 +5288,13 @@ article.page .slideshow-wrapper:after {
   width: 100%;
 }
 
-.contacts-wrapper .contacts .contact .header-wrapper.contact-data .logo-space, .header-wrapper.white .logo-space, .slideshow-wrapper .header-wrapper.slideshow .logo-space {
+.contacts-wrapper .contacts .contact .header-wrapper.contact-data .logo-space, .header-wrapper.white .logo-space, .module-wrapper.facebook-module-wrapper .header-wrapper.fb-feed-item .logo-space, .slideshow-wrapper .header-wrapper.slideshow .logo-space {
   background-color: rgba(255, 255, 255, 0.4) !important;
 }
-.contacts-wrapper .contacts .contact .header-wrapper.contact-data .top-wrapper, .header-wrapper.white .top-wrapper, .slideshow-wrapper .header-wrapper.slideshow .top-wrapper {
+.contacts-wrapper .contacts .contact .header-wrapper.contact-data .top-wrapper, .header-wrapper.white .top-wrapper, .module-wrapper.facebook-module-wrapper .header-wrapper.fb-feed-item .top-wrapper, .slideshow-wrapper .header-wrapper.slideshow .top-wrapper {
   background-color: transparent !important;
 }
-.contacts-wrapper .contacts .contact .header-wrapper.contact-data .top-navigation-wrapper, .header-wrapper.white .top-navigation-wrapper, .slideshow-wrapper .header-wrapper.slideshow .top-navigation-wrapper {
+.contacts-wrapper .contacts .contact .header-wrapper.contact-data .top-navigation-wrapper, .header-wrapper.white .top-navigation-wrapper, .module-wrapper.facebook-module-wrapper .header-wrapper.fb-feed-item .top-navigation-wrapper, .slideshow-wrapper .header-wrapper.slideshow .top-navigation-wrapper {
   border-bottom: 1px solid #ccc;
 }
 
@@ -5398,7 +5398,6 @@ article.page .slideshow-wrapper:after {
   max-width: 100%;
 }
 .home .page-wrapper {
-  padding-top: 0px;
   background: white;
 }
 
@@ -5446,7 +5445,7 @@ article.page .slideshow-wrapper:after {
   height: 30px;
 }
 
-.clip_24x24, .menu-icon, .white .menu-icon, .contacts-wrapper .contacts .contact .contact-data .menu-icon, .slideshow-wrapper .slideshow .menu-icon, .selected-menu-icon, .home-icon, .white .home-icon, .contacts-wrapper .contacts .contact .contact-data .home-icon, .slideshow-wrapper .slideshow .home-icon {
+.clip_24x24, .menu-icon, .white .menu-icon, .contacts-wrapper .contacts .contact .contact-data .menu-icon, .module-wrapper.facebook-module-wrapper .fb-feed-item .menu-icon, .slideshow-wrapper .slideshow .menu-icon, .selected-menu-icon, .home-icon, .white .home-icon, .contacts-wrapper .contacts .contact .contact-data .home-icon, .module-wrapper.facebook-module-wrapper .fb-feed-item .home-icon, .slideshow-wrapper .slideshow .home-icon {
   width: 24px;
   height: 24px;
 }
@@ -5471,7 +5470,7 @@ article.page .slideshow-wrapper:after {
   background-position: -82px -42px;
 }
 
-.white .menu-icon, .contacts-wrapper .contacts .contact .contact-data .menu-icon, .slideshow-wrapper .slideshow .menu-icon {
+.white .menu-icon, .contacts-wrapper .contacts .contact .contact-data .menu-icon, .module-wrapper.facebook-module-wrapper .fb-feed-item .menu-icon, .slideshow-wrapper .slideshow .menu-icon {
   margin-right: 6px;
   background-position: -82px -2px;
 }
@@ -5485,7 +5484,7 @@ article.page .slideshow-wrapper:after {
   background-position: -2px -42px;
 }
 
-.white .home-icon, .contacts-wrapper .contacts .contact .contact-data .home-icon, .slideshow-wrapper .slideshow .home-icon {
+.white .home-icon, .contacts-wrapper .contacts .contact .contact-data .home-icon, .module-wrapper.facebook-module-wrapper .fb-feed-item .home-icon, .slideshow-wrapper .slideshow .home-icon {
   background-position: -2px -2px;
 }
 
@@ -5951,12 +5950,20 @@ article.page .slideshow-wrapper:after {
 }
 .module-wrapper.facebook-module-wrapper {
   /* facebook colors */
-  background: #3b5998 url("../images/facebook.png") no-repeat 90% 100%;
+  background: #3b5998;
   /*border-bottom: 1px solid #133783;
   box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .52);*/
 }
+.module-wrapper.facebook-module-wrapper h1 {
+  margin-left: 6px;
+  padding-top: 50px;
+  background: url("../images/facebook.png") no-repeat 90% 10px;
+  background-clip: padding-box;
+  padding-bottom: 24px;
+  margin-bottom: 0;
+  margin-top: 0px;
+}
 .module-wrapper.facebook-module-wrapper .fb-feed-item {
-  background: rgba(255, 255, 255, 0.94);
   margin-bottom: 8px;
   border-radius: 2px;
 }
@@ -6020,7 +6027,6 @@ article.page .content-wrapper {
 
 /* only on firstpage */
 .slideshow.firstpage {
-  margin-bottom: 36px;
   position: relative;
   overflow: hidden;
 }
@@ -6052,6 +6058,12 @@ article.page .slideshow-wrapper .picto {
   z-index: 100;
   max-width: 300px;
   max-height: 300px;
+}
+@media only screen and (max-width: 680px) {
+  article.page .slideshow-wrapper .picto {
+    max-width: 80px;
+    max-height: 80px;
+  }
 }
 article.page .slideshow-wrapper .slideshow ul, article.page .slideshow-wrapper .slideshow li, article.page .slideshow-wrapper .slideshow a {
   content: '';
