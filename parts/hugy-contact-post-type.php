@@ -45,7 +45,7 @@ function custom_hugy_kontakt_column( $column, $post_id ) {
         case 'arbetsplats' :
             echo get_field( 'arbetsplats', $post_id); 
             break;
-        case 'title' :
+        case 'titel' :
             echo get_field( 'titel', $post_id); 
             break;
     }
