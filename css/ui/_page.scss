@@ -15,6 +15,13 @@ article {
 		}
 	}
 }
+.author,
+time.time {
+	@extend .zeta;
+	margin-top: -28px;
+	display: block;
+	padding-bottom: 28px;
+}
 .single article.page,
 .page article.page{
 	@extend .max-width--center;

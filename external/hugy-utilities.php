@@ -475,6 +475,19 @@
 			$retValue .= "</div>";
 			return $retValue;
 		}
+		
+		/*
+		 * Return the author
+		 */
+		function get_author() {
+			$retValue .= '<div class="author">';
+			if (get_the_author_meta( 'description' ) != '')
+				$link = get_permalink(get_the_author_meta( 'description' ));
+			
+			$retValue .= "SKRIFTST&Auml;LLARE: <a href='$link'>" . get_the_author() . "</a>";
+			$retValue .= '</div>';
+			return $retValue;
+		}
 	}
 	
  ?>

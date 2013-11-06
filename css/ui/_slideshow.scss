@@ -1,6 +1,7 @@
 .slideshow-wrapper {
 	z-index: 1;
 	.slideshow {
+		@extend .white;
 		overflow: hidden;
 		.slidesjs-play,
 		.slidesjs-stop {
@@ -10,7 +11,9 @@
 		.slidesjs-pagination {
 			z-index: 200;
 		}
-
+		.slides {
+			line-height: 0;
+		}
 		/* only on firstpage */
 		&.firstpage {
 			position: relative;

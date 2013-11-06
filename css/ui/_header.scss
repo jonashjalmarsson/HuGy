@@ -96,7 +96,7 @@
 	@extend .black-70;
 	.top-navigation {
 		@extend .max-width--center;
-
+		overflow: hidden;
 		.top-menu-button.selected {
 			@extend .black;
 			.menu-icon {
@@ -128,7 +128,7 @@
 	.top-navigation {
 		white-space: nowrap;
 		.menu-icon {
-			margin-right: 0px;
+			margin-right: 0px!important;
 		}
 	}
 	.top-navigation-wrapper .top-navigation .top-menu-button .text {

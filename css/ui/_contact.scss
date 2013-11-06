@@ -1,5 +1,5 @@
-.single-hugy_kontakt .content-wrapper {
-	.contact {
+.content-wrapper .author,
+.single-hugy_kontakt .content-wrapper .contact {
 		h2 {
 			@extend .header;
 		}
@@ -12,7 +12,7 @@
 		span {
 			display: block;
 		}
-	}
+	
 }
 .contacts-wrapper {
 	h2 {

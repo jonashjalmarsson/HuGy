@@ -352,7 +352,8 @@ jQuery(document).ready(function($) {
 		// begin show menu when close to slideshow end
 		else if ($("body").hasClass("home") && ($(window).scrollTop() - $(window).height()) < 0) {
 			$(".top-navigation-wrapper").addClass("fixed").css("top",($(window).scrollTop() - $(window).height())).show();
-			$(".top-wrapper").css('margin-bottom',$(".top-navigation-wrapper").height());
+			if (!$("body").hasClass("home"))
+				$(".top-wrapper").css('margin-bottom',$(".top-navigation-wrapper").height());
 		}
 		// remove fixed menu when top of page
 		else if ($(window).scrollTop() - $(".top").height() <= 0) {
@@ -362,14 +363,16 @@ jQuery(document).ready(function($) {
 		// show selected menu and stick to menu when at menu place in footer
 		else if ($(window).scrollTop() - $(".main-menu-wrapper").position().top + $(".top-navigation-wrapper").height() > -5) {
 			$(".top-navigation-wrapper").css("top",-($(window).scrollTop() - $(".main-menu-wrapper").position().top + $(".top-navigation-wrapper").height()));
-			$(".top-wrapper").css('margin-bottom',$(".top-navigation-wrapper").height());
+			if (!$("body").hasClass("home"))
+				$(".top-wrapper").css('margin-bottom',$(".top-navigation-wrapper").height());
 			$(".top-menu-button").addClass("selected");
 			$(".top-navigation-wrapper").addClass("selected");
 		}
 		// else show menu
 		else { // if ($(window).scrollTop() - $(".top").height() > 0) {
 			$(".top-navigation-wrapper, .top-menu-button").addClass("fixed").show().css("top","0");
-			$(".top-wrapper").css('margin-bottom',$(".top-navigation-wrapper").height());
+			if (!$("body").hasClass("home"))
+				$(".top-wrapper").css('margin-bottom',$(".top-navigation-wrapper").height());
 		}
 		
 	});
@@ -496,7 +499,7 @@ jQuery(document).ready(function($) {
 			$(".slides img").hide().css('position','absolute').addClass('slidesjs-slide').wrap("<div class='slidesjs-container' style='overflow: hidden; position: relative;'><div class='slidesjs-control' style='position: relative;'></div></div>");
 			$(".slidesjs-control").css('background-image','url(' + $(".slides img").attr('src') + ')').css('background-position', 'top center').css('background-attachment', 'fixed').css('background-repeat', 'no-repeat');
 		}
-		setSizes();
+		setTimeout(setSizes,50);
 	}
 
 
