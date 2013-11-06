@@ -415,49 +415,55 @@
 			if ($contacts != "") :
 				$retValue .= "<div class='contacts-wrapper'><h2>Kontakter</h2><div class='contacts'>";
 				foreach ($contacts as $contact) :
-					$retValue .= "<div class='contact contact-".$contact->ID."'>";
-					if (get_the_post_thumbnail($contact->ID) != "")
-						$retValue .= "<img src='" . get_the_post_thumbnail($contact->ID) . "' />";
-
-					$retValue .= "<a href='" . get_post_permalink($contact->ID) . "'>";
-					$retValue .= "<span class='title'>" . get_the_title($contact->ID) . "</span>";
-					$retValue .= "</a>";
-					$titel = get_field("titel",$contact->ID);	
-					if ($titel)
-						$retValue .= "<span class='titel'>$titel</span>";
-					$retValue .= "<div class='contact-data'>";
-
-					if (get_field("ansvar",$contact->ID))
-						$retValue .= "<span class='ansvar'>" . get_field("ansvar",$contact->ID) . "</span>";
-
-					$arbetsplats = get_field("arbetsplats",$contact->ID);	
-					if ($arbetsplats)
-						$retValue .= "<span class='arbetsplats'>$arbetsplats</span>";
-
-					$beskrivning = get_field("beskrivning",$contact->ID);	
-					if ($beskrivning)
-						$retValue .= "<span class='beskrivning'>$beskrivning</span>";
-
-					$telefon = get_field("telefon",$contact->ID);
-					if ($telefon)
-						$retValue .= "<span class='telefon'>TELEFON: <a href='tel:$telefon'>$telefon</a></span>";
-
-					$mobiltelefon = get_field("mobiltelefon",$contact->ID);	
-					if ($mobiltelefon)
-						$retValue .= "<span class='mobiltelefon'>MOBIL: <a href='tel:$mobiltelefon'>$mobiltelefon</a></span>";
-					
-					$epost = get_field("e-post",$contact->ID);	
-					if ($epost)
-						$retValue .= "<span class='epost'>E-POST: <a href='mailto:$epost'>$epost</a></span>";
-						
-					if (get_field("adress",$contact->ID))
-						$retValue .= "<span class='adress'>" . get_field("adress",$contact->ID) . "</span>";
-					
-					$retValue .= "</div>";
-					$retValue .= "</div>";
+					$retValue .= HuGy::get_contact($contact->ID);
 				endforeach;
 				$retValue .= "</div></div>";
 			endif;
+			return $retValue;
+		}
+		function get_contact($contact_id = "") {
+			if ($contact_id == '') return;
+			
+			$retValue .= "<div class='contact contact-".$contact_id."'>";
+			if (get_the_post_thumbnail($contact_id) != "")
+				$retValue .= "<img src='" . get_the_post_thumbnail($contact_id) . "' />";
+
+			$retValue .= "<a href='" . get_post_permalink($contact_id) . "'>";
+			$retValue .= "<span class='title'>" . get_the_title($contact_id) . "</span>";
+			$retValue .= "</a>";
+			$titel = get_field("titel",$contact_id);	
+			if ($titel)
+				$retValue .= "<span class='titel'>$titel</span>";
+			$retValue .= "<div class='contact-data'>";
+
+			if (get_field("ansvar",$contact_id))
+				$retValue .= "<span class='ansvar'>" . get_field("ansvar",$contact_id) . "</span>";
+
+			$arbetsplats = get_field("arbetsplats",$contact_id);	
+			if ($arbetsplats)
+				$retValue .= "<span class='arbetsplats'>$arbetsplats</span>";
+
+			$beskrivning = get_field("beskrivning",$contact_id);	
+			if ($beskrivning)
+				$retValue .= "<span class='beskrivning'>$beskrivning</span>";
+
+			$telefon = get_field("telefon",$contact_id);
+			if ($telefon)
+				$retValue .= "<span class='telefon'>TELEFON: <a href='tel:$telefon'>$telefon</a></span>";
+
+			$mobiltelefon = get_field("mobiltelefon",$contact_id);	
+			if ($mobiltelefon)
+				$retValue .= "<span class='mobiltelefon'>MOBIL: <a href='tel:$mobiltelefon'>$mobiltelefon</a></span>";
+			
+			$epost = get_field("e-post",$contact_id);	
+			if ($epost)
+				$retValue .= "<span class='epost'>E-POST: <a href='mailto:$epost'>$epost</a></span>";
+				
+			if (get_field("adress",$contact_id))
+				$retValue .= "<span class='adress'>" . get_field("adress",$contact_id) . "</span>";
+			
+			$retValue .= "</div>";
+			$retValue .= "</div>";
 			return $retValue;
 		}
 	}

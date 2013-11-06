@@ -14,7 +14,7 @@
 	<div class="top-navigation-wrapper">
 		<div class="top-navigation">
 				<div class="top-menu-button">
-					<a href="#menu" title="Öppna meny"><span class='menu-icon'></span>Meny</a>
+					<a href="#menu" title="Öppna meny"><span class='menu-icon'></span><span class='text'>Meny</span></a>
 				</div>
 				<div class="breadcrumb"><?php echo HuGy::get_breadcrumb(); ?></div>
 		</div>

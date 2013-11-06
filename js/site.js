@@ -336,6 +336,10 @@ jQuery(document).ready(function($) {
 		}
 */
 		
+		/* reset selected */
+		$(".top-menu-button").removeClass("selected");
+		$(".top-navigation-wrapper").removeClass("selected");
+
 		/* make menu fixed */
 		// hide if home and scrolltop is over slideshow
 		if ($("body").hasClass("home") && ($(window).scrollTop() - $(window).height() + $(".top-navigation-wrapper").height()) < 0) {
@@ -348,22 +352,24 @@ jQuery(document).ready(function($) {
 		// begin show menu when close to slideshow end
 		else if ($("body").hasClass("home") && ($(window).scrollTop() - $(window).height()) < 0) {
 			$(".top-navigation-wrapper").addClass("fixed").css("top",($(window).scrollTop() - $(window).height())).show();
+			$(".top-wrapper").css('margin-bottom',$(".top-navigation-wrapper").height());
 		}
 		// remove fixed menu when top of page
 		else if ($(window).scrollTop() - $(".top").height() <= 0) {
 			$(".top-navigation-wrapper, .top-menu-button").removeClass("fixed");
+			$(".top-wrapper").css('margin-bottom',0);
 		}
 		// show selected menu and stick to menu when at menu place in footer
 		else if ($(window).scrollTop() - $(".main-menu-wrapper").position().top + $(".top-navigation-wrapper").height() > -5) {
 			$(".top-navigation-wrapper").css("top",-($(window).scrollTop() - $(".main-menu-wrapper").position().top + $(".top-navigation-wrapper").height()));
+			$(".top-wrapper").css('margin-bottom',$(".top-navigation-wrapper").height());
 			$(".top-menu-button").addClass("selected");
 			$(".top-navigation-wrapper").addClass("selected");
 		}
 		// else show menu
 		else { // if ($(window).scrollTop() - $(".top").height() > 0) {
 			$(".top-navigation-wrapper, .top-menu-button").addClass("fixed").show().css("top","0");
-			$(".top-menu-button").removeClass("selected");
-			$(".top-navigation-wrapper").removeClass("selected");
+			$(".top-wrapper").css('margin-bottom',$(".top-navigation-wrapper").height());
 		}
 		
 	});

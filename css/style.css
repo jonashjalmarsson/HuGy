@@ -3241,12 +3241,12 @@ article .block-wrapper .contacts-wrapper {
   }
 }
 /* endif */
-.black, .pre-footer, .pre-footer-program, .top-navigation-wrapper .top-navigation .top-menu-button.selected,
+.black, .pre-footer, .pre-footer-program, footer .copyright, .top-navigation-wrapper .top-navigation .top-menu-button.selected,
 .main-menu {
   background-color: black;
   color: white;
 }
-.black a, .pre-footer a, .pre-footer-program a, .top-navigation-wrapper .top-navigation .top-menu-button.selected a,
+.black a, .pre-footer a, .pre-footer-program a, footer .copyright a, .top-navigation-wrapper .top-navigation .top-menu-button.selected a,
 .main-menu a {
   color: white;
 }
@@ -5053,6 +5053,14 @@ article .block-wrapper .contacts-wrapper {
   background-color: #020202;
 }
 
+.content-wrapper .contact {
+  margin-bottom: 12px;
+  position: relative;
+}
+.content-wrapper .contact span {
+  display: block;
+}
+
 .contacts-wrapper h2 {
   font-weight: normal;
 }
@@ -5150,6 +5158,9 @@ footer .footer-div .footer-container .widget:first-child:nth-last-child(8) ~ .wi
 footer .footer-div .footer-container .widget {
   display: inline-block;
 }
+footer .copyright {
+  text-align: center;
+}
 
 @media only screen and (max-width: 680px) {
   .footer-div .widget {
@@ -5160,7 +5171,7 @@ body {
   font-family: Trebuchet MS;
 }
 
-.hidden, .main-menu .main-menu-wrapper, .module-wrapper.facebook-module-wrapper .fb-page-name, .module-wrapper.facebook-module-wrapper .fb-feed-item .caption, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-2, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-3, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-4, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-5, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-6, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-7, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-8, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-9, .module-wrapper.facebook-module-wrapper .fb-loader {
+.hidden, .content-wrapper .contact .title, .main-menu .main-menu-wrapper, .module-wrapper.facebook-module-wrapper .fb-page-name, .module-wrapper.facebook-module-wrapper .fb-feed-item .caption, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-2, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-3, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-4, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-5, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-6, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-7, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-8, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-9, .module-wrapper.facebook-module-wrapper .fb-loader {
   display: none;
 }
 
@@ -5293,8 +5304,8 @@ article.page .slideshow-wrapper:after {
     width: 100% !important;
   }
 
-  .top-navigation-wrapper .top-navigation .top-menu-button, .top-navigation-wrapper .top-navigation .breadcrumb {
-    display: block;
+  .top-navigation-wrapper .top-navigation .top-menu-button .text {
+    display: none;
   }
 
   .top-navigation-wrapper .top-navigation .breadcrumb {
