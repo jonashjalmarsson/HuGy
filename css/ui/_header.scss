@@ -91,6 +91,7 @@
 	}
 	&.selected {
 		box-shadow: none!important;
+		border-bottom: 0!important;
 	}
 	@extend .black-70;
 	.top-navigation {

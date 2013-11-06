@@ -11,6 +11,7 @@ article {
 		.contacts-wrapper {
 			@extend .grid__item;
 			@extend .one-half;
+			@extend .palm-one-whole;
 		}
 	}
 }
@@ -79,3 +80,5 @@ article.page{
 		margin-bottom: 24px;
 	}
 }
+
+

@@ -490,10 +490,12 @@ jQuery(document).ready(function($) {
 		setTimeout(setSizes,500);
 	}
 	else if ($(".slides").find("img").length == 1) {
-		fixedImage = true;
-		//$(".slides img").css('position','absolute').addClass('slidesjs-slide').wrap("<div class='slidesjs-container' style='overflow: hidden; position: relative;'><div class='slidesjs-control' style='position: relative;'></div></div>");
-		$(".slides img").hide().css('position','absolute').addClass('slidesjs-slide').wrap("<div class='slidesjs-container' style='overflow: hidden; position: relative;'><div class='slidesjs-control' style='position: relative;'></div></div>");
-		$(".slidesjs-control").css('background-image','url(' + $(".slides img").attr('src') + ')').css('background-position', 'top center').css('background-attachment', 'fixed').css('background-repeat', 'no-repeat');
+		if ($("body").hasClass("home")) {
+			fixedImage = true;
+			//$(".slides img").css('position','absolute').addClass('slidesjs-slide').wrap("<div class='slidesjs-container' style='overflow: hidden; position: relative;'><div class='slidesjs-control' style='position: relative;'></div></div>");
+			$(".slides img").hide().css('position','absolute').addClass('slidesjs-slide').wrap("<div class='slidesjs-container' style='overflow: hidden; position: relative;'><div class='slidesjs-control' style='position: relative;'></div></div>");
+			$(".slidesjs-control").css('background-image','url(' + $(".slides img").attr('src') + ')').css('background-position', 'top center').css('background-attachment', 'fixed').css('background-repeat', 'no-repeat');
+		}
 		setSizes();
 	}
 

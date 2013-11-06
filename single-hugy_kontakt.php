@@ -14,11 +14,8 @@
 		<h1><?php the_title(); ?></h1>
 		<?php the_content(); ?>
 	</div>
-	<?php echo HuGy::get_contact(get_the_ID()); ?>
+	<?php echo HuGy::get_contact(get_the_ID(),'medium'); ?>
 
-	<div class="block-wrapper">
-	<?php echo HuGy::get_contacts(get_the_ID()); ?><?php echo HuGy::get_related(get_the_ID()); ?>
-	</div>
 	<?php echo HuGy::get_modules(get_the_ID()); ?>
 
 </div>

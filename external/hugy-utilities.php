@@ -401,9 +401,9 @@
 		
 		
 		/*
-		 * Return contacts
+		 * Return contacts on page
 		 */
-		function get_contacts($page_id = "") {
+		function get_contacts($page_id = "", $imagesize = 'thumbnail') {
 			$retValue = "";
 			if ($page_id != "") {
 				$field = $page_id;
@@ -415,18 +415,21 @@
 			if ($contacts != "") :
 				$retValue .= "<div class='contacts-wrapper'><h2>Kontakter</h2><div class='contacts'>";
 				foreach ($contacts as $contact) :
-					$retValue .= HuGy::get_contact($contact->ID);
+					$retValue .= HuGy::get_contact($contact->ID,$imagesize);
 				endforeach;
 				$retValue .= "</div></div>";
 			endif;
 			return $retValue;
 		}
-		function get_contact($contact_id = "") {
+		
+		/*
+		 * Return one contact
+		 */
+		function get_contact($contact_id = "", $imagesize = 'thumbnail') {
 			if ($contact_id == '') return;
 			
 			$retValue .= "<div class='contact contact-".$contact_id."'>";
-			if (get_the_post_thumbnail($contact_id) != "")
-				$retValue .= "<img src='" . get_the_post_thumbnail($contact_id) . "' />";
+
 
 			$retValue .= "<a href='" . get_post_permalink($contact_id) . "'>";
 			$retValue .= "<span class='title'>" . get_the_title($contact_id) . "</span>";
@@ -435,6 +438,12 @@
 			if ($titel)
 				$retValue .= "<span class='titel'>$titel</span>";
 			$retValue .= "<div class='contact-data'>";
+			
+			$bild = get_field("bild",$contact_id);	
+			if ($bild) {
+				$bild = $bild['sizes'][$imagesize];
+				$retValue .= "<span class='bild'><img src='$bild' /></span>";
+			}
 
 			if (get_field("ansvar",$contact_id))
 				$retValue .= "<span class='ansvar'>" . get_field("ansvar",$contact_id) . "</span>";

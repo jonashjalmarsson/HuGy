@@ -2191,7 +2191,8 @@ article .block-wrapper .contacts-wrapper {
   /**
   * Whole
   */
-  .palm-one-whole {
+  .palm-one-whole, article .block-wrapper .related-wrapper,
+  article .block-wrapper .contacts-wrapper {
     width: 100%;
   }
 
@@ -5087,13 +5088,18 @@ article .block-wrapper .contacts-wrapper {
 .header, footer .footer-div .footer-container h2, .main-menu-wrapper .menu-head, .related-wrapper h2, .related-wrapper .related .heading {
   font-family: Georgia;
   font-style: italic;
-}
-
-h1,
-.header {
   font-weight: normal;
 }
 
+@media only screen and (max-width: 680px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+}
 .pre-footer-padding {
   height: 0px;
 }
@@ -5170,6 +5176,7 @@ footer .copyright {
 }
 body {
   font-family: Trebuchet MS;
+  word-break: break-word;
 }
 
 .hidden, .content-wrapper .contact .title, .main-menu .main-menu-wrapper, .module-wrapper.facebook-module-wrapper .fb-page-name, .module-wrapper.facebook-module-wrapper .fb-feed-item .caption, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-2, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-3, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-4, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-5, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-6, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-7, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-8, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-9, .module-wrapper.facebook-module-wrapper .fb-loader {
@@ -5292,6 +5299,7 @@ article.page .slideshow-wrapper:after {
 }
 .top-navigation-wrapper.selected {
   box-shadow: none !important;
+  border-bottom: 0 !important;
 }
 .top-navigation-wrapper .top-navigation .top-menu-button,
 .top-navigation-wrapper .top-navigation .breadcrumb {

@@ -28,7 +28,7 @@
 	<?php /* slideshow */ ?>
 	<?php echo HuGy::get_slideshow(get_field('hg_slideshow',get_the_ID()),'program slideshow','slideshow'); ?>
 </div>
-<div class="content-wrapper">kontakt
+<div class="content-wrapper">
 	<div class="content">
 		<h1><?php the_title(); ?></h1>
 		<?php the_content(); ?>

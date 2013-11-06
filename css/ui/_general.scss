@@ -1,7 +1,7 @@
 body {
 	@extend .white-background;
 	font-family: Trebuchet MS;
-	
+	word-break: break-word;
 }
 .hidden {
 	display: none;
