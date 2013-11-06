@@ -59,6 +59,7 @@ footer {
 	.copyright {
 		@extend .one-whole;
 		@extend .black;
+		display: inline-block;
 		text-align: center;
 	}
 }

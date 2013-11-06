@@ -119,9 +119,16 @@
 }
 
 @include media-query(palm){
+
 	.logo-space,
 	.top-links-wrapper {
 		width: 100%!important;
+	}
+	.top-navigation {
+		white-space: nowrap;
+		.menu-icon {
+			margin-right: 0px;
+		}
 	}
 	.top-navigation-wrapper .top-navigation .top-menu-button .text {
 		display: none;
