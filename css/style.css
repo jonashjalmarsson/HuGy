@@ -2051,7 +2051,7 @@ article .block-wrapper .contacts-wrapper {
 /**
 * Whole
 */
-.one-whole, .pre-footer,
+.one-whole, footer .copyright, .pre-footer,
 .main-menu, .module-wrapper.nyheter-module-wrapper .items .item .item-content {
   width: 100%;
 }
