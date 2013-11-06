@@ -8,37 +8,7 @@
 	position: absolute;
 	z-index: 100;
 }
-.firstpage.slideshow {
-	position: relative;
-	.slide-layer {
-		background: url("../images/slide-layer.png") repeat fixed;
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 90;
-		width: 4000px;
-		height: 4000px;
-	}
-	img {
-		max-width: initial;
-	}
 
-	.slidesjs-pagination {
-		@extend .force-hidden;
-		z-index: 200;
-	}
-}
-.slideshow {
-	overflow: hidden;
-	.slidesjs-play,
-	.slidesjs-stop {
-		@extend .force-hidden;
-		z-index: 200;
-	}
-	.slidesjs-pagination {
-		z-index: 200;
-	}
-}
 .home {
 	.top-wrapper {
 		background: transparent;

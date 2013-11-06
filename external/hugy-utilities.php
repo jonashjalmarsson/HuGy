@@ -431,8 +431,8 @@
 			$retValue .= "<div class='contact contact-".$contact_id."'>";
 
 
-			$retValue .= "<a href='" . get_post_permalink($contact_id) . "'>";
-			$retValue .= "<span class='title'>" . get_the_title($contact_id) . "</span>";
+			$retValue .= "<a class='nolink' href='" . get_post_permalink($contact_id) . "'>";
+			$retValue .= "<h2 class='title'>" . get_the_title($contact_id) . "</h2>";
 			$retValue .= "</a>";
 			$titel = get_field("titel",$contact_id);	
 			if ($titel)

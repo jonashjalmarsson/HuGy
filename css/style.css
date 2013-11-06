@@ -969,7 +969,8 @@ html {
  * heading hierarchy.
  */
 h1, .alpha, h1,
-.header {
+.header,
+.content-wrapper .contact h2 {
   font-size: 36px;
   font-size: 2.25rem;
   line-height: 1.33333;
@@ -987,7 +988,7 @@ h3, .gamma, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2
   line-height: 1;
 }
 
-h4, .delta, .main-menu-wrapper .menu-head {
+h4, .delta, .contacts-wrapper .contacts .contact h2.title, .main-menu-wrapper .menu-head {
   font-size: 20px;
   font-size: 1.25rem;
   line-height: 1.2;
@@ -3256,10 +3257,10 @@ article .block-wrapper .contacts-wrapper {
   background-color: black;
 }
 
-.black-text, .contacts-wrapper .contacts, .main-menu-wrapper .current_page_item > a, .module-wrapper.nyheter-module-wrapper h1, .related-wrapper .related {
+.black-text, .contacts-wrapper .contacts, .contacts-wrapper .contacts .contact h2.title, .main-menu-wrapper .current_page_item > a, .module-wrapper.nyheter-module-wrapper h1, .related-wrapper .related {
   color: black;
 }
-.black-text a, .contacts-wrapper .contacts a, .main-menu-wrapper .current_page_item > a a, .module-wrapper.nyheter-module-wrapper h1 a, .related-wrapper .related a {
+.black-text a, .contacts-wrapper .contacts a, .contacts-wrapper .contacts .contact h2.title a, .main-menu-wrapper .current_page_item > a a, .module-wrapper.nyheter-module-wrapper h1 a, .related-wrapper .related a {
   color: black;
 }
 
@@ -3470,11 +3471,11 @@ article .block-wrapper .contacts-wrapper {
   background-color: black;
 }
 
-.white, .contacts-wrapper .contacts .contact .contact-data, .white.header-wrapper, .white.header-wrapper .top-navigation-wrapper, article.page .slideshow-wrapper {
+.white, .contacts-wrapper .contacts .contact .contact-data, .white.header-wrapper, .white.header-wrapper .top-navigation-wrapper {
   background-color: white;
   color: black;
 }
-.white a, .contacts-wrapper .contacts .contact .contact-data a, .white.header-wrapper a, .white.header-wrapper .top-navigation-wrapper a, article.page .slideshow-wrapper a {
+.white a, .contacts-wrapper .contacts .contact .contact-data a, .white.header-wrapper a, .white.header-wrapper .top-navigation-wrapper a {
   color: black;
 }
 
@@ -3709,11 +3710,13 @@ article .block-wrapper .contacts-wrapper {
 }
 
 .green-text, .contacts-wrapper h2, h1,
-.header {
+.header,
+.content-wrapper .contact h2 {
   color: #14a585;
 }
 .green-text a, .contacts-wrapper h2 a, h1 a,
-.header a {
+.header a,
+.content-wrapper .contact h2 a {
   color: #14a585;
 }
 
@@ -5058,6 +5061,10 @@ article .block-wrapper .contacts-wrapper {
   margin-bottom: 12px;
   position: relative;
 }
+.content-wrapper .contact .titel {
+  margin-top: -28px;
+  padding-bottom: 28px;
+}
 .content-wrapper .contact span {
   display: block;
 }
@@ -5085,10 +5092,15 @@ article .block-wrapper .contacts-wrapper {
 }
 
 .italic, .contacts-wrapper h2, h1,
-.header, footer .footer-div .footer-container h2, .main-menu-wrapper .menu-head, .related-wrapper h2, .related-wrapper .related .heading {
+.header,
+.content-wrapper .contact h2, footer .footer-div .footer-container h2, .main-menu-wrapper .menu-head, .related-wrapper h2, .related-wrapper .related .heading {
   font-family: Georgia;
   font-style: italic;
   font-weight: normal;
+}
+
+.nolink {
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 680px) {
@@ -5179,12 +5191,12 @@ body {
   word-break: break-word;
 }
 
-.hidden, .content-wrapper .contact .title, .main-menu .main-menu-wrapper, .module-wrapper.facebook-module-wrapper .fb-page-name, .module-wrapper.facebook-module-wrapper .fb-feed-item .caption, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-2, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-3, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-4, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-5, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-6, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-7, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-8, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-9, .module-wrapper.facebook-module-wrapper .fb-loader {
+.hidden, .main-menu .main-menu-wrapper, .module-wrapper.facebook-module-wrapper .fb-page-name, .module-wrapper.facebook-module-wrapper .fb-feed-item .caption, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-2, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-3, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-4, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-5, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-6, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-7, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-8, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-9, .module-wrapper.facebook-module-wrapper .fb-loader {
   display: none;
 }
 
-.force-hidden, .firstpage.slideshow .slidesjs-pagination, .slideshow .slidesjs-play,
-.slideshow .slidesjs-stop {
+.force-hidden, .slideshow-wrapper .slideshow .slidesjs-play,
+.slideshow-wrapper .slideshow .slidesjs-stop, .slideshow-wrapper .slideshow.firstpage .slidesjs-pagination {
   display: none !important;
 }
 
@@ -5257,13 +5269,13 @@ article.page .slideshow-wrapper:after {
   width: 100%;
 }
 
-.contacts-wrapper .contacts .contact .header-wrapper.contact-data .logo-space, .header-wrapper.white .logo-space, article.page .header-wrapper.slideshow-wrapper .logo-space {
+.contacts-wrapper .contacts .contact .header-wrapper.contact-data .logo-space, .header-wrapper.white .logo-space {
   background-color: rgba(255, 255, 255, 0.4) !important;
 }
-.contacts-wrapper .contacts .contact .header-wrapper.contact-data .top-wrapper, .header-wrapper.white .top-wrapper, article.page .header-wrapper.slideshow-wrapper .top-wrapper {
+.contacts-wrapper .contacts .contact .header-wrapper.contact-data .top-wrapper, .header-wrapper.white .top-wrapper {
   background-color: transparent !important;
 }
-.contacts-wrapper .contacts .contact .header-wrapper.contact-data .top-navigation-wrapper, .header-wrapper.white .top-navigation-wrapper, article.page .header-wrapper.slideshow-wrapper .top-navigation-wrapper {
+.contacts-wrapper .contacts .contact .header-wrapper.contact-data .top-navigation-wrapper, .header-wrapper.white .top-navigation-wrapper {
   border-bottom: 1px solid #ccc;
 }
 
@@ -5343,36 +5355,6 @@ article.page .slideshow-wrapper:after {
   z-index: 100;
 }
 
-.firstpage.slideshow {
-  position: relative;
-}
-.firstpage.slideshow .slide-layer {
-  background: url("../images/slide-layer.png") repeat fixed;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 90;
-  width: 4000px;
-  height: 4000px;
-}
-.firstpage.slideshow img {
-  max-width: initial;
-}
-.firstpage.slideshow .slidesjs-pagination {
-  z-index: 200;
-}
-
-.slideshow {
-  overflow: hidden;
-}
-.slideshow .slidesjs-play,
-.slideshow .slidesjs-stop {
-  z-index: 200;
-}
-.slideshow .slidesjs-pagination {
-  z-index: 200;
-}
-
 .home .top-wrapper {
   background: transparent;
   z-index: 100;
@@ -5442,7 +5424,7 @@ article.page .slideshow-wrapper:after {
   height: 30px;
 }
 
-.clip_24x24, .menu-icon, .white .menu-icon, .contacts-wrapper .contacts .contact .contact-data .menu-icon, article.page .slideshow-wrapper .menu-icon, .selected-menu-icon, .home-icon, .white .home-icon, .contacts-wrapper .contacts .contact .contact-data .home-icon, article.page .slideshow-wrapper .home-icon {
+.clip_24x24, .menu-icon, .white .menu-icon, .contacts-wrapper .contacts .contact .contact-data .menu-icon, .selected-menu-icon, .home-icon, .white .home-icon, .contacts-wrapper .contacts .contact .contact-data .home-icon {
   width: 24px;
   height: 24px;
 }
@@ -5467,7 +5449,7 @@ article.page .slideshow-wrapper:after {
   background-position: -82px -42px;
 }
 
-.white .menu-icon, .contacts-wrapper .contacts .contact .contact-data .menu-icon, article.page .slideshow-wrapper .menu-icon {
+.white .menu-icon, .contacts-wrapper .contacts .contact .contact-data .menu-icon {
   margin-right: 6px;
   background-position: -82px -2px;
 }
@@ -5481,7 +5463,7 @@ article.page .slideshow-wrapper:after {
   background-position: -2px -42px;
 }
 
-.white .home-icon, .contacts-wrapper .contacts .contact .contact-data .home-icon, article.page .slideshow-wrapper .home-icon {
+.white .home-icon, .contacts-wrapper .contacts .contact .contact-data .home-icon {
   background-position: -2px -2px;
 }
 
@@ -5984,6 +5966,44 @@ article.page .slideshow-wrapper:after {
   box-shadow: 0px 0px 15px #999;
 }
 
+article.page .content-wrapper {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.slideshow-wrapper {
+  z-index: 1;
+}
+.slideshow-wrapper .slideshow {
+  overflow: hidden;
+  /* only on firstpage */
+}
+.slideshow-wrapper .slideshow .slidesjs-play,
+.slideshow-wrapper .slideshow .slidesjs-stop {
+  z-index: 200;
+}
+.slideshow-wrapper .slideshow .slidesjs-pagination {
+  z-index: 200;
+}
+.slideshow-wrapper .slideshow.firstpage {
+  position: relative;
+}
+.slideshow-wrapper .slideshow.firstpage .slide-layer {
+  background: url("../images/slide-layer.png") repeat fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  width: 4000px;
+  height: 4000px;
+}
+.slideshow-wrapper .slideshow.firstpage img {
+  max-width: initial;
+}
+.slideshow-wrapper .slideshow.firstpage .slidesjs-pagination {
+  z-index: 200;
+}
+
 article.page .slideshow-wrapper {
   position: relative;
   margin-top: 24px;
@@ -6011,10 +6031,6 @@ article.page .slideshow-wrapper .slideshow .slidesjs-pagination {
   position: absolute;
   bottom: 0;
   left: 20px;
-}
-article.page .content-wrapper {
-  margin-top: 24px;
-  margin-bottom: 24px;
 }
 
 .program-icons {

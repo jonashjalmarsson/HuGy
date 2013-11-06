@@ -23,57 +23,6 @@ article {
 }
 
 article.page{
-	.slideshow-wrapper {
-		@extend .drop-shadow;
-		@extend .white;
-		position: relative;
-		margin-top: 24px;
-		.picto {
-			position: absolute;
-			right: 20px;
-			top: 20px;
-			opacity: 0.9;
-			z-index: 100;
-			max-width: 300px;
-			max-height: 300px;
-		}
-		.slideshow {
-			
-			ul, li, a {
-				content: '';
-				display: inline-block;
-			}
-			.slidesjs-navigation {
-				position: absolute;
-				bottom: 0;
-				left: 0;
-
-				&.slidesjs-stop {
-					@extend .pause-icon;
-				}
-				&.slidesjs-play {
-					@extend .play-icon;
-				}
-			}
-			.slidesjs-previous {
-			}
-			.slidesjs-next {
-			}
-			.slidesjs-pagination {
-				margin: 0;
-				position: absolute;
-				bottom: 0;
-				left: 20px;
-				.slidesjs-pagination-item a {
-					@extend .active-dot-icon;
-					&.active {
-						@extend .dot-icon;
-					}
-				}
-			}
-		}
-	}
-
 	.content-wrapper {
 		@extend .small-max-width--center;
 		margin-top: 24px;
