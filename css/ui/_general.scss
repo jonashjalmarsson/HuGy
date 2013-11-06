@@ -3,6 +3,12 @@ body {
 	font-family: Trebuchet MS;
 	word-break: break-word;
 }
+a {
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}
 .hidden {
 	display: none;
 }

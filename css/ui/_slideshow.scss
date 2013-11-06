@@ -16,6 +16,7 @@
 		}
 		/* only on firstpage */
 		&.firstpage {
+			margin-bottom: 36px;
 			position: relative;
 			.slide-layer {
 				background: url("../images/slide-layer.png") repeat fixed;
