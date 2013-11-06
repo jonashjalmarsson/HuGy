@@ -3477,7 +3477,7 @@ article .block-wrapper .contacts-wrapper {
   color: black;
 }
 
-.white-background, .main-menu-wrapper .current_page_item > a, article {
+.white-background, body, .main-menu-wrapper .current_page_item > a, article {
   background-color: white;
 }
 
@@ -3703,7 +3703,7 @@ article .block-wrapper .contacts-wrapper {
   color: white;
 }
 
-.green-background, body {
+.green-background {
   background-color: #14a585;
 }
 
@@ -5254,6 +5254,9 @@ article.page .slideshow-wrapper:after {
 }
 .contacts-wrapper .contacts .contact .header-wrapper.contact-data .top-wrapper, .header-wrapper.white .top-wrapper, article.page .header-wrapper.slideshow-wrapper .top-wrapper {
   background-color: transparent !important;
+}
+.contacts-wrapper .contacts .contact .header-wrapper.contact-data .top-navigation-wrapper, .header-wrapper.white .top-navigation-wrapper, article.page .header-wrapper.slideshow-wrapper .top-navigation-wrapper {
+  border-bottom: 1px solid #ccc;
 }
 
 .top-wrapper .top .logo-space {
