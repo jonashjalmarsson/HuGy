@@ -28,4 +28,28 @@ function hugy_contacts_init() {
 
 	//}
 }
+
+add_filter( 'manage_edit-hugy_kontakt_columns', 'my_edit_hugy_kontakt_columns' ) ;
+function my_edit_hugy_kontakt_columns($columns) {
+
+	$new_columns = array(
+		'titel' => 'Titel',
+		'arbetsplats' => 'Arbetsplats'
+	);
+    return array_merge($columns, $new_columns);
+}
+
+add_action( 'manage_hugy_kontakt_posts_custom_column' , 'custom_hugy_kontakt_column', 10, 2 );
+function custom_hugy_kontakt_column( $column, $post_id ) {
+    switch ( $column ) {
+        case 'arbetsplats' :
+            echo get_field( 'arbetsplats', $post_id); 
+            break;
+        case 'title' :
+            echo get_field( 'titel', $post_id); 
+            break;
+    }
+}
+
+
 ?>
