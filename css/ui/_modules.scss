@@ -30,16 +30,17 @@
 					bottom: 6px;
 					left: 24px;
 					
-					position: absolute;
+					//position: absolute;
 					z-index: 99;
 					
 					a {
 						@extend .nounderline;
 					}
 					h2 {
-						@extend .gamma;
+						@extend .delta;
 						@extend .islet;
 						@extend .flush--bottom;
+						font-weight: normal;
 					}
 				}
 			}
@@ -60,10 +61,10 @@
 		h1 {
 			@extend .white-text;
 			margin-left: 6px;
-			padding-top: 50px;
+			padding-top: 78px;
 			background: url("../images/facebook.png") no-repeat 90% 10px;
 			background-clip: padding-box;
-			padding-bottom: 24px;
+			padding-bottom: 6px;
 			margin-bottom: 0;
 			margin-top: 0px;
 		}

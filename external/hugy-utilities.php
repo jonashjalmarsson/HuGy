@@ -481,10 +481,11 @@
 		 */
 		function get_author() {
 			$retValue .= '<div class="author">';
-			if (get_the_author_meta( 'description' ) != '')
-				$link = get_permalink(get_the_author_meta( 'description' ));
-			
-			$retValue .= "SKRIFTST&Auml;LLARE: <a href='$link'>" . get_the_author() . "</a>";
+			if (get_the_author_meta( 'description' ) != '') {
+				$prelink = "<a href='".get_permalink(get_the_author_meta( 'description' ))."'>";
+				$postlink = "</a>";
+			}
+			$retValue .= "SKRIFTST&Auml;LLARE: $prelink" . get_the_author() . "$postlink";
 			$retValue .= '</div>';
 			return $retValue;
 		}

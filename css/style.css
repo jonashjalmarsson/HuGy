@@ -983,13 +983,13 @@ h2, .beta {
   line-height: 1.6;
 }
 
-h3, .gamma, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 {
+h3, .gamma {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 1;
 }
 
-h4, .delta, .contacts-wrapper .contacts .contact h2.title, .main-menu-wrapper .menu-head {
+h4, .delta, .contacts-wrapper .contacts .contact h2.title, .main-menu-wrapper .menu-head, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 {
   font-size: 20px;
   font-size: 1.25rem;
   line-height: 1.2;
@@ -5945,8 +5945,10 @@ article.page .slideshow-wrapper:after {
 .module-wrapper.nyheter-module-wrapper .items .item .item-content {
   bottom: 6px;
   left: 24px;
-  position: absolute;
   z-index: 99;
+}
+.module-wrapper.nyheter-module-wrapper .items .item .item-content h2 {
+  font-weight: normal;
 }
 .module-wrapper.facebook-module-wrapper {
   /* facebook colors */
@@ -5956,10 +5958,10 @@ article.page .slideshow-wrapper:after {
 }
 .module-wrapper.facebook-module-wrapper h1 {
   margin-left: 6px;
-  padding-top: 50px;
+  padding-top: 78px;
   background: url("../images/facebook.png") no-repeat 90% 10px;
   background-clip: padding-box;
-  padding-bottom: 24px;
+  padding-bottom: 6px;
   margin-bottom: 0;
   margin-top: 0px;
 }
