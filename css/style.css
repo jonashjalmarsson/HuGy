@@ -970,7 +970,7 @@ html {
  */
 h1, .alpha, h1,
 .header,
-.content-wrapper .contact h2 {
+.single-hugy_kontakt .content-wrapper .contact h2 {
   font-size: 36px;
   font-size: 2.25rem;
   line-height: 1.33333;
@@ -3711,12 +3711,12 @@ article .block-wrapper .contacts-wrapper {
 
 .green-text, .contacts-wrapper h2, h1,
 .header,
-.content-wrapper .contact h2 {
+.single-hugy_kontakt .content-wrapper .contact h2 {
   color: #14a585;
 }
 .green-text a, .contacts-wrapper h2 a, h1 a,
 .header a,
-.content-wrapper .contact h2 a {
+.single-hugy_kontakt .content-wrapper .contact h2 a {
   color: #14a585;
 }
 
@@ -5057,15 +5057,15 @@ article .block-wrapper .contacts-wrapper {
   background-color: #020202;
 }
 
-.content-wrapper .contact {
+.single-hugy_kontakt .content-wrapper .contact {
   margin-bottom: 12px;
   position: relative;
 }
-.content-wrapper .contact .titel {
+.single-hugy_kontakt .content-wrapper .contact .titel {
   margin-top: -28px;
   padding-bottom: 28px;
 }
-.content-wrapper .contact span {
+.single-hugy_kontakt .content-wrapper .contact span {
   display: block;
 }
 
@@ -5093,7 +5093,7 @@ article .block-wrapper .contacts-wrapper {
 
 .italic, .contacts-wrapper h2, h1,
 .header,
-.content-wrapper .contact h2, footer .footer-div .footer-container h2, .main-menu-wrapper .menu-head, .related-wrapper h2, .related-wrapper .related .heading {
+.single-hugy_kontakt .content-wrapper .contact h2, footer .footer-div .footer-container h2, .main-menu-wrapper .menu-head, .related-wrapper h2, .related-wrapper .related .heading {
   font-family: Georgia;
   font-style: italic;
   font-weight: normal;
