@@ -2194,7 +2194,7 @@ article .block-wrapper .contacts-wrapper {
   /**
   * Whole
   */
-  .palm-one-whole, article .block-wrapper .related-wrapper,
+  .palm-one-whole, .module-wrapper.nyheter-module-wrapper .items .item, article .block-wrapper .related-wrapper,
   article .block-wrapper .contacts-wrapper {
     width: 100%;
   }
@@ -6000,19 +6000,25 @@ article.page .slideshow-wrapper:after {
 .module-wrapper.text-module-wrapper a {
   color: inherit;
 }
-.module-wrapper.nyheter-module-wrapper .items {
-  width: 1100px;
-}
 .module-wrapper.nyheter-module-wrapper .items .item {
   position: relative;
 }
 .module-wrapper.nyheter-module-wrapper .items .item .wp-post-image {
   max-width: 100%;
 }
+.module-wrapper.nyheter-module-wrapper .items .item .wp-post-image img {
+  margin: 0 auto;
+  display: block;
+}
 .module-wrapper.nyheter-module-wrapper .items .item .item-content {
   bottom: 6px;
   left: 24px;
   z-index: 99;
+}
+@media only screen and (max-width: 680px) {
+  .module-wrapper.nyheter-module-wrapper .items .item .item-content {
+    text-align: center;
+  }
 }
 .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 {
   font-weight: normal;

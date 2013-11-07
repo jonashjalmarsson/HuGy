@@ -312,9 +312,10 @@
 					$the_query->the_post();
 					//$retValue .= "<div class='item-img'>";
 					//$retValue .=  get_the_post_thumbnail(get_the_ID(), 'news'); 
+					$retValue .= "<a href='" . get_permalink() . "'>";
 					$retValue .=  HuGy::get_first_image(get_field('hg_slideshow',get_the_ID()),'wp-post-image','news');
 					//$retValue .= "</div>";
-					$retValue .= "<div class='item-content'>";
+					$retValue .= "</a><div class='item-content'>";
 					$retValue .= "<a href='" . get_permalink() . "'><h2>" . get_the_title() . "</h2>";
 					//$retValue .= get_the_excerpt();
 					$retValue .= "</a></div>";

@@ -15,18 +15,25 @@
 			@extend .black-text;
 		}
 		.items {
-			width: $max-width;
 			@extend .grid;
 			.item {
 				@extend .grid__item;
 				@extend .one-third;
+				@extend .palm-one-whole;
 				position: relative;
 				.wp-post-image {
 					max-width: 100%;
+					img {
+						margin: 0 auto;
+						display: block;
+					}
 					//@extend .drop-shadow;
 				}
 
 				.item-content {
+					@include media-query(palm) {
+						text-align: center;
+					}
 					@extend .white-40;
 					@extend .one-whole;
 					bottom: 6px;
