@@ -3793,11 +3793,11 @@ article .block-wrapper .contacts-wrapper {
   background-color: #020202;
 }
 
-.green-40, .pre-footer-program {
+.green-40 {
   background-color: rgba(20, 165, 133, 0.4);
   color: white;
 }
-.green-40 a, .pre-footer-program a {
+.green-40 a {
   color: white;
 }
 
@@ -3805,11 +3805,11 @@ article .block-wrapper .contacts-wrapper {
   background-color: rgba(20, 165, 133, 0.4);
 }
 
-.ie7 .green-40, .ie7 .pre-footer-program, ie8 .green-40, ie8 .pre-footer-program {
+.ie7 .green-40, ie8 .green-40 {
   background-color: #020202;
   color: white;
 }
-.ie7 .green-40 a, .ie7 .pre-footer-program a, ie8 .green-40 a, ie8 .pre-footer-program a {
+.ie7 .green-40 a, ie8 .green-40 a {
   color: white;
 }
 .ie7 .green-40-background, ie8 .green-40-background {
@@ -3885,11 +3885,11 @@ article .block-wrapper .contacts-wrapper {
   background-color: #020202;
 }
 
-.green-80 {
+.green-80, .pre-footer-program {
   background-color: rgba(20, 165, 133, 0.8);
   color: white;
 }
-.green-80 a {
+.green-80 a, .pre-footer-program a {
   color: white;
 }
 
@@ -3897,11 +3897,11 @@ article .block-wrapper .contacts-wrapper {
   background-color: rgba(20, 165, 133, 0.8);
 }
 
-.ie7 .green-80, ie8 .green-80 {
+.ie7 .green-80, .ie7 .pre-footer-program, ie8 .green-80, ie8 .pre-footer-program {
   background-color: #020202;
   color: white;
 }
-.ie7 .green-80 a, ie8 .green-80 a {
+.ie7 .green-80 a, .ie7 .pre-footer-program a, ie8 .green-80 a, ie8 .pre-footer-program a {
   color: white;
 }
 .ie7 .green-80-background, .ie7 .top-wrapper, ie8 .green-80-background, ie8 .top-wrapper {
@@ -5141,6 +5141,9 @@ article .block-wrapper .contacts-wrapper {
   -webkit-transform: rotate(180deg);
 }
 
+footer a {
+  border-bottom: 1px dotted white;
+}
 footer .footer-div .footer-container {
   padding-top: 24px;
   /* if less than 4 widgets */
@@ -5465,6 +5468,7 @@ article.page .slideshow-wrapper:after {
   max-width: 100%;
 }
 .home .page-wrapper {
+  padding-top: 0px;
   background: white;
 }
 
