@@ -262,19 +262,15 @@
 			}
 
 			while (the_flexible_field("hg_modules",$field)) :
-				
-				$retValue .= "<div class='" . get_row_layout() . "-module-wrapper module-wrapper'>";
+				$background = get_sub_field('background-color');
+				$color = get_sub_field('color');
+				$style = '';
+				if ($background != '' || $color != '')
+					$style = " style='background-color:$background;color:$color;'";
+				$retValue .= "<div class='" . get_row_layout() . "-module-wrapper module-wrapper'$style>";
 					$retValue .= "<div class='" . get_row_layout() . "-module module' data-fb-url='http://www.facebook.com/" . get_sub_field("id",$field) . "'>";
 					if (get_row_layout() == "facebook"):
 						$retValue .= "<h1>Vad händer mer...</h1>";
-						/*$retValue .= "<script>(function($) {
-								$('.facebook-$field').facebook_wall({
-									id: '".get_sub_field("id",$field)."',
-									access_token: '".get_sub_field("accesstoken",$field)."',
-									limit: 6
-								});
-						})(jQuery);
-						</script>";*/
 						if (function_exists("fb_feed")) :
 							$retValue .= fb_feed(get_sub_field("id",$field),array('container' => 'div',
 													'container_class' => 'items',
@@ -481,11 +477,17 @@
 		 */
 		function get_author() {
 			$retValue .= '<div class="author">';
-			if (get_the_author_meta( 'description' ) != '') {
-				$prelink = "<a href='".get_permalink(get_the_author_meta( 'description' ))."'>";
+
+			if (get_the_author_meta('kontakt') != '') {
+				$prelink = "<a href='".get_permalink(get_the_author_meta('kontakt'))."'>";
 				$postlink = "</a>";
 			}
-			$retValue .= "SKRIFTST&Auml;LLARE: $prelink" . get_the_author() . "$postlink";
+			$name = get_the_author();
+			if (get_the_author_meta('first_name') != '' || get_the_author_meta('last_name') != '') {
+				$name = get_the_author_meta('first_name') . ' ' . get_the_author_meta('last_name');
+			}
+			
+			$retValue .= "SKRIFTST&Auml;LLARE: $prelink$name$postlink";
 			$retValue .= '</div>';
 			return $retValue;
 		}

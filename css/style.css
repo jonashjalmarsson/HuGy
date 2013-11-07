@@ -5192,6 +5192,10 @@ footer .copyright {
   display: inline-block;
   text-align: center;
 }
+footer .copyright .login {
+  float: right;
+  margin-right: 12px;
+}
 
 @media only screen and (max-width: 680px) {
   .footer-div .widget {
@@ -5204,6 +5208,7 @@ body {
 }
 
 a {
+  color: #d9050d;
   text-decoration: none;
 }
 a:hover {
@@ -5219,14 +5224,14 @@ a:hover {
   display: none !important;
 }
 
-.max-width--center, footer .footer-div, .top-wrapper .top, .top-navigation-wrapper .top-navigation, .main-menu-wrapper, .module-wrapper.nyheter-module-wrapper .module, .single article.page,
+.max-width--center, footer .footer-div, .top-wrapper .top, .top-navigation-wrapper .top-navigation, .main-menu-wrapper, .module-wrapper .module, .single article.page,
 .page article.page {
   max-width: 1100px;
   margin: 0 auto;
 }
 
 @media only screen and (max-width: 1147px) {
-  .max-width--center, footer .footer-div, .top-wrapper .top, .top-navigation-wrapper .top-navigation, .main-menu-wrapper, .module-wrapper.nyheter-module-wrapper .module, .single article.page,
+  .max-width--center, footer .footer-div, .top-wrapper .top, .top-navigation-wrapper .top-navigation, .main-menu-wrapper, .module-wrapper .module, .single article.page,
   .page article.page {
     margin-left: 12px;
     margin-right: 12px;
@@ -5241,6 +5246,68 @@ a:hover {
   text-decoration: none;
 }
 
+/* Images */
+.alignleft {
+  float: left;
+}
+
+.alignright {
+  float: right;
+}
+
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img.alignleft {
+  margin: 5px 20px 5px 0;
+}
+
+.wp-caption.alignleft {
+  margin: 5px 10px 5px 0;
+}
+
+img.alignright {
+  margin: 5px 0 5px 20px;
+}
+
+.wp-caption.alignright {
+  margin: 5px 0 5px 10px;
+}
+
+img.aligncenter {
+  margin: 5px auto;
+}
+
+img.alignnone {
+  margin: 5px 0;
+}
+
+.wp-caption .wp-caption-text,
+.entry-caption,
+.gallery-caption {
+  font-size: 90%;
+  color: #666;
+}
+
+img.wp-smiley,
+.rsswidget img {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+.wp-caption.alignleft + ul,
+.wp-caption.alignleft + ol {
+  list-style-position: inside;
+}
+
+/* dropshadow */
 .drop-shadow, article.page .slideshow-wrapper {
   position: relative;
 }
@@ -5817,9 +5884,9 @@ article.page .slideshow-wrapper:after {
   background-position: -1520px -80px;
 }
 
-.ie7 .max-width--center, .ie7 footer .footer-div, footer .ie7 .footer-div, .ie7 .top-wrapper .top, .top-wrapper .ie7 .top, .ie7 .top-navigation-wrapper .top-navigation, .top-navigation-wrapper .ie7 .top-navigation, .ie7 .main-menu-wrapper, .ie7 .module-wrapper.nyheter-module-wrapper .module, .module-wrapper.nyheter-module-wrapper .ie7 .module, .ie7 .single article.page, .single .ie7 article.page,
+.ie7 .max-width--center, .ie7 footer .footer-div, footer .ie7 .footer-div, .ie7 .top-wrapper .top, .top-wrapper .ie7 .top, .ie7 .top-navigation-wrapper .top-navigation, .top-navigation-wrapper .ie7 .top-navigation, .ie7 .main-menu-wrapper, .ie7 .module-wrapper .module, .module-wrapper .ie7 .module, .ie7 .single article.page, .single .ie7 article.page,
 .ie7 .page article.page,
-.page .ie7 article.page, .ie8 .max-width--center, .ie8 footer .footer-div, footer .ie8 .footer-div, .ie8 .top-wrapper .top, .top-wrapper .ie8 .top, .ie8 .top-navigation-wrapper .top-navigation, .top-navigation-wrapper .ie8 .top-navigation, .ie8 .main-menu-wrapper, .ie8 .module-wrapper.nyheter-module-wrapper .module, .module-wrapper.nyheter-module-wrapper .ie8 .module, .ie8 .single article.page, .single .ie8 article.page,
+.page .ie7 article.page, .ie8 .max-width--center, .ie8 footer .footer-div, footer .ie8 .footer-div, .ie8 .top-wrapper .top, .top-wrapper .ie8 .top, .ie8 .top-navigation-wrapper .top-navigation, .top-navigation-wrapper .ie8 .top-navigation, .ie8 .main-menu-wrapper, .ie8 .module-wrapper .module, .module-wrapper .ie8 .module, .ie8 .single article.page, .single .ie8 article.page,
 .ie8 .page article.page,
 .page .ie8 article.page {
   width: 1100px;
@@ -5930,8 +5997,8 @@ article.page .slideshow-wrapper:after {
   padding-top: 24px;
   padding-bottom: 24px;
 }
-.module-wrapper.nyheter-module-wrapper .module {
-  overflow: hidden;
+.module-wrapper.text-module-wrapper a {
+  color: inherit;
 }
 .module-wrapper.nyheter-module-wrapper .items {
   width: 1100px;
@@ -5958,7 +6025,7 @@ article.page .slideshow-wrapper:after {
 }
 .module-wrapper.facebook-module-wrapper h1 {
   margin-left: 6px;
-  padding-top: 78px;
+  padding-top: 74px;
   background: url("../images/facebook.png") no-repeat 90% 10px;
   background-clip: padding-box;
   padding-bottom: 6px;
@@ -6050,7 +6117,6 @@ article.page .content-wrapper {
 
 article.page .slideshow-wrapper {
   position: relative;
-  margin-top: 24px;
 }
 article.page .slideshow-wrapper .picto {
   position: absolute;
@@ -6073,13 +6139,13 @@ article.page .slideshow-wrapper .slideshow ul, article.page .slideshow-wrapper .
 }
 article.page .slideshow-wrapper .slideshow .slidesjs-navigation {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: -32px;
+  left: 10px;
 }
 article.page .slideshow-wrapper .slideshow .slidesjs-pagination {
   margin: 0;
   position: absolute;
-  bottom: 0;
+  bottom: -32px;
   left: 20px;
 }
 

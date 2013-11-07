@@ -15,5 +15,6 @@
 			<div class="footer-container footer-2-container"><?php dynamic_sidebar( 'footer-2' ); ?></div><!-- .footer-container -->
 		<?php endif; ?>
 		</div>
-		<span class="copyright">&copy; <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?>. All rights reserved.</span>
+		<span class="copyright">&copy; <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?>. All rights reserved. <a class='login' href="<?php echo wp_login_url( get_permalink() ); ?>" title="Login">Logga in</a></span>
+		
 	</footer>

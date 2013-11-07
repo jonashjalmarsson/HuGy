@@ -44,7 +44,6 @@ article.page{
 	.slideshow-wrapper {
 		@extend .drop-shadow;
 		position: relative;
-		margin-top: 24px;
 		.picto {
 			position: absolute;
 			right: 20px;
@@ -68,8 +67,8 @@ article.page{
 			}
 			.slidesjs-navigation {
 				position: absolute;
-				bottom: 0;
-				left: 0;
+				bottom: -32px;
+				left: 10px;
 
 				&.slidesjs-stop {
 					@extend .pause-icon;
@@ -85,7 +84,7 @@ article.page{
 			.slidesjs-pagination {
 				margin: 0;
 				position: absolute;
-				bottom: 0;
+				bottom: -32px;
 				left: 20px;
 				.slidesjs-pagination-item a {
 					@extend .active-dot-icon;

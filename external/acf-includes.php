@@ -594,13 +594,29 @@ if(function_exists("register_field_group"))
 						'sub_fields' => array (
 							array (
 								'key' => 'field_52651cd97fd68',
-								'label' => 'text',
+								'label' => 'Text',
 								'name' => 'text',
 								'type' => 'wysiwyg',
 								'column_width' => '',
 								'default_value' => '',
 								'toolbar' => 'full',
 								'media_upload' => 'yes',
+							),
+							array (
+								'key' => 'field_527b96d558a3e',
+								'label' => 'Bakgrundsfärg',
+								'name' => 'background-color',
+								'type' => 'color_picker',
+								'column_width' => '',
+								'default_value' => '',
+							),
+							array (
+								'key' => 'field_527b97c2837ad',
+								'label' => 'Textfärg',
+								'name' => 'color',
+								'type' => 'color_picker',
+								'column_width' => '',
+								'default_value' => '',
 							),
 						),
 					),
@@ -625,6 +641,44 @@ if(function_exists("register_field_group"))
 					'value' => 'page-hugy-main.php',
 					'order_no' => 0,
 					'group_no' => 1,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_profil',
+		'title' => 'Profil',
+		'fields' => array (
+			array (
+				'key' => 'field_527b8e2972545',
+				'label' => 'Kontakt',
+				'name' => 'kontakt',
+				'type' => 'post_object',
+				'post_type' => array (
+					0 => 'hugy_kontakt',
+				),
+				'taxonomy' => array (
+					0 => 'all',
+				),
+				'allow_null' => 0,
+				'multiple' => 0,
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'ef_user',
+					'operator' => '==',
+					'value' => 'all',
+					'order_no' => 0,
+					'group_no' => 0,
 				),
 			),
 		),

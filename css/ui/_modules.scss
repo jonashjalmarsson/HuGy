@@ -3,13 +3,14 @@
 	padding-top: 24px;
 	padding-bottom: 24px;
 	.module {
-	
+		@extend .max-width--center;
+	}
+	&.text-module-wrapper {
+		a {
+			color: inherit;
+		}
 	}
 	&.nyheter-module-wrapper {
-		.module {
-			@extend .max-width--center;
-			overflow: hidden;
-		}
 		h1 {
 			@extend .black-text;
 		}
@@ -22,6 +23,7 @@
 				position: relative;
 				.wp-post-image {
 					max-width: 100%;
+					//@extend .drop-shadow;
 				}
 
 				.item-content {
@@ -61,7 +63,7 @@
 		h1 {
 			@extend .white-text;
 			margin-left: 6px;
-			padding-top: 78px;
+			padding-top: 74px;
 			background: url("../images/facebook.png") no-repeat 90% 10px;
 			background-clip: padding-box;
 			padding-bottom: 6px;
