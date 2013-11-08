@@ -6,7 +6,7 @@
 		@extend .max-width--center;
 	}
 	&.text-module-wrapper {
-		a {
+		h1, h2, a {
 			color: inherit;
 		}
 	}
