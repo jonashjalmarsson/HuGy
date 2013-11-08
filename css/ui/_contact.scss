@@ -15,23 +15,24 @@
 	
 }
 .contacts-wrapper {
-	h2 {
-		@extend .italic;
-		@extend .green-text;
-		@extend .flush--bottom;
-		font-weight: normal;
+	.contactlist {
+		.contact {
+			border-bottom: 1px solid #ccc;
+			margin-bottom: 24px!important;
+			padding-bottom: 24px!important;
+		}
 	}
 	.contacts {
 		@extend .black-text;
 		@extend .green-30-background;
 		@extend .islet;
+		h2 {
+			@extend .italic;
+			@extend .green-text;
+			@extend .flush--bottom;
+			font-weight: normal;
+		}
 		.contact {
-			margin-bottom: 12px;
-			position: relative;
-			h2.title {
-				@extend .delta;
-				@extend .black-text;
-			}
 			.contact-data {
 				@extend .islet;
 				@extend .white;
@@ -41,6 +42,17 @@
 				position: absolute;	
 				top: 10px;
 				z-index: 200;
+			}
+		}
+	}
+	.contactlist,
+	.contacts {
+		.contact {
+			margin-bottom: 12px;
+			position: relative;
+			h2.title {
+				@extend .delta;
+				@extend .black-text;
 			}
 			span {
 				display: block;

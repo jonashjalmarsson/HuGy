@@ -989,7 +989,8 @@ h3, .gamma {
   line-height: 1;
 }
 
-h4, .delta, .contacts-wrapper .contacts .contact h2.title, .main-menu-wrapper .menu-head, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 {
+h4, .delta, .contacts-wrapper .contactlist .contact h2.title,
+.contacts-wrapper .contacts .contact h2.title, .main-menu-wrapper .menu-head, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 {
   font-size: 20px;
   font-size: 1.25rem;
   line-height: 1.2;
@@ -2982,7 +2983,7 @@ article .block-wrapper .contacts-wrapper {
   margin-right: 0 !important;
 }
 
-.flush--bottom, .contacts-wrapper h2, footer .footer-div .footer-container h2, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2, .program-icons, .related-wrapper h2 {
+.flush--bottom, .contacts-wrapper .contacts h2, footer .footer-div .footer-container h2, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2, .program-icons, .related-wrapper h2 {
   margin-bottom: 0 !important;
 }
 
@@ -3259,10 +3260,12 @@ article .block-wrapper .contacts-wrapper {
   background-color: black;
 }
 
-.black-text, .contacts-wrapper .contacts, .contacts-wrapper .contacts .contact h2.title, .main-menu-wrapper .current_page_item > a, .module-wrapper.nyheter-module-wrapper h1, .related-wrapper .related {
+.black-text, .contacts-wrapper .contacts, .contacts-wrapper .contactlist .contact h2.title,
+.contacts-wrapper .contacts .contact h2.title, .main-menu-wrapper .current_page_item > a, .module-wrapper.nyheter-module-wrapper h1, .related-wrapper .related {
   color: black;
 }
-.black-text a, .contacts-wrapper .contacts a, .contacts-wrapper .contacts .contact h2.title a, .main-menu-wrapper .current_page_item > a a, .module-wrapper.nyheter-module-wrapper h1 a, .related-wrapper .related a {
+.black-text a, .contacts-wrapper .contacts a, .contacts-wrapper .contactlist .contact h2.title a,
+.contacts-wrapper .contacts .contact h2.title a, .main-menu-wrapper .current_page_item > a a, .module-wrapper.nyheter-module-wrapper h1 a, .related-wrapper .related a {
   color: black;
 }
 
@@ -3711,13 +3714,13 @@ article .block-wrapper .contacts-wrapper {
   background-color: #14a585;
 }
 
-.green-text, .contacts-wrapper h2, h1,
+.green-text, .contacts-wrapper .contacts h2, h1,
 .header,
 .content-wrapper .author h2,
 .single-hugy_kontakt .content-wrapper .contact h2 {
   color: #14a585;
 }
-.green-text a, .contacts-wrapper h2 a, h1 a,
+.green-text a, .contacts-wrapper .contacts h2 a, h1 a,
 .header a,
 .content-wrapper .author h2 a,
 .single-hugy_kontakt .content-wrapper .contact h2 a {
@@ -5076,12 +5079,13 @@ article .block-wrapper .contacts-wrapper {
   display: block;
 }
 
-.contacts-wrapper h2 {
-  font-weight: normal;
+.contacts-wrapper .contactlist .contact {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 24px !important;
+  padding-bottom: 24px !important;
 }
-.contacts-wrapper .contacts .contact {
-  margin-bottom: 12px;
-  position: relative;
+.contacts-wrapper .contacts h2 {
+  font-weight: normal;
 }
 .contacts-wrapper .contacts .contact .contact-data {
   box-shadow: 2px 2px 10px #666;
@@ -5091,14 +5095,21 @@ article .block-wrapper .contacts-wrapper {
   top: 10px;
   z-index: 200;
 }
+.contacts-wrapper .contactlist .contact,
+.contacts-wrapper .contacts .contact {
+  margin-bottom: 12px;
+  position: relative;
+}
+.contacts-wrapper .contactlist .contact span,
 .contacts-wrapper .contacts .contact span {
   display: block;
 }
+.contacts-wrapper .contactlist .contact:hover .contact-data,
 .contacts-wrapper .contacts .contact:hover .contact-data {
   display: block;
 }
 
-.italic, .contacts-wrapper h2, h1,
+.italic, .contacts-wrapper .contacts h2, h1,
 .header,
 .content-wrapper .author h2,
 .single-hugy_kontakt .content-wrapper .contact h2, footer .footer-div .footer-container h2, .main-menu-wrapper .menu-head, .related-wrapper h2, .related-wrapper .related .heading {

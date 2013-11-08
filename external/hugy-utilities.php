@@ -15,8 +15,12 @@
 	 * The main one that is used in Starkers is Starkers_Utilities::add_slug_to_body_class(), this will add the page or post slug to the body class
 	 *
 	 */
-	 
-	 class HuGy {
+	$contact_vars = array(
+		'imagesize' => 'thumbnail',
+		'title' => 'Kontakter',
+		'class' => 'contacts',		);
+
+	class HuGy {
 
 	 
 		/*
@@ -146,13 +150,14 @@
 
 
 		/*
-		 *
+		 * return the breadbrumb
 		 */
 		function get_breadcrumb($page_id = "") {
 			$retValue = "";
 			if (!isset($page_id) || $page_id == "") {
 				$page_id = get_the_ID();
 			}
+			// if page
 			if (is_page($page_id)) {
 				$page = get_post($page_id);
 				$retValue = "";
@@ -163,25 +168,34 @@
 				}
 				$retValue = "<a href='" . get_home_url() . "' title='Tillbaka hem'><span class='home-icon'></span></a> / <a href='" . get_page_link($page->ID) . "' title='" . $page->post_title . "'>" . $page->post_title . "</a> / " . $retValue;
 			}
+			// if single post
+			if (is_single($page_id)) {
+				$page = get_post($page_id);
+				$retValue = "<a href='" . get_home_url() . "' title='Tillbaka hem'><span class='home-icon'></span></a> / ";
+				$archive = HuGy::get_hugy_nyheter_page();
+				if ($archive != '')
+					$retValue .= "<a href='" . get_page_link($archive->ID) . "' title='" . $archive->post_title . "'>" . $archive->post_title . "</a> / ";
+				$retValue .= "<a href='" . get_page_link($page->ID) . "' title='" . $page->post_title . "'>" . $page->post_title . "</a>";
+			}
 			return $retValue;
 		}
 		
 		
 		/*
-		 *
+		 * return pages below parent
 		 */
-		function get_page_tree($page_id = "") {
+		function get_page_tree($parent_id = "") {
 			$retValue = "";
-			if (!isset($page_id) || $page_id == "") {
-				$page_id = get_the_ID();
+			if (!isset($parent_id) || $parent_id == "") {
+				$parent_id = get_the_ID();
 			}
-			$page = get_post($page_id);
+			$page = get_post($parent_id);
 			if ($page->post_type == "page") {
 				$args = array(
 					'depth'        => 0,
 					'show_date'    => '',
 					'date_format'  => get_option('date_format'),
-					'child_of'     => $page_id,
+					'child_of'     => $parent_id,
 					'exclude'      => '',
 					'include'      => '',
 					'title_li'     => "",
@@ -400,7 +414,14 @@
 		/*
 		 * Return contacts on page
 		 */
-		function get_contacts($page_id = "", $imagesize = 'thumbnail') {
+		var $contact_vars = array(
+			'imagesize' => 'thumbnail',
+			'title' => 'Kontakter', );
+		function get_contacts($page_id = "", $args = array()) {
+			global $contact_vars;
+
+			$vars = array_merge( $contact_vars, $args );
+			
 			$retValue = "";
 			if ($page_id != "") {
 				$field = $page_id;
@@ -410,9 +431,12 @@
 			}
 			$contacts = get_field('hg_kontakter',$page_id);
 			if ($contacts != "") :
-				$retValue .= "<div class='contacts-wrapper'><h2>Kontakter</h2><div class='contacts'>";
+				$retValue .= "<div class='contacts-wrapper'>";
+				if ($vars['title'] != '')
+					$retValue .= "<h2>" . $vars['title'] . "</h2>";
+				$retValue .= "<div class='" . $vars['class'] . "'>";
 				foreach ($contacts as $contact) :
-					$retValue .= HuGy::get_contact($contact->ID,$imagesize);
+					$retValue .= HuGy::get_contact($contact->ID,$args);
 				endforeach;
 				$retValue .= "</div></div>";
 			endif;
@@ -422,9 +446,12 @@
 		/*
 		 * Return one contact
 		 */
-		function get_contact($contact_id = "", $imagesize = 'thumbnail') {
+		function get_contact($contact_id = "", $args = array()) {
+			global $contact_vars;
 			if ($contact_id == '') return;
 			
+			$vars = array_merge( $contact_vars, $args );
+
 			$retValue .= "<div class='contact contact-".$contact_id."'>";
 
 
@@ -438,7 +465,7 @@
 			
 			$bild = get_field("bild",$contact_id);	
 			if ($bild) {
-				$bild = $bild['sizes'][$imagesize];
+				$bild = $bild['sizes'][$vars['imagesize']];
 				$retValue .= "<span class='bild'><img src='$bild' /></span>";
 			}
 
@@ -492,6 +519,22 @@
 			$retValue .= '</div>';
 			return $retValue;
 		}
+		
+		
+		/*
+		 * Return the first hugy_nyheter page
+		 */
+		function get_hugy_nyheter_page() {
+			$pages = get_posts(array(
+				'post_type' => 'page',
+				'meta_key' => '_wp_page_template',
+				'meta_value' => 'page-hugy-nyheter.php'
+			));
+			foreach($pages as $page){
+				// retur first page found
+				return $page;
+			}
+			return;
+		}
 	}
-	
  ?>

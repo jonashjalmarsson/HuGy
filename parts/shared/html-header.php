@@ -37,4 +37,4 @@
 		<?php } ?>
 		</style>
 	</head>
-	<body <?php body_class(); ?>>
+	<body <?php body_class((is_home()) ? 'home' : ''); ?>>
