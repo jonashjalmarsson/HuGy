@@ -17,14 +17,12 @@
 			position: relative;
 			
 			.logo-space {
-				border-radius: 6px;
 				left: 36px;
 				padding: 12px;
 				position: absolute;
 				top: 36px;
 				width: auto;
 				z-index: 100;
-				@extend .black-40;
 			}
 		}
 	}

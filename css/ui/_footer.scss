@@ -4,6 +4,14 @@
 .pre-footer {
 	@extend .black;
 }
+#betaicon {
+	top: 0px;
+	position: fixed;
+	cursor: pointer;
+	right: 30%;
+	text-align: center;
+	z-index: 250;
+}
 .up-icon {
 	bottom: 20px;
 	position: fixed;

@@ -22,16 +22,16 @@
 			padding-bottom: 24px!important;
 		}
 	}
+	h2 {
+		@extend .italic;
+		@extend .green-text;
+		@extend .flush--bottom;
+		font-weight: normal;
+	}
 	.contacts {
 		@extend .black-text;
 		@extend .green-30-background;
 		@extend .islet;
-		h2 {
-			@extend .italic;
-			@extend .green-text;
-			@extend .flush--bottom;
-			font-weight: normal;
-		}
 		.contact {
 			.contact-data {
 				@extend .islet;

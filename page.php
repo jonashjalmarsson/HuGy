@@ -18,7 +18,7 @@
 		<h1><?php the_title(); ?></h1>
 		<?php echo HuGy::get_author(); ?>
 		<?php the_content(); ?>
-		<?php //comments_template( '', true ); ?>
+		<?php if (is_page("betapage")) comments_template( '', true ); ?>
 	</div>
 	<div class="block-wrapper">
 	<?php echo HuGy::get_contacts(get_the_ID()); ?><?php echo HuGy::get_related(get_the_ID()); ?>

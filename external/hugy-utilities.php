@@ -172,9 +172,17 @@
 			if (is_single($page_id)) {
 				$page = get_post($page_id);
 				$retValue = "<a href='" . get_home_url() . "' title='Tillbaka hem'><span class='home-icon'></span></a> / ";
-				$archive = HuGy::get_hugy_nyheter_page();
-				if ($archive != '')
-					$retValue .= "<a href='" . get_page_link($archive->ID) . "' title='" . $archive->post_title . "'>" . $archive->post_title . "</a> / ";
+				if ($page->post_type == 'post') {
+					$archive = HuGy::get_hugy_nyheter_page();
+					if ($archive != '')
+						$retValue .= "<a href='" . get_page_link($archive->ID) . "' title='" . $archive->post_title . "'>" . $archive->post_title . "</a> / ";
+				}
+				if ($page->post_type == 'hugy_kontakt') {
+					//$archive = HuGy::get_hugy_nyheter_page();
+					//if ($archive != '')
+						//$retValue .= "<a href='" . get_page_link($archive->ID) . "' title='" . $archive->post_title . "'>" . $archive->post_title . "</a> / ";
+					$retValue .= " kontakt / ";
+				}
 				$retValue .= "<a href='" . get_page_link($page->ID) . "' title='" . $page->post_title . "'>" . $page->post_title . "</a>";
 			}
 			return $retValue;

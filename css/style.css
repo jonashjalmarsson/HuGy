@@ -2983,7 +2983,7 @@ article .block-wrapper .contacts-wrapper {
   margin-right: 0 !important;
 }
 
-.flush--bottom, .contacts-wrapper .contacts h2, footer .footer-div .footer-container h2, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2, .program-icons, .related-wrapper h2 {
+.flush--bottom, .contacts-wrapper h2, footer .footer-div .footer-container h2, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2, .program-icons, .related-wrapper h2 {
   margin-bottom: 0 !important;
 }
 
@@ -3338,11 +3338,11 @@ article .block-wrapper .contacts-wrapper {
   background-color: black;
 }
 
-.black-40, .home .top-wrapper .top .logo-space {
+.black-40 {
   background-color: rgba(0, 0, 0, 0.4);
   color: white;
 }
-.black-40 a, .home .top-wrapper .top .logo-space a {
+.black-40 a {
   color: white;
 }
 
@@ -3350,11 +3350,11 @@ article .block-wrapper .contacts-wrapper {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.ie7 .black-40, .ie7 .home .top-wrapper .top .logo-space, .home .top-wrapper .top .ie7 .logo-space, ie8 .black-40, ie8 .home .top-wrapper .top .logo-space, .home .top-wrapper .top ie8 .logo-space {
+.ie7 .black-40, ie8 .black-40 {
   background-color: black;
   color: white;
 }
-.ie7 .black-40 a, .ie7 .home .top-wrapper .top .logo-space a, .home .top-wrapper .top .ie7 .logo-space a, ie8 .black-40 a, ie8 .home .top-wrapper .top .logo-space a, .home .top-wrapper .top ie8 .logo-space a {
+.ie7 .black-40 a, ie8 .black-40 a {
   color: white;
 }
 .ie7 .black-40-background, ie8 .black-40-background {
@@ -3714,13 +3714,13 @@ article .block-wrapper .contacts-wrapper {
   background-color: #14a585;
 }
 
-.green-text, .contacts-wrapper .contacts h2, h1,
+.green-text, .contacts-wrapper h2, h1,
 .header,
 .content-wrapper .author h2,
 .single-hugy_kontakt .content-wrapper .contact h2 {
   color: #14a585;
 }
-.green-text a, .contacts-wrapper .contacts h2 a, h1 a,
+.green-text a, .contacts-wrapper h2 a, h1 a,
 .header a,
 .content-wrapper .author h2 a,
 .single-hugy_kontakt .content-wrapper .contact h2 a {
@@ -5084,7 +5084,7 @@ article .block-wrapper .contacts-wrapper {
   margin-bottom: 24px !important;
   padding-bottom: 24px !important;
 }
-.contacts-wrapper .contacts h2 {
+.contacts-wrapper h2 {
   font-weight: normal;
 }
 .contacts-wrapper .contacts .contact .contact-data {
@@ -5109,7 +5109,7 @@ article .block-wrapper .contacts-wrapper {
   display: block;
 }
 
-.italic, .contacts-wrapper .contacts h2, h1,
+.italic, .contacts-wrapper h2, h1,
 .header,
 .content-wrapper .author h2,
 .single-hugy_kontakt .content-wrapper .contact h2, footer .footer-div .footer-container h2, .main-menu-wrapper .menu-head, .related-wrapper h2, .related-wrapper .related .heading {
@@ -5133,6 +5133,15 @@ article .block-wrapper .contacts-wrapper {
 }
 .pre-footer-padding {
   height: 0px;
+}
+
+#betaicon {
+  top: 0px;
+  position: fixed;
+  cursor: pointer;
+  right: 30%;
+  text-align: center;
+  z-index: 250;
 }
 
 .up-icon {
@@ -5369,9 +5378,6 @@ article.page .slideshow-wrapper:after {
   width: 100%;
 }
 
-.contacts-wrapper .contacts .contact .header-wrapper.contact-data .logo-space, .header-wrapper.white .logo-space, .module-wrapper.facebook-module-wrapper .header-wrapper.fb-feed-item .logo-space, .slideshow-wrapper .header-wrapper.slideshow .logo-space {
-  background-color: rgba(255, 255, 255, 0.4) !important;
-}
 .contacts-wrapper .contacts .contact .header-wrapper.contact-data .top-wrapper, .header-wrapper.white .top-wrapper, .module-wrapper.facebook-module-wrapper .header-wrapper.fb-feed-item .top-wrapper, .slideshow-wrapper .header-wrapper.slideshow .top-wrapper {
   background-color: transparent !important;
 }
@@ -5466,7 +5472,6 @@ article.page .slideshow-wrapper:after {
   position: relative;
 }
 .home .top-wrapper .top .logo-space {
-  border-radius: 6px;
   left: 36px;
   padding: 12px;
   position: absolute;
