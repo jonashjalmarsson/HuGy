@@ -188,10 +188,26 @@ jQuery(document).ready(function($) {
 		$(".top-navigation-wrapper").hide();
 	}
 	
-	/* 
-	 * hover effect on news
-	 */
-	$(".nyheter-module").find(".item").each(function() {
+	
+	// make click animate to anchor
+	$('a[href^="#"]').on('click',function(){
+		e.preventDefault();
+
+	    var target = this.hash,
+	    $target = $(target);
+		
+		$('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 900, 'swing', function () {
+	        window.location.hash = target;
+	    });
+		
+		/*$('html, body').stop().animate({
+			scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
+		}, 1000, 'swing', function () {
+	        window.location.hash = target;
+	    });*/
+		return false;
 	});
 	
 	
@@ -199,6 +215,7 @@ jQuery(document).ready(function($) {
 	/* 
 	 * hover effect on facebook
 	 */
+	 /*
 	$(".facebook-module").hover(function() {
 		if (!$(".fb-loader").hasClass('link')) {
 			$(".fb-loader").show();
@@ -207,12 +224,29 @@ jQuery(document).ready(function($) {
 					$(".fb-loader").addClass('link').css('background-image','none').append('<a href="'+$(".facebook-module").attr('data-fb-url')+'">Se mer p&aring; facebook...</a>');
 			});
 		}		
-	});
-		
+	});*/
 		
 	/* 
-	 * hover effect on facebook
+	 * click effect on facebook
 	 */
+	$(".facebook-module").append('<div class="fb-more-wrapper hidden"></div>');
+	$(".facebook-module").append('<div class="fb-load-button">Se fler...</div>');
+	$(".facebook-module .fb-feed-item:hidden").each(function (){
+		$(this).show().appendTo('.fb-more-wrapper');
+	});
+	$(".fb-load-button").click(	function() {
+		if (!$(".fb-load-button").hasClass('link')) {
+			$(".fb-load-button").addClass("link fb-loader").html('');
+			$(".facebook-module .fb-more-wrapper").delay(1500).slideDown('fast', function() {
+				$(".fb-load-button").html('<a href="'+$(".facebook-module").attr('data-fb-url')+'">Se mer p&aring; facebook...</a>').removeClass('fb-loader');
+			});
+		}		
+	});
+		
+	/* 
+	 * hover effect on contact
+	 */
+	 /*
 	$(".contacts").find('.contact').each(function() {
 		$(this).hover(function(ev) {
 				ev.preventDefault();
@@ -226,7 +260,7 @@ jQuery(document).ready(function($) {
 				ev.stopImmediatePropagation();
 				$(this).find('.contact-data').show().hide('fade','fast');
 			});
-	});
+	});*/
 	
 	
 	/*
@@ -453,7 +487,7 @@ jQuery(document).ready(function($) {
 		width = $(window).width();
 		height = $(window).height()/*-$(".top-wrapper").height()*/;
 	}
-	$(".slideshow").append($("<div />").addClass("slide-layer"));
+	$(".slideshow").append($("<div />"));//.addClass("slide-layer"));
 	if ($(".slides").find("img").length > 1) {	
 		myslideshow = $(".slides").slidesjs({
 			width: width,

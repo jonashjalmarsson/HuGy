@@ -6,7 +6,6 @@
 	echo "<div class='pre-footer'>" . HuGy::get_main_navigation() . "</div>";
 	echo "<div class='pre-footer-program'>" . HuGy::get_program_icons() . "</div>"; ?>
 	<div class="up-icon"></div>
-	<div id="betaicon"><a href='<?php echo get_site_url() ?>/betapage'><img src='<?php echo get_stylesheet_directory_uri() ?>/images/beta.png' /></a></div>
 	<footer>
 		<div class="footer-div">
 		<?php if ( is_active_sidebar( 'footer' ) ) : ?>

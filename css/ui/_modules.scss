@@ -116,9 +116,14 @@
 			}
 		}
 		.fb-loader {
+			background-image: url('../images/fb-loader.gif');
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+		.fb-load-button {
 			@extend .islet;
-			@extend .hidden;
-			background: rgba(230,230,230,0.9) url('../images/fb-loader.gif') no-repeat center center;
+			background-color: rgba(230,230,230,0.9);
+			cursor: pointer;
 		}
 
 	}

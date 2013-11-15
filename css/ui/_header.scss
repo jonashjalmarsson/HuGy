@@ -27,6 +27,14 @@
 	}
 }
 	
+
+#betaicon {
+	top: -16px;
+	position: absolute;
+	cursor: pointer;
+	right: 46%;
+	z-index: 250;
+}
 	
 .top-wrapper {
 	@extend .green-80-background;
@@ -39,6 +47,7 @@
 		.logo-space {
 			@extend .one-fifth;
 			display: inline-block;
+			position: relative;
 			h1 {
 				@extend .visuallyhidden;
 			}
