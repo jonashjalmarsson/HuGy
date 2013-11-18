@@ -412,7 +412,7 @@ jQuery(document).ready(function($) {
 	
 	
 	/* menu button */
-	$(".top-menu-button").click(function(ev) {
+	/*$(".top-menu-button").click(function(ev) {
 		// open hover menu
 		ev.preventDefault();
 		menupos = $(".pre-footer").position().top - $(".top-navigation-wrapper").height();
@@ -420,25 +420,24 @@ jQuery(document).ready(function($) {
 		$("body,html")
 			.softscroll(menupos,800,function() {
 			});
-	});
+	});*/
 
 	
 	/* add + and expanding submenu in hovermenu */
-	if (false) // removed 
-		$('.main-menu .menu a').each(function() {
-			if ( $(this).parent('li').children('ul').size() > 0 ) {
-				if (!$(this).hasClass("menu-head")) {
-					if ($(this).next().hasClass("children"))
-						$(this).next().hide();
-					expand = $("<span />").addClass("expand").html("+").css("cursor","pointer").click( function() {
-						if ($(this).next().hasClass("children")) {
-							$(this).next().toggle();
-						}
-					});
-					$(this).after(expand);
-				}
-			}           
-		});
+	$('.main-menu-wrapper .menu a').each(function() {
+		if ( $(this).parent('li').children('ul').size() > 0 ) {
+			if (!$(this).hasClass("menu-head")) {
+				if ($(this).next().hasClass("children"))
+					$(this).next().hide();
+				expand = $("<span />").addClass("expand").html("+").css("cursor","pointer").click( function() {
+					if ($(this).next().hasClass("children")) {
+						$(this).next().slideToggle();
+					}
+				});
+				$(this).after(expand);
+			}
+		}           
+	});
 
 
 	/* up icon */

@@ -1,8 +1,26 @@
 .pre-footer-padding {
 	height: 0px;
 }
-.pre-footer {
+.pre-footer,
+.pre-footer-search {
 	@extend .black;
+}
+.pre-footer-search {
+	@extend .islet;
+	@extend .flush--bottom;
+	text-align: center;
+	input#s {
+		@extend .black;
+		border: 1px solid #666;
+		padding-left: 6px; 
+	}
+	input {
+		border: 0;
+		border-radius: 6px;
+	}
+	label {
+		display: none;
+	}
 }
 .up-icon {
 	bottom: 20px;

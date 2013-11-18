@@ -3,6 +3,7 @@
 		<div class="top">
 			<div class="top-links-wrapper">
 				<?php echo HuGy::get_quicklinks(); ?>
+				<?php get_search_form(); ?>
 			</div><div class="logo-space">
 				<div id="betaicon"><a href='<?php echo get_site_url() ?>/betapage'><img src='<?php echo get_stylesheet_directory_uri() ?>/images/beta.png' /></a></div>
 				<a href="<?php echo home_url(); ?>"><img class="logo" title="Hultsfreds gymnasium" src="<?php echo get_template_directory_uri() . "/images/hultsfreds-gymnasium.png"; ?>" /></a>
@@ -21,8 +22,7 @@
 		</div>
 	</div>
 </header>
-	<!-- div class='main-menu'><?php //echo HuGy::get_main_navigation(); ?></div //-->
-	<?php get_search_form(); ?>
+	
 	<?php 
 	if (is_home()) :
 		/* slideshow */

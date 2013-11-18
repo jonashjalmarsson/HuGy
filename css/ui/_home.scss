@@ -10,9 +10,17 @@
 }
 
 .firstpage-menu {
+	@extend .black-60;
+	@extend .flush--bottom;
+	@extend .islet;
+	@extend .one-whole;
+	
+	bottom: 0px;
+	left: 0px;	
 	position: absolute;
-	bottom: 10px;
-	left: 10px;
+	a {
+		margin-right: 12px;
+	}
 }
 .menu-margin {
 	padding-top: 40px;
