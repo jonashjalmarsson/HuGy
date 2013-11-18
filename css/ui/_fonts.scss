@@ -13,12 +13,28 @@ h1,
 	@extend .italic;
 	@extend .alpha;
 }
+h2 {
+
+}
+
+.content h2, 
+.content h3, 
+.content h4, 
+.content h5, 
+.content h6 {
+	color: #333;
+	margin-bottom: 6px;
+}
+
+blockquote {
+	@extend .alpha;
+}
 
 @include media-query(palm){
 	h1 {
 		font-size: 30px;
 	}
 	h2 {
-		font-size: 24px;
+		font-size: 20px;
 	}
 }

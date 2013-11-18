@@ -6,15 +6,20 @@
 	@extend .black;
 }
 .pre-footer-search {
-	@extend .islet;
+	@extend .island;
 	@extend .flush--bottom;
 	text-align: center;
 	input#s {
-		@extend .black;
 		border: 1px solid #666;
 		padding-left: 6px; 
+		&:focus {
+			outline: 0;
+		}
 	}
 	input {
+		@extend .alpha;
+		@extend .black;
+		@extend .italic;
 		border: 0;
 		border-radius: 6px;
 	}

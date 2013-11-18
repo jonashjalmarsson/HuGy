@@ -53,7 +53,7 @@
 			$retValue = "";
 			$args = array(
 				'sort_order' => 'ASC',
-				'sort_column' => 'post_title',
+				'sort_column' => 'title',
 				'hierarchical' => 1,
 				'exclude' => '',
 				'include' => '',
