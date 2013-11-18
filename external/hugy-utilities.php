@@ -254,7 +254,7 @@
 					$menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
 
 					$menu_items = wp_get_nav_menu_items($menu->term_id);
-					$retValue .= "<ul class='menu cols-".count($menu_items)."'>";
+					$retValue .= "<a class='menu-margin' name='menu' id='menu'></a><ul class='menu cols-".count($menu_items)."'>";
 					foreach($menu_items as $menu_item) {
 						$currentclass = "";
 						if ($menu_item->object_id == get_the_ID())
@@ -292,7 +292,7 @@
 				$retValue .= "<div class='" . get_row_layout() . "-module-wrapper module-wrapper'$style>";
 					$retValue .= "<div class='" . get_row_layout() . "-module module' data-fb-url='http://www.facebook.com/" . get_sub_field("id",$field) . "'>";
 					if (get_row_layout() == "facebook"):
-						$retValue .= "<h1>Vad händer mer...</h1>";
+						$retValue .= "<a class='menu-margin' name='facebook' id='facebook'></a><h1>Vad händer mer...</h1>";
 						if (function_exists("fb_feed")) :
 							$retValue .= fb_feed(get_sub_field("id",$field),array('container' => 'div',
 													'container_class' => 'items',
@@ -320,7 +320,7 @@
 		 * Return news, used in get_modules()
 		 */
 		function get_news() {
-			$retValue = "<h1>Nytt på skolan</h1>";
+			$retValue = "<a class='menu-margin' name='nyheter' id='nyheter'></a><h1>Nytt på skolan</h1>";
 			// The Query
 			$the_query = new WP_Query( array(
 											'post_type' => 'post',
@@ -464,7 +464,8 @@
 
 
 			$retValue .= "<a class='nolink' href='" . get_post_permalink($contact_id) . "'>";
-			$retValue .= "<h2 class='title'>" . get_the_title($contact_id) . "</h2>";
+			$title = get_the_title($contact_id);
+			$retValue .= "<h2 class='title'>$title</h2>";
 			$retValue .= "</a>";
 			
 			$titel = get_field("titel",$contact_id);	
@@ -497,24 +498,22 @@
 			$bild = get_field("bild",$contact_id);	
 			if ($bild) {
 				$bild = $bild['sizes'][$vars['imagesize']];
-				$retValue .= "<span class='bild'><img src='$bild' /></span>";
+				$retValue .= "<div class='bild'><img src='$bild' alt='$title' /></div>";
 			}
-
-			$ansvar = get_field("ansvar",$contact_id);	
-			if ($ansvar)
-				$retValue .= "<span class='ansvar'>$ansvar</span>";
-
-			$arbetsplats = get_field("arbetsplats",$contact_id);	
-			if ($arbetsplats)
-				$retValue .= "<span class='arbetsplats'>$arbetsplats</span>";
 
 			$beskrivning = get_field("beskrivning",$contact_id);	
 			if ($beskrivning)
-				$retValue .= "<span class='beskrivning'>$beskrivning</span>";
-				
-			if (get_field("adress",$contact_id))
-				$retValue .= "<span class='adress'>" . get_field("adress",$contact_id) . "</span>";
+				$retValue .= "<div class='beskrivning'>BESKRIVNING:<br /> $beskrivning</div>";
 			
+			$arbetsplats = get_field("arbetsplats",$contact_id);	
+			if ($arbetsplats)
+				$retValue .= "<p class='arbetsplats'>ARBETSPLATS:<br /> $arbetsplats</p>";
+
+			$adress = get_field("adress",$contact_id);	
+			
+			if ($adress)
+				$retValue .= "<div class='adress'>ADRESS:<br /> $adress</div>";
+
 			$retValue .= "</div>";
 			$retValue .= "</div>";
 			return $retValue;

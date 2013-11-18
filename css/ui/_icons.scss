@@ -85,6 +85,21 @@ $clip-sizes: 80 48 40 30 24 20 16 12;
 	background-position: 0px -200px;
 }
 
+.firstpage-menu {
+	a {
+		@extend .clip_48x48;
+	}
+	.menu {
+		background-position: -190px -50px;
+	}
+	.facebook {
+		background-position: -240px -50px;
+	}
+	.nyheter {
+		background-position: -290px -50px;
+	}
+}
+
 
 
 

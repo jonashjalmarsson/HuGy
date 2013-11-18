@@ -165,6 +165,7 @@ jQuery(document).ready(function($) {
 				pos2 = pos-4;
 			}
 			$(this)
+				.stop()
 				.animate( {scrollTop: pos3 } ,time)
 				.animate( {scrollTop: pos2 } ,time/4)
 				.animate( {scrollTop: pos } ,time/4, function() {
@@ -190,15 +191,13 @@ jQuery(document).ready(function($) {
 	
 	
 	// make click animate to anchor
-	$('a[href^="#"]').on('click',function(){
+	$('a[href^="#"]').on('click',function(e){
 		e.preventDefault();
 
 	    var target = this.hash,
 	    $target = $(target);
 		
-		$('html, body').stop().animate({
-	        'scrollTop': $target.offset().top
-	    }, 900, 'swing', function () {
+		$('html, body').softscroll($target.offset().top, 900, function () {
 	        window.location.hash = target;
 	    });
 		

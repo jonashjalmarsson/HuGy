@@ -82,6 +82,7 @@
 		}
 		.fb-feed-item {
 			@extend .white;
+			@extend .islet;
 			margin-bottom: 8px;
 			border-radius: 2px;
 			.item-content {
@@ -97,8 +98,8 @@
 				@extend .cf;
 				quotes: "";
 				padding: 6px;
-				border: 1px solid #ccc;
-				background: rgba(230,230,230,0.7);
+				/*border: 1px solid #ccc;*/
+				/*background: rgba(230,230,230,0.7);*/
 			}
 			.caption {
 				@extend .hidden;

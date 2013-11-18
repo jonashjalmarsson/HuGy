@@ -29,6 +29,11 @@
 		echo HuGy::get_slideshow(get_field('hg_firstpage_slideshow','option'),'firstpage slideshow','firstpage');
 		echo "<div class='teaser-1 teaser-icon teaser'></div>";
 		echo HuGy::get_teasers();
+		echo "<div class='firstpage-menu'>";
+		echo "<a class='menu' href='#menu'></a>";
+		echo "<a class='nyheter' href='#nyheter'></a>";
+		echo "<a class='facebook' href='#facebook'></a>";
+		echo "</div>";
 
 	endif; ?>
 
