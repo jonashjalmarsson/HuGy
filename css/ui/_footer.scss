@@ -46,9 +46,6 @@
 }
 footer {
 	@extend .green;
-	a {
-		border-bottom: 1px dotted white;
-	}
 	.footer-div {
 		@extend .max-width--center;
 		.footer-container {	

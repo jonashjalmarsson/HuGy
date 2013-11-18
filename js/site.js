@@ -423,6 +423,7 @@ jQuery(document).ready(function($) {
 	});*/
 
 	
+	
 	/* add + and expanding submenu in hovermenu */
 	if (false) // removed 
 		$('.main-menu-wrapper .menu a').each(function() {
@@ -445,6 +446,7 @@ jQuery(document).ready(function($) {
 	$(".up-icon").hide().click( function() {
 		$("body,html").softscroll(0, 800);
 	});
+	
 	
 	
 	/* teaser function on firstpage */

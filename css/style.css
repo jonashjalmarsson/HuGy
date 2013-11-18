@@ -1016,7 +1016,7 @@ h1, .alpha, h1,
   line-height: 1.33333;
 }
 
-h2, .beta {
+h2, .beta, .main-menu-wrapper .menu-head {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 1;
@@ -1029,7 +1029,7 @@ h3, .gamma {
 }
 
 h4, .delta, .contacts-wrapper .contactlist .contact h2.title,
-.contacts-wrapper .contacts .contact h2.title, .main-menu-wrapper .menu-head, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 {
+.contacts-wrapper .contacts .contact h2.title, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 {
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.33333;
@@ -5225,9 +5225,6 @@ article .block-wrapper .contacts-wrapper {
   -webkit-transform: rotate(180deg);
 }
 
-footer a {
-  border-bottom: 1px dotted white;
-}
 footer .footer-div .footer-container {
   padding-top: 24px;
   /* if less than 4 widgets */
@@ -5532,7 +5529,7 @@ article.page .slideshow-wrapper:after {
   }
 }
 .teaser-1 {
-  bottom: 1%;
+  bottom: 3%;
   left: 50%;
 }
 
@@ -5695,7 +5692,7 @@ article.page .slideshow-wrapper:after {
 }
 
 .teaser-1 {
-  width: 115px;
+  width: 312px;
   height: 157px;
   background-position: 0px -200px;
 }
@@ -6104,8 +6101,8 @@ article.page .slideshow-wrapper:after {
   margin-left: 24px;
 }
 .main-menu-wrapper .menu a {
-  padding: 2px;
-  margin: 2px;
+  padding: 3px;
+  margin: 3px;
   display: inline-block;
   border-radius: 4px;
 }
