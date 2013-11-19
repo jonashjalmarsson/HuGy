@@ -28,8 +28,7 @@ wp_reset_query();
 	</li>
 <?php endwhile; ?>
 </ol>
-<div class="navigation"><p><?php posts_nav_link('&#8734;','Go 
-Forward In Time','Go Back in Time'); ?></p></div>
+<div class="navigation"><p><?php posts_nav_link('|',' F&ouml;reg&aring;ende ',' N&auml;sta '); ?></p></div>
 <?php else: ?>
 <h1>Inga resultat hittades f&ouml;r '<?php echo get_search_query(); ?>'</h1>
 <?php endif; ?>

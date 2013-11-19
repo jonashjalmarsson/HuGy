@@ -3291,7 +3291,7 @@ article .block-wrapper .contacts-wrapper {
 }
 /* endif */
 .black, .pre-footer,
-.pre-footer-search, .pre-footer-search input, footer .copyright, .top-navigation-wrapper .top-navigation .top-menu-button.selected,
+.pre-footer-search, footer .copyright, .top-navigation-wrapper .top-navigation .top-menu-button.selected,
 .main-menu {
   background-color: black;
   color: white;
@@ -3530,14 +3530,14 @@ article .block-wrapper .contacts-wrapper {
   color: black;
 }
 
-.white-background, body, .main-menu-wrapper .current_page_item > a, article {
+.white-background, .pre-footer-search input#s, body, .main-menu-wrapper .current_page_item > a, article {
   background-color: white;
 }
 
-.white-text, .up-icon span, .header-wrapper, .module-wrapper.facebook-module-wrapper h1 {
+.white-text, .pre-footer-search input, .up-icon span, .header-wrapper, .module-wrapper.facebook-module-wrapper h1 {
   color: white;
 }
-.white-text a, .up-icon span a, .header-wrapper a, .module-wrapper.facebook-module-wrapper h1 a {
+.white-text a, .pre-footer-search input a, .up-icon span a, .header-wrapper a, .module-wrapper.facebook-module-wrapper h1 a {
   color: white;
 }
 
@@ -3748,11 +3748,11 @@ article .block-wrapper .contacts-wrapper {
   background-color: #020202;
 }
 
-.green, footer, .filter.toggle .selected {
+.green, footer, .filter.toggle .selected, .pre-footer-program {
   background-color: #14a585;
   color: white;
 }
-.green a, footer a, .filter.toggle .selected a {
+.green a, footer a, .filter.toggle .selected a, .pre-footer-program a {
   color: white;
 }
 
@@ -3763,13 +3763,13 @@ article .block-wrapper .contacts-wrapper {
 .green-text, .contacts-wrapper h2, h1,
 .header,
 .content-wrapper .author h2,
-.single-hugy_kontakt .content-wrapper .contact h2 {
+.single-hugy_kontakt .content-wrapper .contact h2, .pre-footer-search input#s {
   color: #14a585;
 }
 .green-text a, .contacts-wrapper h2 a, h1 a,
 .header a,
 .content-wrapper .author h2 a,
-.single-hugy_kontakt .content-wrapper .contact h2 a {
+.single-hugy_kontakt .content-wrapper .contact h2 a, .pre-footer-search input#s a {
   color: #14a585;
 }
 
@@ -3934,11 +3934,11 @@ article .block-wrapper .contacts-wrapper {
   background-color: #020202;
 }
 
-.green-80, .pre-footer-program {
+.green-80, .pre-footer-search {
   background-color: rgba(20, 165, 133, 0.8);
   color: white;
 }
-.green-80 a, .pre-footer-program a {
+.green-80 a, .pre-footer-search a {
   color: white;
 }
 
@@ -3946,11 +3946,11 @@ article .block-wrapper .contacts-wrapper {
   background-color: rgba(20, 165, 133, 0.8);
 }
 
-.ie7 .green-80, .ie7 .pre-footer-program, ie8 .green-80, ie8 .pre-footer-program {
+.ie7 .green-80, .ie7 .pre-footer-search, ie8 .green-80, ie8 .pre-footer-search {
   background-color: #020202;
   color: white;
 }
-.ie7 .green-80 a, .ie7 .pre-footer-program a, ie8 .green-80 a, ie8 .pre-footer-program a {
+.ie7 .green-80 a, .ie7 .pre-footer-search a, ie8 .green-80 a, ie8 .pre-footer-search a {
   color: white;
 }
 .ie7 .green-80-background, .ie7 .top-wrapper, ie8 .green-80-background, ie8 .top-wrapper {
@@ -5195,13 +5195,14 @@ article .block-wrapper .contacts-wrapper {
   text-align: center;
 }
 .pre-footer-search input#s {
-  border: 1px solid #666;
+  border: 1px solid #14a585;
   padding-left: 6px;
 }
 .pre-footer-search input#s:focus {
   outline: 0;
 }
 .pre-footer-search input {
+  background: transparent;
   border: 0;
   border-radius: 6px;
 }
@@ -5325,6 +5326,11 @@ a:hover {
 .small-max-width--center, .module-wrapper.facebook-module-wrapper .module, article.page .content-wrapper {
   max-width: 700px;
   margin: 0 auto;
+}
+
+.large-space, .pre-footer-search, .pre-footer-program {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .nounderline, .header-wrapper a, .main-menu-wrapper, .module-wrapper.nyheter-module-wrapper .items .item .item-content a, .nounderline a, .header-wrapper a a, .main-menu-wrapper a, .module-wrapper.nyheter-module-wrapper .items .item .item-content a a {

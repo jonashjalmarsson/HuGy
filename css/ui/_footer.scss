@@ -8,9 +8,13 @@
 .pre-footer-search {
 	@extend .island;
 	@extend .flush--bottom;
+	@extend .large-space;
+	@extend .green-80;
 	text-align: center;
 	input#s {
-		border: 1px solid #666;
+		@extend .white-background;
+		@extend .green-text;
+		border: 1px solid $green;
 		padding-left: 6px; 
 		&:focus {
 			outline: 0;
@@ -18,7 +22,8 @@
 	}
 	input {
 		@extend .alpha;
-		@extend .black;
+		@extend .white-text;
+		background: transparent;
 		@extend .italic;
 		border: 0;
 		border-radius: 6px;

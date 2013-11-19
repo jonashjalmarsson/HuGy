@@ -208,7 +208,7 @@
 					'title_li'     => "",
 					'echo'         => 0,
 					'authors'      => '',
-					'sort_column'  => 'menu_order, post_title',
+					'sort_column'  => 'post_title',
 					'link_before'  => '',
 					'link_after'   => '',
 					'walker'       => '',

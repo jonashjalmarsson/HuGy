@@ -48,8 +48,7 @@
 		<?php (get_option('rss_use_excerpt'))?the_excerpt():the_content(); ?>
 		<?php endwhile; ?>
 		
-		<div class="navigation"><p><?php posts_nav_link('&#8734;','Go 
-Forward In Time','Go Back in Time'); ?></p></div>
+		<div class="navigation"><p><?php posts_nav_link('|',' F&ouml;reg&aring;ende ',' N&auml;sta '); ?></p></div>
 	</div>
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
