@@ -504,9 +504,9 @@ if(function_exists("register_field_group"))
 				'type' => 'checkbox',
 				'required' => 1,
 				'choices' => array (
-					'Administration' => 'Administration',
-					'Pedagog eller elevassistent' => 'Pedagog eller elevassistent',
-					'Servicefunktion' => 'Servicefunktion',
+					'Administration' => 'Administration (Kansli, Studie och yrkesvägledning, Elevhälsa o dyl)',
+					'Pedagoger' => 'Pedagoger och elevassistenter',
+					'Servicefunktion' => 'Servicefunktioner (Cafeteria, Kost, Vaktmästeri, Lokalvård o dyl)',
 					'Skolledning' => 'Skolledning',
 				),
 				'default_value' => '',
@@ -724,6 +724,57 @@ if(function_exists("register_field_group"))
 					'param' => 'page_template',
 					'operator' => '==',
 					'value' => 'page-hugy-program.php',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_schema',
+		'title' => 'Schema',
+		'fields' => array (
+			array (
+				'key' => 'field_528b0727c4917',
+				'label' => __('Klasser'),
+				'name' => 'klasser',
+				'type' => 'wysiwyg',
+				'default_value' => '',
+				'toolbar' => 'full',
+				'media_upload' => 'yes',
+			),
+			array (
+				'key' => 'field_528b06dac4915',
+				'label' => __('Salar'),
+				'name' => 'salar',
+				'type' => 'wysiwyg',
+				'default_value' => '',
+				'toolbar' => 'full',
+				'media_upload' => 'yes',
+			),
+			array (
+				'key' => 'field_528b06f6c4916',
+				'label' => __('Lärare'),
+				'name' => 'larare',
+				'type' => 'wysiwyg',
+				'default_value' => '',
+				'toolbar' => 'full',
+				'media_upload' => 'yes',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'page-hugy-schema.php',
 					'order_no' => 0,
 					'group_no' => 0,
 				),

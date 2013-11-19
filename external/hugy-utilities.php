@@ -178,10 +178,9 @@
 						$retValue .= "<a href='" . get_page_link($archive->ID) . "' title='" . $archive->post_title . "'>" . $archive->post_title . "</a> / ";
 				}
 				if ($page->post_type == 'hugy_kontakt') {
-					//$archive = HuGy::get_hugy_nyheter_page();
-					//if ($archive != '')
-						//$retValue .= "<a href='" . get_page_link($archive->ID) . "' title='" . $archive->post_title . "'>" . $archive->post_title . "</a> / ";
-					$retValue .= " kontakt / ";
+					$archive = HuGy::get_hugy_kontakter_page();
+					if ($archive != '')
+						$retValue .= "<a href='" . get_page_link($archive->ID) . "' title='" . $archive->post_title . "'>" . $archive->post_title . "</a> / ";
 				}
 				$retValue .= "<a href='" . get_page_link($page->ID) . "' title='" . $page->post_title . "'>" . $page->post_title . "</a>";
 			}
@@ -490,7 +489,7 @@
 
 			$typ_av_kontakt = get_field("typ_av_kontakt",$contact_id);	
 			if ($typ_av_kontakt)
-				$retValue .= "<span class='typ_av_kontakt hidden'>$typ_av_kontakt</span>";
+				$retValue .= "<span class='typ_av_kontakt force-hidden'>".implode(',',$typ_av_kontakt)."</span>";
 
 
 			$retValue .= "<div class='contact-data'>";
@@ -548,6 +547,23 @@
 				'post_type' => 'page',
 				'meta_key' => '_wp_page_template',
 				'meta_value' => 'page-hugy-nyheter.php'
+			));
+			foreach($pages as $page){
+				// retur first page found
+				return $page;
+			}
+			return;
+		}
+
+
+		/*
+		 * Return the first hugy_kontakter page
+		 */
+		function get_hugy_kontakter_page() {
+			$pages = get_posts(array(
+				'post_type' => 'page',
+				'meta_key' => '_wp_page_template',
+				'meta_value' => 'page-hugy-kontakter.php'
 			));
 			foreach($pages as $page){
 				// retur first page found

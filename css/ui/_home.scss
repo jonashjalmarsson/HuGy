@@ -9,17 +9,19 @@
 	z-index: 100;
 }
 
-.firstpage-menu {
+.firstpage-menu-wrapper {
 	@extend .black-60;
-	@extend .flush--bottom;
-	@extend .islet;
 	@extend .one-whole;
-	
 	bottom: 0px;
 	left: 0px;	
 	position: absolute;
-	a {
-		margin-right: 12px;
+	.firstpage-menu {
+		@extend .flush--bottom;
+		@extend .islet;
+		@extend .max-width--center;
+		a {
+			margin-right: 12px;
+		}
 	}
 }
 .menu-margin {

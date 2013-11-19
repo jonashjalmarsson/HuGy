@@ -424,6 +424,68 @@ jQuery(document).ready(function($) {
 
 	
 	
+	/* filter table in schema page */
+	if ($("body").hasClass("page-template-page-hugy-schema-php")) {
+		table = $("table");
+		table.before($("<div class='filter tool' />").html(""));
+		$(".filter.tool").append("<span>filtrera</span>");
+		$(".filter.tool").append("<input type='text' name='filter' id='filter' />");
+		$("#filter").keyup(function(ev) {
+			schema_filter = $(this).val().toLowerCase();
+			$("table tr:not(:containsi('"+schema_filter+"'))").css("display", "none");
+			$("table tr:containsi('"+schema_filter+"')").css("display", "");
+		});
+	}
+
+
+
+	/* filter table in schema page */
+	if ($("body").hasClass("page-template-page-hugy-kontakter-php")) {
+		contactlist = $(".contactlist");
+		contactlist.before($("<div class='filter tool' />").html(""));
+		$(".filter.tool").append("<span>filtrera</span>");
+		$(".filter.tool").append("<input type='text' name='filter' id='filter' />");
+		
+		contactlist.before($("<div class='filter toggle' />").html(""));
+		$(".filter.toggle").append("<input type='button' class='toggle' id='Administration' value='Administration' />");
+		$(".filter.toggle").append("<input type='button' class='toggle' id='Pedagoger' value='Pedagoger' />");
+		$(".filter.toggle").append("<input type='button' class='toggle' id='Servicefunktion' value='Servicefunktion' />");
+		$(".filter.toggle").append("<input type='button' class='toggle' id='Skolledning' value='Skolledning' />");
+		$("input.toggle").click(function(ev) {
+			id = $(this).attr("id");
+			
+
+			if ($(this).hasClass("selected")) {
+				$("input.toggle").removeClass("selected");
+				$(".contactlist .contact").show();
+			}
+			else {
+				$("input.toggle").removeClass("selected");
+				$(this).addClass("selected");
+				if ($(".contactlist .contact").find("typ_av_kontakt").length <= 0)
+					$(".contactlist .contact").hide();
+				$(".contactlist .contact > .typ_av_kontakt:not(:containsi('"+id+"'))").parent().hide();
+				$(".contactlist .contact > .typ_av_kontakt:containsi('"+id+"')").parent().show();
+			}
+			$("#filter").val("");
+			console.log(id);
+		});
+		$("#filter").keyup(function(ev) {
+			contact_filter = $(this).val().toLowerCase();
+			$("input.toggle").removeClass("selected");
+			$(".contactlist .contact:not(:containsi('"+contact_filter+"'))").css("display", "none");
+			$(".contactlist .contact:containsi('"+contact_filter+"')").css("display", "");
+		});
+	}
+
+	/* case insensitive contain */
+	$.extend($.expr[':'], {
+	  'containsi': function(elem, i, match, array) {
+		return (elem.textContent || elem.innerText || '').toLowerCase()
+			.indexOf((match[3] || "").toLowerCase()) >= 0;
+	  }
+	});
+	
 	/* add + and expanding submenu in hovermenu */
 	if (false) // removed 
 		$('.main-menu-wrapper .menu a').each(function() {
