@@ -426,56 +426,103 @@ jQuery(document).ready(function($) {
 	
 	/* filter table in schema page */
 	if ($("body").hasClass("page-template-page-hugy-schema-php")) {
+
 		$(".filter.tool").append("<span>filtrera</span>");
 		$(".filter.tool").append("<input type='text' name='filter' id='filter' />");
-		$("#filter").keyup(function(ev) {
-			schema_filter = $(this).val().toLowerCase();
-			$("table tr:not(:containsi('"+schema_filter+"'))").css("display", "none");
-			$("table tr:containsi('"+schema_filter+"')").css("display", "");
+		$(".filter.tool").append("<span id='rensa' class='rensa link hidden'>X</span>");
+		$('#filter').focus();
+		$('#rensa').click(function() {
+			$('#filter').val('');
+			$('#rensa').hide();
+			$('#filter').focus();
+			filter_schema();
 		});
+		
+		
+		$(".filter.toggle").append("<input type='button' class='toggle selected' id='alla' value='Alla' />");
+		$(".filter.toggle").append("<input type='button' class='toggle' id='klasser' value='Klasser' />");
+		$(".filter.toggle").append("<input type='button' class='toggle' id='larare' value='L&auml;rare' />");
+		$(".filter.toggle").append("<input type='button' class='toggle' id='salar' value='Salar' />");
+		
+		$("input.toggle").click(function(ev) {
+			if ($(this).hasClass("selected") || $(this).attr("id") == "alla") {
+				$("input.toggle").removeClass("selected");
+				$("#alla").addClass("selected");
+				$(".klasser, .larare, .salar").show();
+			}
+			else {
+				$("input.toggle").removeClass("selected");
+				$(this).addClass("selected");
+				$(".klasser, .larare, .salar").hide();
+				$("."+$(this).attr("id")).show();
+			}
+		});
+
+
+		$("#filter").keyup(function(ev) {
+			$('#rensa').show();
+			filter_schema();
+		});
+	}
+	function filter_schema() {
+		filter = $('#filter').val().toLowerCase();
+		$("table tr:not(:containsi('"+filter+"'))").css("display", "none");
+		$("table tr:containsi('"+filter+"')").css("display", "");
 	}
 
 
-
+	
+	
 	/* filter table in schema page */
 	if ($("body").hasClass("page-template-page-hugy-kontakter-php")) {
 		contactlist = $(".contactlist");
 		
 		$(".filter.tool").append("<span>filtrera</span>");
 		$(".filter.tool").append("<input type='text' name='filter' id='filter' />");
+		$(".filter.tool").append("<span id='rensa' class='rensa link hidden'>X</span>");
+		$('#filter').focus();
+		$('#rensa').click(function() {
+			$('#filter').val('');
+			contact_filter();
+			$('#rensa').hide();
+			$('#filter').focus();
+		});
 		
-		
+		$(".filter.toggle").append("<input type='button' class='toggle selected' id='alla' value='Alla' />");
 		$(".filter.toggle").append("<input type='button' class='toggle' id='Administration' value='Administration' />");
 		$(".filter.toggle").append("<input type='button' class='toggle' id='Pedagoger' value='Pedagoger' />");
 		$(".filter.toggle").append("<input type='button' class='toggle' id='Servicefunktion' value='Servicefunktion' />");
 		$(".filter.toggle").append("<input type='button' class='toggle' id='Skolledning' value='Skolledning' />");
+		
 		$("input.toggle").click(function(ev) {
-			id = $(this).attr("id");
-			
-
-			if ($(this).hasClass("selected")) {
+			if ($(this).hasClass("selected") || $(this).attr("id") == "alla") {
 				$("input.toggle").removeClass("selected");
+				$("#alla").addClass("selected");
 				$(".contactlist .contact").show();
 			}
 			else {
 				$("input.toggle").removeClass("selected");
 				$(this).addClass("selected");
-				if ($(".contactlist .contact").find("typ_av_kontakt").length <= 0)
-					$(".contactlist .contact").hide();
-				$(".contactlist .contact > .typ_av_kontakt:not(:containsi('"+id+"'))").parent().hide();
-				$(".contactlist .contact > .typ_av_kontakt:containsi('"+id+"')").parent().show();
 			}
-			$("#filter").val("");
-			console.log(id);
+			contact_filter();
 		});
 		$("#filter").keyup(function(ev) {
-			contact_filter = $(this).val().toLowerCase();
-			$("input.toggle").removeClass("selected");
-			$(".contactlist .contact:not(:containsi('"+contact_filter+"'))").css("display", "none");
-			$(".contactlist .contact:containsi('"+contact_filter+"')").css("display", "");
+			$('#rensa').show();
+			contact_filter();
 		});
 	}
+	function contact_filter() {
+		typ = $("input.toggle.selected").attr("id");
+		filter = $("#filter").val().toLowerCase();
+		$(".contactlist .contact").show();
+		if (typ != 'alla')
+			$(".contactlist .contact > .typ_av_kontakt:not(:containsi('"+typ+"'))").parent().hide();
+		if (filter != '')
+			$(".contactlist .contact:not(:containsi('"+filter+"'))").hide();
+	}
 
+	
+	
 	/* case insensitive contain */
 	$.extend($.expr[':'], {
 	  'containsi': function(elem, i, match, array) {
@@ -483,6 +530,9 @@ jQuery(document).ready(function($) {
 			.indexOf((match[3] || "").toLowerCase()) >= 0;
 	  }
 	});
+	
+	
+	
 	
 	/* add + and expanding submenu in hovermenu */
 	if (false) // removed 

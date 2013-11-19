@@ -19,14 +19,21 @@
 		<h1><?php the_title(); ?></h1>
 		<?php echo HuGy::get_author(); ?>
 		<?php the_content(); ?>
-		<div class='filter tool'></div>
 		<div class='filter toggle'></div>
+		<div class='filter tool'></div>
+		<div class='klasser'>
 		<h2>Klasser</h2>
 		<?php echo get_field('klasser'); ?>
+		</div>
+		<div class='larare'>
 		<h2>L&auml;rare</h2>
 		<?php echo get_field('larare'); ?>
+		</div>
+		<div class='salar'>
 		<h2>Salar</h2>
 		<?php echo get_field('salar'); ?>
+		</div>
+
 		<?php //comments_template( '', true ); ?>
 	</div>
 	<div class="block-wrapper">

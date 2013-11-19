@@ -39,8 +39,14 @@ a {
 		text-decoration: none;
 	}
 }
+.link {
+	cursor: pointer;
+}
 
 
+th, td {
+	padding: 6px 6px 6px 0;
+}
 /* search results */
 .search .page-wrapper .page > ol {
 	list-style-type: none;
