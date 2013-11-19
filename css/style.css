@@ -5616,7 +5616,7 @@ article.page .slideshow-wrapper:after {
   height: 80px;
 }
 
-.clip_48x48, .firstpage-menu a {
+.clip_48x48, .firstpage-menu a, .menu-header .menu-icon {
   width: 48px;
   height: 48px;
 }
@@ -5714,6 +5714,10 @@ article.page .slideshow-wrapper:after {
 }
 .firstpage-menu .nyheter {
   background-position: -290px -50px;
+}
+
+.menu-header .menu-icon {
+  background-position: -190px -50px;
 }
 
 /* program ikoner */
@@ -6099,6 +6103,9 @@ article.page .slideshow-wrapper:after {
 
 .main-menu-wrapper {
   padding: 24px 0;
+}
+.main-menu-wrapper span.menu-icon {
+  margin: 0 0 24px;
 }
 .main-menu-wrapper ul {
   list-style-type: none;

@@ -253,7 +253,9 @@
 					$menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
 
 					$menu_items = wp_get_nav_menu_items($menu->term_id);
-					$retValue .= "<a class='menu-margin' name='menu' id='menu'></a><ul class='menu cols-".count($menu_items)."'>";
+					$retValue .= "<a class='menu-margin' name='menu' id='menu'></a>";
+					$retValue .= "<div class='menu-header'><span class='menu-icon'></span></div>";
+					$retValue .= "<ul class='menu cols-".count($menu_items)."'>";
 					foreach($menu_items as $menu_item) {
 						$currentclass = "";
 						if ($menu_item->object_id == get_the_ID())

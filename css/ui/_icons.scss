@@ -99,6 +99,10 @@ $clip-sizes: 80 48 40 30 24 20 16 12;
 		background-position: -290px -50px;
 	}
 }
+.menu-header .menu-icon {
+	@extend .clip_48x48;
+	background-position: -190px -50px;
+}
 
 
 

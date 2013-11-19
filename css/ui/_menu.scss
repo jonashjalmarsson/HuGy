@@ -16,6 +16,9 @@
 	@extend .max-width--center;
 	@extend .nounderline;
 	padding: 24px 0;
+	span.menu-icon {
+		margin: 0 0 24px;
+	}
 	.menu-head {
 		@extend .beta;
 		@extend .italic;
