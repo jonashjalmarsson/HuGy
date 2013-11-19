@@ -535,21 +535,20 @@ jQuery(document).ready(function($) {
 	
 	
 	/* add + and expanding submenu in hovermenu */
-	if (false) // removed 
-		$('.main-menu-wrapper .menu a').each(function() {
-			if ( $(this).parent('li').children('ul').size() > 0 ) {
-				if (!$(this).hasClass("menu-head")) {
-					if ($(this).next().hasClass("children"))
-						$(this).next().hide();
-					expand = $("<span />").addClass("expand").html("+").css("cursor","pointer").click( function() {
-						if ($(this).next().hasClass("children")) {
-							$(this).next().slideToggle();
-						}
-					});
-					$(this).after(expand);
-				}
-			}           
-		});
+	$('.main-menu-wrapper .menu a').each(function() {
+		if ( $(this).parent('li').children('ul').size() > 0 ) {
+			if (!$(this).hasClass("menu-head")) {
+				if ($(this).next().hasClass("children"))
+					$(this).next().hide();
+				expand = $("<span />").addClass("expand").html("+").css("cursor","pointer").click( function() {
+					if ($(this).next().hasClass("children")) {
+						$(this).next().slideToggle();
+					}
+				});
+				$(this).after(expand);
+			}
+		}           
+	});
 
 
 	/* up icon */
