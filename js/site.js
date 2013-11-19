@@ -426,8 +426,6 @@ jQuery(document).ready(function($) {
 	
 	/* filter table in schema page */
 	if ($("body").hasClass("page-template-page-hugy-schema-php")) {
-		table = $("table");
-		table.before($("<div class='filter tool' />").html(""));
 		$(".filter.tool").append("<span>filtrera</span>");
 		$(".filter.tool").append("<input type='text' name='filter' id='filter' />");
 		$("#filter").keyup(function(ev) {
@@ -442,11 +440,11 @@ jQuery(document).ready(function($) {
 	/* filter table in schema page */
 	if ($("body").hasClass("page-template-page-hugy-kontakter-php")) {
 		contactlist = $(".contactlist");
-		contactlist.before($("<div class='filter tool' />").html(""));
+		
 		$(".filter.tool").append("<span>filtrera</span>");
 		$(".filter.tool").append("<input type='text' name='filter' id='filter' />");
 		
-		contactlist.before($("<div class='filter toggle' />").html(""));
+		
 		$(".filter.toggle").append("<input type='button' class='toggle' id='Administration' value='Administration' />");
 		$(".filter.toggle").append("<input type='button' class='toggle' id='Pedagoger' value='Pedagoger' />");
 		$(".filter.toggle").append("<input type='button' class='toggle' id='Servicefunktion' value='Servicefunktion' />");

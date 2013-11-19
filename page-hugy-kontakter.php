@@ -20,6 +20,8 @@
 		<?php echo HuGy::get_author(); ?>
 		<?php the_content(); ?>
 		
+		<div class='filter tool'></div>
+		<div class='filter toggle'></div>
 		<?php echo HuGy::get_contacts(get_the_ID(), array('title' => '', 'class' => 'contactlist')); ?>
 	</div>
 	<div class="block-wrapper">
