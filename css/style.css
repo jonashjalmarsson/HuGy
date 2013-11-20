@@ -5628,14 +5628,14 @@ article.page .slideshow-wrapper:after {
     display: none !important;
   }
 }
-.clip, .clip_80x80, .program-icon, .clip_48x48, .firstpage-menu a, .clip_40x40, .quick-icon, .clip_30x30, .clip_24x24, .menu-icon, .selected-menu-icon, .home-icon, .clip_20x20, .clip_16x16, .slideshow-navigation, .play-icon, article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-play, .pause-icon, article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-stop, .dot-icon, .active-dot-icon, article.page .slideshow-wrapper .slideshow .slidesjs-pagination .slidesjs-pagination-item a, .clip_12x12, .up-icon, .teaser-1 {
+.clip, .clip_80x80, .program-icon, .clip_54x54, .menu-head.picto-icon, .menu-head.quick-menu-icon, .clip_48x48, .firstpage-menu a, .clip_40x40, .quick-icon, .clip_30x30, .clip_24x24, .menu-icon, .selected-menu-icon, .home-icon, .clip_20x20, .clip_16x16, .slideshow-navigation, .play-icon, article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-play, .pause-icon, article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-stop, .dot-icon, .active-dot-icon, article.page .slideshow-wrapper .slideshow .slidesjs-pagination .slidesjs-pagination-item a, .clip_12x12, .up-icon, .teaser-1 {
   background-image: url("../images/ikoner.svg");
   display: inline-block;
   background-repeat: no-repeat;
   vertical-align: text-bottom;
 }
 
-.ie7 .clip, .ie7 .clip_80x80, .ie7 .program-icon, .ie7 .clip_48x48, .ie7 .firstpage-menu a, .firstpage-menu .ie7 a, .ie7 .clip_40x40, .ie7 .quick-icon, .ie7 .clip_30x30, .ie7 .clip_24x24, .ie7 .menu-icon, .ie7 .selected-menu-icon, .ie7 .home-icon, .ie7 .clip_20x20, .ie7 .clip_16x16, .ie7 .slideshow-navigation, .ie7 .play-icon, .ie7 article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-play, article.page .slideshow-wrapper .slideshow .ie7 .slidesjs-navigation.slidesjs-play, .ie7 .pause-icon, .ie7 article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-stop, article.page .slideshow-wrapper .slideshow .ie7 .slidesjs-navigation.slidesjs-stop, .ie7 .dot-icon, .ie7 .active-dot-icon, .ie7 article.page .slideshow-wrapper .slideshow .slidesjs-pagination .slidesjs-pagination-item a, article.page .slideshow-wrapper .slideshow .slidesjs-pagination .slidesjs-pagination-item .ie7 a, .ie7 .clip_12x12, .ie7 .up-icon, .ie7 .teaser-1, ie8 .clip, ie8 .clip_80x80, ie8 .program-icon, ie8 .clip_48x48, ie8 .firstpage-menu a, .firstpage-menu ie8 a, ie8 .clip_40x40, ie8 .quick-icon, ie8 .clip_30x30, ie8 .clip_24x24, ie8 .menu-icon, ie8 .selected-menu-icon, ie8 .home-icon, ie8 .clip_20x20, ie8 .clip_16x16, ie8 .slideshow-navigation, ie8 .play-icon, ie8 article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-play, article.page .slideshow-wrapper .slideshow ie8 .slidesjs-navigation.slidesjs-play, ie8 .pause-icon, ie8 article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-stop, article.page .slideshow-wrapper .slideshow ie8 .slidesjs-navigation.slidesjs-stop, ie8 .dot-icon, ie8 .active-dot-icon, ie8 article.page .slideshow-wrapper .slideshow .slidesjs-pagination .slidesjs-pagination-item a, article.page .slideshow-wrapper .slideshow .slidesjs-pagination .slidesjs-pagination-item ie8 a, ie8 .clip_12x12, ie8 .up-icon, ie8 .teaser-1 {
+.ie7 .clip, .ie7 .clip_80x80, .ie7 .program-icon, .ie7 .clip_54x54, .ie7 .menu-head.picto-icon, .ie7 .menu-head.quick-menu-icon, .ie7 .clip_48x48, .ie7 .firstpage-menu a, .firstpage-menu .ie7 a, .ie7 .clip_40x40, .ie7 .quick-icon, .ie7 .clip_30x30, .ie7 .clip_24x24, .ie7 .menu-icon, .ie7 .selected-menu-icon, .ie7 .home-icon, .ie7 .clip_20x20, .ie7 .clip_16x16, .ie7 .slideshow-navigation, .ie7 .play-icon, .ie7 article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-play, article.page .slideshow-wrapper .slideshow .ie7 .slidesjs-navigation.slidesjs-play, .ie7 .pause-icon, .ie7 article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-stop, article.page .slideshow-wrapper .slideshow .ie7 .slidesjs-navigation.slidesjs-stop, .ie7 .dot-icon, .ie7 .active-dot-icon, .ie7 article.page .slideshow-wrapper .slideshow .slidesjs-pagination .slidesjs-pagination-item a, article.page .slideshow-wrapper .slideshow .slidesjs-pagination .slidesjs-pagination-item .ie7 a, .ie7 .clip_12x12, .ie7 .up-icon, .ie7 .teaser-1, ie8 .clip, ie8 .clip_80x80, ie8 .program-icon, ie8 .clip_54x54, ie8 .menu-head.picto-icon, ie8 .menu-head.quick-menu-icon, ie8 .clip_48x48, ie8 .firstpage-menu a, .firstpage-menu ie8 a, ie8 .clip_40x40, ie8 .quick-icon, ie8 .clip_30x30, ie8 .clip_24x24, ie8 .menu-icon, ie8 .selected-menu-icon, ie8 .home-icon, ie8 .clip_20x20, ie8 .clip_16x16, ie8 .slideshow-navigation, ie8 .play-icon, ie8 article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-play, article.page .slideshow-wrapper .slideshow ie8 .slidesjs-navigation.slidesjs-play, ie8 .pause-icon, ie8 article.page .slideshow-wrapper .slideshow .slidesjs-navigation.slidesjs-stop, article.page .slideshow-wrapper .slideshow ie8 .slidesjs-navigation.slidesjs-stop, ie8 .dot-icon, ie8 .active-dot-icon, ie8 article.page .slideshow-wrapper .slideshow .slidesjs-pagination .slidesjs-pagination-item a, article.page .slideshow-wrapper .slideshow .slidesjs-pagination .slidesjs-pagination-item ie8 a, ie8 .clip_12x12, ie8 .up-icon, ie8 .teaser-1 {
   background-image: url("../images/ikoner.png");
 }
 
@@ -5644,7 +5644,12 @@ article.page .slideshow-wrapper:after {
   height: 80px;
 }
 
-.clip_48x48, .firstpage-menu a, .menu-header .menu-icon {
+.clip_54x54, .menu-head.menu-icon, .menu-head.picto-icon, .menu-head.quick-menu-icon {
+  width: 54px;
+  height: 54px;
+}
+
+.clip_48x48, .firstpage-menu a {
   width: 48px;
   height: 48px;
 }
@@ -5744,8 +5749,16 @@ article.page .slideshow-wrapper:after {
   background-position: -290px -50px;
 }
 
-.menu-header .menu-icon {
-  background-position: -190px -50px;
+.menu-head.menu-icon {
+  background-position: -130px -110px;
+}
+
+.menu-head.picto-icon {
+  background-position: -250px -110px;
+}
+
+.menu-head.quick-menu-icon {
+  background-position: -190px -110px;
 }
 
 /* program ikoner */

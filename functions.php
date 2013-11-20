@@ -265,9 +265,6 @@
 				<label for="<?php echo $this->get_field_id('chars'); ?>"><?php _e('Maximum Post Title Length (Characters):', 'wp-postviews'); ?> <input class="widefat" id="<?php echo $this->get_field_id('chars'); ?>" name="<?php echo $this->get_field_name('chars'); ?>" type="text" value="<?php echo $chars; ?>" /></label><br />
 				<small><?php _e('<strong>0</strong> to disable.', 'wp-postviews'); ?></small>
 			</p>
-			<p style="color: red;">
-				<small><?php _e('* If you are not using any category statistics, you can ignore it.', 'wp-postviews'); ?></small>
-			<p>
 			<input type="hidden" id="<?php echo $this->get_field_id('submit'); ?>" name="<?php echo $this->get_field_name('submit'); ?>" value="1" />
 	<?php
 		}
@@ -277,6 +274,26 @@
 	add_action('widgets_init', 'hugy_widget_views_init');
 	function hugy_widget_views_init() {
 		register_widget('HuGy_WP_Widget_PostViews');
+	}
+	### Function: Snippet Text
+	if(!function_exists('snippet_text')) {
+		function snippet_text($text, $length = 0) {
+			if (defined('MB_OVERLOAD_STRING')) {
+			  $text = @html_entity_decode($text, ENT_QUOTES, get_option('blog_charset'));
+				if (mb_strlen($text) > $length) {
+					return htmlentities(mb_substr($text,0,$length), ENT_COMPAT, get_option('blog_charset')).'...';
+				} else {
+					return htmlentities($text, ENT_COMPAT, get_option('blog_charset'));
+				}
+			} else {
+				$text = @html_entity_decode($text, ENT_QUOTES, get_option('blog_charset'));
+				if (strlen($text) > $length) {
+					return htmlentities(substr($text,0,$length), ENT_COMPAT, get_option('blog_charset')).'...';
+				} else {
+					return htmlentities($text, ENT_COMPAT, get_option('blog_charset'));
+				}
+			}
+		}
 	}
 
 	} // end if

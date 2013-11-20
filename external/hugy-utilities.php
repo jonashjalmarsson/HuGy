@@ -24,7 +24,7 @@
 
 	 
 		/*
-		 *
+		 * Get quick links with image place. Placed on top of page.
 		 */
 		function get_quicklinks() {
 			$retValue = "";
@@ -35,11 +35,40 @@
 			$retValue .= "<ul class='quicklinks'>";
 			while(has_sub_field('hg_quicklinks', 'option')):
 				$retValue .= "<li>";
-				$retValue .= "<a alt='" . get_sub_field('title') . "' href='" . get_sub_field('url') . "'>";
+				$retValue .= "<a title='" . get_sub_field('title') . "' href='" . get_sub_field('url') . "'>";
 				$retValue .= "<span class='quick-icon quick-" .get_sub_field("imageplace") . "'></span>";
 				$retValue .= "</a></li>";
 			endwhile;
 			$retValue .= "</ul></div>";
+		 
+			endif;
+			return $retValue;
+		}
+
+
+		/*
+		 * Get quick menu. Placed in menu.
+		 */
+		function get_quickmenu() {
+			$retValue = "";
+
+			if(get_field('direktlankar_i_menyn', 'option')): 
+		 
+			while(has_sub_field('direktlankar_i_menyn', 'option')):
+				if (get_row_layout() == 'intern_lank') {
+					$link = get_sub_field('intern_lank');
+					$retValue .= "<li>";
+					$retValue .= "<a title='" . $link->excerpt . "' href='" . get_permalink($link->ID) . "'>";
+					$retValue .= $link->post_title;
+					$retValue .= "</a></li>";
+				}
+				else if (get_row_layout() == 'extern_lank') {
+					$retValue .= "<li>";
+					$retValue .= "<a title='" . get_sub_field('beskrivning') . "' href='" . get_sub_field('url') . "'>";
+					$retValue .= get_sub_field('titel');
+					$retValue .= "</a></li>";
+				}
+			endwhile;
 		 
 			endif;
 			return $retValue;
@@ -75,7 +104,7 @@
 				$retValue .= "<ul class='program-icons'>";
 				foreach($pages as $page) :
 					$retValue .= "<li>";
-					$retValue .= "<a alt='" . $page->post_title . "' href='" . get_page_link($page->ID) . "'>";
+					$retValue .= "<a title='" . $page->post_title . "' href='" . get_page_link($page->ID) . "'>";
 					$retValue .= "<span class='program-icon program-" .get_field("hg_imageplace",$page->ID) . "'></span>";
 					$retValue .= "</a></li>";
 				endforeach;
@@ -255,19 +284,18 @@
 					$menu_items = wp_get_nav_menu_items($menu->term_id);
 					$menu_items_count = count($menu_items) + 1;
 					$retValue .= "<a class='menu-margin' name='menu' id='menu'></a>";
-					$retValue .= "<div class='menu-header'><span class='menu-icon'></span></div>";
 					$retValue .= "<ul class='menu cols-".$menu_items_count."'>";
 					foreach($menu_items as $menu_item) {
 						$currentclass = "";
 						if ($menu_item->object_id == get_the_ID())
 							$currentclass = " class='current_page_item'";
-						$retValue .= "<li$currentclass><a class='menu-head' href='" . get_page_link($menu_item->object_id) . "'>" . get_the_title($menu_item->object_id) . "</a><ul class='children'>";
+						$retValue .= "<li$currentclass><a class='menu-head " . implode(' ', $menu_item->classes) . "' href='" . get_page_link($menu_item->object_id) . "'>" . $menu_item->title /*get_the_title($menu_item->object_id)*/ . "</a><ul class='children'>";
 						$retValue .= HuGy::get_page_tree($menu_item->object_id);
 						$retValue .= "</ul></li>";
 					}
 					// quickmenu
-					$retValue .= "<li><a class='menu-head'>Genv&auml;gar</a><ul class='children'>";
-					$retValue .= "<li><a><i>snabbl&auml;nkar kommer</i></a></li>";//HuGy::get_page_tree($menu_item->object_id);
+					$retValue .= "<li><a class='menu-head quick-menu-icon'></a><ul class='children'>";
+					$retValue .= "<li>" . HuGy::get_quickmenu() . "</li>";
 					$retValue .= "</ul></li>";
 
 					$retValue .= "</ul>";

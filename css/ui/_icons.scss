@@ -10,7 +10,7 @@
 	}
 }
 
-$clip-sizes: 80 48 40 30 24 20 16 12;
+$clip-sizes: 80 54 48 40 30 24 20 16 12;
 
 @each $size in $clip-sizes {
     .clip_#{$size}x#{$size} {
@@ -99,9 +99,17 @@ $clip-sizes: 80 48 40 30 24 20 16 12;
 		background-position: -290px -50px;
 	}
 }
-.menu-header .menu-icon {
-	@extend .clip_48x48;
-	background-position: -190px -50px;
+.menu-head.menu-icon {
+	@extend .clip_54x54;
+	background-position: -130px -110px;
+}
+.menu-head.picto-icon {
+	@extend .clip_54x54;
+	background-position: -250px -110px;
+}
+.menu-head.quick-menu-icon {
+	@extend .clip_54x54;
+	background-position: -190px -110px;
 }
 
 
