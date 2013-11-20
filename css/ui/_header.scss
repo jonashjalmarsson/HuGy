@@ -68,9 +68,6 @@
 			@extend .four-fifths;
 			display: inline-block;
 			float: right;
-			.searchform {
-				@extend .visuallyhidden;
-			}
 			.quicklinks-wrapper {	
 				text-align: right;
 				overflow: hidden;

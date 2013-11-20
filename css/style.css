@@ -813,8 +813,9 @@ textarea:focus {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf:after, .nav:after, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks:after, .program-icons:after, .media:after, .island:after, .pre-footer-search:after, .single article.page:after,
-.page article.page:after, .filter.tool:after,
+.cf:after, .nav:after, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks:after, .program-icons:after, .media:after, .island:after, .single article.page:after,
+.page article.page:after, .filter.tool:after, .search-wrapper:after,
+.pre-footer-search:after,
 .islet:after,
 .contacts-wrapper .contacts:after,
 .contacts-wrapper .contacts .contact .contact-data:after,
@@ -848,10 +849,11 @@ pre,
 .form-fields > li,
 .media,
 .island,
-.pre-footer-search,
 .single article.page,
 .page article.page,
 .filter.tool,
+.search-wrapper,
+.pre-footer-search,
 .islet,
 .contacts-wrapper .contacts,
 .contacts-wrapper .contacts .contact .contact-data,
@@ -919,14 +921,7 @@ pre, .islet .form-fields > li, .contacts-wrapper .contacts .form-fields > li, .f
 .island, .module-wrapper.facebook-module-wrapper .fb-feed-item
 .island, .module-wrapper.facebook-module-wrapper .fb-load-button
 .island, .related-wrapper .related
-.island, .islet
-.pre-footer-search, .contacts-wrapper .contacts
-.pre-footer-search, .firstpage-menu-wrapper .firstpage-menu
-.pre-footer-search, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2
-.pre-footer-search, .module-wrapper.facebook-module-wrapper .fb-feed-item
-.pre-footer-search, .module-wrapper.facebook-module-wrapper .fb-load-button
-.pre-footer-search, .related-wrapper .related
-.pre-footer-search, .islet .single article.page, .single .islet article.page, .contacts-wrapper .contacts .single article.page, .single .contacts-wrapper .contacts article.page, .firstpage-menu-wrapper .firstpage-menu .single article.page, .single .firstpage-menu-wrapper .firstpage-menu article.page, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .single article.page, .single .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 article.page, .module-wrapper.facebook-module-wrapper .fb-feed-item .single article.page, .single .module-wrapper.facebook-module-wrapper .fb-feed-item article.page, .module-wrapper.facebook-module-wrapper .fb-load-button .single article.page, .single .module-wrapper.facebook-module-wrapper .fb-load-button article.page, .related-wrapper .related .single article.page, .single .related-wrapper .related article.page,
+.island, .islet .single article.page, .single .islet article.page, .contacts-wrapper .contacts .single article.page, .single .contacts-wrapper .contacts article.page, .firstpage-menu-wrapper .firstpage-menu .single article.page, .single .firstpage-menu-wrapper .firstpage-menu article.page, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .single article.page, .single .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 article.page, .module-wrapper.facebook-module-wrapper .fb-feed-item .single article.page, .single .module-wrapper.facebook-module-wrapper .fb-feed-item article.page, .module-wrapper.facebook-module-wrapper .fb-load-button .single article.page, .single .module-wrapper.facebook-module-wrapper .fb-load-button article.page, .related-wrapper .related .single article.page, .single .related-wrapper .related article.page,
 .islet .page article.page,
 .page .islet article.page,
 .contacts-wrapper .contacts .page article.page,
@@ -948,6 +943,20 @@ pre, .islet .form-fields > li, .contacts-wrapper .contacts .form-fields > li, .f
 .filter.tool, .module-wrapper.facebook-module-wrapper .fb-load-button
 .filter.tool, .related-wrapper .related
 .filter.tool, .islet
+.search-wrapper, .contacts-wrapper .contacts
+.search-wrapper, .firstpage-menu-wrapper .firstpage-menu
+.search-wrapper, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2
+.search-wrapper, .module-wrapper.facebook-module-wrapper .fb-feed-item
+.search-wrapper, .module-wrapper.facebook-module-wrapper .fb-load-button
+.search-wrapper, .related-wrapper .related
+.search-wrapper,
+.islet .pre-footer-search,
+.contacts-wrapper .contacts .pre-footer-search,
+.firstpage-menu-wrapper .firstpage-menu .pre-footer-search,
+.module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .pre-footer-search,
+.module-wrapper.facebook-module-wrapper .fb-feed-item .pre-footer-search,
+.module-wrapper.facebook-module-wrapper .fb-load-button .pre-footer-search,
+.related-wrapper .related .pre-footer-search, .islet
 .islet, .contacts-wrapper .contacts
 .islet, .contacts-wrapper .contacts .contact .contact-data
 .islet, .firstpage-menu-wrapper .firstpage-menu
@@ -1011,7 +1020,8 @@ html {
 h1, .alpha, h1,
 .header,
 .content-wrapper .author h2,
-.single-hugy_kontakt .content-wrapper .contact h2, blockquote, .pre-footer-search input {
+.single-hugy_kontakt .content-wrapper .contact h2, blockquote, .search-wrapper input,
+.pre-footer-search input {
   font-size: 36px;
   font-size: 2.25rem;
   line-height: 1.33333;
@@ -2044,8 +2054,9 @@ article .block-wrapper .contacts-wrapper {
  * Demo: jsfiddle.net/inuitcss/u8pV3
  *
  */
-.island, .pre-footer-search, .single article.page,
-.page article.page, .filter.tool,
+.island, .single article.page,
+.page article.page, .filter.tool, .search-wrapper,
+.pre-footer-search,
 .islet,
 .contacts-wrapper .contacts,
 .contacts-wrapper .contacts .contact .contact-data,
@@ -2057,13 +2068,15 @@ article .block-wrapper .contacts-wrapper {
   display: block;
 }
 
-.island, .pre-footer-search, .single article.page,
-.page article.page, .filter.tool {
+.island, .single article.page,
+.page article.page, .filter.tool, .search-wrapper,
+.pre-footer-search {
   padding: 24px;
 }
 
-.island > :last-child, .pre-footer-search > :last-child, .single article.page > :last-child,
-.page article.page > :last-child, .filter.tool > :last-child,
+.island > :last-child, .single article.page > :last-child,
+.page article.page > :last-child, .filter.tool > :last-child, .search-wrapper > :last-child,
+.pre-footer-search > :last-child,
 .islet > :last-child,
 .contacts-wrapper .contacts > :last-child,
 .contacts-wrapper .contacts .contact .contact-data > :last-child,
@@ -3027,7 +3040,8 @@ article .block-wrapper .contacts-wrapper {
   margin-right: 0 !important;
 }
 
-.flush--bottom, .contacts-wrapper h2, .pre-footer-search, footer .footer-div .footer-container h2, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks, .firstpage-menu-wrapper .firstpage-menu, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2, .program-icons, .related-wrapper h2 {
+.flush--bottom, .contacts-wrapper h2, footer .footer-div .footer-container h2, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks, .firstpage-menu-wrapper .firstpage-menu, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2, .search-wrapper,
+.pre-footer-search, .program-icons, .related-wrapper h2 {
   margin-bottom: 0 !important;
 }
 
@@ -3199,8 +3213,7 @@ article .block-wrapper .contacts-wrapper {
  */
 .accessibility,
 .visuallyhidden,
-.top-wrapper .top .logo-space h1,
-.top-wrapper .top .top-links-wrapper .searchform {
+.top-wrapper .top .logo-space h1 {
   border: 0 !important;
   clip: rect(0 0 0 0) !important;
   height: 1px !important;
@@ -3290,14 +3303,12 @@ article .block-wrapper .contacts-wrapper {
   }
 }
 /* endif */
-.black, .pre-footer,
-.pre-footer-search, footer .copyright, .top-navigation-wrapper .top-navigation .top-menu-button.selected,
+.black, .pre-footer, footer .copyright, .top-navigation-wrapper .top-navigation .top-menu-button.selected,
 .main-menu {
   background-color: black;
   color: white;
 }
-.black a, .pre-footer a,
-.pre-footer-search a, footer .copyright a, .top-navigation-wrapper .top-navigation .top-menu-button.selected a,
+.black a, .pre-footer a, footer .copyright a, .top-navigation-wrapper .top-navigation .top-menu-button.selected a,
 .main-menu a {
   color: white;
 }
@@ -3530,14 +3541,15 @@ article .block-wrapper .contacts-wrapper {
   color: black;
 }
 
-.white-background, .pre-footer-search input#s, body, .main-menu-wrapper .current_page_item > a, article {
+.white-background, body, .main-menu-wrapper .current_page_item > a, article, .search-wrapper input#s,
+.pre-footer-search input#s {
   background-color: white;
 }
 
-.white-text, .pre-footer-search input, .up-icon span, .header-wrapper, .module-wrapper.facebook-module-wrapper h1 {
+.white-text, .up-icon span, .header-wrapper, .module-wrapper.facebook-module-wrapper h1, .pre-footer-search input {
   color: white;
 }
-.white-text a, .pre-footer-search input a, .up-icon span a, .header-wrapper a, .module-wrapper.facebook-module-wrapper h1 a {
+.white-text a, .up-icon span a, .header-wrapper a, .module-wrapper.facebook-module-wrapper h1 a, .pre-footer-search input a {
   color: white;
 }
 
@@ -3763,13 +3775,15 @@ article .block-wrapper .contacts-wrapper {
 .green-text, .contacts-wrapper h2, h1,
 .header,
 .content-wrapper .author h2,
-.single-hugy_kontakt .content-wrapper .contact h2, .pre-footer-search input#s {
+.single-hugy_kontakt .content-wrapper .contact h2, .search-wrapper input, .search-wrapper input#s,
+.pre-footer-search input#s {
   color: #14a585;
 }
 .green-text a, .contacts-wrapper h2 a, h1 a,
 .header a,
 .content-wrapper .author h2 a,
-.single-hugy_kontakt .content-wrapper .contact h2 a, .pre-footer-search input#s a {
+.single-hugy_kontakt .content-wrapper .contact h2 a, .search-wrapper input a, .search-wrapper input#s a,
+.pre-footer-search input#s a {
   color: #14a585;
 }
 
@@ -5160,7 +5174,8 @@ article .block-wrapper .contacts-wrapper {
 .italic, .contacts-wrapper h2, h1,
 .header,
 .content-wrapper .author h2,
-.single-hugy_kontakt .content-wrapper .contact h2, .pre-footer-search input, footer .footer-div .footer-container h2, .main-menu-wrapper .menu-head, .filter.tool, .related-wrapper h2, .related-wrapper .related .heading {
+.single-hugy_kontakt .content-wrapper .contact h2, footer .footer-div .footer-container h2, .main-menu-wrapper .menu-head, .filter.tool, .search-wrapper input,
+.pre-footer-search input, .related-wrapper h2, .related-wrapper .related .heading {
   font-family: Georgia;
   font-style: italic;
   font-weight: normal;
@@ -5190,25 +5205,6 @@ article .block-wrapper .contacts-wrapper {
 }
 .pre-footer-padding {
   height: 0px;
-}
-
-.pre-footer-search {
-  text-align: center;
-}
-.pre-footer-search input#s {
-  border: 1px solid #14a585;
-  padding-left: 6px;
-}
-.pre-footer-search input#s:focus {
-  outline: 0;
-}
-.pre-footer-search input {
-  background: transparent;
-  border: 0;
-  border-radius: 6px;
-}
-.pre-footer-search label {
-  display: none;
 }
 
 .up-icon {
@@ -5351,7 +5347,8 @@ a:hover {
   margin: 0 auto;
 }
 
-.large-space, .pre-footer-search, .pre-footer-program {
+.large-space, .search-wrapper,
+.pre-footer-search, .pre-footer-program {
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -6308,6 +6305,37 @@ article.page .content-wrapper {
 }
 .filter input:focus {
   outline: none;
+}
+
+.pre-footer-search input {
+  background: transparent;
+}
+
+.search-wrapper input {
+  background: transparent;
+}
+
+.search-wrapper,
+.pre-footer-search {
+  text-align: center;
+}
+.search-wrapper input#s,
+.pre-footer-search input#s {
+  border: 1px solid #14a585;
+  padding-left: 6px;
+}
+.search-wrapper input,
+.pre-footer-search input {
+  border: 0;
+  border-radius: 6px;
+}
+.search-wrapper input:focus,
+.pre-footer-search input:focus {
+  outline: 0;
+}
+.search-wrapper label,
+.pre-footer-search label {
+  display: none;
 }
 
 .slideshow-wrapper {

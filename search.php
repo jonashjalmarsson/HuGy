@@ -14,12 +14,15 @@ wp_reset_query();
 ?>
 
 <div class='page-wrapper'><article class='page'>
+<div class="search-wrapper">
+<?php echo get_search_form(); ?>
+</div>
 <?php if ( have_posts() ): ?>
-<h1>Visar resultat f&ouml;r '<?php echo get_search_query(); ?>'</h1>	
+<h1>Visar resultat f&ouml;r '<?php echo get_search_query(); ?>'</h1>
 <ol>
 <?php while ( have_posts() ) : the_post(); ?>
 	<li>
-		<article>
+		<article class="<?php echo get_post_type(); ?>">
 			<h2><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 			<?php if (get_post_type() == "post") : ?>
 			<time class='time' datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate>DATUM: <?php echo get_the_date(); ?> <?php the_time(); ?></time>

@@ -1,0 +1,40 @@
+.pre-footer-search {
+	@extend .green-80;
+	input {
+		@extend .white-text;
+		background: transparent;
+	}
+}
+
+.search-wrapper {
+	input {
+		@extend .green-text;
+		background: transparent;
+	}
+}
+
+.search-wrapper,
+.pre-footer-search {
+	@extend .island;
+	@extend .flush--bottom;
+	@extend .large-space;
+	text-align: center;
+	input#s {
+		@extend .white-background;
+		@extend .green-text;
+		border: 1px solid $green;
+		padding-left: 6px; 
+	}
+	input {
+		@extend .alpha;
+		@extend .italic;
+		border: 0;
+		border-radius: 6px;
+		&:focus {
+			outline: 0;
+		}
+	}
+	label {
+		display: none;
+	}
+}

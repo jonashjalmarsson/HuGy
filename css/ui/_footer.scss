@@ -1,36 +1,8 @@
 .pre-footer-padding {
 	height: 0px;
 }
-.pre-footer,
-.pre-footer-search {
+.pre-footer {
 	@extend .black;
-}
-.pre-footer-search {
-	@extend .island;
-	@extend .flush--bottom;
-	@extend .large-space;
-	@extend .green-80;
-	text-align: center;
-	input#s {
-		@extend .white-background;
-		@extend .green-text;
-		border: 1px solid $green;
-		padding-left: 6px; 
-		&:focus {
-			outline: 0;
-		}
-	}
-	input {
-		@extend .alpha;
-		@extend .white-text;
-		background: transparent;
-		@extend .italic;
-		border: 0;
-		border-radius: 6px;
-	}
-	label {
-		display: none;
-	}
 }
 .up-icon {
 	bottom: 20px;
