@@ -5231,6 +5231,7 @@ footer .footer-div .footer-container {
   padding-top: 24px;
   /* if less than 4 widgets */
   /* if more than 4 widgets */
+  /* views widget cloud */
 }
 footer .footer-div .footer-container .widget {
   overflow: hidden;
@@ -5273,6 +5274,27 @@ footer .footer-div .footer-container .widget:first-child:nth-last-child(8) ~ .wi
 }
 footer .footer-div .footer-container .widget {
   display: inline-block;
+}
+footer .footer-div .footer-container .wp-views-cloud {
+  text-align: center;
+}
+footer .footer-div .footer-container .wp-views-cloud .views-cloud-item {
+  margin: 6px;
+}
+footer .footer-div .footer-container .wp-views-cloud .views-cloud-item.large {
+  font-size: 200%;
+}
+footer .footer-div .footer-container .wp-views-cloud .views-cloud-item.medium {
+  font-size: 170%;
+}
+footer .footer-div .footer-container .wp-views-cloud .views-cloud-item.small {
+  font-size: 140%;
+}
+footer .footer-div .footer-container .wp-views-cloud .views-cloud-item.mini {
+  font-size: 100%;
+}
+footer .footer-div .footer-container .wp-views-cloud .views-cloud-item.tiny {
+  font-size: 80%;
 }
 footer .copyright {
   display: inline-block;

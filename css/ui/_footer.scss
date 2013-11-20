@@ -83,6 +83,28 @@ footer {
 			.widget {
 				display: inline-block;
 			}
+			/* views widget cloud */
+			.wp-views-cloud {
+				text-align: center;
+				.views-cloud-item {
+					margin: 6px;
+					&.large {
+						font-size: 200%;
+					}
+					&.medium {
+						font-size: 170%;
+					}
+					&.small {
+						font-size: 140%;
+					}
+					&.mini {
+						font-size: 100%;
+					}
+					&.tiny {
+						font-size: 80%;
+					}
+				}
+			}
 		}
 	}
 	.copyright {

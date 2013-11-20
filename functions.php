@@ -158,7 +158,7 @@
 			$limit = intval($instance['limit']);
 			$chars = intval($instance['chars']);
 			echo $before_widget.$before_title.$title.$after_title;
-			echo '<ul>'."\n";
+			echo '<div class="wp-views-cloud">'."\n";
 		
 		
 		
@@ -166,32 +166,50 @@
 			global $wpdb;
 			$views_options = get_option('views_options');
 			$where = '';
-			$temp = '';
 			$output = '';
 			if(!empty($mode) && $mode != 'both') {
 				$where = "post_type = '$mode'";
 			} else {
 				$where = '1=1';
 			}
+			$largest_count = -1;
 			$most_viewed = $wpdb->get_results("SELECT DISTINCT $wpdb->posts.*, (meta_value+0) AS views FROM $wpdb->posts LEFT JOIN $wpdb->postmeta ON $wpdb->postmeta.post_id = $wpdb->posts.ID WHERE post_date < '".current_time('mysql')."' AND $where AND post_status = 'publish' AND meta_key = 'views' AND post_password = '' ORDER BY views DESC LIMIT $limit");
 			if($most_viewed) {
 				foreach ($most_viewed as $post) {
 					$post_views = intval($post->views);
+					if ($largest_count == -1)
+						$largest_count = $post_views;
+						
+					//case 
+					switch(intval($post_views*4/$largest_count)) {
+						case 4:
+							$class = 'large';
+							break;
+						case 3:
+							$class = 'medium';
+							break;
+						case 2:
+							$class = 'small';
+							break;
+						case 1:
+							$class = 'mini';
+							break;
+						default:
+							$class = 'tiny';
+							break;
+					}
+					
 					$post_title = get_the_title($post);
 					if($chars > 0) {
 						$post_title = snippet_text($post_title, $chars);
 					}
 					$post_excerpt = views_post_excerpt($post->post_excerpt, $post->post_content, $post->post_password, $chars);
-					$temp = stripslashes($views_options['most_viewed_template']);
-					$temp = str_replace("%VIEW_COUNT%", number_format_i18n($post_views), $temp);
-					$temp = str_replace("%POST_TITLE%", $post_title, $temp);
-					$temp = str_replace("%POST_EXCERPT%", $post_excerpt, $temp);
-					$temp = str_replace("%POST_CONTENT%", $post->post_content, $temp);
-					$temp = str_replace("%POST_URL%", get_permalink($post), $temp);
-					$output .= $temp;
+					$output .= "<a class='$class views-cloud-item' href='" . get_permalink($post) . "' title='$post_excerpt'>";
+					$output .= $post_title;
+					$output .= "</a>";
 				}
 			} else {
-				$output = '<li>'.__('N/A', 'wp-postviews').'</li>'."\n";
+				$output = 'Nothing here..';
 			}
 
 			echo $output;
@@ -201,7 +219,7 @@
 			
 
 			
-			echo '</ul>'."\n";
+			echo '</div>'."\n";
 			echo $after_widget;
 		}
 
