@@ -83,8 +83,19 @@
 		.fb-feed-item {
 			@extend .white;
 			@extend .islet;
-			margin-bottom: 8px;
 			border-radius: 2px;
+			margin-bottom: 8px;
+			overflow: hidden;
+			position: relative;
+			.expand-item {
+				@extend .one-whole;
+				background: rgba(255,255,255,0.9);
+				cursor: pointer;
+				left: 0px;
+				padding: 0 12px;
+				position: absolute;
+				top: 186px;
+			}
 			.item-content {
 				@extend .cf;
 				overflow: hidden;

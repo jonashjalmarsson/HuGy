@@ -2100,7 +2100,7 @@ article .block-wrapper .contacts-wrapper {
 * Whole
 */
 .one-whole, footer .copyright, .firstpage-menu-wrapper, .pre-footer,
-.main-menu, .module-wrapper.nyheter-module-wrapper .items .item .item-content {
+.main-menu, .module-wrapper.nyheter-module-wrapper .items .item .item-content, .module-wrapper.facebook-module-wrapper .fb-feed-item .expand-item {
   width: 100%;
 }
 
@@ -5132,6 +5132,7 @@ article .block-wrapper .contacts-wrapper {
 }
 .contacts-wrapper h2 {
   font-weight: normal;
+  padding-bottom: 6px;
 }
 .contacts-wrapper .contacts .contact .contact-data {
   box-shadow: 2px 2px 10px #666;
@@ -6219,8 +6220,18 @@ article.page .slideshow-wrapper:after {
   margin-top: 0px;
 }
 .module-wrapper.facebook-module-wrapper .fb-feed-item {
-  margin-bottom: 8px;
   border-radius: 2px;
+  margin-bottom: 8px;
+  overflow: hidden;
+  position: relative;
+}
+.module-wrapper.facebook-module-wrapper .fb-feed-item .expand-item {
+  background: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  left: 0px;
+  padding: 0 12px;
+  position: absolute;
+  top: 186px;
 }
 .module-wrapper.facebook-module-wrapper .fb-feed-item .item-content {
   overflow: hidden;
@@ -6231,7 +6242,7 @@ article.page .slideshow-wrapper:after {
   margin-right: 12px;
 }
 .module-wrapper.facebook-module-wrapper .fb-feed-item blockquote {
-  quotes: "";
+  quotes: "" "";
   padding: 6px;
   /*border: 1px solid #ccc;*/
   /*background: rgba(230,230,230,0.7);*/
@@ -6385,6 +6396,7 @@ article.page .slideshow-wrapper .slideshow .slidesjs-pagination {
 .related-wrapper h2 {
   color: #666;
   font-weight: normal;
+  padding-bottom: 6px;
 }
 .related-wrapper .related {
   margin-bottom: 12px;

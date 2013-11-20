@@ -81,8 +81,8 @@
 		function get_program_links($icon = true, $wrapping_ul = true) {
 			$retValue = "";
 			$args = array(
-				'sort_order' => 'ASC',
-				'sort_column' => 'title',
+				'order' => 'ASC',
+				'orderby' => 'title',
 				'hierarchical' => 1,
 				'exclude' => '',
 				'include' => '',
@@ -231,13 +231,14 @@
 				//$parent_id = get_the_ID();
 			//}
 			$page = get_post($parent_id);
+			$exclude = get_field('visa_inte_sidor_i_menyn', 'option');
 			if ($page->post_type == "page" || $parent_id == "") {
 				$args = array(
 					'depth'        => 0,
 					'show_date'    => '',
 					'date_format'  => get_option('date_format'),
 					'child_of'     => $parent_id,
-					'exclude'      => '',
+					'exclude'      => implode(",",$exclude),
 					'include'      => '',
 					'title_li'     => "",
 					'echo'         => 0,
@@ -247,7 +248,7 @@
 					'link_after'   => '',
 					'walker'       => '',
 					'post_type'    => 'page',
-					'post_status'  => 'publish' 
+					'post_status'  => 'publish',
 				); 
 				$retValue .= wp_list_pages( $args );
 			}

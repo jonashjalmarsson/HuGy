@@ -461,6 +461,39 @@ if(function_exists("register_field_group"))
 				'min' => '',
 				'max' => '',
 			),
+			array (
+				'key' => 'field_528d1ff2ce0b7',
+				'label' => __('Visa inte sidor i menyn'),
+				'name' => 'visa_inte_sidor_i_menyn',
+				'type' => 'relationship',
+				'return_format' => 'id',
+				'post_type' => array (
+					0 => 'page',
+				),
+				'taxonomy' => array (
+					0 => 'all',
+				),
+				'filters' => array (
+					0 => 'search',
+				),
+				'result_elements' => array (
+					0 => 'post_type',
+					1 => 'post_title',
+				),
+				'max' => '',
+			),
+			array (
+				'key' => 'field_528d215b3440e',
+				'label' => __('Innehåll i sidfot'),
+				'name' => 'innehall_i_sidfot',
+				'type' => 'wysiwyg',
+				'default_value' => '',
+				'placeholder' => '',
+				'maxlength' => '',
+				'formatting' => 'br',
+				'toolbar' => 'full',
+				'media_upload' => 'yes',
+			),
 		),
 		'location' => array (
 			array (

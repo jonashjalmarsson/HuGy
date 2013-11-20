@@ -230,6 +230,17 @@ jQuery(document).ready(function($) {
 	 */
 	$(".facebook-module").append('<div class="fb-more-wrapper hidden"></div>');
 	$(".facebook-module").append('<div class="fb-load-button">Se fler...</div>');
+	$(".facebook-module .fb-feed-item").each(function (){	
+		if ($(this).height() > 250) {
+			$(this).css("max-height","210px");
+			$(this).prepend($("<span class='expand-item'>&gt; l&auml;s mer</span>"));
+			
+		}
+	});
+	$(".expand-item").click(function() {
+		$(this).parent().css("max-height","inherit");
+		$(this).remove();
+	});
 	$(".facebook-module .fb-feed-item:hidden").each(function (){
 		$(this).show().appendTo('.fb-more-wrapper');
 	});
