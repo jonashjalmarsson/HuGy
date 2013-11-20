@@ -1,18 +1,17 @@
 .content-wrapper .author,
 .single-hugy_kontakt .content-wrapper .contact {
-		h2 {
-			@extend .header;
-		}
-		.titel {
-			margin-top: -28px;
-			padding-bottom: 28px;
-		}
-		margin-bottom: 12px;
-		position: relative;
-		span {
-			display: block;
-		}
-	
+	h2 {
+		@extend .header;
+	}
+	.titel {
+		margin-top: -28px;
+		padding-bottom: 28px;
+	}
+	margin-bottom: 12px;
+	position: relative;
+	span {
+		display: block;
+	}
 }
 .contacts-wrapper {
 	.contactlist {
@@ -27,6 +26,7 @@
 		@extend .green-text;
 		@extend .flush--bottom;
 		font-weight: normal;
+		padding-bottom: 6px;
 	}
 	.contacts {
 		@extend .black-text;

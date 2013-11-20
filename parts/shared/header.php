@@ -26,7 +26,7 @@
 	if (is_home()) :
 		/* slideshow */
 		echo HuGy::get_slideshow(get_field('hg_firstpage_slideshow','option'),'firstpage slideshow','firstpage');
-		echo "<div class='teaser-1 teaser-icon teaser'></div>";
+		//echo "<div class='teaser-1 teaser-icon teaser'></div>";
 		echo HuGy::get_teasers();
 		echo "<div class='firstpage-menu-wrapper'>";
 		echo "<div class='firstpage-menu'>";
