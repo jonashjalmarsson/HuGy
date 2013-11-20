@@ -78,7 +78,7 @@
 		/*
 		 *
 		 */
-		function get_program_icons() {
+		function get_program_links($icon = true, $wrapping_ul = true) {
 			$retValue = "";
 			$args = array(
 				'sort_order' => 'ASC',
@@ -101,14 +101,19 @@
 			$pages = get_posts($args);
 			
 			if (count($pages) > 0):
-				$retValue .= "<ul class='program-icons'>";
+				if ($wrapping_ul)
+					$retValue .= "<ul class='program-icons'>";
 				foreach($pages as $page) :
 					$retValue .= "<li>";
 					$retValue .= "<a title='" . $page->post_title . "' href='" . get_page_link($page->ID) . "'>";
-					$retValue .= "<span class='program-icon program-" .get_field("hg_imageplace",$page->ID) . "'></span>";
+					if ($icon) 
+						$retValue .= "<span class='program-icon program-" . get_field("hg_imageplace",$page->ID) . "'></span>";
+					else
+						$retValue .= "<span class='program'>" . $page->post_title . "</span>";
 					$retValue .= "</a></li>";
 				endforeach;
-				$retValue .= "</ul>";
+				if ($wrapping_ul)
+					$retValue .= "</ul>";
 			endif;
 			return $retValue ;
 			
@@ -222,11 +227,11 @@
 		 */
 		function get_page_tree($parent_id = "") {
 			$retValue = "";
-			if (!isset($parent_id) || $parent_id == "") {
-				$parent_id = get_the_ID();
-			}
+			//if (!isset($parent_id) || $parent_id == "") {
+				//$parent_id = get_the_ID();
+			//}
 			$page = get_post($parent_id);
-			if ($page->post_type == "page") {
+			if ($page->post_type == "page" || $parent_id == "") {
 				$args = array(
 					'depth'        => 0,
 					'show_date'    => '',
@@ -302,6 +307,34 @@
 				}
 				$retValue .= "</nav>";
 			}
+			else {
+				$retValue .= "<nav class='main-menu-wrapper'>";
+				//$retValue .= wp_nav_menu($args);
+				
+				
+				
+					$menu_items_count = 3;
+					$retValue .= "<a class='menu-margin' name='menu' id='menu'></a>";
+					$retValue .= "<ul class='menu cols-".$menu_items_count."'>";
+
+
+					$retValue .= "<li><a class='menu-head menu-icon'></a><ul class='children'>";
+					$retValue .= HuGy::get_page_tree();
+					$retValue .= "</ul></li>";
+
+					$retValue .= "<li><a class='menu-head picto-icon'></a><ul class='children'>";
+					$retValue .= HuGy::get_program_links(false,false);
+					$retValue .= "</ul></li>";
+
+					// quickmenu
+					$retValue .= "<li><a class='menu-head quick-menu-icon'></a><ul class='children'>";
+					$retValue .= "<li>" . HuGy::get_quickmenu() . "</li>";
+					$retValue .= "</ul></li>";
+
+					$retValue .= "</ul>";
+				
+				$retValue .= "</nav>";
+			}
 			return $retValue;
 		}
 		
@@ -338,7 +371,7 @@
 							$retValue .= "<div class='hidden'>Du beh&ouml;ver installera <i>Facebook Feed Grabber</i> f&ouml;r att detta ska fungera.</div>";
 						endif;
 					elseif (get_row_layout() == "program"):
-						$retValue .= HuGy::get_program_icons();
+						$retValue .= HuGy::get_program_links();
 					elseif (get_row_layout() == "nyheter"):
 						$retValue .= HuGy::get_news();
 					elseif (get_row_layout() == "text"):
