@@ -22,7 +22,7 @@ wp_reset_query();
 <ol>
 <?php while ( have_posts() ) : the_post(); ?>
 	<li>
-		<article class="<?php echo get_post_type(); ?>">
+		<article class="search-<?php echo get_post_type(); ?>">
 			<h2><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 			<?php if (get_post_type() == "post") : ?>
 			<time class='time' datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate>DATUM: <?php echo get_the_date(); ?> <?php the_time(); ?></time>
