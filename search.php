@@ -21,11 +21,10 @@ wp_reset_query();
 	<li>
 		<article>
 			<h2><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-			<span class="hidden"><?php echo get_post_type(); ?></span>
-			<?php if (is_singular("post")) : ?>
+			<?php if (get_post_type() == "post") : ?>
 			<time class='time' datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate>DATUM: <?php echo get_the_date(); ?> <?php the_time(); ?></time>
 			<?php endif; ?>
-			<?php if (!is_singular("hugy_kontakt")) : ?>
+			<?php if (get_post_type() != "hugy_kontakt") : ?>
 			<?php echo HuGy::get_author(); ?>
 			<?php endif; ?>
 			
