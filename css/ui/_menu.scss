@@ -43,6 +43,11 @@
 		@extend .grid;
 		& > li {
 			@extend .grid__item;
+			.expand {
+				cursor: pointer;
+				margin: 6px;
+				font-weight: bold;
+			}
 		}
 		&.cols-2 {
 			& > li {

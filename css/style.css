@@ -6150,6 +6150,11 @@ article.page .slideshow-wrapper:after {
   display: inline-block;
   border-radius: 4px;
 }
+.main-menu-wrapper .menu > li .expand {
+  cursor: pointer;
+  margin: 6px;
+  font-weight: bold;
+}
 
 @media only screen and (max-width: 680px) {
   .menu.cols-2 > li, .menu.cols-3 > li, .menu.cols-4 > li, .menu.cols-5 > li {
