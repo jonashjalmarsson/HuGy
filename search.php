@@ -17,6 +17,7 @@ wp_reset_query();
 <div class="search-wrapper">
 <?php echo get_search_form(); ?>
 </div>
+<div class="content-wrapper">
 <?php if ( have_posts() ): ?>
 <h1>Visar resultat f&ouml;r '<?php echo get_search_query(); ?>'</h1>
 <ol>
@@ -39,5 +40,5 @@ wp_reset_query();
 <?php else: ?>
 <h1>Inga resultat hittades f&ouml;r '<?php echo get_search_query(); ?>'</h1>
 <?php endif; ?>
-
+</div>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>

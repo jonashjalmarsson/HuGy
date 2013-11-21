@@ -166,7 +166,7 @@ jQuery(document).ready(function($) {
 			}
 			$(this)
 				.stop()
-				.animate( {scrollTop: pos3 } ,time)
+				.animate( {scrollTop: pos3 } ,time/2)
 				.animate( {scrollTop: pos2 } ,time/4)
 				.animate( {scrollTop: pos } ,time/4, function() {
 					if (typeof callback == 'function') { // make sure the callback is a function
@@ -188,7 +188,7 @@ jQuery(document).ready(function($) {
 	{
 		$(".top-navigation-wrapper").hide();
 		$(".firstpage-menu").click(function() {
-			$($("body,html")).softscroll(($(".page-wrapper").position().top - $(".top-navigation-wrapper").height()), 800);
+			$($("body,html")).softscroll(($(".page-wrapper").position().top - $(".top-navigation-wrapper").height()), 600);
 		});
 	}
 	
@@ -200,7 +200,7 @@ jQuery(document).ready(function($) {
 	    var target = this.hash,
 	    $target = $(target);
 		
-		$('html, body').softscroll($target.offset().top, 900, function () {
+		$('html, body').softscroll($target.offset().top, 600, function () {
 	        window.location.hash = target;
 	    });
 		
@@ -536,7 +536,7 @@ jQuery(document).ready(function($) {
 
 	/* up icon */
 	$(".up-icon").hide().click( function() {
-		$("body,html").softscroll(0, 800);
+		$("body,html").softscroll(0, 600);
 	});
 	
 	

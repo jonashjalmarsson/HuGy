@@ -22,14 +22,11 @@ time.time {
 	display: block;
 	padding-bottom: 28px;
 }
-.single article.page,
-.page article.page{
+article.page{
 	@extend .max-width--center;
  	@extend .island;
 	box-shadow: 0px 0px 15px #999;
-}
 
-article.page{
 	.content-wrapper {
 		@extend .small-max-width--center;
 		margin-top: 24px;

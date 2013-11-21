@@ -813,8 +813,7 @@ textarea:focus {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf:after, .nav:after, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks:after, .program-icons:after, .media:after, .island:after, .single article.page:after,
-.page article.page:after, .filter.tool:after, .search-wrapper:after,
+.cf:after, .nav:after, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks:after, .program-icons:after, .media:after, .island:after, article.page:after, .filter.tool:after, .search-wrapper:after,
 .pre-footer-search:after,
 .islet:after,
 .contacts-wrapper .contacts:after,
@@ -849,8 +848,7 @@ pre,
 .form-fields > li,
 .media,
 .island,
-.single article.page,
-.page article.page,
+article.page,
 .filter.tool,
 .search-wrapper,
 .pre-footer-search,
@@ -921,21 +919,14 @@ pre, .islet .form-fields > li, .contacts-wrapper .contacts .form-fields > li, .f
 .island, .module-wrapper.facebook-module-wrapper .fb-feed-item
 .island, .module-wrapper.facebook-module-wrapper .fb-load-button
 .island, .related-wrapper .related
-.island, .islet .single article.page, .single .islet article.page, .contacts-wrapper .contacts .single article.page, .single .contacts-wrapper .contacts article.page, .firstpage-menu-wrapper .firstpage-menu .single article.page, .single .firstpage-menu-wrapper .firstpage-menu article.page, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .single article.page, .single .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 article.page, .module-wrapper.facebook-module-wrapper .fb-feed-item .single article.page, .single .module-wrapper.facebook-module-wrapper .fb-feed-item article.page, .module-wrapper.facebook-module-wrapper .fb-load-button .single article.page, .single .module-wrapper.facebook-module-wrapper .fb-load-button article.page, .related-wrapper .related .single article.page, .single .related-wrapper .related article.page,
-.islet .page article.page,
-.page .islet article.page,
-.contacts-wrapper .contacts .page article.page,
-.page .contacts-wrapper .contacts article.page,
-.firstpage-menu-wrapper .firstpage-menu .page article.page,
-.page .firstpage-menu-wrapper .firstpage-menu article.page,
-.module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .page article.page,
-.page .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 article.page,
-.module-wrapper.facebook-module-wrapper .fb-feed-item .page article.page,
-.page .module-wrapper.facebook-module-wrapper .fb-feed-item article.page,
-.module-wrapper.facebook-module-wrapper .fb-load-button .page article.page,
-.page .module-wrapper.facebook-module-wrapper .fb-load-button article.page,
-.related-wrapper .related .page article.page,
-.page .related-wrapper .related article.page, .islet
+.island, .islet
+article.page, .contacts-wrapper .contacts
+article.page, .firstpage-menu-wrapper .firstpage-menu
+article.page, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2
+article.page, .module-wrapper.facebook-module-wrapper .fb-feed-item
+article.page, .module-wrapper.facebook-module-wrapper .fb-load-button
+article.page, .related-wrapper .related
+article.page, .islet
 .filter.tool, .contacts-wrapper .contacts
 .filter.tool, .firstpage-menu-wrapper .firstpage-menu
 .filter.tool, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2
@@ -2054,8 +2045,7 @@ article .block-wrapper .contacts-wrapper {
  * Demo: jsfiddle.net/inuitcss/u8pV3
  *
  */
-.island, .single article.page,
-.page article.page, .filter.tool, .search-wrapper,
+.island, article.page, .filter.tool, .search-wrapper,
 .pre-footer-search,
 .islet,
 .contacts-wrapper .contacts,
@@ -2068,14 +2058,12 @@ article .block-wrapper .contacts-wrapper {
   display: block;
 }
 
-.island, .single article.page,
-.page article.page, .filter.tool, .search-wrapper,
+.island, article.page, .filter.tool, .search-wrapper,
 .pre-footer-search {
   padding: 24px;
 }
 
-.island > :last-child, .single article.page > :last-child,
-.page article.page > :last-child, .filter.tool > :last-child, .search-wrapper > :last-child,
+.island > :last-child, article.page > :last-child, .filter.tool > :last-child, .search-wrapper > :last-child,
 .pre-footer-search > :last-child,
 .islet > :last-child,
 .contacts-wrapper .contacts > :last-child,
@@ -5329,15 +5317,13 @@ a:hover {
   display: none !important;
 }
 
-.max-width--center, footer .footer-div, .top-wrapper .top, .top-navigation-wrapper .top-navigation, .firstpage-menu-wrapper .firstpage-menu, .main-menu-wrapper, .module-wrapper .module, .single article.page,
-.page article.page {
+.max-width--center, footer .footer-div, .top-wrapper .top, .top-navigation-wrapper .top-navigation, .firstpage-menu-wrapper .firstpage-menu, .main-menu-wrapper, .module-wrapper .module, article.page {
   max-width: 1100px;
   margin: 0 auto;
 }
 
 @media only screen and (max-width: 1147px) {
-  .max-width--center, footer .footer-div, .top-wrapper .top, .top-navigation-wrapper .top-navigation, .firstpage-menu-wrapper .firstpage-menu, .main-menu-wrapper, .module-wrapper .module, .single article.page,
-  .page article.page {
+  .max-width--center, footer .footer-div, .top-wrapper .top, .top-navigation-wrapper .top-navigation, .firstpage-menu-wrapper .firstpage-menu, .main-menu-wrapper, .module-wrapper .module, article.page {
     margin-left: 12px;
     margin-right: 12px;
   }
@@ -6060,11 +6046,7 @@ article.page .slideshow-wrapper:after {
   background-position: -1520px -80px;
 }
 
-.ie7 .max-width--center, .ie7 footer .footer-div, footer .ie7 .footer-div, .ie7 .top-wrapper .top, .top-wrapper .ie7 .top, .ie7 .top-navigation-wrapper .top-navigation, .top-navigation-wrapper .ie7 .top-navigation, .ie7 .firstpage-menu-wrapper .firstpage-menu, .firstpage-menu-wrapper .ie7 .firstpage-menu, .ie7 .main-menu-wrapper, .ie7 .module-wrapper .module, .module-wrapper .ie7 .module, .ie7 .single article.page, .single .ie7 article.page,
-.ie7 .page article.page,
-.page .ie7 article.page, .ie8 .max-width--center, .ie8 footer .footer-div, footer .ie8 .footer-div, .ie8 .top-wrapper .top, .top-wrapper .ie8 .top, .ie8 .top-navigation-wrapper .top-navigation, .top-navigation-wrapper .ie8 .top-navigation, .ie8 .firstpage-menu-wrapper .firstpage-menu, .firstpage-menu-wrapper .ie8 .firstpage-menu, .ie8 .main-menu-wrapper, .ie8 .module-wrapper .module, .module-wrapper .ie8 .module, .ie8 .single article.page, .single .ie8 article.page,
-.ie8 .page article.page,
-.page .ie8 article.page {
+.ie7 .max-width--center, .ie7 footer .footer-div, footer .ie7 .footer-div, .ie7 .top-wrapper .top, .top-wrapper .ie7 .top, .ie7 .top-navigation-wrapper .top-navigation, .top-navigation-wrapper .ie7 .top-navigation, .ie7 .firstpage-menu-wrapper .firstpage-menu, .firstpage-menu-wrapper .ie7 .firstpage-menu, .ie7 .main-menu-wrapper, .ie7 .module-wrapper .module, .module-wrapper .ie7 .module, .ie7 article.page, .ie8 .max-width--center, .ie8 footer .footer-div, footer .ie8 .footer-div, .ie8 .top-wrapper .top, .top-wrapper .ie8 .top, .ie8 .top-navigation-wrapper .top-navigation, .top-navigation-wrapper .ie8 .top-navigation, .ie8 .firstpage-menu-wrapper .firstpage-menu, .firstpage-menu-wrapper .ie8 .firstpage-menu, .ie8 .main-menu-wrapper, .ie8 .module-wrapper .module, .module-wrapper .ie8 .module, .ie8 article.page {
   width: 1100px;
 }
 .ie7 .small-max-width--center, .ie7 .module-wrapper.facebook-module-wrapper .module, .module-wrapper.facebook-module-wrapper .ie7 .module, .ie7 article.page .content-wrapper, article.page .ie7 .content-wrapper, .ie8 .small-max-width--center, .ie8 .module-wrapper.facebook-module-wrapper .module, .module-wrapper.facebook-module-wrapper .ie8 .module, .ie8 article.page .content-wrapper, article.page .ie8 .content-wrapper {
@@ -6214,11 +6196,17 @@ article.page .slideshow-wrapper:after {
 .module-wrapper.facebook-module-wrapper h1 {
   margin-left: 6px;
   padding-top: 74px;
-  background: url("../images/facebook.png") no-repeat 90% 10px;
+  /*background: url("../images/facebook.png") no-repeat 90% 10px;*/
   background-clip: padding-box;
   padding-bottom: 6px;
   margin-bottom: 0;
   margin-top: 0px;
+  position: relative;
+}
+.module-wrapper.facebook-module-wrapper h1 .fb-logo {
+  position: absolute;
+  bottom: 0px;
+  right: 20px;
 }
 .module-wrapper.facebook-module-wrapper .fb-feed-item {
   border-radius: 2px;
@@ -6271,11 +6259,9 @@ time.time {
   padding-bottom: 28px;
 }
 
-.single article.page,
-.page article.page {
+article.page {
   box-shadow: 0px 0px 15px #999;
 }
-
 article.page .content-wrapper {
   margin-top: 24px;
   margin-bottom: 24px;

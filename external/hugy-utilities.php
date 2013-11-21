@@ -385,7 +385,7 @@
 				$retValue .= "<div class='" . get_row_layout() . "-module-wrapper module-wrapper'$style>";
 					$retValue .= "<div class='" . get_row_layout() . "-module module' data-fb-url='http://www.facebook.com/" . get_sub_field("id",$field) . "'>";
 					if (get_row_layout() == "facebook"):
-						$retValue .= "<a class='menu-margin' name='facebook' id='facebook'></a><h1>Vad händer mer...</h1>";
+						$retValue .= "<a class='menu-margin' name='facebook' id='facebook'></a><h1>Vad händer mer...<a class='fb-logo' href='http://www.facebook.com/" . get_sub_field("id",$field) . "'><img src='".get_stylesheet_directory_uri()."/images/facebook.png'/></a></h1>";
 						if (function_exists("fb_feed")) :
 							$retValue .= fb_feed(get_sub_field("id",$field),array('container' => 'div',
 													'container_class' => 'items',

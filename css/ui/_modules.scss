@@ -71,11 +71,18 @@
 			@extend .white-text;
 			margin-left: 6px;
 			padding-top: 74px;
-			background: url("../images/facebook.png") no-repeat 90% 10px;
+			/*background: url("../images/facebook.png") no-repeat 90% 10px;*/
 			background-clip: padding-box;
 			padding-bottom: 6px;
 			margin-bottom: 0;
 			margin-top: 0px;
+			position: relative;
+			.fb-logo {
+				position: absolute;
+				bottom: 0px;
+				right: 20px;
+			}
+
 		}
 		.fb-page-name {
 			@extend .hidden;
