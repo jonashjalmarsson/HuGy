@@ -20,8 +20,16 @@
 }
 /* only on firstpage */
 .slideshow.firstpage {
-	position: relative;
+	@extend .green;
+	background-attachment: fixed;
+	background-size: auto 100%;
+	background-repeat: no-repeat no-repeat;
+	background-position: top center;
+	height: 800px;
 	overflow: hidden;
+	position: relative;
+	display: inline-block;
+	width: 100%;
 	.slide-layer {
 		background: url("../images/slide-layer.png") repeat fixed;
 		position: absolute;
@@ -30,14 +38,6 @@
 		z-index: 90;
 		width: 4000px;
 		height: 4000px;
-	}
-	img {
-		max-width: initial;
-	}
-
-	.slidesjs-pagination {
-		@extend .force-hidden;
-		z-index: 200;
 	}
 }
 article.page{

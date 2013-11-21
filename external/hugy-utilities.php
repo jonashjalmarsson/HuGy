@@ -141,6 +141,30 @@
 			return $retValue;
 		}
 
+		/*
+		 * Get special firstpage slideshow
+		 */
+		function get_firstpage_slideshow($images, $wrapper_class_name = "slideshow", $size = "thumbnail") {
+			global $image_sizes;
+			$imagearray = array();
+			if( $images ): 
+				foreach( $images as $image ) :
+					if (($image_sizes[$size][0] == "9999" || $image_sizes[$size][0] == $image["sizes"][$size."-width"] )
+					 && ($image_sizes[$size][1] == "9999" || $image_sizes[$size][1] == $image["sizes"][$size."-height"])) {
+						$url = $image["sizes"][$size];
+						$imagearray[] = array("url" => $url, 'alt' => $image['alt'], 'description' => $image['description']);
+					}
+				endforeach;
+			endif;
+			
+			$retValue = "";
+			// right now only echo first image
+			if (count($imagearray) > 0) {
+				$retValue .= "<div class='$wrapper_class_name' style='background-image: url(" . $imagearray[0]["url"] . ")'>&nbsp;</div>";
+			}
+			return $retValue;
+		}
+
 
 		/*
 		 * Get first image of slideshow images

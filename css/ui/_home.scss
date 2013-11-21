@@ -19,6 +19,8 @@
 		@extend .flush--bottom;
 		@extend .islet;
 		@extend .max-width--center;
+		background: transparent url("../images/ikoner.svg") no-repeat center -200px;
+		cursor: pointer;
 		a {
 			margin-right: 12px;
 		}

@@ -13,7 +13,7 @@
 wp_reset_query();
 ?>
 
-<div class='page-wrapper'><article class='page'>
+
 <div class="search-wrapper">
 <?php echo get_search_form(); ?>
 </div>
@@ -30,7 +30,6 @@ wp_reset_query();
 			<?php if (get_post_type() != "hugy_kontakt") : ?>
 			<?php echo HuGy::get_author(); ?>
 			<?php endif; ?>
-			
 			<?php the_excerpt(); ?>
 		</article>
 	</li>
@@ -40,5 +39,5 @@ wp_reset_query();
 <?php else: ?>
 <h1>Inga resultat hittades f&ouml;r '<?php echo get_search_query(); ?>'</h1>
 <?php endif; ?>
-</article></div>
+
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
