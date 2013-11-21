@@ -1037,7 +1037,7 @@ h4, .delta, .contacts-wrapper .contactlist .contact h2.title,
   line-height: 1.33333;
 }
 
-h5, .epsilon, .main-menu-wrapper {
+h5, .epsilon, .main-menu-wrapper, .module-wrapper.facebook-module-wrapper .fb-feed-item blockquote {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;

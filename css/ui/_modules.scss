@@ -113,6 +113,7 @@
 				margin-right: 12px;
 			}
 			blockquote {
+				@extend .epsilon;
 				@extend .cf;
 				quotes: "" "";
 				padding: 6px;
