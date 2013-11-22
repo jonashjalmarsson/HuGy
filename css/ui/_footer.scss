@@ -23,73 +23,74 @@
 }
 footer {
 	@extend .gray-light;
-	.footer-div {
-		@extend .max-width--center;
-		.footer-container {	
-			padding-top: 24px;
-			@extend .grid;
-			h2 {
-				@extend .italic;
-				@extend .flush--bottom;
-			}
-			.widget {
-				@extend .grid__item;
-				overflow: hidden;
-				ul {
-					list-style-type: none;
-					margin-left: 0px;
-				}
-			}
-			/* if less than 4 widgets */
-			@for $i from 1 through 4 {
-				.widget:first-child:nth-last-child(#{$i}),
-				.widget:first-child:nth-last-child(#{$i}) ~ .widget {
-					width: 100%/$i }
-			} 
-			/* if more than 4 widgets */
-			@for $i from 5 through 8 {
-				.widget:first-child:nth-last-child(#{$i}),
-				.widget:first-child:nth-last-child(#{$i}) ~ .widget {
-					width: 200%/$i }
-			} 
-			.widget {
-				display: inline-block;
-			}
-			/* views widget cloud */
-			.wp-views-cloud {
-				text-align: center;
-				.views-cloud-item {
-					margin: 6px;
-					&.large {
-						font-size: 200%;
-					}
-					&.medium {
-						font-size: 170%;
-					}
-					&.small {
-						font-size: 140%;
-					}
-					&.mini {
-						font-size: 100%;
-					}
-					&.tiny {
-						font-size: 80%;
-					}
-				}
+}
+.footer-div {
+	@extend .max-width--center;
+	.footer-container {	
+		padding-top: 24px;
+		@extend .grid;
+		h2 {
+			@extend .italic;
+			@extend .flush--bottom;
+		}
+		.widget {
+			@extend .grid__item;
+			overflow: hidden;
+			ul {
+				list-style-type: none;
+				margin-left: 0px;
 			}
 		}
-	}
-	.copyright {
-		@extend .one-whole;
-		@extend .gray-dark;
-		display: inline-block;
-		text-align: center;
-		.login {
-			float: right;
-			margin-right: 12px;
+		/* if less than 4 widgets */
+		@for $i from 1 through 4 {
+			.widget:first-child:nth-last-child(#{$i}),
+			.widget:first-child:nth-last-child(#{$i}) ~ .widget {
+				width: 100%/$i }
+		} 
+		/* if more than 4 widgets */
+		@for $i from 5 through 8 {
+			.widget:first-child:nth-last-child(#{$i}),
+			.widget:first-child:nth-last-child(#{$i}) ~ .widget {
+				width: 200%/$i }
+		} 
+		.widget {
+			display: inline-block;
+		}
+		/* views widget cloud */
+		.wp-views-cloud {
+			text-align: center;
+			.views-cloud-item {
+				margin: 6px;
+				&.large {
+					font-size: 200%;
+				}
+				&.medium {
+					font-size: 170%;
+				}
+				&.small {
+					font-size: 140%;
+				}
+				&.mini {
+					font-size: 100%;
+				}
+				&.tiny {
+					font-size: 80%;
+				}
+			}
 		}
 	}
 }
+.copyright {
+	@extend .one-whole;
+	@extend .gray-dark;
+	display: inline-block;
+	text-align: center;
+	.login {
+		float: right;
+		margin-right: 12px;
+	}
+}
+
 @include media-query(palm){
 	.footer-div {
 		.widget {

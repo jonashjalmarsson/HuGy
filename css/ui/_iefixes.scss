@@ -45,23 +45,24 @@
 			}
 		}
 	}
-	footer {
-		.footer-div {
-			/* if less than 4 widgets */
-			@for $i from 1 through 4 {
-				.widget:first-child:nth-last-child(#{$i}),
-				.widget:first-child:nth-last-child(#{$i}) ~ .widget {
-					width: $max-width/$i }
-			} 
-			/* if more than 4 widgets */
-			@for $i from 5 through 8 {
-				.widget:first-child:nth-last-child(#{$i}),
-				.widget:first-child:nth-last-child(#{$i}) ~ .widget {
-					width: $max-width*2/$i }
-			} 
+	.pre-footer-search {
+		.search-icon {
+			display: none;
+		}
+	}
+		.footer-1-container {
 			.widget {
 				float:left;
+				width: 475px;
+				margin: 24px;
 			}
 		}
-	}	
+		.footer-2-container {
+			.widget {
+				float:left;
+				width: 1100px;
+				margin: 24px;
+			}
+		}
+		
 }
