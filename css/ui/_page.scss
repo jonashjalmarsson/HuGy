@@ -1,6 +1,7 @@
 .page-wrapper {
+	@extend .gray-light;
 	padding-top: 30px;
-	background: white url("../images/background.png") repeat;
+	/*background: white url("../images/background.png") repeat;*/
 	padding-bottom: 30px;
 }
 article {

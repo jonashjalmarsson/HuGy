@@ -10,7 +10,7 @@
 }
 
 .firstpage-menu-wrapper {
-	@extend .black-60;
+
 	@extend .one-whole;
 	bottom: 0px;
 	left: 0px;	
@@ -31,6 +31,7 @@
 	display: block;
 }
 .home {
+	/*
 	.top-wrapper {
 		background: transparent;
 		z-index: 100;
@@ -47,13 +48,18 @@
 			}
 		}
 	}
-	.page {
-		width: 100%;
-		max-width: 100%;
-	}
+	*/
 	.page-wrapper {
-		padding-top: 0px;
+		margin-top: -6px;
 		background: white;
+		padding-top: 0px;
+		article.page {
+			box-shadow: none;
+			margin: 0;
+			max-width: 100%;
+			padding: 0;
+			width: 100%;
+		}
 	}
 }
 

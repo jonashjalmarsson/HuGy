@@ -186,7 +186,7 @@ jQuery(document).ready(function($) {
 	
 	if ($("body").hasClass("home"))
 	{
-		$(".top-navigation-wrapper").hide();
+		//$(".top-navigation-wrapper").hide();
 		$(".firstpage-menu").click(function() {
 			$($("body,html")).softscroll(($(".page-wrapper").position().top - $(".top-navigation-wrapper").height()), 600);
 		});
@@ -357,22 +357,9 @@ jQuery(document).ready(function($) {
 		$(".top-navigation-wrapper").removeClass("selected");
 
 		/* make menu fixed */
-		// hide if home and scrolltop is over slideshow
-		if ($("body").hasClass("home") && ($(window).scrollTop() - $(window).height() + $(".top-navigation-wrapper").height()*2) < 0) {
-			$(".top-navigation-wrapper").addClass("fixed").css("top","0").hide();
-			// slideshow scroll effect firstpage
-			//$(".slidesjs-container").css("top",$(window).scrollTop());
-			if (!fixedImage)
-				$(".slidesjs-container").css("top",$(window).scrollTop());
-		}
-		// begin show menu when close to slideshow end
-		else if ($("body").hasClass("home") && ($(window).scrollTop() - $(window).height() + $(".top-navigation-wrapper").height()) < 0) {
-			$(".top-navigation-wrapper").addClass("fixed").css("top",($(window).scrollTop() - $(window).height() + $(".top-navigation-wrapper").height())).show();
-			if (!$("body").hasClass("home"))
-				$(".top-wrapper").css('margin-bottom',$(".top-navigation-wrapper").height());
-		}
+		
 		// remove fixed menu when top of page
-		else if ($(window).scrollTop() - $(".top").height() <= 0) {
+		if ($(window).scrollTop() - $(".top").height() <= 0) {
 			$(".top-navigation-wrapper, .top-menu-button").removeClass("fixed");
 			$(".top-wrapper").css('margin-bottom',0);
 		}

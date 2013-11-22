@@ -1,4 +1,4 @@
-<header class="white header-wrapper">
+<header class="header-wrapper">
 	<div class="top-wrapper">
 		<div class="top">
 			<div class="top-links-wrapper">
@@ -15,9 +15,12 @@
 	<div class="top-navigation-wrapper">
 		<div class="top-navigation">
 				<div class="top-menu-button">
-					<a href="#menu" title="Öppna meny"><span class='menu-icon'></span><span class='text'>Meny</span></a>
+					<a href="#menu" title="&Ouml;ppna meny"><span class='menu-icon'></span><span class='text'>Meny</span></a>
 				</div>
 				<div class="breadcrumb"><?php echo HuGy::get_breadcrumb(); ?></div>
+				<div class="top-search-button">
+					<a href="#search" title="S&ouml;k efter inneh&aring;ll p&aring; sidan"><span class='search-icon'></span></a>
+				</div>
 		</div>
 	</div>
 </header>
@@ -30,7 +33,6 @@
 		echo HuGy::get_teasers();
 		echo "<div class='firstpage-menu-wrapper'>";
 		echo "<div class='firstpage-menu'>";
-		echo "<a class='menu' href='#menu'></a>";
 		echo "<a class='nyheter' href='#nyheter'></a>";
 		echo "<a class='facebook' href='#facebook'></a>";
 		echo "</div></div>";

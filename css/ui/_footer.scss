@@ -2,10 +2,10 @@
 	height: 0px;
 }
 .pre-footer {
-	@extend .black;
+	@extend .gray-darker;
 }
 .up-icon {
-	bottom: 20px;
+	top: 55px;
 	position: fixed;
 	cursor: pointer;
 	right: 20px;
@@ -22,7 +22,7 @@
 	}
 }
 footer {
-	@extend .green;
+	@extend .gray-light;
 	.footer-div {
 		@extend .max-width--center;
 		.footer-container {	
@@ -81,7 +81,7 @@ footer {
 	}
 	.copyright {
 		@extend .one-whole;
-		@extend .black;
+		@extend .gray-dark;
 		display: inline-block;
 		text-align: center;
 		.login {

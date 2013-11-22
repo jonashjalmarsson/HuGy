@@ -100,12 +100,17 @@
 			); 
 			$pages = get_posts($args);
 			
+			
 			if (count($pages) > 0):
 				if ($wrapping_ul)
 					$retValue .= "<ul class='program-icons'>";
 				foreach($pages as $page) :
-					$retValue .= "<li>";
+					$current_class = '';
+					if (get_the_ID() == $page->ID)
+						$current_class = ' current_page_item';
+					$retValue .= "<li class='page_item$current_class'>";
 					$retValue .= "<a title='" . $page->post_title . "' href='" . get_page_link($page->ID) . "'>";
+			
 					if ($icon) 
 						$retValue .= "<span class='program-icon program-" . get_field("hg_imageplace",$page->ID) . "'></span>";
 					else

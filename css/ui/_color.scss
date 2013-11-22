@@ -1,4 +1,4 @@
-$black: rgb(0,0,0)!default;
+$black: #333!default;
 $white: #fff!default;
 $green: #14A585!default;
 $blue: #63C2C7!default;
@@ -6,6 +6,10 @@ $purple: #7C1473!default;
 $yellow: #F6E528!default;
 $orange: #F18200!default;
 $red: #D9050D!default;
+
+$gray-light: #f0f0f0!default;
+$gray-dark: #3a3737!default;
+$gray-darker: #4a4747!default;
 
 
 @mixin color($title, $bg, $text){
@@ -52,6 +56,7 @@ $red: #D9050D!default;
 			}
 		}
 	}
+	
 }
 
 @include color("black", $black, $white); 
@@ -62,3 +67,6 @@ $red: #D9050D!default;
 @include color("yellow", $yellow, $black); 
 @include color("orange", $orange, $black); 
 @include color("red", $red, $white); 
+@include color("gray-light", $gray-light, $black); 
+@include color("gray-dark", $gray-dark, $white); 
+@include color("gray-darker", $gray-darker, $white); 
