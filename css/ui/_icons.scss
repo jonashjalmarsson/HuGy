@@ -133,7 +133,7 @@ $clip-sizes: 80 54 48 40 30 24 20 16 12;
 .program-icon {
 	background-image: url("../images/program-ikoner.svg");
 }
-.ie7, ie8 {
+.ie7, .ie8 {
 	.program-icon {
 		background-image: url("../images/program-ikoner.png");
 	}
@@ -142,7 +142,7 @@ $clip-sizes: 80 54 48 40 30 24 20 16 12;
 .quick-icon {
 	background-image: url("../images/quick-ikoner.svg");
 }
-.ie7, ie8 {
+.ie7, .ie8 {
 	.quick-icon {
 		background-image: url("../images/quick-ikoner.png");
 	}

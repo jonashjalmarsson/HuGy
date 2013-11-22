@@ -4202,7 +4202,7 @@ article.page .slideshow-wrapper:after {
   background-image: url("../images/program-ikoner.svg");
 }
 
-.ie7 .program-icon, ie8 .program-icon {
+.ie7 .program-icon, .ie8 .program-icon {
   background-image: url("../images/program-ikoner.png");
 }
 
@@ -4210,7 +4210,7 @@ article.page .slideshow-wrapper:after {
   background-image: url("../images/quick-ikoner.svg");
 }
 
-.ie7 .quick-icon, ie8 .quick-icon {
+.ie7 .quick-icon, .ie8 .quick-icon {
   background-image: url("../images/quick-ikoner.png");
 }
 
