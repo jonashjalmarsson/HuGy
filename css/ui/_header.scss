@@ -7,9 +7,11 @@
 	}
 }
 .header-wrapper {
-	opacity: 0.9;
 	@extend .gray-light;
+	opacity: 0.9;
+	position: relative;
 	width: 100%;
+	z-index: 9999;
 	a {
 		@extend .nounderline;
 	}

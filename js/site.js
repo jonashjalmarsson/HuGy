@@ -256,6 +256,42 @@ jQuery(document).ready(function($) {
 		}		
 	});
 		
+
+	/* 
+	 * click effect on contactlist
+	 */
+	 
+	$(".contactlist").find('.contact').each(function() {
+		$(this).find('a').click(function(ev) {
+			if ($(this).parents('.contact').hasClass('expanded') && $(this).hasClass('nolink')) {
+				$(this).parents('.contact').addClass('clicked');
+			}
+			else if ($(this).hasClass('nolink')) {
+				ev.preventDefault();
+			}
+		});
+		$(this).click(function(ev) {
+				//ev.preventDefault();
+				//ev.stopPropagation();
+				//ev.stopImmediatePropagation();
+			if (!$(this).hasClass('clicked')) {
+				if (!$(this).hasClass('expanded')) {
+					$(this).addClass('expanded');
+					if ($(document).width() > 500)
+						$(this).find('.bild img').animate({width: '150px'}, 'fast');
+					$(this).find('.contact-data').slideDown('fast');
+				} 
+				else {
+					$(this).removeClass('expanded');
+					$(this).find('.bild img').animate({width: '100px'}, 'fast');
+					$(this).find('.contact-data').slideUp('fast');
+				}
+			}
+		});
+	});
+
+	
+		
 	/* 
 	 * hover effect on contact
 	 */
@@ -443,7 +479,7 @@ jQuery(document).ready(function($) {
 
 	
 	
-	/* filter table in schema page */
+	/* filter table in konakter page */
 	if ($("body").hasClass("page-template-page-hugy-kontakter-php")) {
 		contactlist = $(".contactlist");
 		

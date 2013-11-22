@@ -18,7 +18,8 @@
 	$contact_vars = array(
 		'imagesize' => 'thumbnail',
 		'title' => 'Kontakter',
-		'class' => 'contacts',		);
+		'class' => 'contacts',
+		'excerpt' => true);
 
 	class HuGy {
 
@@ -520,9 +521,6 @@
 		/*
 		 * Return contacts on page
 		 */
-		var $contact_vars = array(
-			'imagesize' => 'thumbnail',
-			'title' => 'Kontakter', );
 		function get_contacts($page_id = "", $args = array()) {
 			global $contact_vars;
 
@@ -557,10 +555,19 @@
 			if ($contact_id == '') return;
 			
 			$vars = array_merge( $contact_vars, $args );
+			$excerpt = $vars['excerpt'];
+			$retValue .= "<div class='media contact contact-".$contact_id."'>";
 
-			$retValue .= "<div class='contact contact-".$contact_id."'>";
-
-
+			
+			if (!$excerpt) {
+				$bild = get_field("bild",$contact_id);	
+				if ($bild) {
+					$bild = $bild['sizes'][$vars['imagesize']];
+					$retValue .= "<div class='media__img  bild'><img src='$bild' alt='$title' /></div>";
+				}
+			}
+			$retValue .= "<div class='media__body'>";
+			
 			$retValue .= "<a class='nolink' href='" . get_post_permalink($contact_id) . "'>";
 			$title = get_the_title($contact_id);
 			$retValue .= "<h2 class='title'>$title</h2>";
@@ -590,28 +597,24 @@
 			if ($typ_av_kontakt)
 				$retValue .= "<span class='typ_av_kontakt force-hidden'>".implode(',',$typ_av_kontakt)."</span>";
 
+			if (!$excerpt) {
+				$retValue .= "<div class='contact-data'>";
 
-			$retValue .= "<div class='contact-data'>";
-			
-			$bild = get_field("bild",$contact_id);	
-			if ($bild) {
-				$bild = $bild['sizes'][$vars['imagesize']];
-				$retValue .= "<div class='bild'><img src='$bild' alt='$title' /></div>";
+				$beskrivning = get_field("beskrivning",$contact_id);	
+				if ($beskrivning)
+					$retValue .= "<div class='beskrivning'>BESKRIVNING:<br /> $beskrivning</div>";
+				
+				$arbetsplats = get_field("arbetsplats",$contact_id);	
+				if ($arbetsplats)
+					$retValue .= "<p class='arbetsplats'>ARBETSPLATS:<br /> $arbetsplats</p>";
+
+				$adress = get_field("adress",$contact_id);	
+				
+				if ($adress)
+					$retValue .= "<div class='adress'>ADRESS:<br /> $adress</div>";
+
+				$retValue .= "</div>";
 			}
-
-			$beskrivning = get_field("beskrivning",$contact_id);	
-			if ($beskrivning)
-				$retValue .= "<div class='beskrivning'>BESKRIVNING:<br /> $beskrivning</div>";
-			
-			$arbetsplats = get_field("arbetsplats",$contact_id);	
-			if ($arbetsplats)
-				$retValue .= "<p class='arbetsplats'>ARBETSPLATS:<br /> $arbetsplats</p>";
-
-			$adress = get_field("adress",$contact_id);	
-			
-			if ($adress)
-				$retValue .= "<div class='adress'>ADRESS:<br /> $adress</div>";
-
 			$retValue .= "</div>";
 			$retValue .= "</div>";
 			return $retValue;

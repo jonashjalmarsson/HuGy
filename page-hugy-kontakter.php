@@ -21,7 +21,7 @@
 		<?php the_content(); ?>
 		<div class='filter toggle'></div>
 		<div class='filter tool'></div>
-		<?php echo HuGy::get_contacts(get_the_ID(), array('title' => '', 'class' => 'contactlist')); ?>
+		<?php echo HuGy::get_contacts(get_the_ID(), array('title' => '', 'class' => 'contactlist', 'excerpt' => false, 'imagesize' => 'thumbnail',)); ?>
 	</div>
 	<div class="block-wrapper">
 	<?php echo HuGy::get_related(get_the_ID()); ?>

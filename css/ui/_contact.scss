@@ -16,9 +16,16 @@
 .contacts-wrapper {
 	.contactlist {
 		.contact {
-			border-bottom: 1px solid #ccc;
+			border-bottom: 1px dashed #ccc;
+			cursor: pointer;
 			margin-bottom: 24px!important;
 			padding-bottom: 24px!important;
+			.bild img {
+				width: 100px;
+			}
+			.contact-data {
+				@extend .hidden;
+			}
 		}
 	}
 	h2 {
