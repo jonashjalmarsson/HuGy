@@ -4788,7 +4788,7 @@ article.page .content-wrapper {
 /* only on firstpage */
 .slideshow.firstpage {
   background-attachment: fixed;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat no-repeat;
   background-position: center center;
   height: 800px;
