@@ -21,8 +21,8 @@
 /* only on firstpage */
 .slideshow.firstpage {
 	@extend .gray-light;
-	background-attachment: fixed;
-	background-size: contain;
+	/*background-attachment: fixed;*/
+	background-size: cover;
 	background-repeat: no-repeat no-repeat;
 	background-position: center center;
 	height: 800px;
