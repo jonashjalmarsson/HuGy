@@ -345,10 +345,7 @@ jQuery(document).ready(function($) {
 		{
 			$(".teaser-1").css("left", ($(document).width() - $(".teaser-1").width()) / 2);
 			$(".slideshow").width($(window).width()).height($(window).height());
-			
-				
 		}
-
 	}
 
 	/* what to do when resizeing */
