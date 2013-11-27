@@ -425,7 +425,11 @@ jQuery(document).ready(function($) {
 			});
 	});*/
 
-	
+	/* toggle quick-menu-buttons */
+	$(".quick-expand-icon").click(function(ev) {
+		$(".top-links-wrapper").toggleClass("expanded");
+		ev.preventDefault();
+	});
 	
 	/* filter table in schema page */
 	if ($("body").hasClass("page-template-page-hugy-schema-php")) {

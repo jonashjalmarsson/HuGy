@@ -66,19 +66,10 @@
 
 @include media-query(palm){
 	.home {
-		.top-wrapper {
-			.top {
-				.logo-space {
-					width: 60%!important;
-					padding: 6px;
-					margin-top: 24px;
-					img {
-						max-width: 100%;
-					}
-				}
-			}
+		.firstpage-menu {
+			background-image: none;
 		}
-		.teaser:not(.teaser-1) {
+		.teaser {
 			display: none!important;
 		}
 	}

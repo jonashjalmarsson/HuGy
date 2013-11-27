@@ -154,7 +154,23 @@ $clip-sizes: 80 54 48 40 30 24 20 16 12;
 	@extend .clip_80x80;
 }
 
-@for $i from 0 through 19 {
+.quick-expand-icon {
+	@extend .clip_40x40;
+	background-position: -760px 0px;
+	&.hover,
+	&:hover {
+		background-position: -760px -40px; 
+	}
+}
+.expanded .quick-expand-icon {
+	background-position: -720px 0px;
+	&.hover,
+	&:hover {
+		background-position: -720px -40px; 
+	}
+}
+
+@for $i from 0 through 18 {
 	.quick-#{$i+1} {
 		background-position: -$i*40px 0px; 
 		&.hover,

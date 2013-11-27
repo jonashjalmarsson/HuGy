@@ -86,6 +86,13 @@
 		}
 	}
 }
+
+
+.quick-expand {
+	display: none!important;
+}
+
+
 .top-navigation-wrapper {
 
 	&.fixed {
@@ -132,10 +139,20 @@
 
 @include media-query(palm){
 
-	.logo-space,
-	.top-links-wrapper {
-		width: 100%!important;
+	.logo-space {
+		width: 160px!important;
 	}
+	
+	.top-links-wrapper {
+		width: 40px!important;
+		&.expanded {
+			width: auto!important;
+		}
+	}
+	.quick-expand {
+		display: inline-block!important;
+	}
+
 	.top-navigation {
 		white-space: nowrap;
 		.menu-icon {

@@ -34,6 +34,11 @@
 		 
 			$retValue .= "<div class='quicklinks-wrapper'>";
 			$retValue .= "<ul class='quicklinks'>";
+			$retValue .= "<li class='quick-expand'>";
+			$retValue .= "<a title='Visa l&auml;nkar' href='#'>";
+			$retValue .= "<span class='quick-icon quick-expand-icon'></span>";
+			$retValue .= "</a></li>";
+		
 			while(has_sub_field('hg_quicklinks', 'option')):
 				$retValue .= "<li>";
 				$retValue .= "<a title='" . get_sub_field('title') . "' href='" . get_sub_field('url') . "'>";
