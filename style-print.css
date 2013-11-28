@@ -1,6 +1,7 @@
 @media print {
 	html, body {
 		font-family: Trebuchet MS;
+		font-size: 16px;
 	}
 	a {
 		text-decoration: none;
@@ -33,6 +34,9 @@
 		font-family: Georgia;
 		font-style: italic;
 		font-weight: normal;
+	}
+	.contacts-wrapper {
+		padding-top: 12px;
 	}
 	.contacts-wrapper h2 {
 		font-size: 20px;
