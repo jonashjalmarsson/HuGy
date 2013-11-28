@@ -180,9 +180,10 @@
 		/*
 		 * Get first image of slideshow images
 		 */
-		function get_first_image($images, $wrapper_class_name = "wp-post-image", $size = "thumbnail") {
+		function get_first_image($images, $wrapper_class_name = "wp-post-image", $size = "thumbnail", $fill_if_empty = false) {
 			global $image_sizes;
 			$retValue = "";
+			$found = false;
 			if( $images ): 
 				$retValue .= "<div class='$wrapper_class_name'>";
 				foreach( $images as $image ) :
@@ -190,11 +191,15 @@
 					 && ($image_sizes[$size][1] == "9999" || $image_sizes[$size][1] == $image["sizes"][$size."-height"])) {
 						$url = $image["sizes"][$size];
 						$retValue .= "<img src='" . $url ."' alt='" . $image['alt'] . "' />";
+						$found = true;
 						break;
 					}
 				endforeach;
 				$retValue .= "</div>";
 			endif;
+			if (!$found && $fill_if_empty) {
+				$retValue .= "<div class='$wrapper_class_name'><img src='" . get_stylesheet_directory_uri() ."/images/empty.png' /></div>";
+			}
 			return $retValue;
 		}
 		
@@ -439,7 +444,7 @@
 					//$retValue .= "<div class='item-img'>";
 					//$retValue .=  get_the_post_thumbnail(get_the_ID(), 'news'); 
 					$retValue .= "<a href='" . get_permalink() . "'>";
-					$retValue .=  HuGy::get_first_image(get_field('hg_slideshow',get_the_ID()),'wp-post-image','news');
+					$retValue .=  HuGy::get_first_image(get_field('hg_slideshow',get_the_ID()), 'wp-post-image', 'news', true);
 					//$retValue .= "</div>";
 					$retValue .= "</a><div class='item-content'>";
 					$retValue .= "<a href='" . get_permalink() . "'><h2>" . get_the_title() . "</h2>";

@@ -3474,15 +3474,15 @@ article .block-wrapper .contacts-wrapper {
   color: #d9050d;
 }
 
-.gray-light, footer, .header-wrapper, .page-wrapper, .slideshow.firstpage {
+.gray-light, footer, .header-wrapper, .slideshow.firstpage {
   background-color: #f0f0f0;
   color: #333333;
 }
-.gray-light a, footer a, .header-wrapper a, .page-wrapper a, .slideshow.firstpage a {
+.gray-light a, footer a, .header-wrapper a, .slideshow.firstpage a {
   color: #333333;
 }
 
-.gray-light-background, .related-wrapper .related {
+.gray-light-background, .page-wrapper, .related-wrapper .related {
   background-color: #f0f0f0;
 }
 
