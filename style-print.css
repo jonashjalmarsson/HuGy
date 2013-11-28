@@ -1,12 +1,19 @@
 @media print {
 	html, body {
 		font-family: Trebuchet MS;
-		font-size: 16px;
+		font-size: 14px;
 	}
 	a {
 		text-decoration: none;
 		color: black;
 	}
+	.hidden,
+	.hide,
+	hidden,
+	.firstpage.slideshow,
+	.fb-logo,
+	.fb-page-name,
+	.teaser,
 	#betaicon,
 	.top-links-wrapper,
 	.logo-space h1,
@@ -20,7 +27,7 @@
 	.footer,
 	.program-module-wrapper
 	{
-		display: none;
+		display: none!important;
 	}
 	.logo-space {
 		width: 30%;
@@ -48,4 +55,24 @@
 	.contact .media__body span {
 		display: block;
 	}
+	
+	.nyheter-module .items {
+		vertical-align: top;
+	}
+	.nyheter-module .item {
+		width: 30%;
+		margin-left: 3%;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.nyheter-module h2 {
+		font-size: 16px;
+		font-weight: normal;
+		margin-top: 3px;
+	}
+	
+	.fb-feed-item {
+		border-bottom: 1px solid #666;
+	}
+	
 }
