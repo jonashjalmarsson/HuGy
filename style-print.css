@@ -75,4 +75,16 @@
 		border-bottom: 1px solid #666;
 	}
 	
+	
+	.search ol {
+		list-style-type: none;
+		margin-left: 0;
+	}
+	.search .author {
+		margin-bottom: 0px;
+		padding-bottom: 0px;
+	}
+	.search h2 {
+		margin-bottom: 0px;
+	}
 }

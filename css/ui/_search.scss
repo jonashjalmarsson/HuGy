@@ -1,3 +1,14 @@
+.search {
+	ol {
+		list-style-type: none;
+		margin-left: 0;
+	}
+	.author {
+		margin-bottom: 0px;
+		padding-bottom: 0px;
+	}
+
+}
 .pre-footer-search {
 	@extend .gray-darker;
 	.search-icon {

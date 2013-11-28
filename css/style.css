@@ -4688,9 +4688,9 @@ time.time {
   display: block;
   padding-bottom: 28px;
 }
-.author, .author.a,
+.author, .author a,
 time.time,
-time.time.a {
+time.time a {
   color: #999;
 }
 
@@ -4730,6 +4730,15 @@ article.page .content-wrapper {
 }
 .filter input:focus {
   outline: none;
+}
+
+.search ol {
+  list-style-type: none;
+  margin-left: 0;
+}
+.search .author {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 
 .pre-footer-search .search-icon {
