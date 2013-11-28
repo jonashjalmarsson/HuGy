@@ -3,6 +3,9 @@
 		font-family: Trebuchet MS;
 		font-size: 14px;
 	}
+	img {
+		border: 0;
+	}
 	a {
 		text-decoration: none;
 		color: black;
@@ -31,6 +34,7 @@
 	}
 	.logo-space {
 		width: 30%;
+		margin-bottom: 24px;
 	}
 	img {
 		max-width: 100%;
@@ -86,5 +90,34 @@
 	}
 	.search h2 {
 		margin-bottom: 0px;
+	}
+	
+	.contactlist .contact {
+		padding-bottom: 24px;
+		border-bottom: 1px dashed #999;
+	}
+	.contactlist .media__img {
+		float: left;
+		margin-right: 24px;
+		margin-top: 18px;
+	}
+	.contactlist .media__img img {
+		width: 100px;
+	}
+	.contactlist .media__body {
+		overflow: hidden;
+	}
+	.contactlist .media__body .contact-data {
+		display: none;
+	}
+	
+	.filter input {
+		border: 0px;
+		background-color: #fff;	
+	}
+	#filter,
+	.filter .selected {
+		border: 1px solid #999;
+		background-color: #aaa;
 	}
 }
