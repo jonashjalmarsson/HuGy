@@ -640,7 +640,7 @@
 				$name = get_the_author_meta('first_name') . ' ' . get_the_author_meta('last_name');
 			}
 			
-			$retValue .= "SKRIFTST&Auml;LLARE: $prelink$name$postlink";
+			$retValue .= "UPPDATERAD AV: $prelink$name$postlink";
 			$retValue .= '</div>';
 			return $retValue;
 		}

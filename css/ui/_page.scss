@@ -22,6 +22,9 @@ time.time {
 	margin-top: -28px;
 	display: block;
 	padding-bottom: 28px;
+	&, &.a {
+		color: #999;
+	}
 }
 article.page{
 	@extend .max-width--center;

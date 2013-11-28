@@ -10,7 +10,7 @@
 	echo "</div>";
 	echo "<div class='pre-footer-program'>" . HuGy::get_program_links() . "</div>"; ?>
 	<div class="up-icon"></div>
-	<footer>
+	<footer class="footer">
 		<div class="footer-div">
 		<?php if ( is_active_sidebar( 'footer' ) ) : ?>
 			<div class="footer-container footer-1-container"><?php dynamic_sidebar( 'footer' ); ?></div><!-- .footer-1-container -->

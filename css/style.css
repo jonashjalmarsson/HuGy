@@ -3688,6 +3688,7 @@ article .block-wrapper .contacts-wrapper {
 }
 .footer-div .footer-container .wp-views-cloud .views-cloud-item {
   margin: 6px;
+  white-space: nowrap;
 }
 .footer-div .footer-container .wp-views-cloud .views-cloud-item.large {
   font-size: 200%;
@@ -3736,8 +3737,8 @@ a:hover {
   display: none;
 }
 
-.force-hidden, .slideshow-wrapper .slideshow .slidesjs-play,
-.slideshow-wrapper .slideshow .slidesjs-stop {
+.force-hidden, .slideshow-wrapper .slideshow .slides .slidesjs-play,
+.slideshow-wrapper .slideshow .slides .slidesjs-stop {
   display: none !important;
 }
 
@@ -4687,6 +4688,11 @@ time.time {
   display: block;
   padding-bottom: 28px;
 }
+.author, .author.a,
+time.time,
+time.time.a {
+  color: #999;
+}
 
 article.page {
   box-shadow: 0px 0px 15px #999;
@@ -4784,15 +4790,15 @@ article.page .content-wrapper {
 .slideshow-wrapper .slideshow {
   overflow: hidden;
 }
-.slideshow-wrapper .slideshow .slidesjs-play,
-.slideshow-wrapper .slideshow .slidesjs-stop {
-  z-index: 200;
-}
-.slideshow-wrapper .slideshow .slidesjs-pagination {
-  z-index: 200;
-}
 .slideshow-wrapper .slideshow .slides {
   line-height: 0;
+}
+.slideshow-wrapper .slideshow .slides .slidesjs-play,
+.slideshow-wrapper .slideshow .slides .slidesjs-stop {
+  z-index: 200;
+}
+.slideshow-wrapper .slideshow .slides .slidesjs-pagination {
+  z-index: 200;
 }
 
 /* only on firstpage */

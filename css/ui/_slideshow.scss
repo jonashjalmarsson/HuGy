@@ -3,16 +3,16 @@
 	.slideshow {
 		@extend .white;
 		overflow: hidden;
-		.slidesjs-play,
-		.slidesjs-stop {
-			@extend .force-hidden;
-			z-index: 200;
-		}
-		.slidesjs-pagination {
-			z-index: 200;
-		}
 		.slides {
 			line-height: 0;
+			.slidesjs-play,
+			.slidesjs-stop {
+				@extend .force-hidden;
+				z-index: 200;
+			}
+			.slidesjs-pagination {
+				z-index: 200;
+			}
 		}
 
 		

@@ -107,6 +107,8 @@
 
 		wp_register_style( 'screen', get_stylesheet_directory_uri().'/style.css', '', '', 'screen' );
         wp_enqueue_style( 'screen' );
+		wp_register_style( 'print', get_stylesheet_directory_uri().'/style-print.css', '', '', 'print' );
+        wp_enqueue_style( 'print' );
 	}	
 
 	/* ========================================================================================================================

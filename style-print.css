@@ -1,0 +1,47 @@
+@media print {
+	html, body {
+		font-family: Trebuchet MS;
+	}
+	a {
+		text-decoration: none;
+		color: black;
+	}
+	#betaicon,
+	.top-links-wrapper,
+	.logo-space h1,
+	.top-navigation-wrapper,
+	.slideshow-wrapper,
+	.author,
+	.related-wrapper,
+	.pre-footer,
+	.pre-footer-search,
+	.pre-footer-program,
+	.footer,
+	.program-module-wrapper
+	{
+		display: none;
+	}
+	.logo-space {
+		width: 30%;
+	}
+	img {
+		max-width: 100%;
+	}
+	.contact h2.title ,
+	.contacts-wrapper h2,
+	h1 {
+		font-family: Georgia;
+		font-style: italic;
+		font-weight: normal;
+	}
+	.contacts-wrapper h2 {
+		font-size: 20px;
+	}
+	.contact h2.title {
+		font-size: 17px;
+		margin-bottom: 0;
+	}
+	.contact .media__body span {
+		display: block;
+	}
+}
