@@ -12,13 +12,17 @@
 		@extend .gray-light-background;
 		@extend .islet;
 		margin-bottom: 12px;
-		.heading {
-			@extend .italic;
-			font-weight: bold;
-			margin-top: 6px;
+		h2.title {
+			@extend .delta;
+			@extend .black-text;
+			margin-top: 12px;
 		}
 		span, a {
 			display: block;
+		}
+		.icon {
+			float: left;
+			margin: 2px 6px 0 0;
 		}
 	}
 }

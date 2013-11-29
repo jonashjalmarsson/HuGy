@@ -70,7 +70,27 @@ $clip-sizes: 80 54 48 40 30 24 20 16 12;
 }
 
 
-
+/* related icons */
+.link-icon {
+	@extend .clip_20x20;
+	background-position: -920px -0px;
+}
+.external-link-icon {
+	@extend .clip_20x20;
+	background-position: -950px -0px;
+}
+.pdf-doc-icon {
+	@extend .clip_20x20;
+	background-position: -680px -0px;
+}
+.xls-doc-icon {
+	@extend .clip_20x20;
+	background-position: -800px -0px;
+}
+.doc-doc-icon {
+	@extend .clip_20x20;
+	background-position: -770px -0px;
+}
 
 
 

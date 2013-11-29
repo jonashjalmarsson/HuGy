@@ -508,16 +508,27 @@
 				if (get_row_layout() == "dokument"):
 					$doc = get_sub_field("dokument",$field);
 					$retValue .= "<a href='" . $doc["url"]. "' title='" . $doc["description"] . "' >";
+					$doctype = "";
+					if (strpos($doc["url"], '.doc') !== false)
+						$doctype = "doc-";
+					if (strpos($doc["url"], '.pdf') !== false)
+						$doctype = "pdf-";
+					if (strpos($doc["url"], '.xls') !== false)
+						$doctype = "xls-";
+
+					$retValue .= "<span class='icon ".$doctype."doc-icon'></span>";
 					$retValue .= $doc["title"];
 					$retValue .= "</a>";
 				elseif (get_row_layout() == "lank"):
-					$retValue .= "<a href='" . get_sub_field("url",$field) . "' title='" . get_sub_field("beskrivning",$field) . "'>";
+					$url = get_sub_field("url",$field);
+					$retValue .= "<a href='$url' title='" . get_sub_field("beskrivning",$field) . "'>";
+					$retValue .= "<span class='icon ".((strpos($url, 'http') !== false)?"external-":"")."link-icon'></span>";
 					$retValue .= get_sub_field("namn",$field);
 					$retValue .= "</a>";
 				elseif (get_row_layout() == "rubrik"):
-					$retValue .= "<span class='heading'>";
+					$retValue .= "<h2 class='title'>";
 					$retValue .= get_sub_field("rubrik",$field);
-					$retValue .= "</span>";
+					$retValue .= "</h2>";
 				endif;
 				//$retValue .= "</div>";
 			endwhile;
