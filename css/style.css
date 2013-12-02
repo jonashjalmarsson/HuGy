@@ -813,7 +813,8 @@ textarea:focus {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf:after, .nav:after, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks:after, .program-icons:after, .media:after, .island:after, article.page:after, .filter.tool:after, .search-wrapper:after,
+.cf:after, .nav:after, .top-wrapper .top .top-links-wrapper .weektext .quicklinks:after,
+.top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks:after, .program-icons:after, .media:after, .island:after, article.page:after, .filter.tool:after, .search-wrapper:after,
 .pre-footer-search:after,
 .islet:after,
 .contacts-wrapper .contacts:after,
@@ -1043,7 +1044,7 @@ h5, .epsilon, .main-menu-wrapper, .module-wrapper.facebook-module-wrapper .fb-fe
   line-height: 1.5;
 }
 
-h6, .zeta, .up-icon span, .author,
+h6, .zeta, .up-icon span, .top-wrapper .top .top-links-wrapper .weektext, .author,
 time.time {
   font-size: 14px;
   font-size: 0.875rem;
@@ -1861,12 +1862,15 @@ article .block-wrapper .contacts-wrapper {
  * Demo: jsfiddle.net/inuitcss/Vnph4
  *
  */
-.nav, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks, .program-icons {
+.nav, .top-wrapper .top .top-links-wrapper .weektext .quicklinks,
+.top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks, .program-icons {
   list-style: none;
   margin-left: 0;
 }
-.nav > li, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks > li, .program-icons > li,
+.nav > li, .top-wrapper .top .top-links-wrapper .weektext .quicklinks > li,
+.top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks > li, .program-icons > li,
 .nav > li > a,
+.top-wrapper .top .top-links-wrapper .weektext .quicklinks > li > a,
 .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks > li > a,
 .program-icons > li > a {
   display: inline-block;
@@ -1918,7 +1922,8 @@ article .block-wrapper .contacts-wrapper {
    </ul>
  *
  */
-.nav--block, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks, .program-icons {
+.nav--block, .top-wrapper .top .top-links-wrapper .weektext .quicklinks,
+.top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks, .program-icons {
   line-height: 1;
   /**
    * Remove whitespace caused by `inline-block`.
@@ -1927,11 +1932,13 @@ article .block-wrapper .contacts-wrapper {
   word-spacing: -0.43em;
   white-space: nowrap;
 }
-.nav--block > li, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks > li, .program-icons > li {
+.nav--block > li, .top-wrapper .top .top-links-wrapper .weektext .quicklinks > li,
+.top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks > li, .program-icons > li {
   letter-spacing: normal;
   word-spacing: normal;
 }
-.nav--block > li > a, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks > li > a, .program-icons > li > a {
+.nav--block > li > a, .top-wrapper .top .top-links-wrapper .weektext .quicklinks > li > a,
+.top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks > li > a, .program-icons > li > a {
   padding: 12px;
 }
 
@@ -3029,7 +3036,8 @@ article .block-wrapper .contacts-wrapper {
   margin-right: 0 !important;
 }
 
-.flush--bottom, .contacts-wrapper h2, .footer-div .footer-container h2, .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks, .firstpage-menu-wrapper .firstpage-menu, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2, .search-wrapper,
+.flush--bottom, .contacts-wrapper h2, .footer-div .footer-container h2, .top-wrapper .top .top-links-wrapper .weektext .quicklinks,
+.top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks, .firstpage-menu-wrapper .firstpage-menu, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2, .search-wrapper,
 .pre-footer-search, .program-icons, .related-wrapper h2 {
   margin-bottom: 0 !important;
 }
@@ -3215,7 +3223,9 @@ article .block-wrapper .contacts-wrapper {
 
 @media only screen and (max-width: 680px) {
   .accessibility--palm,
-  .visuallyhidden--palm {
+  .visuallyhidden--palm,
+  .top-wrapper .top .top-links-wrapper .weektext,
+  .top-navigation-wrapper .top-navigation .top-search-form {
     border: 0 !important;
     clip: rect(0 0 0 0) !important;
     height: 1px !important;
@@ -3228,7 +3238,8 @@ article .block-wrapper .contacts-wrapper {
 }
 @media only screen and (min-width: 681px) and (max-width: 1147px) {
   .accessibility--lap,
-  .visuallyhidden--lap {
+  .visuallyhidden--lap,
+  .top-navigation-wrapper .top-navigation .top-search-button {
     border: 0 !important;
     clip: rect(0 0 0 0) !important;
     height: 1px !important;
@@ -3267,7 +3278,8 @@ article .block-wrapper .contacts-wrapper {
 }
 @media only screen and (min-width: 1148px) {
   .accessibility--desk,
-  .visuallyhidden--desk {
+  .visuallyhidden--desk,
+  .top-navigation-wrapper .top-navigation .top-search-button {
     border: 0 !important;
     clip: rect(0 0 0 0) !important;
     height: 1px !important;
@@ -3486,10 +3498,10 @@ article .block-wrapper .contacts-wrapper {
   background-color: #f0f0f0;
 }
 
-.gray-light-text {
+.gray-light-text, .top-navigation-wrapper .top-navigation .top-search-form #searchsubmit {
   color: #f0f0f0;
 }
-.gray-light-text a {
+.gray-light-text a, .top-navigation-wrapper .top-navigation .top-search-form #searchsubmit a {
   color: #f0f0f0;
 }
 
@@ -3505,10 +3517,10 @@ article .block-wrapper .contacts-wrapper {
   background-color: #3a3737;
 }
 
-.gray-dark-text, .search-wrapper input {
+.gray-dark-text, .top-navigation-wrapper .top-navigation .top-search-form #s, .search-wrapper input {
   color: #3a3737;
 }
-.gray-dark-text a, .search-wrapper input a {
+.gray-dark-text a, .top-navigation-wrapper .top-navigation .top-search-form #s a, .search-wrapper input a {
   color: #3a3737;
 }
 
@@ -3585,7 +3597,7 @@ article .block-wrapper .contacts-wrapper {
 .italic, .contacts-wrapper h2, h1,
 .header,
 .content-wrapper .author h2,
-.single-hugy_kontakt .content-wrapper .contact h2, .footer-div .footer-container h2, .main-menu-wrapper .menu-head, .filter.tool, .search-wrapper input,
+.single-hugy_kontakt .content-wrapper .contact h2, .footer-div .footer-container h2, .top-wrapper .top .top-links-wrapper .weektext, .top-navigation-wrapper .top-navigation .top-search-form #s, .top-navigation-wrapper .top-navigation .top-search-form #searchsubmit, .main-menu-wrapper .menu-head, .filter.tool, .search-wrapper input,
 .pre-footer-search input, .related-wrapper h2 {
   font-family: Georgia;
   font-style: italic;
@@ -3733,7 +3745,7 @@ a:hover {
   text-decoration: underline;
 }
 
-.hidden, .contacts-wrapper .contactlist .contact .contact-data, .main-menu .main-menu-wrapper, .module-wrapper.facebook-module-wrapper .fb-page-name, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-3, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-4, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-5, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-6, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-7, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-8, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-9 {
+.hidden, .contacts-wrapper .contactlist .contact .contact-data, .top-navigation-wrapper .top-navigation .top-search-form .screen-reader-text, .main-menu .main-menu-wrapper, .module-wrapper.facebook-module-wrapper .fb-page-name, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-3, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-4, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-5, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-6, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-7, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-8, .module-wrapper.facebook-module-wrapper .fb-feed-item.fb-item-9 {
   display: none;
 }
 
@@ -3918,13 +3930,16 @@ article.page .slideshow-wrapper:after {
   display: inline-block;
   float: right;
 }
+.top-wrapper .top .top-links-wrapper .weektext,
 .top-wrapper .top .top-links-wrapper .quicklinks-wrapper {
   text-align: right;
   overflow: hidden;
 }
+.top-wrapper .top .top-links-wrapper .weektext .quicklinks > li > a,
 .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks > li > a {
   padding: 0;
 }
+.top-wrapper .top .top-links-wrapper .weektext .quicklinks img,
 .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks img {
   max-height: 24px;
 }
@@ -3951,6 +3966,7 @@ article.page .slideshow-wrapper:after {
 }
 .top-navigation-wrapper .top-navigation .top-menu-button,
 .top-navigation-wrapper .top-navigation .top-search-button,
+.top-navigation-wrapper .top-navigation .top-search-form,
 .top-navigation-wrapper .top-navigation .breadcrumb {
   padding: 6px;
   display: inline-block;
@@ -3962,6 +3978,26 @@ article.page .slideshow-wrapper:after {
   position: absolute;
   right: 0;
   top: 0;
+}
+.top-navigation-wrapper .top-navigation .top-search-form {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.top-navigation-wrapper .top-navigation .top-search-form form, .top-navigation-wrapper .top-navigation .top-search-form div, .top-navigation-wrapper .top-navigation .top-search-form input {
+  display: inline-block;
+}
+.top-navigation-wrapper .top-navigation .top-search-form input:focus {
+  outline: none;
+}
+.top-navigation-wrapper .top-navigation .top-search-form #s {
+  border-radius: 12px;
+  border: 0;
+  padding-left: 6px;
+}
+.top-navigation-wrapper .top-navigation .top-search-form #searchsubmit {
+  background: transparent;
+  border: 0;
 }
 
 @media only screen and (max-width: 680px) {
@@ -4801,7 +4837,7 @@ article.page .content-wrapper {
 .search-wrapper input,
 .pre-footer-search input {
   border: 0;
-  border-radius: 6px;
+  border-radius: 30px;
 }
 .search-wrapper input:focus,
 .pre-footer-search input:focus {

@@ -694,5 +694,16 @@
 			}
 			return;
 		}
+		
+		
+		/*
+		 * Return text with todays date and week
+		 */
+		function get_todaysdate_text() {
+			$retValue = '<div class="weektext">';
+			$retValue .= date('\v\. W\, j F');
+			$retValue .= '</div>';
+			return $retValue;
+		}
 	}
  ?>
