@@ -523,7 +523,7 @@ jQuery(document).ready(function($) {
 		filter = $("#filter").val().toLowerCase();
 		$(".contactlist .contact").show();
 		if (typ != 'alla')
-			$(".contactlist .contact > .typ_av_kontakt:not(:containsi('"+typ+"'))").parent().hide();
+			$(".contactlist .typ_av_kontakt:not(:containsi('"+typ+"'))").parents(".contact").hide();
 		if (filter != '')
 			$(".contactlist .contact:not(:containsi('"+filter+"'))").hide();
 	}
@@ -610,6 +610,11 @@ jQuery(document).ready(function($) {
 			width: width,
 			height: height,
 			effect: {
+				slide: {
+					// Slide effect settings.
+					speed: 1000
+					  // [number] Speed in milliseconds of the slide animation.
+				},
 				fade: {
 					speed: 2000,
 					  // [number] Speed in milliseconds of the fade animation.
@@ -620,8 +625,8 @@ jQuery(document).ready(function($) {
 			play: {
 				active: true,	// [boolean] Generate the play and stop buttons.
 								// You cannot use your own buttons. Sorry.
-				effect: "fade", // [string] Can be either "slide" or "fade".
-				interval: 4000, // [number] Time spent on each slide in milliseconds.
+				effect: "slide", // [string] Can be either "slide" or "fade".
+				interval: 5000, // [number] Time spent on each slide in milliseconds.
 				auto: true, // [boolean] Start playing the slideshow on load.
 				swap: true, // [boolean] show/hide stop and play buttons
 				pauseOnHover: false, // [boolean] pause a playing slideshow on hover
@@ -634,7 +639,7 @@ jQuery(document).ready(function($) {
 				// User defined buttons must have the following:
 				// previous button: class="slidesjs-previous slidesjs-navigation"
 				// next button: class="slidesjs-next slidesjs-navigation"
-				effect: "fade"
+				effect: "slide"
 				// [string] Can be either "slide" or "fade".
 			}
 		});

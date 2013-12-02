@@ -62,6 +62,7 @@ article.page{
 		margin-bottom: 24px;
 		.selected {
 			@extend .green;
+			border: 1px solid $green;
 		}
 	}		
 	input {
@@ -72,6 +73,9 @@ article.page{
 		&:focus {
 			outline: none;
 		}
+	}
+	#filter {
+		border: 1px solid #999;
 	}
 	
 }
