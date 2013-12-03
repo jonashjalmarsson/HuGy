@@ -28,6 +28,7 @@
 /* only on firstpage */
 .slideshow.firstpage {
 	@extend .gray-light;
+	height: 530px;
 	/*background-attachment: fixed;*/
 	background-size: cover;
 	background-repeat: no-repeat no-repeat;
