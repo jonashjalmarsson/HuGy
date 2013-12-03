@@ -144,7 +144,7 @@
 					if (($image_sizes[$size][0] == "9999" || $image_sizes[$size][0] == $image["sizes"][$size."-width"] )
 					 && ($image_sizes[$size][1] == "9999" || $image_sizes[$size][1] == $image["sizes"][$size."-height"])) {
 						$url = $image["sizes"][$size];
-						$retValue .= "<div class='slide-wrapper'><img src='" . $url ."' alt='" . $image['alt'] . "' />";
+						$retValue .= "<div class='slide-item slide-wrapper'><img src='" . $url ."' alt='" . $image['alt'] . "' />";
 						if ($image['alt'] != '')
 							$retValue .= "<div class='caption'>". $image['alt'] . "</div>";
 						$retValue .= "</div>";
@@ -167,7 +167,7 @@
 					if (($image_sizes[$size][0] == "9999" || $image_sizes[$size][0] == $image["sizes"][$size."-width"] )
 					 && ($image_sizes[$size][1] == "9999" || $image_sizes[$size][1] == $image["sizes"][$size."-height"])) {
 						$url = $image["sizes"][$size];
-						$retValue .= "<div><img src='" . $url ."' alt='" . $image['alt'] . "' />";
+						$retValue .= "<div class='slide-item'><img src='" . $url ."' alt='" . $image['alt'] . "' />";
 						if ($image['alt'] != '')
 							$retValue .= "<div class='caption'>". $image['alt'] . "</div>";
 						$retValue .= "</div>";

@@ -50,6 +50,14 @@
 		height: 4000px;
 	}
 }
+
+.slide-item {
+	display: none;
+}
+.slide-item:nth-child(1) {
+	display: inline-block;
+}
+
 article.page{
 	.slideshow-wrapper {
 	
@@ -71,12 +79,6 @@ article.page{
 			}
 		}
 		.slideshow {
-			.slide-wrapper {
-				display: none;
-			}
-			.slide-wrapper:nth-child(1) {
-				display: inline-block;
-			}
 			ul, li, a {
 				content: '';
 				display: inline-block;
