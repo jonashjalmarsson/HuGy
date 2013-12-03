@@ -28,7 +28,7 @@
 /* only on firstpage */
 .slideshow.firstpage {
 	@extend .gray-light;
-	height: 530px;
+
 	/*background-attachment: fixed;*/
 	background-size: cover;
 	background-repeat: no-repeat no-repeat;
@@ -118,9 +118,12 @@ article.page{
 }
 
 
-
-.film_roll_wrapper {
+.filmroll {
+	height: 530px;
 	@extend .gray-dark;
+}
+.film_roll_wrapper {
+	
    display: block;
    text-align: center;
    float: none;

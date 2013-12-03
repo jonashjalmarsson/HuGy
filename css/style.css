@@ -3525,11 +3525,11 @@ article .block-wrapper .contacts-wrapper {
   color: #f0f0f0;
 }
 
-.gray-dark, .copyright, .top-navigation-wrapper, .film_roll_wrapper {
+.gray-dark, .copyright, .top-navigation-wrapper, .filmroll {
   background-color: #3a3737;
   color: white;
 }
-.gray-dark a, .copyright a, .top-navigation-wrapper a, .film_roll_wrapper a {
+.gray-dark a, .copyright a, .top-navigation-wrapper a, .filmroll a {
   color: white;
 }
 
@@ -4947,7 +4947,6 @@ article.page .content-wrapper {
 
 /* only on firstpage */
 .slideshow.firstpage {
-  height: 530px;
   /*background-attachment: fixed;*/
   background-size: cover;
   background-repeat: no-repeat no-repeat;
@@ -5011,6 +5010,10 @@ article.page .slideshow-wrapper .slideshow .slidesjs-pagination {
   position: absolute;
   bottom: -32px;
   left: 20px;
+}
+
+.filmroll {
+  height: 530px;
 }
 
 .film_roll_wrapper {
