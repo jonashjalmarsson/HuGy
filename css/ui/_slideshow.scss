@@ -160,6 +160,8 @@ article.page{
 .slide-wrapper .caption,
 .active .caption {
 	@extend .gray-light;
+	@extend .italic;
+	@extend .zeta;
 	border-radius: 20px;
 	display: block;
 	line-height: 16px;

@@ -1059,7 +1059,8 @@ h5, .epsilon, .main-menu-wrapper, .module-wrapper.facebook-module-wrapper .fb-fe
 }
 
 h6, .zeta, .up-icon span, .top-wrapper .top .top-links-wrapper .weektext, article .columntext, .author,
-.time {
+.time, .slide-wrapper .caption,
+.active .caption {
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.71429;
@@ -3617,7 +3618,8 @@ article .block-wrapper .contacts-wrapper {
 .header,
 .content-wrapper .author h2,
 .single-hugy_kontakt .content-wrapper .contact h2, .footer-div .footer-container h2, .top-wrapper .top .top-links-wrapper .weektext, .top-navigation-wrapper .top-navigation .top-search-form #s, .top-navigation-wrapper .top-navigation .top-search-form #searchsubmit, .main-menu-wrapper .menu-head, .filter.tool, .search-wrapper input,
-.pre-footer-search input, .related-wrapper h2 {
+.pre-footer-search input, .slide-wrapper .caption,
+.active .caption, .related-wrapper h2 {
   font-family: Georgia;
   font-style: italic;
   font-weight: normal;

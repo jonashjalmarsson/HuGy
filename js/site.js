@@ -879,7 +879,7 @@ jQuery(document).ready(function($) {
         });
       }
       $(window).bind("resize", function() {
-        //return _this.update();
+        return _this.update();
       });
       this._setActive();
       if (this.options.play.auto) {
