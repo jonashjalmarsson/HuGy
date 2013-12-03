@@ -1059,7 +1059,7 @@ h5, .epsilon, .main-menu-wrapper, .module-wrapper.facebook-module-wrapper .fb-fe
 }
 
 h6, .zeta, .up-icon span, .top-wrapper .top .top-links-wrapper .weektext, article .columntext, .author,
-time.time {
+.time {
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.71429;
@@ -4066,7 +4066,7 @@ article.page .slideshow-wrapper:after {
 }
 .teaser-wrapper .teaser-content {
   position: relative;
-  height: 630px;
+  height: 530px;
 }
 .teaser-wrapper .teaser-content .teaser {
   cursor: pointer;
@@ -4606,12 +4606,28 @@ article.page .slideshow-wrapper:after {
   float: left;
   widht: 180px;
 }
+.ie7 .filter.tool,
+.ie7 .filter.toggle,
+.ie7 .top-search-button .search-icon, .ie8 .filter.tool,
+.ie8 .filter.toggle,
+.ie8 .top-search-button .search-icon {
+  display: none;
+}
 .ie7 .breadcrumb, .ie8 .breadcrumb {
   float: left;
+}
+.ie7 .nyheter-module-wrapper, .ie8 .nyheter-module-wrapper {
+  height: 400px;
 }
 .ie7 .module-wrapper .module .items .item, .ie8 .module-wrapper .module .items .item {
   float: left;
   width: 342.66667px;
+}
+.ie7 .fb-load-button, .ie8 .fb-load-button {
+  background: white;
+}
+.ie7 .contacts, .ie8 .contacts {
+  background: #f0f0f0;
 }
 .ie7 .main-menu-wrapper .menu > li, .ie8 .main-menu-wrapper .menu > li {
   float: left;
@@ -4630,6 +4646,10 @@ article.page .slideshow-wrapper:after {
 }
 .ie7 .pre-footer-search .search-icon, .ie8 .pre-footer-search .search-icon {
   display: none;
+}
+.ie7 .pre-footer-search form, .ie8 .pre-footer-search form {
+  margin-top: 24px;
+  width: 100%;
 }
 .ie7 .footer-1-container .widget, .ie8 .footer-1-container .widget {
   float: left;
@@ -4779,14 +4799,14 @@ article .columntext {
 }
 
 .author,
-time.time {
+.time {
   margin-top: -28px;
   display: block;
   padding-bottom: 28px;
 }
 .author, .author a,
-time.time,
-time.time a {
+.time,
+.time a {
   color: #999;
 }
 

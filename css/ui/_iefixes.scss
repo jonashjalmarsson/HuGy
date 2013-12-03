@@ -10,14 +10,27 @@
 		float: left;
 		widht: 180px;
 	}
+	.filter.tool, 
+	.filter.toggle, 
+	.top-search-button .search-icon {
+		display: none;
+	}
 	.breadcrumb {
 		float: left;
+	}
+	.nyheter-module-wrapper {
+		height: 400px;
 	}
 	.module-wrapper .module .items .item {
 		float: left;
 		width: (($max-width - 24 * 3)/3);
 	}
-
+	.fb-load-button {
+		background: white;
+	}
+	.contacts {
+		background: rgb(240, 240, 240);
+	}
 	.main-menu-wrapper {	
 		.menu {
 			& > li {
@@ -49,20 +62,25 @@
 		.search-icon {
 			display: none;
 		}
+		form {
+			margin-top: 24px;
+			width: 100%;
+		}
+		
 	}
-		.footer-1-container {
-			.widget {
-				float:left;
-				width: 475px;
-				margin: 24px;
-			}
+	.footer-1-container {
+		.widget {
+			float:left;
+			width: 475px;
+			margin: 24px;
 		}
-		.footer-2-container {
-			.widget {
-				float:left;
-				width: 1100px;
-				margin: 24px;
-			}
+	}
+	.footer-2-container {
+		.widget {
+			float:left;
+			width: 1100px;
+			margin: 24px;
 		}
+	}
 		
 }
