@@ -92,6 +92,7 @@ article.page{
 			.slidesjs-next {
 			}
 			.slidesjs-pagination {
+				@extend .visuallyhidden--palm;
 				margin: 0;
 				position: absolute;
 				bottom: -32px;

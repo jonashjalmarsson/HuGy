@@ -13,16 +13,17 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-}
-.teaser-content {
-	@extend .max-width--center;
-	position: relative;
-}
-.teaser {
-	cursor: pointer;
-	opacity: 0.8;
-	position: absolute;
-	z-index: 100;
+	.teaser-content {
+		@extend .max-width--center;
+		position: relative;
+		height: 530px;
+		.teaser {
+			cursor: pointer;
+			opacity: 0.8;
+			position: absolute;
+			z-index: 100;
+		}
+	}
 }
 
 .firstpage-menu-wrapper {

@@ -3241,7 +3241,8 @@ article .block-wrapper .contacts-wrapper {
   .accessibility--palm,
   .visuallyhidden--palm,
   .top-wrapper .top .top-links-wrapper .weektext,
-  .top-navigation-wrapper .top-navigation .top-search-form {
+  .top-navigation-wrapper .top-navigation .top-search-form,
+  article.page .slideshow-wrapper .slideshow .slidesjs-pagination {
     border: 0 !important;
     clip: rect(0 0 0 0) !important;
     height: 1px !important;
@@ -3772,13 +3773,13 @@ a:hover {
   display: none !important;
 }
 
-.max-width--center, .footer-div, .top-wrapper .top, .top-navigation-wrapper .top-navigation, .teaser-content, .firstpage-menu-wrapper .firstpage-menu, .main-menu-wrapper, .module-wrapper .module, article.page {
+.max-width--center, .footer-div, .top-wrapper .top, .top-navigation-wrapper .top-navigation, .teaser-wrapper .teaser-content, .firstpage-menu-wrapper .firstpage-menu, .main-menu-wrapper, .module-wrapper .module, article.page {
   max-width: 1100px;
   margin: 0 auto;
 }
 
 @media only screen and (max-width: 1147px) {
-  .max-width--center, .footer-div, .top-wrapper .top, .top-navigation-wrapper .top-navigation, .teaser-content, .firstpage-menu-wrapper .firstpage-menu, .main-menu-wrapper, .module-wrapper .module, article.page {
+  .max-width--center, .footer-div, .top-wrapper .top, .top-navigation-wrapper .top-navigation, .teaser-wrapper .teaser-content, .firstpage-menu-wrapper .firstpage-menu, .main-menu-wrapper, .module-wrapper .module, article.page {
     margin-left: 12px;
     margin-right: 12px;
   }
@@ -4063,12 +4064,11 @@ article.page .slideshow-wrapper:after {
   top: 0;
   left: 0;
 }
-
-.teaser-content {
+.teaser-wrapper .teaser-content {
   position: relative;
+  height: 630px;
 }
-
-.teaser {
+.teaser-wrapper .teaser-content .teaser {
   cursor: pointer;
   opacity: 0.8;
   position: absolute;
@@ -4596,7 +4596,7 @@ article.page .slideshow-wrapper:after {
   background-position: -1440px -80px;
 }
 
-.ie7 .max-width--center, .ie7 .footer-div, .ie7 .top-wrapper .top, .top-wrapper .ie7 .top, .ie7 .top-navigation-wrapper .top-navigation, .top-navigation-wrapper .ie7 .top-navigation, .ie7 .teaser-content, .ie7 .firstpage-menu-wrapper .firstpage-menu, .firstpage-menu-wrapper .ie7 .firstpage-menu, .ie7 .main-menu-wrapper, .ie7 .module-wrapper .module, .module-wrapper .ie7 .module, .ie7 article.page, .ie8 .max-width--center, .ie8 .footer-div, .ie8 .top-wrapper .top, .top-wrapper .ie8 .top, .ie8 .top-navigation-wrapper .top-navigation, .top-navigation-wrapper .ie8 .top-navigation, .ie8 .teaser-content, .ie8 .firstpage-menu-wrapper .firstpage-menu, .firstpage-menu-wrapper .ie8 .firstpage-menu, .ie8 .main-menu-wrapper, .ie8 .module-wrapper .module, .module-wrapper .ie8 .module, .ie8 article.page {
+.ie7 .max-width--center, .ie7 .footer-div, .ie7 .top-wrapper .top, .top-wrapper .ie7 .top, .ie7 .top-navigation-wrapper .top-navigation, .top-navigation-wrapper .ie7 .top-navigation, .ie7 .teaser-wrapper .teaser-content, .teaser-wrapper .ie7 .teaser-content, .ie7 .firstpage-menu-wrapper .firstpage-menu, .firstpage-menu-wrapper .ie7 .firstpage-menu, .ie7 .main-menu-wrapper, .ie7 .module-wrapper .module, .module-wrapper .ie7 .module, .ie7 article.page, .ie8 .max-width--center, .ie8 .footer-div, .ie8 .top-wrapper .top, .top-wrapper .ie8 .top, .ie8 .top-navigation-wrapper .top-navigation, .top-navigation-wrapper .ie8 .top-navigation, .ie8 .teaser-wrapper .teaser-content, .teaser-wrapper .ie8 .teaser-content, .ie8 .firstpage-menu-wrapper .firstpage-menu, .firstpage-menu-wrapper .ie8 .firstpage-menu, .ie8 .main-menu-wrapper, .ie8 .module-wrapper .module, .module-wrapper .ie8 .module, .ie8 article.page {
   width: 1100px;
 }
 .ie7 .small-max-width--center, .ie7 .module-wrapper.facebook-module-wrapper .module, .module-wrapper.facebook-module-wrapper .ie7 .module, .ie7 article.page .content-wrapper, article.page .ie7 .content-wrapper, .ie8 .small-max-width--center, .ie8 .module-wrapper.facebook-module-wrapper .module, .module-wrapper.facebook-module-wrapper .ie8 .module, .ie8 article.page .content-wrapper, article.page .ie8 .content-wrapper {

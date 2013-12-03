@@ -616,7 +616,6 @@ jQuery(document).ready(function($) {
 			animation: 2000,
 			pager: false,
 			scroll: true,
-
 		});
 	   
 	   //setSizes();
