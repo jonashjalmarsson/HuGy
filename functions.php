@@ -31,7 +31,7 @@
 	if ( function_exists( 'add_image_size' ) ) { 
 		$image_sizes = array();
 		$image_sizes["news"] = array("375","210",true);
-		$image_sizes["program"] = array("200","9999",false);
+		$image_sizes["program"] = array("150","9999",false);
 		$image_sizes["slideshow"] = array("1100","400",true);
 		$image_sizes["firstpage"] = array("9999","518",false);
 		
