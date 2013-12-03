@@ -48,7 +48,11 @@ article.page {
 	}
 }
 
-
+@include media-query(palm) {
+	.gallery-item {
+		width: 100%!important;
+	}
+}
 /* schema page */
 .page-template-page-hugy-schema-php .tool {
 	padding-left: 12px;

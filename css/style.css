@@ -4818,6 +4818,11 @@ article.page .content-wrapper {
   margin-bottom: 24px;
 }
 
+@media only screen and (max-width: 680px) {
+  .gallery-item {
+    width: 100% !important;
+  }
+}
 /* schema page */
 .page-template-page-hugy-schema-php .tool {
   padding-left: 12px;
