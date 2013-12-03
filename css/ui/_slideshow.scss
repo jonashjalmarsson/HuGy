@@ -52,6 +52,7 @@
 }
 article.page{
 	.slideshow-wrapper {
+	
 		@extend .drop-shadow;
 		position: relative;
 		.picto {
@@ -70,7 +71,12 @@ article.page{
 			}
 		}
 		.slideshow {
-			
+			.slide-wrapper {
+				display: none;
+			}
+			.slide-wrapper:nth-child(1) {
+				display: inline-block;
+			}
 			ul, li, a {
 				content: '';
 				display: inline-block;
