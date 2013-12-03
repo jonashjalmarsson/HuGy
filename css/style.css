@@ -823,6 +823,7 @@ textarea:focus {
 .module-wrapper.nyheter-module-wrapper .items .item .item-content h2:after,
 .module-wrapper.facebook-module-wrapper .fb-feed-item:after,
 .module-wrapper.facebook-module-wrapper .fb-load-button:after,
+article .columntext:after,
 .related-wrapper .related:after, .module-wrapper.facebook-module-wrapper .fb-feed-item .item-content:after, .module-wrapper.facebook-module-wrapper .fb-feed-item blockquote:after {
   content: "";
   display: table;
@@ -860,33 +861,37 @@ article.page,
 .module-wrapper.nyheter-module-wrapper .items .item .item-content h2,
 .module-wrapper.facebook-module-wrapper .fb-feed-item,
 .module-wrapper.facebook-module-wrapper .fb-load-button,
+article .columntext,
 .related-wrapper .related {
   margin-bottom: 24px;
   margin-bottom: 1.5rem;
 }
-.islet h1, .contacts-wrapper .contacts h1, .contacts-wrapper .contacts .contact .contact-data h1, .firstpage-menu-wrapper .firstpage-menu h1, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 h1, .module-wrapper.facebook-module-wrapper .fb-feed-item h1, .module-wrapper.facebook-module-wrapper .fb-load-button h1, .related-wrapper .related h1, .islet h2, .contacts-wrapper .contacts h2, .contacts-wrapper .contacts .contact .contact-data h2, .firstpage-menu-wrapper .firstpage-menu h2, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 h2, .module-wrapper.facebook-module-wrapper .fb-feed-item h2, .module-wrapper.facebook-module-wrapper .fb-load-button h2, .related-wrapper .related h2, .islet h3, .contacts-wrapper .contacts h3, .contacts-wrapper .contacts .contact .contact-data h3, .firstpage-menu-wrapper .firstpage-menu h3, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 h3, .module-wrapper.facebook-module-wrapper .fb-feed-item h3, .module-wrapper.facebook-module-wrapper .fb-load-button h3, .related-wrapper .related h3, .islet h4, .contacts-wrapper .contacts h4, .contacts-wrapper .contacts .contact .contact-data h4, .firstpage-menu-wrapper .firstpage-menu h4, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 h4, .module-wrapper.facebook-module-wrapper .fb-feed-item h4, .module-wrapper.facebook-module-wrapper .fb-load-button h4, .related-wrapper .related h4, .islet h5, .contacts-wrapper .contacts h5, .contacts-wrapper .contacts .contact .contact-data h5, .firstpage-menu-wrapper .firstpage-menu h5, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 h5, .module-wrapper.facebook-module-wrapper .fb-feed-item h5, .module-wrapper.facebook-module-wrapper .fb-load-button h5, .related-wrapper .related h5, .islet h6, .contacts-wrapper .contacts h6, .contacts-wrapper .contacts .contact .contact-data h6, .firstpage-menu-wrapper .firstpage-menu h6, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 h6, .module-wrapper.facebook-module-wrapper .fb-feed-item h6, .module-wrapper.facebook-module-wrapper .fb-load-button h6, .related-wrapper .related h6, .islet hgroup, .contacts-wrapper .contacts hgroup, .contacts-wrapper .contacts .contact .contact-data hgroup, .firstpage-menu-wrapper .firstpage-menu hgroup, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 hgroup, .module-wrapper.facebook-module-wrapper .fb-feed-item hgroup, .module-wrapper.facebook-module-wrapper .fb-load-button hgroup, .related-wrapper .related hgroup, .islet
+.islet h1, .contacts-wrapper .contacts h1, .contacts-wrapper .contacts .contact .contact-data h1, .firstpage-menu-wrapper .firstpage-menu h1, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 h1, .module-wrapper.facebook-module-wrapper .fb-feed-item h1, .module-wrapper.facebook-module-wrapper .fb-load-button h1, article .columntext h1, .related-wrapper .related h1, .islet h2, .contacts-wrapper .contacts h2, .contacts-wrapper .contacts .contact .contact-data h2, .firstpage-menu-wrapper .firstpage-menu h2, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 h2, .module-wrapper.facebook-module-wrapper .fb-feed-item h2, .module-wrapper.facebook-module-wrapper .fb-load-button h2, article .columntext h2, .related-wrapper .related h2, .islet h3, .contacts-wrapper .contacts h3, .contacts-wrapper .contacts .contact .contact-data h3, .firstpage-menu-wrapper .firstpage-menu h3, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 h3, .module-wrapper.facebook-module-wrapper .fb-feed-item h3, .module-wrapper.facebook-module-wrapper .fb-load-button h3, article .columntext h3, .related-wrapper .related h3, .islet h4, .contacts-wrapper .contacts h4, .contacts-wrapper .contacts .contact .contact-data h4, .firstpage-menu-wrapper .firstpage-menu h4, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 h4, .module-wrapper.facebook-module-wrapper .fb-feed-item h4, .module-wrapper.facebook-module-wrapper .fb-load-button h4, article .columntext h4, .related-wrapper .related h4, .islet h5, .contacts-wrapper .contacts h5, .contacts-wrapper .contacts .contact .contact-data h5, .firstpage-menu-wrapper .firstpage-menu h5, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 h5, .module-wrapper.facebook-module-wrapper .fb-feed-item h5, .module-wrapper.facebook-module-wrapper .fb-load-button h5, article .columntext h5, .related-wrapper .related h5, .islet h6, .contacts-wrapper .contacts h6, .contacts-wrapper .contacts .contact .contact-data h6, .firstpage-menu-wrapper .firstpage-menu h6, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 h6, .module-wrapper.facebook-module-wrapper .fb-feed-item h6, .module-wrapper.facebook-module-wrapper .fb-load-button h6, article .columntext h6, .related-wrapper .related h6, .islet hgroup, .contacts-wrapper .contacts hgroup, .contacts-wrapper .contacts .contact .contact-data hgroup, .firstpage-menu-wrapper .firstpage-menu hgroup, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 hgroup, .module-wrapper.facebook-module-wrapper .fb-feed-item hgroup, .module-wrapper.facebook-module-wrapper .fb-load-button hgroup, article .columntext hgroup, .related-wrapper .related hgroup, .islet
 ul, .contacts-wrapper .contacts
 ul, .contacts-wrapper .contacts .contact .contact-data
 ul, .firstpage-menu-wrapper .firstpage-menu
 ul, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2
 ul, .module-wrapper.facebook-module-wrapper .fb-feed-item
 ul, .module-wrapper.facebook-module-wrapper .fb-load-button
+ul, article .columntext
 ul, .related-wrapper .related
-ul, .islet ol, .contacts-wrapper .contacts ol, .contacts-wrapper .contacts .contact .contact-data ol, .firstpage-menu-wrapper .firstpage-menu ol, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 ol, .module-wrapper.facebook-module-wrapper .fb-feed-item ol, .module-wrapper.facebook-module-wrapper .fb-load-button ol, .related-wrapper .related ol, .islet dl, .contacts-wrapper .contacts dl, .contacts-wrapper .contacts .contact .contact-data dl, .firstpage-menu-wrapper .firstpage-menu dl, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 dl, .module-wrapper.facebook-module-wrapper .fb-feed-item dl, .module-wrapper.facebook-module-wrapper .fb-load-button dl, .related-wrapper .related dl, .islet
+ul, .islet ol, .contacts-wrapper .contacts ol, .contacts-wrapper .contacts .contact .contact-data ol, .firstpage-menu-wrapper .firstpage-menu ol, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 ol, .module-wrapper.facebook-module-wrapper .fb-feed-item ol, .module-wrapper.facebook-module-wrapper .fb-load-button ol, article .columntext ol, .related-wrapper .related ol, .islet dl, .contacts-wrapper .contacts dl, .contacts-wrapper .contacts .contact .contact-data dl, .firstpage-menu-wrapper .firstpage-menu dl, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 dl, .module-wrapper.facebook-module-wrapper .fb-feed-item dl, .module-wrapper.facebook-module-wrapper .fb-load-button dl, article .columntext dl, .related-wrapper .related dl, .islet
 blockquote, .contacts-wrapper .contacts
 blockquote, .contacts-wrapper .contacts .contact .contact-data
 blockquote, .firstpage-menu-wrapper .firstpage-menu
 blockquote, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2
 blockquote, .module-wrapper.facebook-module-wrapper .fb-feed-item
 blockquote, .module-wrapper.facebook-module-wrapper .fb-load-button
+blockquote, article .columntext
 blockquote, .related-wrapper .related
-blockquote, .islet p, .contacts-wrapper .contacts p, .contacts-wrapper .contacts .contact .contact-data p, .firstpage-menu-wrapper .firstpage-menu p, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 p, .module-wrapper.facebook-module-wrapper .fb-feed-item p, .module-wrapper.facebook-module-wrapper .fb-load-button p, .related-wrapper .related p, .islet address, .contacts-wrapper .contacts address, .contacts-wrapper .contacts .contact .contact-data address, .firstpage-menu-wrapper .firstpage-menu address, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 address, .module-wrapper.facebook-module-wrapper .fb-feed-item address, .module-wrapper.facebook-module-wrapper .fb-load-button address, .related-wrapper .related address, .islet
+blockquote, .islet p, .contacts-wrapper .contacts p, .contacts-wrapper .contacts .contact .contact-data p, .firstpage-menu-wrapper .firstpage-menu p, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 p, .module-wrapper.facebook-module-wrapper .fb-feed-item p, .module-wrapper.facebook-module-wrapper .fb-load-button p, article .columntext p, .related-wrapper .related p, .islet address, .contacts-wrapper .contacts address, .contacts-wrapper .contacts .contact .contact-data address, .firstpage-menu-wrapper .firstpage-menu address, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 address, .module-wrapper.facebook-module-wrapper .fb-feed-item address, .module-wrapper.facebook-module-wrapper .fb-load-button address, article .columntext address, .related-wrapper .related address, .islet
 table, .contacts-wrapper .contacts
 table, .contacts-wrapper .contacts .contact .contact-data
 table, .firstpage-menu-wrapper .firstpage-menu
 table, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2
 table, .module-wrapper.facebook-module-wrapper .fb-feed-item
 table, .module-wrapper.facebook-module-wrapper .fb-load-button
+table, article .columntext
 table, .related-wrapper .related
 table, .islet
 fieldset, .contacts-wrapper .contacts
@@ -895,22 +900,25 @@ fieldset, .firstpage-menu-wrapper .firstpage-menu
 fieldset, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2
 fieldset, .module-wrapper.facebook-module-wrapper .fb-feed-item
 fieldset, .module-wrapper.facebook-module-wrapper .fb-load-button
+fieldset, article .columntext
 fieldset, .related-wrapper .related
-fieldset, .islet figure, .contacts-wrapper .contacts figure, .contacts-wrapper .contacts .contact .contact-data figure, .firstpage-menu-wrapper .firstpage-menu figure, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 figure, .module-wrapper.facebook-module-wrapper .fb-feed-item figure, .module-wrapper.facebook-module-wrapper .fb-load-button figure, .related-wrapper .related figure, .islet
+fieldset, .islet figure, .contacts-wrapper .contacts figure, .contacts-wrapper .contacts .contact .contact-data figure, .firstpage-menu-wrapper .firstpage-menu figure, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 figure, .module-wrapper.facebook-module-wrapper .fb-feed-item figure, .module-wrapper.facebook-module-wrapper .fb-load-button figure, article .columntext figure, .related-wrapper .related figure, .islet
 pre, .contacts-wrapper .contacts
 pre, .contacts-wrapper .contacts .contact .contact-data
 pre, .firstpage-menu-wrapper .firstpage-menu
 pre, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2
 pre, .module-wrapper.facebook-module-wrapper .fb-feed-item
 pre, .module-wrapper.facebook-module-wrapper .fb-load-button
+pre, article .columntext
 pre, .related-wrapper .related
-pre, .islet .form-fields > li, .contacts-wrapper .contacts .form-fields > li, .firstpage-menu-wrapper .firstpage-menu .form-fields > li, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .form-fields > li, .module-wrapper.facebook-module-wrapper .fb-feed-item .form-fields > li, .module-wrapper.facebook-module-wrapper .fb-load-button .form-fields > li, .related-wrapper .related .form-fields > li, .islet
+pre, .islet .form-fields > li, .contacts-wrapper .contacts .form-fields > li, .firstpage-menu-wrapper .firstpage-menu .form-fields > li, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .form-fields > li, .module-wrapper.facebook-module-wrapper .fb-feed-item .form-fields > li, .module-wrapper.facebook-module-wrapper .fb-load-button .form-fields > li, article .columntext .form-fields > li, .related-wrapper .related .form-fields > li, .islet
 .media, .contacts-wrapper .contacts
 .media, .contacts-wrapper .contacts .contact .contact-data
 .media, .firstpage-menu-wrapper .firstpage-menu
 .media, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2
 .media, .module-wrapper.facebook-module-wrapper .fb-feed-item
 .media, .module-wrapper.facebook-module-wrapper .fb-load-button
+.media, article .columntext
 .media, .related-wrapper .related
 .media, .islet
 .island, .contacts-wrapper .contacts
@@ -919,6 +927,7 @@ pre, .islet .form-fields > li, .contacts-wrapper .contacts .form-fields > li, .f
 .island, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2
 .island, .module-wrapper.facebook-module-wrapper .fb-feed-item
 .island, .module-wrapper.facebook-module-wrapper .fb-load-button
+.island, article .columntext
 .island, .related-wrapper .related
 .island, .islet
 article.page, .contacts-wrapper .contacts
@@ -926,6 +935,7 @@ article.page, .firstpage-menu-wrapper .firstpage-menu
 article.page, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2
 article.page, .module-wrapper.facebook-module-wrapper .fb-feed-item
 article.page, .module-wrapper.facebook-module-wrapper .fb-load-button
+article.page, article .columntext
 article.page, .related-wrapper .related
 article.page, .islet
 .filter.tool, .contacts-wrapper .contacts
@@ -933,6 +943,7 @@ article.page, .islet
 .filter.tool, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2
 .filter.tool, .module-wrapper.facebook-module-wrapper .fb-feed-item
 .filter.tool, .module-wrapper.facebook-module-wrapper .fb-load-button
+.filter.tool, article .columntext
 .filter.tool, .related-wrapper .related
 .filter.tool, .islet
 .search-wrapper, .contacts-wrapper .contacts
@@ -940,6 +951,7 @@ article.page, .islet
 .search-wrapper, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2
 .search-wrapper, .module-wrapper.facebook-module-wrapper .fb-feed-item
 .search-wrapper, .module-wrapper.facebook-module-wrapper .fb-load-button
+.search-wrapper, article .columntext
 .search-wrapper, .related-wrapper .related
 .search-wrapper,
 .islet .pre-footer-search,
@@ -948,6 +960,7 @@ article.page, .islet
 .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .pre-footer-search,
 .module-wrapper.facebook-module-wrapper .fb-feed-item .pre-footer-search,
 .module-wrapper.facebook-module-wrapper .fb-load-button .pre-footer-search,
+article .columntext .pre-footer-search,
 .related-wrapper .related .pre-footer-search, .islet
 .islet, .contacts-wrapper .contacts
 .islet, .contacts-wrapper .contacts .contact .contact-data
@@ -955,8 +968,9 @@ article.page, .islet
 .islet, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2
 .islet, .module-wrapper.facebook-module-wrapper .fb-feed-item
 .islet, .module-wrapper.facebook-module-wrapper .fb-load-button
+.islet, article .columntext
 .islet, .related-wrapper .related
-.islet, .islet .contacts-wrapper .contacts, .contacts-wrapper .islet .contacts, .contacts-wrapper .contacts .contacts, .firstpage-menu-wrapper .firstpage-menu .contacts-wrapper .contacts, .contacts-wrapper .firstpage-menu-wrapper .firstpage-menu .contacts, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .contacts-wrapper .contacts, .contacts-wrapper .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .contacts, .module-wrapper.facebook-module-wrapper .fb-feed-item .contacts-wrapper .contacts, .contacts-wrapper .module-wrapper.facebook-module-wrapper .fb-feed-item .contacts, .module-wrapper.facebook-module-wrapper .fb-load-button .contacts-wrapper .contacts, .contacts-wrapper .module-wrapper.facebook-module-wrapper .fb-load-button .contacts, .related-wrapper .related .contacts-wrapper .contacts, .contacts-wrapper .related-wrapper .related .contacts, .contacts-wrapper .contacts .contact .contact-data, .islet .firstpage-menu-wrapper .firstpage-menu, .firstpage-menu-wrapper .islet .firstpage-menu, .contacts-wrapper .contacts .firstpage-menu-wrapper .firstpage-menu, .firstpage-menu-wrapper .contacts-wrapper .contacts .firstpage-menu, .firstpage-menu-wrapper .firstpage-menu .firstpage-menu, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .firstpage-menu-wrapper .firstpage-menu, .firstpage-menu-wrapper .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .firstpage-menu, .module-wrapper.facebook-module-wrapper .fb-feed-item .firstpage-menu-wrapper .firstpage-menu, .firstpage-menu-wrapper .module-wrapper.facebook-module-wrapper .fb-feed-item .firstpage-menu, .module-wrapper.facebook-module-wrapper .fb-load-button .firstpage-menu-wrapper .firstpage-menu, .firstpage-menu-wrapper .module-wrapper.facebook-module-wrapper .fb-load-button .firstpage-menu, .related-wrapper .related .firstpage-menu-wrapper .firstpage-menu, .firstpage-menu-wrapper .related-wrapper .related .firstpage-menu, .islet .module-wrapper.nyheter-module-wrapper .items .item .item-content h2, .module-wrapper.nyheter-module-wrapper .items .item .item-content .islet h2, .contacts-wrapper .contacts .module-wrapper.nyheter-module-wrapper .items .item .item-content h2, .module-wrapper.nyheter-module-wrapper .items .item .item-content .contacts-wrapper .contacts h2, .firstpage-menu-wrapper .firstpage-menu .module-wrapper.nyheter-module-wrapper .items .item .item-content h2, .module-wrapper.nyheter-module-wrapper .items .item .item-content .firstpage-menu-wrapper .firstpage-menu h2, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 h2, .module-wrapper.facebook-module-wrapper .fb-feed-item .module-wrapper.nyheter-module-wrapper .items .item .item-content h2, .module-wrapper.nyheter-module-wrapper .items .item .item-content .module-wrapper.facebook-module-wrapper .fb-feed-item h2, .module-wrapper.facebook-module-wrapper .fb-load-button .module-wrapper.nyheter-module-wrapper .items .item .item-content h2, .module-wrapper.nyheter-module-wrapper .items .item .item-content .module-wrapper.facebook-module-wrapper .fb-load-button h2, .related-wrapper .related .module-wrapper.nyheter-module-wrapper .items .item .item-content h2, .module-wrapper.nyheter-module-wrapper .items .item .item-content .related-wrapper .related h2, .islet .module-wrapper.facebook-module-wrapper .fb-feed-item, .module-wrapper.facebook-module-wrapper .islet .fb-feed-item, .contacts-wrapper .contacts .module-wrapper.facebook-module-wrapper .fb-feed-item, .module-wrapper.facebook-module-wrapper .contacts-wrapper .contacts .fb-feed-item, .firstpage-menu-wrapper .firstpage-menu .module-wrapper.facebook-module-wrapper .fb-feed-item, .module-wrapper.facebook-module-wrapper .firstpage-menu-wrapper .firstpage-menu .fb-feed-item, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .module-wrapper.facebook-module-wrapper .fb-feed-item, .module-wrapper.facebook-module-wrapper .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .fb-feed-item, .module-wrapper.facebook-module-wrapper .fb-feed-item .fb-feed-item, .module-wrapper.facebook-module-wrapper .fb-load-button .fb-feed-item, .related-wrapper .related .module-wrapper.facebook-module-wrapper .fb-feed-item, .module-wrapper.facebook-module-wrapper .related-wrapper .related .fb-feed-item, .islet .module-wrapper.facebook-module-wrapper .fb-load-button, .module-wrapper.facebook-module-wrapper .islet .fb-load-button, .contacts-wrapper .contacts .module-wrapper.facebook-module-wrapper .fb-load-button, .module-wrapper.facebook-module-wrapper .contacts-wrapper .contacts .fb-load-button, .firstpage-menu-wrapper .firstpage-menu .module-wrapper.facebook-module-wrapper .fb-load-button, .module-wrapper.facebook-module-wrapper .firstpage-menu-wrapper .firstpage-menu .fb-load-button, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .module-wrapper.facebook-module-wrapper .fb-load-button, .module-wrapper.facebook-module-wrapper .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .fb-load-button, .module-wrapper.facebook-module-wrapper .fb-feed-item .fb-load-button, .module-wrapper.facebook-module-wrapper .fb-load-button .fb-load-button, .related-wrapper .related .module-wrapper.facebook-module-wrapper .fb-load-button, .module-wrapper.facebook-module-wrapper .related-wrapper .related .fb-load-button, .islet .related-wrapper .related, .related-wrapper .islet .related, .contacts-wrapper .contacts .related-wrapper .related, .related-wrapper .contacts-wrapper .contacts .related, .firstpage-menu-wrapper .firstpage-menu .related-wrapper .related, .related-wrapper .firstpage-menu-wrapper .firstpage-menu .related, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .related-wrapper .related, .related-wrapper .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .related, .module-wrapper.facebook-module-wrapper .fb-feed-item .related-wrapper .related, .related-wrapper .module-wrapper.facebook-module-wrapper .fb-feed-item .related, .module-wrapper.facebook-module-wrapper .fb-load-button .related-wrapper .related, .related-wrapper .module-wrapper.facebook-module-wrapper .fb-load-button .related, .related-wrapper .related .related {
+.islet, .islet .contacts-wrapper .contacts, .contacts-wrapper .islet .contacts, .contacts-wrapper .contacts .contacts, .firstpage-menu-wrapper .firstpage-menu .contacts-wrapper .contacts, .contacts-wrapper .firstpage-menu-wrapper .firstpage-menu .contacts, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .contacts-wrapper .contacts, .contacts-wrapper .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .contacts, .module-wrapper.facebook-module-wrapper .fb-feed-item .contacts-wrapper .contacts, .contacts-wrapper .module-wrapper.facebook-module-wrapper .fb-feed-item .contacts, .module-wrapper.facebook-module-wrapper .fb-load-button .contacts-wrapper .contacts, .contacts-wrapper .module-wrapper.facebook-module-wrapper .fb-load-button .contacts, article .columntext .contacts-wrapper .contacts, .contacts-wrapper article .columntext .contacts, .related-wrapper .related .contacts-wrapper .contacts, .contacts-wrapper .related-wrapper .related .contacts, .contacts-wrapper .contacts .contact .contact-data, .islet .firstpage-menu-wrapper .firstpage-menu, .firstpage-menu-wrapper .islet .firstpage-menu, .contacts-wrapper .contacts .firstpage-menu-wrapper .firstpage-menu, .firstpage-menu-wrapper .contacts-wrapper .contacts .firstpage-menu, .firstpage-menu-wrapper .firstpage-menu .firstpage-menu, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .firstpage-menu-wrapper .firstpage-menu, .firstpage-menu-wrapper .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .firstpage-menu, .module-wrapper.facebook-module-wrapper .fb-feed-item .firstpage-menu-wrapper .firstpage-menu, .firstpage-menu-wrapper .module-wrapper.facebook-module-wrapper .fb-feed-item .firstpage-menu, .module-wrapper.facebook-module-wrapper .fb-load-button .firstpage-menu-wrapper .firstpage-menu, .firstpage-menu-wrapper .module-wrapper.facebook-module-wrapper .fb-load-button .firstpage-menu, article .columntext .firstpage-menu-wrapper .firstpage-menu, .firstpage-menu-wrapper article .columntext .firstpage-menu, .related-wrapper .related .firstpage-menu-wrapper .firstpage-menu, .firstpage-menu-wrapper .related-wrapper .related .firstpage-menu, .islet .module-wrapper.nyheter-module-wrapper .items .item .item-content h2, .module-wrapper.nyheter-module-wrapper .items .item .item-content .islet h2, .contacts-wrapper .contacts .module-wrapper.nyheter-module-wrapper .items .item .item-content h2, .module-wrapper.nyheter-module-wrapper .items .item .item-content .contacts-wrapper .contacts h2, .firstpage-menu-wrapper .firstpage-menu .module-wrapper.nyheter-module-wrapper .items .item .item-content h2, .module-wrapper.nyheter-module-wrapper .items .item .item-content .firstpage-menu-wrapper .firstpage-menu h2, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 h2, .module-wrapper.facebook-module-wrapper .fb-feed-item .module-wrapper.nyheter-module-wrapper .items .item .item-content h2, .module-wrapper.nyheter-module-wrapper .items .item .item-content .module-wrapper.facebook-module-wrapper .fb-feed-item h2, .module-wrapper.facebook-module-wrapper .fb-load-button .module-wrapper.nyheter-module-wrapper .items .item .item-content h2, .module-wrapper.nyheter-module-wrapper .items .item .item-content .module-wrapper.facebook-module-wrapper .fb-load-button h2, article .columntext .module-wrapper.nyheter-module-wrapper .items .item .item-content h2, .module-wrapper.nyheter-module-wrapper .items .item .item-content article .columntext h2, .related-wrapper .related .module-wrapper.nyheter-module-wrapper .items .item .item-content h2, .module-wrapper.nyheter-module-wrapper .items .item .item-content .related-wrapper .related h2, .islet .module-wrapper.facebook-module-wrapper .fb-feed-item, .module-wrapper.facebook-module-wrapper .islet .fb-feed-item, .contacts-wrapper .contacts .module-wrapper.facebook-module-wrapper .fb-feed-item, .module-wrapper.facebook-module-wrapper .contacts-wrapper .contacts .fb-feed-item, .firstpage-menu-wrapper .firstpage-menu .module-wrapper.facebook-module-wrapper .fb-feed-item, .module-wrapper.facebook-module-wrapper .firstpage-menu-wrapper .firstpage-menu .fb-feed-item, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .module-wrapper.facebook-module-wrapper .fb-feed-item, .module-wrapper.facebook-module-wrapper .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .fb-feed-item, .module-wrapper.facebook-module-wrapper .fb-feed-item .fb-feed-item, .module-wrapper.facebook-module-wrapper .fb-load-button .fb-feed-item, article .columntext .module-wrapper.facebook-module-wrapper .fb-feed-item, .module-wrapper.facebook-module-wrapper article .columntext .fb-feed-item, .related-wrapper .related .module-wrapper.facebook-module-wrapper .fb-feed-item, .module-wrapper.facebook-module-wrapper .related-wrapper .related .fb-feed-item, .islet .module-wrapper.facebook-module-wrapper .fb-load-button, .module-wrapper.facebook-module-wrapper .islet .fb-load-button, .contacts-wrapper .contacts .module-wrapper.facebook-module-wrapper .fb-load-button, .module-wrapper.facebook-module-wrapper .contacts-wrapper .contacts .fb-load-button, .firstpage-menu-wrapper .firstpage-menu .module-wrapper.facebook-module-wrapper .fb-load-button, .module-wrapper.facebook-module-wrapper .firstpage-menu-wrapper .firstpage-menu .fb-load-button, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .module-wrapper.facebook-module-wrapper .fb-load-button, .module-wrapper.facebook-module-wrapper .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .fb-load-button, .module-wrapper.facebook-module-wrapper .fb-feed-item .fb-load-button, .module-wrapper.facebook-module-wrapper .fb-load-button .fb-load-button, article .columntext .module-wrapper.facebook-module-wrapper .fb-load-button, .module-wrapper.facebook-module-wrapper article .columntext .fb-load-button, .related-wrapper .related .module-wrapper.facebook-module-wrapper .fb-load-button, .module-wrapper.facebook-module-wrapper .related-wrapper .related .fb-load-button, .islet article .columntext, article .islet .columntext, .contacts-wrapper .contacts article .columntext, article .contacts-wrapper .contacts .columntext, .firstpage-menu-wrapper .firstpage-menu article .columntext, article .firstpage-menu-wrapper .firstpage-menu .columntext, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 article .columntext, article .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .columntext, .module-wrapper.facebook-module-wrapper .fb-feed-item article .columntext, article .module-wrapper.facebook-module-wrapper .fb-feed-item .columntext, .module-wrapper.facebook-module-wrapper .fb-load-button article .columntext, article .module-wrapper.facebook-module-wrapper .fb-load-button .columntext, article .columntext .columntext, .related-wrapper .related article .columntext, article .related-wrapper .related .columntext, .islet .related-wrapper .related, .related-wrapper .islet .related, .contacts-wrapper .contacts .related-wrapper .related, .related-wrapper .contacts-wrapper .contacts .related, .firstpage-menu-wrapper .firstpage-menu .related-wrapper .related, .related-wrapper .firstpage-menu-wrapper .firstpage-menu .related, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .related-wrapper .related, .related-wrapper .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .related, .module-wrapper.facebook-module-wrapper .fb-feed-item .related-wrapper .related, .related-wrapper .module-wrapper.facebook-module-wrapper .fb-feed-item .related, .module-wrapper.facebook-module-wrapper .fb-load-button .related-wrapper .related, .related-wrapper .module-wrapper.facebook-module-wrapper .fb-load-button .related, article .columntext .related-wrapper .related, .related-wrapper article .columntext .related, .related-wrapper .related .related {
   margin-bottom: 12px;
   margin-bottom: 0.75rem;
 }
@@ -1044,7 +1058,7 @@ h5, .epsilon, .main-menu-wrapper, .module-wrapper.facebook-module-wrapper .fb-fe
   line-height: 1.5;
 }
 
-h6, .zeta, .up-icon span, .top-wrapper .top .top-links-wrapper .weektext, .author,
+h6, .zeta, .up-icon span, .top-wrapper .top .top-links-wrapper .weektext, article .columntext, .author,
 time.time {
   font-size: 14px;
   font-size: 0.875rem;
@@ -2030,11 +2044,11 @@ article .block-wrapper .contacts-wrapper {
 /**
  * `.img`s in `.islet`s need an appropriately sized margin.
  */
-.islet .media__img, .contacts-wrapper .contacts .media__img, .contacts-wrapper .contacts .contact .contact-data .media__img, .firstpage-menu-wrapper .firstpage-menu .media__img, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .media__img, .module-wrapper.facebook-module-wrapper .fb-feed-item .media__img, .module-wrapper.facebook-module-wrapper .fb-load-button .media__img, .related-wrapper .related .media__img {
+.islet .media__img, .contacts-wrapper .contacts .media__img, .contacts-wrapper .contacts .contact .contact-data .media__img, .firstpage-menu-wrapper .firstpage-menu .media__img, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .media__img, .module-wrapper.facebook-module-wrapper .fb-feed-item .media__img, .module-wrapper.facebook-module-wrapper .fb-load-button .media__img, article .columntext .media__img, .related-wrapper .related .media__img {
   margin-right: 12px;
 }
 
-.islet .media__img--rev, .contacts-wrapper .contacts .media__img--rev, .contacts-wrapper .contacts .contact .contact-data .media__img--rev, .firstpage-menu-wrapper .firstpage-menu .media__img--rev, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .media__img--rev, .module-wrapper.facebook-module-wrapper .fb-feed-item .media__img--rev, .module-wrapper.facebook-module-wrapper .fb-load-button .media__img--rev, .related-wrapper .related .media__img--rev {
+.islet .media__img--rev, .contacts-wrapper .contacts .media__img--rev, .contacts-wrapper .contacts .contact .contact-data .media__img--rev, .firstpage-menu-wrapper .firstpage-menu .media__img--rev, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .media__img--rev, .module-wrapper.facebook-module-wrapper .fb-feed-item .media__img--rev, .module-wrapper.facebook-module-wrapper .fb-load-button .media__img--rev, article .columntext .media__img--rev, .related-wrapper .related .media__img--rev {
   margin-left: 12px;
 }
 
@@ -2061,6 +2075,7 @@ article .block-wrapper .contacts-wrapper {
 .module-wrapper.nyheter-module-wrapper .items .item .item-content h2,
 .module-wrapper.facebook-module-wrapper .fb-feed-item,
 .module-wrapper.facebook-module-wrapper .fb-load-button,
+article .columntext,
 .related-wrapper .related {
   display: block;
 }
@@ -2079,6 +2094,7 @@ article .block-wrapper .contacts-wrapper {
 .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 > :last-child,
 .module-wrapper.facebook-module-wrapper .fb-feed-item > :last-child,
 .module-wrapper.facebook-module-wrapper .fb-load-button > :last-child,
+article .columntext > :last-child,
 .related-wrapper .related > :last-child {
   margin-bottom: 0;
 }
@@ -2086,7 +2102,7 @@ article .block-wrapper .contacts-wrapper {
 /**
  * Just like `.island`, only smaller.
  */
-.islet, .contacts-wrapper .contacts, .contacts-wrapper .contacts .contact .contact-data, .firstpage-menu-wrapper .firstpage-menu, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2, .module-wrapper.facebook-module-wrapper .fb-feed-item, .module-wrapper.facebook-module-wrapper .fb-load-button, .related-wrapper .related {
+.islet, .contacts-wrapper .contacts, .contacts-wrapper .contacts .contact .contact-data, .firstpage-menu-wrapper .firstpage-menu, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2, .module-wrapper.facebook-module-wrapper .fb-feed-item, .module-wrapper.facebook-module-wrapper .fb-load-button, article .columntext, .related-wrapper .related {
   padding: 12px;
 }
 
@@ -2107,8 +2123,8 @@ article .block-wrapper .contacts-wrapper {
 /**
 * Whole
 */
-.one-whole, .copyright, .firstpage-menu-wrapper, .pre-footer,
-.main-menu, .module-wrapper.nyheter-module-wrapper .items .item .item-content, .module-wrapper.facebook-module-wrapper .fb-feed-item .expand-item {
+.one-whole, .copyright, .teaser-wrapper, .firstpage-menu-wrapper, .pre-footer,
+.main-menu, .module-wrapper.nyheter-module-wrapper .items .item .item-content, .module-wrapper.facebook-module-wrapper .fb-feed-item .expand-item, .home .slideshow-wrapper {
   width: 100%;
 }
 
@@ -2248,7 +2264,7 @@ article .block-wrapper .contacts-wrapper {
   * Whole
   */
   .palm-one-whole, .module-wrapper.nyheter-module-wrapper .items .item, article .block-wrapper .related-wrapper,
-  article .block-wrapper .contacts-wrapper, .search-wrapper input#s,
+  article .block-wrapper .contacts-wrapper, article .columntext, .search-wrapper input#s,
   .pre-footer-search input#s {
     width: 100%;
   }
@@ -2387,7 +2403,7 @@ article .block-wrapper .contacts-wrapper {
   /**
   * Thirds
   */
-  .lap-one-third, .lap-two-sixths, .lap-four-twelfths {
+  .lap-one-third, .lap-two-sixths, .lap-four-twelfths, article .columntext {
     width: 33.333%;
   }
 
@@ -2759,7 +2775,7 @@ article .block-wrapper .contacts-wrapper {
   /**
   * Thirds
   */
-  .desk-one-third, .desk-two-sixths, .desk-four-twelfths {
+  .desk-one-third, .desk-two-sixths, .desk-four-twelfths, article .columntext {
     width: 33.333%;
   }
 
@@ -3156,7 +3172,7 @@ article .block-wrapper .contacts-wrapper {
   margin-right: -24px !important;
   margin-left: -24px !important;
 }
-.islet .full-bleed, .contacts-wrapper .contacts .full-bleed, .contacts-wrapper .contacts .contact .contact-data .full-bleed, .firstpage-menu-wrapper .firstpage-menu .full-bleed, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .full-bleed, .module-wrapper.facebook-module-wrapper .fb-feed-item .full-bleed, .module-wrapper.facebook-module-wrapper .fb-load-button .full-bleed, .related-wrapper .related .full-bleed {
+.islet .full-bleed, .contacts-wrapper .contacts .full-bleed, .contacts-wrapper .contacts .contact .contact-data .full-bleed, .firstpage-menu-wrapper .firstpage-menu .full-bleed, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2 .full-bleed, .module-wrapper.facebook-module-wrapper .fb-feed-item .full-bleed, .module-wrapper.facebook-module-wrapper .fb-load-button .full-bleed, article .columntext .full-bleed, .related-wrapper .related .full-bleed {
   margin-right: -12px !important;
   margin-left: -12px !important;
 }
@@ -3486,15 +3502,17 @@ article .block-wrapper .contacts-wrapper {
   color: #d9050d;
 }
 
-.gray-light, footer, .header-wrapper, .slideshow.firstpage {
+.gray-light, footer, .header-wrapper, article .columntext, .slideshow.firstpage, .slide-wrapper .caption,
+.active .caption {
   background-color: #f0f0f0;
   color: #333333;
 }
-.gray-light a, footer a, .header-wrapper a, .slideshow.firstpage a {
+.gray-light a, footer a, .header-wrapper a, article .columntext a, .slideshow.firstpage a, .slide-wrapper .caption a,
+.active .caption a {
   color: #333333;
 }
 
-.gray-light-background, .page-wrapper, .related-wrapper .related {
+.gray-light-background, .home, .page-wrapper, .related-wrapper .related {
   background-color: #f0f0f0;
 }
 
@@ -3505,11 +3523,11 @@ article .block-wrapper .contacts-wrapper {
   color: #f0f0f0;
 }
 
-.gray-dark, .copyright, .top-navigation-wrapper {
+.gray-dark, .copyright, .top-navigation-wrapper, .film_roll_wrapper {
   background-color: #3a3737;
   color: white;
 }
-.gray-dark a, .copyright a, .top-navigation-wrapper a {
+.gray-dark a, .copyright a, .top-navigation-wrapper a, .film_roll_wrapper a {
   color: white;
 }
 
@@ -3754,13 +3772,13 @@ a:hover {
   display: none !important;
 }
 
-.max-width--center, .footer-div, .top-wrapper .top, .top-navigation-wrapper .top-navigation, .firstpage-menu-wrapper .firstpage-menu, .main-menu-wrapper, .module-wrapper .module, article.page {
+.max-width--center, .footer-div, .top-wrapper .top, .top-navigation-wrapper .top-navigation, .teaser-content, .firstpage-menu-wrapper .firstpage-menu, .main-menu-wrapper, .module-wrapper .module, article.page {
   max-width: 1100px;
   margin: 0 auto;
 }
 
 @media only screen and (max-width: 1147px) {
-  .max-width--center, .footer-div, .top-wrapper .top, .top-navigation-wrapper .top-navigation, .firstpage-menu-wrapper .firstpage-menu, .main-menu-wrapper, .module-wrapper .module, article.page {
+  .max-width--center, .footer-div, .top-wrapper .top, .top-navigation-wrapper .top-navigation, .teaser-content, .firstpage-menu-wrapper .firstpage-menu, .main-menu-wrapper, .module-wrapper .module, article.page {
     margin-left: 12px;
     margin-right: 12px;
   }
@@ -3891,7 +3909,7 @@ article.page .slideshow-wrapper:after {
 
 .home .header-wrapper {
   left: 0;
-  position: absolute;
+  /*position: absolute;*/
   top: 0;
   z-index: 200;
 }
@@ -4031,9 +4049,23 @@ article.page .slideshow-wrapper:after {
     margin-left: 0px;
   }
 }
+.home .slideshow-wrapper {
+  position: relative;
+}
+
 .teaser-1 {
   bottom: 3%;
   left: 50%;
+}
+
+.teaser-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.teaser-content {
+  position: relative;
 }
 
 .teaser {
@@ -4044,9 +4076,11 @@ article.page .slideshow-wrapper:after {
 }
 
 .firstpage-menu-wrapper {
+  display: none;
   bottom: 0px;
   left: 0px;
   position: absolute;
+  z-index: 100;
 }
 .firstpage-menu-wrapper .firstpage-menu {
   background: transparent url("../images/ikoner.svg") no-repeat center -200px;
@@ -4562,7 +4596,7 @@ article.page .slideshow-wrapper:after {
   background-position: -1440px -80px;
 }
 
-.ie7 .max-width--center, .ie7 .footer-div, .ie7 .top-wrapper .top, .top-wrapper .ie7 .top, .ie7 .top-navigation-wrapper .top-navigation, .top-navigation-wrapper .ie7 .top-navigation, .ie7 .firstpage-menu-wrapper .firstpage-menu, .firstpage-menu-wrapper .ie7 .firstpage-menu, .ie7 .main-menu-wrapper, .ie7 .module-wrapper .module, .module-wrapper .ie7 .module, .ie7 article.page, .ie8 .max-width--center, .ie8 .footer-div, .ie8 .top-wrapper .top, .top-wrapper .ie8 .top, .ie8 .top-navigation-wrapper .top-navigation, .top-navigation-wrapper .ie8 .top-navigation, .ie8 .firstpage-menu-wrapper .firstpage-menu, .firstpage-menu-wrapper .ie8 .firstpage-menu, .ie8 .main-menu-wrapper, .ie8 .module-wrapper .module, .module-wrapper .ie8 .module, .ie8 article.page {
+.ie7 .max-width--center, .ie7 .footer-div, .ie7 .top-wrapper .top, .top-wrapper .ie7 .top, .ie7 .top-navigation-wrapper .top-navigation, .top-navigation-wrapper .ie7 .top-navigation, .ie7 .teaser-content, .ie7 .firstpage-menu-wrapper .firstpage-menu, .firstpage-menu-wrapper .ie7 .firstpage-menu, .ie7 .main-menu-wrapper, .ie7 .module-wrapper .module, .module-wrapper .ie7 .module, .ie7 article.page, .ie8 .max-width--center, .ie8 .footer-div, .ie8 .top-wrapper .top, .top-wrapper .ie8 .top, .ie8 .top-navigation-wrapper .top-navigation, .top-navigation-wrapper .ie8 .top-navigation, .ie8 .teaser-content, .ie8 .firstpage-menu-wrapper .firstpage-menu, .firstpage-menu-wrapper .ie8 .firstpage-menu, .ie8 .main-menu-wrapper, .ie8 .module-wrapper .module, .module-wrapper .ie8 .module, .ie8 article.page {
   width: 1100px;
 }
 .ie7 .small-max-width--center, .ie7 .module-wrapper.facebook-module-wrapper .module, .module-wrapper.facebook-module-wrapper .ie7 .module, .ie7 article.page .content-wrapper, article.page .ie7 .content-wrapper, .ie8 .small-max-width--center, .ie8 .module-wrapper.facebook-module-wrapper .module, .module-wrapper.facebook-module-wrapper .ie8 .module, .ie8 article.page .content-wrapper, article.page .ie8 .content-wrapper {
@@ -4739,6 +4773,11 @@ article.page .slideshow-wrapper:after {
   padding-bottom: 30px;
 }
 
+article .columntext {
+  float: right;
+  margin-left: 12px;
+}
+
 .author,
 time.time {
   margin-top: -28px;
@@ -4856,6 +4895,12 @@ article.page .content-wrapper {
     display: block;
   }
 }
+@media only screen and (max-width: 680px) {
+  .home .slideshow-wrapper {
+    margin: 0px !important;
+  }
+}
+
 .slideshow-wrapper {
   z-index: 1;
 }
@@ -4879,11 +4924,14 @@ article.page .content-wrapper {
   background-size: cover;
   background-repeat: no-repeat no-repeat;
   background-position: center center;
-  height: 800px;
+  /*height: 800px;*/
   overflow: hidden;
   position: relative;
   display: inline-block;
   width: 100%;
+}
+.slideshow.firstpage .slidesjs-pagination {
+  display: none;
 }
 .slideshow.firstpage .slide-layer {
   background: url("../images/slide-layer.png") repeat fixed;
@@ -4927,6 +4975,74 @@ article.page .slideshow-wrapper .slideshow .slidesjs-pagination {
   position: absolute;
   bottom: -32px;
   left: 20px;
+}
+
+.film_roll_wrapper {
+  display: block;
+  text-align: center;
+  float: none;
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  z-index: auto;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden;
+  width: 100%;
+}
+
+.film_roll_shuttle {
+  text-align: left;
+  float: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: auto;
+  margin: 0 !important;
+  padding: 0 !important;
+  z-index: auto;
+}
+
+.film_roll_shuttle.vertical_center:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+}
+
+.film_roll_child {
+  margin: 6px 12px 0;
+  position: relative;
+  display: inline-block;
+  *display: inline;
+  vertical-align: middle;
+  zoom: 1;
+}
+
+.caption {
+  display: none;
+}
+
+.slide-wrapper .caption,
+.active .caption {
+  border-radius: 20px;
+  display: block;
+  line-height: 16px;
+  padding: 3px 12px;
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+}
+
+.film_roll_prev,
+.film_roll_next,
+.film_roll_pager {
+  display: none;
 }
 
 .program-icons {

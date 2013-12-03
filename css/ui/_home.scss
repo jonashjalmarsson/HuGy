@@ -1,6 +1,22 @@
+.home {
+	@extend .gray-light-background;
+}
+.home .slideshow-wrapper {
+	position: relative;
+}
 .teaser-1 {
 	bottom: 3%;
 	left: 50%;
+}
+.teaser-wrapper {
+	@extend .one-whole;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.teaser-content {
+	@extend .max-width--center;
+	position: relative;
 }
 .teaser {
 	cursor: pointer;
@@ -10,17 +26,20 @@
 }
 
 .firstpage-menu-wrapper {
-
+	
 	@extend .one-whole;
+	display: none;
 	bottom: 0px;
 	left: 0px;	
 	position: absolute;
+	z-index: 100;
 	.firstpage-menu {
 		@extend .flush--bottom;
 		@extend .islet;
 		@extend .max-width--center;
 		background: transparent url("../images/ikoner.svg") no-repeat center -200px;
 		cursor: pointer;
+		
 		a {
 			margin-right: 12px;
 		}

@@ -144,10 +144,36 @@
 					if (($image_sizes[$size][0] == "9999" || $image_sizes[$size][0] == $image["sizes"][$size."-width"] )
 					 && ($image_sizes[$size][1] == "9999" || $image_sizes[$size][1] == $image["sizes"][$size."-height"])) {
 						$url = $image["sizes"][$size];
-						$retValue .= "<img src='" . $url ."' alt='" . $image['alt'] . "' />";
+						$retValue .= "<div class='slide-wrapper'><img src='" . $url ."' alt='" . $image['alt'] . "' />";
+						if ($image['alt'] != '')
+							$retValue .= "<div class='caption'>". $image['alt'] . "</div>";
+						$retValue .= "</div>";
 					}
 				endforeach;
 				$retValue .= "</div></div>";
+			endif;
+			return $retValue;
+		}
+		/*
+		 * Get slideshow images
+		 */
+		function get_filmroll_slideshow($images, $wrapper_class_name = "slideshow", $size = "thumbnail") {
+			global $image_sizes;
+			$retValue = "";
+			if( $images ): 
+				$retValue .= "<div class='$wrapper_class_name'>";
+				
+				foreach( $images as $image ) :
+					if (($image_sizes[$size][0] == "9999" || $image_sizes[$size][0] == $image["sizes"][$size."-width"] )
+					 && ($image_sizes[$size][1] == "9999" || $image_sizes[$size][1] == $image["sizes"][$size."-height"])) {
+						$url = $image["sizes"][$size];
+						$retValue .= "<div><img src='" . $url ."' alt='" . $image['alt'] . "' />";
+						if ($image['alt'] != '')
+							$retValue .= "<div class='caption'>". $image['alt'] . "</div>";
+						$retValue .= "</div>";
+					}
+				endforeach;
+				$retValue .= "</div>";
 			endif;
 			return $retValue;
 		}
@@ -475,6 +501,7 @@
 				$field = 'option';
 			}
 			$i = 2;
+			$retValue .= "<div class='teaser-wrapper'><div class='teaser-content'>";
 			while (the_flexible_field("hg_firstpage_teaser_link",$field)) :
 				$retValue .= "<div class='" . get_row_layout() . "-" . $i++ . " teaser' style='" . get_sub_field("x_align",$field) . ":" . get_sub_field("x_pos",$field) . "px; " . get_sub_field("y_align",$field) . ":" . get_sub_field("y_pos",$field) . "px;'>";
 				if (get_row_layout() == "teaser"):
@@ -484,6 +511,7 @@
 				endif;
 				$retValue .= "</div>";
 			endwhile;
+			$retValue .= "</div></div>";
 			return $retValue;
 		}
 		
@@ -704,6 +732,17 @@
 			$retValue .= date('\v\. W\, j F');
 			$retValue .= '</div>';
 			return $retValue;
+		}
+		
+		
+		
+		/*
+		 * Return text with todays date and week
+		 */
+		function get_columntext() {
+			if (get_field('hg_columntext',get_the_ID())) :
+				return "<div class='columntext'>" . get_field('hg_columntext',get_the_ID()) . "</div>";
+			endif;
 		}
 	}
  ?>

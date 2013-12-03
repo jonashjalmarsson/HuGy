@@ -1,4 +1,5 @@
 <?php
+
 if(function_exists("register_field_group"))
 {
 	register_field_group(array (
@@ -45,6 +46,8 @@ if(function_exists("register_field_group"))
 						'label' => __('Dokument'),
 						'name' => 'dokument',
 						'display' => 'row',
+						'min' => '',
+						'max' => '',
 						'sub_fields' => array (
 							array (
 								'key' => 'field_527381ca844b9',
@@ -61,6 +64,8 @@ if(function_exists("register_field_group"))
 						'label' => __('Länk'),
 						'name' => 'lank',
 						'display' => 'row',
+						'min' => '',
+						'max' => '',
 						'sub_fields' => array (
 							array (
 								'key' => 'field_527381fd844bb',
@@ -107,6 +112,8 @@ if(function_exists("register_field_group"))
 						'label' => __('Rubrik'),
 						'name' => 'rubrik',
 						'display' => 'row',
+						'min' => '',
+						'max' => '',
 						'sub_fields' => array (
 							array (
 								'key' => 'field_52778333acef3',
@@ -127,6 +134,15 @@ if(function_exists("register_field_group"))
 				'button_label' => 'Ny rad',
 				'min' => '',
 				'max' => '',
+			),
+			array (
+				'key' => 'field_529c8de8644a5',
+				'label' => __('Kolumntext'),
+				'name' => 'hg_columntext',
+				'type' => 'wysiwyg',
+				'default_value' => '',
+				'toolbar' => 'basic',
+				'media_upload' => 'yes',
 			),
 		),
 		'location' => array (
@@ -909,4 +925,6 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 }
+
+
 ?>

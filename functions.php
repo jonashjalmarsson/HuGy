@@ -33,7 +33,7 @@
 		$image_sizes["news"] = array("375","210",true);
 		$image_sizes["program"] = array("200","9999",false);
 		$image_sizes["slideshow"] = array("1100","400",true);
-		$image_sizes["firstpage"] = array("2000","9999",false);
+		$image_sizes["firstpage"] = array("9999","618",false);
 		
 		foreach($image_sizes as $key => $size) {
 			add_image_size( $key, $size[0], $size[1], $size[2] );

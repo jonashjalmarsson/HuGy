@@ -15,6 +15,16 @@ article {
 			@extend .palm-one-whole;
 		}
 	}
+	.columntext {
+		@extend .desk-one-third;
+		@extend .lap-one-third;
+		@extend .palm-one-whole;
+		@extend .gray-light;
+		@extend .islet;
+		@extend .zeta;
+		float: right;
+		margin-left: 12px;
+	}
 }
 .author,
 time.time {
@@ -26,7 +36,7 @@ time.time {
 		color: #999;
 	}
 }
-article.page{
+article.page {
 	@extend .max-width--center;
  	@extend .island;
 	box-shadow: 0px 0px 15px #999;
