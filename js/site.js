@@ -204,11 +204,6 @@ jQuery(document).ready(function($) {
 	        window.location.hash = target;
 	    });
 		
-		/*$('html, body').stop().animate({
-			scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
-		}, 1000, 'swing', function () {
-	        window.location.hash = target;
-	    });*/
 		return false;
 	});
 	

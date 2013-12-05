@@ -4,7 +4,7 @@
 	<?php 
 	/* main navigation */
 	echo "<div class='pre-footer'>" . HuGy::get_main_navigation() . "</div>";
-	echo "<a name='search' id='search'></a><div class='pre-footer-search'>";
+	echo "<a id='search'></a><div class='pre-footer-search'>";
 	echo get_search_form();
 	echo "</div>";
 	echo "<div class='pre-footer-program'>" . HuGy::get_program_links() . "</div>"; ?>

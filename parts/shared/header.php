@@ -5,8 +5,8 @@
 				<?php echo HuGy::get_quicklinks(); ?>
 				<?php echo HuGy::get_todaysdate_text(); ?>
 			</div><div class="logo-space">
-				<div id="betaicon"><a href='<?php echo get_site_url() ?>/betapage'><img src='<?php echo get_stylesheet_directory_uri() ?>/images/beta.png' /></a></div>
-				<a href="<?php echo home_url(); ?>"><img class="logo" title="Hultsfreds gymnasium" src="<?php echo get_template_directory_uri() . "/images/hultsfreds-gymnasium.png"; ?>" /></a>
+				<div id="betaicon"><a href='<?php echo get_site_url() ?>/betapage'><img src='<?php echo get_stylesheet_directory_uri() ?>/images/beta.png' alt='Beta' /></a></div>
+				<a href="<?php echo home_url(); ?>"><img class="logo" title="Hultsfreds gymnasium" src="<?php echo get_template_directory_uri() . "/images/hultsfreds-gymnasium.png"; ?>" alt='Hultsfreds gymnasium' /></a>
 				<h1><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 			</div>
 		</div>

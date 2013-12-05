@@ -60,21 +60,21 @@
 
 			if(get_field('direktlankar_i_menyn', 'option')): 
 		 
-			while(has_sub_field('direktlankar_i_menyn', 'option')):
-				if (get_row_layout() == 'intern_lank') {
-					$link = get_sub_field('intern_lank');
-					$retValue .= "<li>";
-					$retValue .= "<a title='" . $link->excerpt . "' href='" . get_permalink($link->ID) . "'>";
-					$retValue .= $link->post_title;
-					$retValue .= "</a></li>";
-				}
-				else if (get_row_layout() == 'extern_lank') {
-					$retValue .= "<li>";
-					$retValue .= "<a title='" . get_sub_field('beskrivning') . "' href='" . get_sub_field('url') . "'>";
-					$retValue .= get_sub_field('titel');
-					$retValue .= "</a></li>";
-				}
-			endwhile;
+				while ( has_sub_field('direktlankar_i_menyn', 'option') ):
+					if (get_row_layout() == 'intern_lank') {
+						$link = get_sub_field('intern_lank');
+						$retValue .= "<li>";
+						$retValue .= "<a title='" . $link->excerpt . "' href='" . get_permalink($link->ID) . "'>";
+						$retValue .= $link->post_title;
+						$retValue .= "</a></li>";
+					}
+					else if ( get_row_layout() == 'extern_lank' ) {
+						$retValue .= "<li>";
+						$retValue .= "<a title='" . get_sub_field('beskrivning') . "' href='" . get_sub_field('url') . "'>";
+						$retValue .= get_sub_field('titel');
+						$retValue .= "</a></li>";
+					}
+				endwhile;
 		 
 			endif;
 			return $retValue;
@@ -84,7 +84,7 @@
 		/*
 		 *
 		 */
-		function get_program_links($icon = true, $wrapping_ul = true) {
+		function get_program_links( $icon = true, $wrapping_ul = true ) {
 			$retValue = "";
 			$args = array(
 				'order' => 'ASC',
@@ -107,10 +107,10 @@
 			$pages = get_posts($args);
 			
 			
-			if (count($pages) > 0):
+			if ( count( $pages ) > 0 ):
 				if ($wrapping_ul)
 					$retValue .= "<ul class='program-icons'>";
-				foreach($pages as $page) :
+				foreach ( $pages as $page ) :
 					$current_class = '';
 					if (get_the_ID() == $page->ID)
 						$current_class = ' current_page_item';
@@ -134,15 +134,15 @@
 		/*
 		 * Get slideshow images
 		 */
-		function get_slideshow($images, $wrapper_class_name = "slideshow", $size = "thumbnail") {
+		function get_slideshow( $images, $wrapper_class_name = "slideshow", $size = "thumbnail" ) {
 			global $image_sizes;
 			$retValue = "";
-			if( $images ): 
+			if ( $images ): 
 				$retValue .= "<div class='$wrapper_class_name'>";
 				$retValue .= "<div class='slides'>";
-				foreach( $images as $image ) :
-					if (($image_sizes[$size][0] == "9999" || $image_sizes[$size][0] == $image["sizes"][$size."-width"] )
-					 && ($image_sizes[$size][1] == "9999" || $image_sizes[$size][1] == $image["sizes"][$size."-height"])) {
+				foreach ( $images as $image ) :
+					if ( ( $image_sizes[$size][0] == "9999" || $image_sizes[$size][0] == $image["sizes"][$size."-width"] )
+					 && ($image_sizes[$size][1] == "9999" || $image_sizes[$size][1] == $image["sizes"][$size."-height"] ) ) {
 						$url = $image["sizes"][$size];
 						$retValue .= "<div class='slide-item slide-wrapper'><img src='" . $url ."' alt='" . $image['alt'] . "' />";
 						if ($image['alt'] != '')
@@ -237,7 +237,7 @@
 				$retValue .= "</div>";
 			endif;
 			if (!$found && $fill_if_empty) {
-				$retValue .= "<div class='$wrapper_class_name'><img src='" . get_stylesheet_directory_uri() ."/images/empty.png' /></div>";
+				$retValue .= "<div class='$wrapper_class_name'><img src='" . get_stylesheet_directory_uri() ."/images/empty.png' alt='Ingen bild' /></div>";
 			}
 			return $retValue;
 		}
@@ -311,13 +311,16 @@
 			//}
 			$page = get_post($parent_id);
 			$exclude = get_field('visa_inte_sidor_i_menyn', 'option');
+			if ( ! empty( $exclude ) ) {
+				$exclude = implode( ",", $exclude );
+			}
 			if ($page->post_type == "page" || $parent_id == "") {
 				$args = array(
 					'depth'        => 0,
 					'show_date'    => '',
 					'date_format'  => get_option('date_format'),
 					'child_of'     => $parent_id,
-					'exclude'      => implode(",",$exclude),
+					'exclude'      => $exclude,
 					'include'      => '',
 					'title_li'     => "",
 					'echo'         => 0,
@@ -368,7 +371,7 @@
 
 					$menu_items = wp_get_nav_menu_items($menu->term_id);
 					$menu_items_count = count($menu_items) + 1;
-					$retValue .= "<a class='menu-margin' name='menu' id='menu'></a>";
+					$retValue .= "<a class='menu-margin' id='menu'></a>";
 					$retValue .= "<ul class='menu cols-".$menu_items_count."'>";
 					foreach($menu_items as $menu_item) {
 						$currentclass = "";
@@ -380,7 +383,7 @@
 					}
 					// quickmenu
 					$retValue .= "<li><a class='menu-head quick-menu-icon'></a><ul class='children'>";
-					$retValue .= "<li>" . HuGy::get_quickmenu() . "</li>";
+					$retValue .= HuGy::get_quickmenu();
 					$retValue .= "</ul></li>";
 
 					$retValue .= "</ul>";
@@ -394,7 +397,7 @@
 				
 				
 					$menu_items_count = 3;
-					$retValue .= "<a class='menu-margin' name='menu' id='menu'></a>";
+					$retValue .= "<a class='menu-margin' id='menu'></a>";
 					$retValue .= "<ul class='menu cols-".$menu_items_count."'>";
 
 
@@ -408,7 +411,7 @@
 
 					// quickmenu
 					$retValue .= "<li><a class='menu-head quick-menu-icon'></a><ul class='children'>";
-					$retValue .= "<li>" . HuGy::get_quickmenu() . "</li>";
+					$retValue .= HuGy::get_quickmenu();
 					$retValue .= "</ul></li>";
 
 					$retValue .= "</ul>";
@@ -440,7 +443,7 @@
 				$retValue .= "<div class='" . get_row_layout() . "-module-wrapper module-wrapper'$style>";
 					$retValue .= "<div class='" . get_row_layout() . "-module module' data-fb-url='http://www.facebook.com/" . get_sub_field("id",$field) . "'>";
 					if (get_row_layout() == "facebook"):
-						$retValue .= "<a class='menu-margin' name='facebook' id='facebook'></a><h1>Vad händer mer...<a class='fb-logo' href='http://www.facebook.com/" . get_sub_field("id",$field) . "'><img src='".get_stylesheet_directory_uri()."/images/facebook.png'/></a></h1>";
+						$retValue .= "<a class='menu-margin' id='facebook'></a><h1>Vad händer mer...<a class='fb-logo' href='http://www.facebook.com/" . get_sub_field("id",$field) . "'><img src='".get_stylesheet_directory_uri()."/images/facebook.png' alt='Facebook logga' /></a></h1>";
 						if (function_exists("fb_feed")) :
 							$retValue .= fb_feed(get_sub_field("id",$field),array('container' => 'div',
 													'container_class' => 'items',
@@ -468,7 +471,7 @@
 		 * Return news, used in get_modules()
 		 */
 		function get_news() {
-			$retValue = "<a class='menu-margin' name='nyheter' id='nyheter'></a><h1>Nytt på skolan</h1>";
+			$retValue = "<a class='menu-margin' id='nyheter'></a><h1>Nytt på skolan</h1>";
 			// The Query
 			$the_query = new WP_Query( array(
 											'post_type' => 'post',
@@ -595,14 +598,14 @@
 			else {
 				$field = 'option';
 			}
-			$contacts = get_field('hg_kontakter',$page_id);
+			$contacts = get_field('hg_kontakter', $page_id);
 			if (!empty($contacts) && $contacts != "") :
 				$retValue .= "<div class='contacts-wrapper'>";
 				if ($vars['title'] != '')
 					$retValue .= "<h2>" . $vars['title'] . "</h2>";
 				$retValue .= "<div class='" . $vars['class'] . "'>";
 				foreach ($contacts as $contact) :
-					$retValue .= HuGy::get_contact($contact->ID,$args);
+					$retValue .= HuGy::get_contact( $contact->ID, $args );
 				endforeach;
 				$retValue .= "</div></div>";
 			endif;
@@ -612,7 +615,7 @@
 		/*
 		 * Return one contact
 		 */
-		function get_contact($contact_id = "", $args = array()) {
+		function get_contact( $contact_id = "", $args = array() ) {
 			global $contact_vars;
 			if ($contact_id == '') return;
 			
@@ -639,14 +642,14 @@
 			if ($titel)
 				$retValue .= "<span class='titel'>$titel</span>";
 			
-			$telefon = get_field("telefon",$contact_id);
-			$mobiltelefon = get_field("mobiltelefon",$contact_id);
+			$telefon = get_field( "telefon", $contact_id );
+			$mobiltelefon = get_field( "mobiltelefon", $contact_id );
 			if ($telefon && $mobiltelefon)
-				$telefon = "<a href='tel:$telefon'>$telefon</a>, <a href='tel:$mobiltelefon'>$mobiltelefon</a>";
+				$telefon = "<a href='tel:" . preg_replace( "/[^0-9]/", "", $telefon ) . "'>$telefon</a>, <a href='tel:" . preg_replace( "/[^0-9]/", "", $mobiltelefon ) . "'>$mobiltelefon</a>";
 			else if ($telefon)
-				$telefon = "<a href='tel:$telefon'>$telefon</a>";
+				$telefon = "<a href='tel:" . preg_replace( "/[^0-9]/", "", $telefon ) . "'>$telefon</a>";
 			else if ($mobiltelefon)
-				$telefon = "<a href='tel:$mobiltelefon'>$mobiltelefon</a>";
+				$telefon = "<a href='tel:" . preg_replace( "/[^0-9]/", "", $mobiltelefon ) . "'>$mobiltelefon</a>";
 				
 			if ($telefon)
 				$retValue .= "<span class='telefon'>TELEFON: $telefon</span>";
