@@ -66,12 +66,12 @@
 @include media-query(palm){
 	.pre-footer-search {
 		text-align: left;
-		.search-icon {
-			display: block;
-		}
-		input#s {
-			
-			
+		.searchform {
+			width: 100%;
+			input#s {
+				width: 70%;
+				
+			}
 		}
 	}
 }

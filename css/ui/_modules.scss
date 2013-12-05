@@ -94,6 +94,8 @@
 			margin-bottom: 8px;
 			overflow: hidden;
 			position: relative;
+			border-left: 4px solid #3b5998;
+			border-right: 4px solid #3b5998;
 			.expand-item {
 				@extend .one-whole;
 				background: rgba(255,255,255,0.9);
@@ -138,10 +140,14 @@
 			background-image: url('../images/fb-loader.gif');
 			background-repeat: no-repeat;
 			background-position: center center;
+			border-left: 4px solid #3b5998;
+			border-right: 4px solid #3b5998;
 		}
 		.fb-load-button {
 			@extend .islet;
 			background-color: rgba(230,230,230,0.9);
+			border-left: 4px solid #3b5998;
+			border-right: 4px solid #3b5998;
 			cursor: pointer;
 		}
 

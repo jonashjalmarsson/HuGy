@@ -630,13 +630,13 @@
 			if ($telefon)
 				$retValue .= "<span class='telefon'>TELEFON: <a href='tel:$telefon'>$telefon</a></span>";
 			
+			$mobiltelefon = get_field("mobiltelefon",$contact_id);	
+			if ($mobiltelefon)
+				$retValue .= "<span class='mobiltelefon'>TELEFON: <a href='tel:$mobiltelefon'>$mobiltelefon</a></span>";
+			
 			$fax = get_field("fax",$contact_id);	
 			if ($fax)
 				$retValue .= "<span class='fax'>FAX: $fax</span>";
-			
-			$mobiltelefon = get_field("mobiltelefon",$contact_id);	
-			if ($mobiltelefon)
-				$retValue .= "<span class='mobiltelefon'>MOBIL: <a href='tel:$mobiltelefon'>$mobiltelefon</a></span>";
 			
 			$epost = get_field("e-post",$contact_id);	
 			if ($epost)
@@ -644,7 +644,8 @@
 
 			$typ_av_kontakt = get_field("typ_av_kontakt",$contact_id);	
 			if ($typ_av_kontakt)
-				$retValue .= "<span class='typ_av_kontakt force-hidden'>".implode(',',$typ_av_kontakt)."</span>";
+				$typ_av_kontakt = implode(',',$typ_av_kontakt);
+			$retValue .= "<span class='typ_av_kontakt force-hidden'>$typ_av_kontakt</span>";
 
 			if (!$excerpt) {
 				$retValue .= "<div class='contact-data'>";
