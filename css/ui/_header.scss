@@ -134,43 +134,6 @@
 		.breadcrumb {
 			margin-left: 12px;
 		}
-		.top-search-button {
-			@extend .visuallyhidden--lap;
-			@extend .visuallyhidden--desk;
-			position: absolute;
-			right: 0;
-			top: 0;
-		}
-		.top-search-form {
-			@extend .visuallyhidden--palm;
-			position: absolute;
-			right: 0;
-			top: 0;
-			.screen-reader-text {
-				@extend .hidden;
-			}
-			form, div, input {
-				display: inline-block;
-			}
-			input:focus {
-				outline: none;
-			}
-			#s {
-				@extend .gray-dark-text;
-				@extend .italic;
-				border-radius: 12px;
-				border: 0;
-				padding-left: 6px;
-				
-			}
-			#searchsubmit {
-				@extend .italic;
-				@extend .gray-light-text;
-				background: transparent;
-				border: 0;
-				
-			}
-		}
 	}
 }
 

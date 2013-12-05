@@ -28,6 +28,7 @@
 	======================================================================================================================== */
 
 	add_theme_support('post-thumbnails');
+	add_theme_support('html5', array('search-form'));
 	if ( function_exists( 'add_image_size' ) ) { 
 		$image_sizes = array();
 		$image_sizes["news"] = array("375","210",true);

@@ -22,7 +22,7 @@
 	?>
 	<?php if (isset($bubbla) && $bubbla != "") : ?>
 	<div class="picto">
-		<img title='<?php the_title(); ?>' src='<?php echo $bubbla; ?>' <?php echo $picto ?> />
+		<img alt='<?php the_title(); ?>' src='<?php echo $bubbla; ?>' <?php echo $picto ?> />
 	</div>
 	<?php endif; ?>
 	<?php /* slideshow */ ?>
