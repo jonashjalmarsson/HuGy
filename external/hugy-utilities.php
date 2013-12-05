@@ -640,12 +640,17 @@
 				$retValue .= "<span class='titel'>$titel</span>";
 			
 			$telefon = get_field("telefon",$contact_id);
+			$mobiltelefon = get_field("mobiltelefon",$contact_id);
+			if ($telefon && $mobiltelefon)
+				$telefon = "<a href='tel:$telefon'>$telefon</a>, <a href='tel:$mobiltelefon'>$mobiltelefon</a>";
+			else if ($telefon)
+				$telefon = "<a href='tel:$telefon'>$telefon</a>";
+			else if ($mobiltelefon)
+				$telefon = "<a href='tel:$mobiltelefon'>$mobiltelefon</a>";
+				
 			if ($telefon)
-				$retValue .= "<span class='telefon'>TELEFON: <a href='tel:$telefon'>$telefon</a></span>";
+				$retValue .= "<span class='telefon'>TELEFON: $telefon</span>";
 			
-			$mobiltelefon = get_field("mobiltelefon",$contact_id);	
-			if ($mobiltelefon)
-				$retValue .= "<span class='mobiltelefon'>TELEFON: <a href='tel:$mobiltelefon'>$mobiltelefon</a></span>";
 			
 			$fax = get_field("fax",$contact_id);	
 			if ($fax)

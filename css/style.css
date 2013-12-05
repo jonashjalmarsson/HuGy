@@ -3614,6 +3614,13 @@ article .block-wrapper .contacts-wrapper {
   display: block;
 }
 
+@media only screen and (max-width: 680px) {
+  .contact .media__img {
+    float: none;
+    margin-bottom: 12px;
+    width: 100%;
+  }
+}
 .italic, .contacts-wrapper h2, h1,
 .header,
 .content-wrapper .author h2,
@@ -4028,9 +4035,16 @@ article.page .slideshow-wrapper:after {
 
   .top-links-wrapper {
     width: 40px !important;
+    height: 40px !important;
+    overflow: hidden;
   }
   .top-links-wrapper.expanded {
     width: auto !important;
+    height: auto !important;
+  }
+
+  .quicklinks {
+    white-space: normal !important;
   }
 
   .quick-expand {
@@ -4852,6 +4866,7 @@ article.page .content-wrapper {
   border: 1px solid #999;
   padding: 2px 6px;
   margin-right: 12px;
+  margin-bottom: 6px;
 }
 .filter input:focus {
   outline: none;

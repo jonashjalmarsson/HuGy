@@ -184,9 +184,15 @@
 	
 	.top-links-wrapper {
 		width: 40px!important;
+		height: 40px!important;
+		overflow: hidden;
 		&.expanded {
 			width: auto!important;
+			height: auto!important;
 		}
+	}
+	.quicklinks {
+		white-space: normal!important;
 	}
 	.quick-expand {
 		display: inline-block!important;

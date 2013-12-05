@@ -72,3 +72,12 @@
 		}
 	}
 }
+@include media-query(palm) {
+	.contact {
+		.media__img {
+			float: none;
+			margin-bottom: 12px;
+			width: 100%;
+		}
+	}
+}
