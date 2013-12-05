@@ -174,8 +174,8 @@
 						$addedimages++;
 					}
 				endforeach;
-				// add images one more time if less than 4 to make filmroll
-				if ( $addedimages < 4 )
+				// add images one more time if less than 5 to make filmroll
+				if ( $addedimages > 1 && $addedimages < 5 )
 					foreach( $images as $image ) :
 						if (($image_sizes[$size][0] == "9999" || $image_sizes[$size][0] == $image["sizes"][$size."-width"] )
 						 && ($image_sizes[$size][1] == "9999" || $image_sizes[$size][1] == $image["sizes"][$size."-height"])) {
@@ -743,7 +743,7 @@
 		 */
 		function get_todaysdate_text() {
 			$retValue = '<div class="weektext">';
-			$retValue .= date('\v\. W\, j F');
+			$retValue .= date('j F\, \v\e\c\k\a W');
 			$retValue .= '</div>';
 			return $retValue;
 		}
