@@ -162,7 +162,7 @@
 			$retValue = "";
 			if( $images ): 
 				$retValue .= "<div class='$wrapper_class_name'>";
-				
+				$addedimages = 0;
 				foreach( $images as $image ) :
 					if (($image_sizes[$size][0] == "9999" || $image_sizes[$size][0] == $image["sizes"][$size."-width"] )
 					 && ($image_sizes[$size][1] == "9999" || $image_sizes[$size][1] == $image["sizes"][$size."-height"])) {
@@ -171,8 +171,21 @@
 						if ($image['alt'] != '')
 							$retValue .= "<div class='caption'>". $image['alt'] . "</div>";
 						$retValue .= "</div>";
+						$addedimages++;
 					}
 				endforeach;
+				// add images one more time if less than 4 to make filmroll
+				if ( $addedimages < 4 )
+					foreach( $images as $image ) :
+						if (($image_sizes[$size][0] == "9999" || $image_sizes[$size][0] == $image["sizes"][$size."-width"] )
+						 && ($image_sizes[$size][1] == "9999" || $image_sizes[$size][1] == $image["sizes"][$size."-height"])) {
+							$url = $image["sizes"][$size];
+							$retValue .= "<div class='slide-item'><img src='" . $url ."' alt='" . $image['alt'] . "' />";
+							if ($image['alt'] != '')
+								$retValue .= "<div class='caption'>". $image['alt'] . "</div>";
+							$retValue .= "</div>";
+						}
+					endforeach;
 				$retValue .= "</div>";
 			endif;
 			return $retValue;
