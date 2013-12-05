@@ -260,7 +260,6 @@ jQuery(document).ready(function($) {
 	/* 
 	 * click effect on contactlist
 	 */
-	 
 	$(".contactlist").find('.contact').each(function() {
 		$(this).find('a').click(function(ev) {
 			if ($(this).parents('.contact').hasClass('expanded') && $(this).hasClass('nolink')) {
@@ -291,58 +290,14 @@ jQuery(document).ready(function($) {
 	});
 
 	
-		
-	/* 
-	 * hover effect on contact
-	 */
-	 /*
-	$(".contacts").find('.contact').each(function() {
-		$(this).hover(function(ev) {
-				ev.preventDefault();
-				ev.stopPropagation();
-				ev.stopImmediatePropagation();
-				$(this).find('.contact-data').hide().show('fade','slow');
-			},
-			function(ev) {
-				ev.preventDefault();
-				ev.stopPropagation();
-				ev.stopImmediatePropagation();
-				$(this).find('.contact-data').show().hide('fade','fast');
-			});
-	});*/
 	
-	
-	/*
-	$("header").prepend($("<div />").addClass("doit").html("do me").css("background","pink").css("position","absolute").css("z-index","1000").css("left","100px").css("top","300px"));
-	$("header").prepend($("<div />").addClass("showit").html("test").css("background","grey").css("position","absolute").css("z-index","1000").css("left","100px").css("top","100px"));
-	
-	function runIt() {
-	  $(".doit")
-		.show( "slow" )
-		.animate({ left: "+=200" }, 2000 )
-		.slideToggle( 1000 )
-		.slideToggle( "fast" )
-		.animate({ left: "-=200" }, 1500 )
-		.delay(2000)
-		.hide( "slow" )
-		.show( 1200 )
-		.slideUp( "normal", runIt );
-	}
-	 
-	function showIt() {
-	  var n = $(".doit").queue( "fx" );
-	  $( ".showit" ).text( n.length );
-	  setTimeout( showIt, 100 );
-	}
-	 
-	runIt();
-	showIt();*/
 	
 	
 	
 	function setSizes() {
 		if ($("body").hasClass("home"))
 		{
+			/* responsive filmroll */
 			if ( $('body').width() < 680 && ! $('.filmroll').hasClass("downscale") ) {
 				$('.filmroll').addClass("downscale").height(($('.filmroll').height()*0.5)+8);
 				$('.film_roll_wrapper').css("min-height",$('.filmroll').height());
@@ -381,26 +336,6 @@ jQuery(document).ready(function($) {
 		else if ($(window).scrollTop() > 100)
 			$(".up-icon").css("opacity",($(window).scrollTop()-100) / 200).show();
 		
-		/* show/hide teaser (if any) */
-		/*if ($(window).scrollTop() < 100)
-			$(".teaser-1").css("opacity",1).show();
-		else if ($(window).scrollTop() > 300)
-			$(".teaser-1").css("opacity",0).hide();
-		else if ($(window).scrollTop() > 100)
-			$(".teaser-1").css("opacity",((300-$(window).scrollTop()) / 200)).show();
-		*/
-		/* other teasers */
-		if ($(window).scrollTop() < 300)
-			$(".teaser").css("opacity",1).show();
-		else if ($(window).scrollTop() > 500)
-			$(".teaser").css("opacity",0).hide();
-		else if ($(window).scrollTop() > 300)
-			$(".teaser").css("opacity",((500-$(window).scrollTop()) / 100)).show();
-/*
-		if ($(window).height() - $(window).scrollTop() - $(".top-wrapper").height() > 0) {
-			$(".firstpage.slideshow").height($(window).height() - $(window).scrollTop() - $(".top-wrapper").height());
-		}
-*/
 		
 		/* reset selected */
 		$(".top-menu-button").removeClass("selected");
@@ -429,18 +364,6 @@ jQuery(document).ready(function($) {
 		}
 		
 	});
-	
-	
-	/* menu button */
-	/*$(".top-menu-button").click(function(ev) {
-		// open hover menu
-		ev.preventDefault();
-		menupos = $(".pre-footer").position().top - $(".top-navigation-wrapper").height();
-
-		$("body,html")
-			.softscroll(menupos,800,function() {
-			});
-	});*/
 
 	/* toggle quick-menu-buttons */
 	$(".quick-expand-icon").click(function(ev) {
@@ -497,7 +420,7 @@ jQuery(document).ready(function($) {
 
 	
 	
-	/* filter table in konakter page */
+	/* filter table in kontakter page */
 	if ($("body").hasClass("page-template-page-hugy-kontakter-php")) {
 		contactlist = $(".contactlist");
 		
@@ -579,7 +502,7 @@ jQuery(document).ready(function($) {
 	});
 
 
-	/* up icon */
+	/* up icon click */
 	$(".up-icon").hide().click( function() {
 		$("body,html").softscroll(0, 600);
 	});
@@ -614,11 +537,10 @@ jQuery(document).ready(function($) {
 
 	
 	/*
-     * do slideshow 
+     * do slideshow or filmroll
 	 */
 	width = 1100;
 	height = 400;
-
 	
 	if ($("body").hasClass("home")) {
 		
@@ -684,7 +606,9 @@ jQuery(document).ready(function($) {
 		
 	}
 
-	// load addthis
+	/* 
+	 * load addthis 
+	 */
 	$(".author").append('<!-- AddThis Button BEGIN -->'+
 		'<div class="addthis_toolbox addthis_default_style ">'+
 		'<a class="addthis_button_preferred_1"></a>'+
@@ -699,6 +623,11 @@ jQuery(document).ready(function($) {
 });
 
 
+
+
+/********************/
+/* EXTERNAL SCRIPTS */
+/********************/
 
 
 /*
