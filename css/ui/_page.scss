@@ -53,9 +53,19 @@ article.page {
 		width: 100%!important;
 	}
 }
+
 /* schema page */
-.page-template-page-hugy-schema-php .tool {
-	padding-left: 12px;
+
+.page-template-page-hugy-schema-php {
+	td:nth-child(2),
+	td:nth-child(3),
+	td:nth-child(4) {
+		width: 8%;
+	}
+	
+	.tool {
+		padding-left: 12px;
+	}
 }
 .filter {
 	&.tool {

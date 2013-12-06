@@ -565,8 +565,14 @@
 					$retValue .= "</a>";
 				elseif (get_row_layout() == "lank"):
 					$url = get_sub_field("url",$field);
+					$external = "";
+					$target = "";
+					if ((strpos($url, 'http') !== false)) {
+						$external = "external-";
+						$target = " target='_blank'";
+					}
 					$retValue .= "<a href='$url' title='" . get_sub_field("beskrivning",$field) . "'>";
-					$retValue .= "<span class='icon ".((strpos($url, 'http') !== false)?"external-":"")."link-icon'></span>";
+					$retValue .= "<span class='icon $externallink-icon'$target></span>";
 					$retValue .= get_sub_field("namn",$field);
 					$retValue .= "</a>";
 				elseif (get_row_layout() == "rubrik"):

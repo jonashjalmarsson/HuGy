@@ -3749,10 +3749,20 @@ article .block-wrapper .contacts-wrapper {
 .copyright {
   display: inline-block;
   text-align: center;
+  vertical-align: middle;
 }
 .copyright .login {
   float: right;
   margin-right: 12px;
+}
+
+.tech-logos {
+  text-align: center;
+}
+.tech-logos .logo {
+  padding: 6px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 @media only screen and (max-width: 680px) {
@@ -4591,7 +4601,7 @@ article.page .slideshow-wrapper:after {
 }
 .ie7 .top-menu-button, .ie8 .top-menu-button {
   float: left;
-  widht: 180px;
+  width: 180px;
 }
 .ie7 .filter.tool,
 .ie7 .filter.toggle,
@@ -4814,6 +4824,11 @@ article.page .content-wrapper {
   }
 }
 /* schema page */
+.page-template-page-hugy-schema-php td:nth-child(2),
+.page-template-page-hugy-schema-php td:nth-child(3),
+.page-template-page-hugy-schema-php td:nth-child(4) {
+  width: 8%;
+}
 .page-template-page-hugy-schema-php .tool {
   padding-left: 12px;
 }

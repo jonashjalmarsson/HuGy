@@ -86,9 +86,21 @@ footer {
 	@extend .gray-dark;
 	display: inline-block;
 	text-align: center;
+	vertical-align: middle;
 	.login {
 		float: right;
 		margin-right: 12px;
+	}
+}
+.tech-logos {
+	text-align: center;
+	.logo {
+		padding: 6px;
+		display: inline-block;
+		vertical-align: middle;
+		img {
+			
+		}
 	}
 }
 
