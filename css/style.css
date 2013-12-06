@@ -3745,6 +3745,9 @@ article .block-wrapper .contacts-wrapper {
 .footer-div .footer-container .wp-views-cloud .views-cloud-item.tiny {
   font-size: 80%;
 }
+.footer-div .footer-3-container img {
+  margin: 10px;
+}
 
 .copyright {
   display: inline-block;
@@ -4827,7 +4830,7 @@ article.page .content-wrapper {
 .page-template-page-hugy-schema-php td:nth-child(2),
 .page-template-page-hugy-schema-php td:nth-child(3),
 .page-template-page-hugy-schema-php td:nth-child(4) {
-  width: 8%;
+  width: 10%;
 }
 .page-template-page-hugy-schema-php .tool {
   padding-left: 12px;
