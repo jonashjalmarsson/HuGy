@@ -545,13 +545,13 @@
 				$field = 'option';
 			}
 			$i = 0;
-			if (get_field("hg_relaterade",$field)) :
+			if ( get_field( "hg_relaterade", $field ) ) :
 			$retValue .= "<div class='related-wrapper'><h2>Relaterat</h2><div class='related'>";
-			while (the_flexible_field("hg_relaterade",$field)) :
+			while ( the_flexible_field( "hg_relaterade", $field ) ) :
 				//$retValue .= "<div class='" . get_row_layout() . "-" . $i++ . " relaterad'>";
-				if (get_row_layout() == "dokument"):
+				if ( get_row_layout() == "dokument"):
 					$doc = get_sub_field("dokument",$field);
-					$retValue .= "<a href='" . $doc["url"]. "' title='" . $doc["description"] . "' >";
+					$retValue .= "<a href='" . str_replace( "https://", "http://", $doc["url"] ) . "' title='" . $doc["description"] . "' >";
 					$doctype = "";
 					if (strpos($doc["url"], '.doc') !== false)
 						$doctype = "doc-";
@@ -563,21 +563,21 @@
 					$retValue .= "<span class='icon ".$doctype."doc-icon'></span>";
 					$retValue .= $doc["title"];
 					$retValue .= "</a>";
-				elseif (get_row_layout() == "lank"):
+				elseif ( get_row_layout() == "lank" ) :
 					$url = get_sub_field("url",$field);
 					$external = "";
 					$target = "";
-					if ((strpos($url, 'http') !== false)) {
+					if ( ( strpos( $url, 'http' ) !== false ) && ( strpos( $url, 'hultsfredsgymnasium.se' ) == false ) ) {
 						$external = "external-";
 						$target = " target='_blank'";
 					}
 					$retValue .= "<a href='$url' title='" . get_sub_field("beskrivning",$field) . "'>";
-					$retValue .= "<span class='icon $externallink-icon'$target></span>";
+					$retValue .= "<span class='icon " . $external . "link-icon'$target></span>";
 					$retValue .= get_sub_field("namn",$field);
 					$retValue .= "</a>";
-				elseif (get_row_layout() == "rubrik"):
+				elseif ( get_row_layout() == "rubrik" ) :
 					$retValue .= "<h2 class='title'>";
-					$retValue .= get_sub_field("rubrik",$field);
+					$retValue .= get_sub_field("rubrik", $field);
 					$retValue .= "</h2>";
 				endif;
 				//$retValue .= "</div>";
