@@ -756,8 +756,10 @@
 		 * Return text with todays date and week
 		 */
 		function get_todaysdate_text() {
+			setlocale(LC_ALL, 'sv_SE');
 			$retValue = '<div class="weektext">';
-			$retValue .= date('j F\, \v\e\c\k\a W');
+			$date = date_i18n('j F\, \v\e\c\k\a W');
+			$retValue .= $date;
 			$retValue .= '</div>';
 			return $retValue;
 		}

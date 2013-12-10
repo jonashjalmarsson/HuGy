@@ -1,5 +1,4 @@
 <?php
-
 if(function_exists("register_field_group"))
 {
 	register_field_group(array (
@@ -8,7 +7,7 @@ if(function_exists("register_field_group"))
 		'fields' => array (
 			array (
 				'key' => 'field_525261cffddc5',
-				'label' => __('Bildspel'),
+				'label' => 'Bildspel',
 				'name' => 'hg_slideshow',
 				'type' => 'gallery',
 				'preview_size' => 'thumbnail',
@@ -16,7 +15,7 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_52736561eae27',
-				'label' => __('Kontakter'),
+				'label' => 'Kontakter',
 				'name' => 'hg_kontakter',
 				'type' => 'relationship',
 				'return_format' => 'object',
@@ -38,12 +37,12 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_52738166ce668',
-				'label' => __('Relaterade'),
+				'label' => 'Relaterade',
 				'name' => 'hg_relaterade',
 				'type' => 'flexible_content',
 				'layouts' => array (
 					array (
-						'label' => __('Dokument'),
+						'label' => 'Dokument',
 						'name' => 'dokument',
 						'display' => 'row',
 						'min' => '',
@@ -51,7 +50,7 @@ if(function_exists("register_field_group"))
 						'sub_fields' => array (
 							array (
 								'key' => 'field_527381ca844b9',
-								'label' => __('Dokument'),
+								'label' => 'Dokument',
 								'name' => 'dokument',
 								'type' => 'file',
 								'column_width' => '',
@@ -61,7 +60,7 @@ if(function_exists("register_field_group"))
 						),
 					),
 					array (
-						'label' => __('Länk'),
+						'label' => 'Länk',
 						'name' => 'lank',
 						'display' => 'row',
 						'min' => '',
@@ -69,7 +68,7 @@ if(function_exists("register_field_group"))
 						'sub_fields' => array (
 							array (
 								'key' => 'field_527381fd844bb',
-								'label' => __('Namn'),
+								'label' => 'Namn',
 								'name' => 'namn',
 								'type' => 'text',
 								'column_width' => '',
@@ -82,7 +81,7 @@ if(function_exists("register_field_group"))
 							),
 							array (
 								'key' => 'field_52738209844bc',
-								'label' => __('Url'),
+								'label' => 'Url',
 								'name' => 'url',
 								'type' => 'text',
 								'column_width' => '',
@@ -95,7 +94,7 @@ if(function_exists("register_field_group"))
 							),
 							array (
 								'key' => 'field_52738210844bd',
-								'label' => __('Beskrivning'),
+								'label' => 'Beskrivning',
 								'name' => 'beskrivning',
 								'type' => 'text',
 								'column_width' => '',
@@ -109,7 +108,7 @@ if(function_exists("register_field_group"))
 						),
 					),
 					array (
-						'label' => __('Rubrik'),
+						'label' => 'Rubrik',
 						'name' => 'rubrik',
 						'display' => 'row',
 						'min' => '',
@@ -117,7 +116,7 @@ if(function_exists("register_field_group"))
 						'sub_fields' => array (
 							array (
 								'key' => 'field_52778333acef3',
-								'label' => __('Rubrik'),
+								'label' => 'Rubrik',
 								'name' => 'rubrik',
 								'type' => 'text',
 								'column_width' => '',
@@ -137,7 +136,7 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_529c8de8644a5',
-				'label' => __('Kolumntext'),
+				'label' => 'Kolumntext',
 				'name' => 'hg_columntext',
 				'type' => 'wysiwyg',
 				'default_value' => '',
@@ -152,6 +151,13 @@ if(function_exists("register_field_group"))
 					'operator' => '==',
 					'value' => 'page',
 					'order_no' => 0,
+					'group_no' => 0,
+				),
+				array (
+					'param' => 'page_template',
+					'operator' => '!=',
+					'value' => 'page-hugy-pagelink.php',
+					'order_no' => 1,
 					'group_no' => 0,
 				),
 			),
@@ -175,12 +181,62 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 	register_field_group(array (
+		'id' => 'acf_direktlank',
+		'title' => 'Direktlänk',
+		'fields' => array (
+			array (
+				'key' => 'field_52a6f2926c913',
+				'label' => 'Direktlänk',
+				'name' => 'redirect_url',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'page-hugy-pagelink.php',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'acf_after_title',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+				0 => 'permalink',
+				1 => 'the_content',
+				2 => 'excerpt',
+				3 => 'custom_fields',
+				4 => 'discussion',
+				5 => 'comments',
+				6 => 'revisions',
+				7 => 'slug',
+				8 => 'author',
+				9 => 'format',
+				10 => 'featured_image',
+				11 => 'categories',
+				12 => 'tags',
+				13 => 'send-trackbacks',
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
 		'id' => 'acf_inst%c3%a4llningar',
 		'title' => 'Inställningar',
 		'fields' => array (
 			array (
 				'key' => 'field_52526201085f3',
-				'label' => __('Bildspel förstasida'),
+				'label' => 'Bildspel förstasida',
 				'name' => 'hg_firstpage_slideshow',
 				'type' => 'gallery',
 				'preview_size' => 'thumbnail',
@@ -188,7 +244,7 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_5252624b7bfbd',
-				'label' => __('Facebook eller annan info'),
+				'label' => 'Facebook eller annan info',
 				'name' => 'hg_firstpage_extra_information',
 				'type' => 'wysiwyg',
 				'default_value' => '',
@@ -197,7 +253,7 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_525d45e01120a',
-				'label' => __('Programikoner (svg)'),
+				'label' => 'Programikoner (svg)',
 				'name' => 'hg_program_icons_svg',
 				'type' => 'image',
 				'save_format' => 'object',
@@ -206,7 +262,7 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_525d47871120b',
-				'label' => __('Programikoner (png)'),
+				'label' => 'Programikoner (png)',
 				'name' => 'hg_program_icons_png',
 				'type' => 'image',
 				'save_format' => 'object',
@@ -215,13 +271,13 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_52526290e9423',
-				'label' => __('Snabbgenvägar'),
+				'label' => 'Snabbgenvägar',
 				'name' => 'hg_quicklinks',
 				'type' => 'repeater',
 				'sub_fields' => array (
 					array (
 						'key' => 'field_525262b1e9424',
-						'label' => __('Titel'),
+						'label' => 'Titel',
 						'name' => 'title',
 						'type' => 'text',
 						'column_width' => '',
@@ -234,7 +290,7 @@ if(function_exists("register_field_group"))
 					),
 					array (
 						'key' => 'field_525262d0e9426',
-						'label' => __('Länk'),
+						'label' => 'Länk',
 						'name' => 'url',
 						'type' => 'text',
 						'column_width' => '',
@@ -247,7 +303,7 @@ if(function_exists("register_field_group"))
 					),
 					array (
 						'key' => 'field_525d435285d1a',
-						'label' => __('Vilken plats i bilden'),
+						'label' => 'Vilken plats i bilden',
 						'name' => 'imageplace',
 						'type' => 'number',
 						'column_width' => '',
@@ -267,7 +323,7 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_525d479e1120c',
-				'label' => __('Snabbikoner (svg)'),
+				'label' => 'Snabbikoner (svg)',
 				'name' => 'hg_quick_icons_svg',
 				'type' => 'image',
 				'save_format' => 'object',
@@ -276,7 +332,7 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_525d47bb1120d',
-				'label' => __('Snabbikoner (png)'),
+				'label' => 'Snabbikoner (png)',
 				'name' => 'hg_quick_icons_svg',
 				'type' => 'image',
 				'save_format' => 'object',
@@ -285,12 +341,12 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_526e5ade9814a',
-				'label' => __('Direktlänkar på förstasidan'),
+				'label' => 'Direktlänkar på förstasidan',
 				'name' => 'hg_firstpage_teaser_link',
 				'type' => 'flexible_content',
 				'layouts' => array (
 					array (
-						'label' => __('Länk'),
+						'label' => 'Länk',
 						'name' => 'teaser',
 						'display' => 'row',
 						'min' => '',
@@ -298,7 +354,7 @@ if(function_exists("register_field_group"))
 						'sub_fields' => array (
 							array (
 								'key' => 'field_526f80bc9ae25',
-								'label' => __('Länk'),
+								'label' => 'Länk',
 								'name' => 'link',
 								'type' => 'text',
 								'column_width' => '',
@@ -311,7 +367,7 @@ if(function_exists("register_field_group"))
 							),
 							array (
 								'key' => 'field_526f80ca9ae26',
-								'label' => __('Bild'),
+								'label' => 'Bild',
 								'name' => 'image',
 								'type' => 'image',
 								'column_width' => '',
@@ -321,7 +377,7 @@ if(function_exists("register_field_group"))
 							),
 							array (
 								'key' => 'field_526f80dd9ae27',
-								'label' => __('Hover bild (valfri)'),
+								'label' => 'Hover bild (valfri)',
 								'name' => 'hover_image',
 								'type' => 'image',
 								'column_width' => '',
@@ -331,7 +387,7 @@ if(function_exists("register_field_group"))
 							),
 							array (
 								'key' => 'field_526f83ee9e92b',
-								'label' => __('Left/Right'),
+								'label' => 'Left/Right',
 								'name' => 'x_align',
 								'type' => 'select',
 								'column_width' => '',
@@ -345,7 +401,7 @@ if(function_exists("register_field_group"))
 							),
 							array (
 								'key' => 'field_526f810538082',
-								'label' => __('position'),
+								'label' => 'position',
 								'name' => 'x_pos',
 								'type' => 'number',
 								'column_width' => '',
@@ -359,7 +415,7 @@ if(function_exists("register_field_group"))
 							),
 							array (
 								'key' => 'field_526f83b09e92a',
-								'label' => __('Top/Bottom'),
+								'label' => 'Top/Bottom',
 								'name' => 'y_align',
 								'type' => 'select',
 								'column_width' => '',
@@ -373,7 +429,7 @@ if(function_exists("register_field_group"))
 							),
 							array (
 								'key' => 'field_526f812038083',
-								'label' => __('position'),
+								'label' => 'position',
 								'name' => 'y_pos',
 								'type' => 'number',
 								'column_width' => '',
@@ -394,12 +450,12 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_528b8119cf59c',
-				'label' => __('Direktlänkar i menyn'),
+				'label' => 'Direktlänkar i menyn',
 				'name' => 'direktlankar_i_menyn',
 				'type' => 'flexible_content',
 				'layouts' => array (
 					array (
-						'label' => __('Intern länk'),
+						'label' => 'Intern länk',
 						'name' => 'intern_lank',
 						'display' => 'row',
 						'min' => '',
@@ -407,7 +463,7 @@ if(function_exists("register_field_group"))
 						'sub_fields' => array (
 							array (
 								'key' => 'field_528b818acf59d',
-								'label' => __('Intern länk'),
+								'label' => 'Intern länk',
 								'name' => 'intern_lank',
 								'type' => 'post_object',
 								'column_width' => '',
@@ -425,7 +481,7 @@ if(function_exists("register_field_group"))
 						),
 					),
 					array (
-						'label' => __('Extern länk'),
+						'label' => 'Extern länk',
 						'name' => 'extern_lank',
 						'display' => 'row',
 						'min' => '',
@@ -433,7 +489,7 @@ if(function_exists("register_field_group"))
 						'sub_fields' => array (
 							array (
 								'key' => 'field_528b81f9cf5a1',
-								'label' => __('Titel'),
+								'label' => 'Titel',
 								'name' => 'titel',
 								'type' => 'text',
 								'column_width' => '',
@@ -446,7 +502,7 @@ if(function_exists("register_field_group"))
 							),
 							array (
 								'key' => 'field_528b81d2cf5a0',
-								'label' => __('Url'),
+								'label' => 'Url',
 								'name' => 'url',
 								'type' => 'text',
 								'column_width' => '',
@@ -459,7 +515,7 @@ if(function_exists("register_field_group"))
 							),
 							array (
 								'key' => 'field_528b8204cf5a2',
-								'label' => __('Beskrivning'),
+								'label' => 'Beskrivning',
 								'name' => 'beskrivning',
 								'type' => 'text',
 								'column_width' => '',
@@ -479,7 +535,7 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_528d1ff2ce0b7',
-				'label' => __('Visa inte sidor i menyn'),
+				'label' => 'Visa inte sidor i menyn',
 				'name' => 'visa_inte_sidor_i_menyn',
 				'type' => 'relationship',
 				'return_format' => 'id',
@@ -500,7 +556,7 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_528d215b3440e',
-				'label' => __('Innehåll i sidfot'),
+				'label' => 'Innehåll i sidfot',
 				'name' => 'innehall_i_sidfot',
 				'type' => 'wysiwyg',
 				'default_value' => '',
@@ -536,7 +592,7 @@ if(function_exists("register_field_group"))
 		'fields' => array (
 			array (
 				'key' => 'field_52777a683e5ab',
-				'label' => __('Titel'),
+				'label' => 'Titel',
 				'name' => 'titel',
 				'type' => 'text',
 				'default_value' => '',
@@ -548,7 +604,7 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_5273a3a928622',
-				'label' => __('Bild'),
+				'label' => 'Bild',
 				'name' => 'bild',
 				'type' => 'image',
 				'save_format' => 'object',
@@ -557,7 +613,7 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_5273576313976',
-				'label' => __('Telefon'),
+				'label' => 'Telefon',
 				'name' => 'telefon',
 				'type' => 'text',
 				'default_value' => '',
@@ -569,7 +625,7 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_5273577313977',
-				'label' => __('Mobiltelefon'),
+				'label' => 'Mobiltelefon',
 				'name' => 'mobiltelefon',
 				'type' => 'text',
 				'default_value' => '',
@@ -581,7 +637,7 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_5285f0a04d0ec',
-				'label' => __('Fax'),
+				'label' => 'Fax',
 				'name' => 'fax',
 				'type' => 'text',
 				'default_value' => '',
@@ -593,7 +649,7 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_5273577b13978',
-				'label' => __('E-post'),
+				'label' => 'E-post',
 				'name' => 'e-post',
 				'type' => 'text',
 				'default_value' => '',
@@ -605,7 +661,7 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_52777a773e5ad',
-				'label' => __('Beskrivning'),
+				'label' => 'Beskrivning',
 				'name' => 'beskrivning',
 				'type' => 'wysiwyg',
 				'default_value' => '',
@@ -614,7 +670,7 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_52777a703e5ac',
-				'label' => __('Arbetsplats'),
+				'label' => 'Arbetsplats',
 				'name' => 'arbetsplats',
 				'type' => 'text',
 				'default_value' => '',
@@ -626,7 +682,7 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_5273578413979',
-				'label' => __('Adress'),
+				'label' => 'Adress',
 				'name' => 'adress',
 				'type' => 'wysiwyg',
 				'default_value' => '',
@@ -635,7 +691,7 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_5285f0d00bb6a',
-				'label' => __('Typ av kontakt'),
+				'label' => 'Typ av kontakt',
 				'name' => 'typ_av_kontakt',
 				'type' => 'checkbox',
 				'required' => 1,
@@ -674,28 +730,28 @@ if(function_exists("register_field_group"))
 		'fields' => array (
 			array (
 				'key' => 'field_5265193457019',
-				'label' => __('Innehåll'),
+				'label' => 'Innehåll',
 				'name' => 'hg_modules',
 				'type' => 'flexible_content',
 				'layouts' => array (
 					array (
-						'label' => __('Nyheter'),
+						'label' => 'Nyheter',
 						'name' => 'nyheter',
 						'display' => 'row',
 						'sub_fields' => array (
 						),
 					),
 					array (
-						'label' => __('Facebook'),
+						'label' => 'Facebook',
 						'name' => 'facebook',
 						'display' => 'row',
 						'sub_fields' => array (
 							array (
 								'key' => 'field_526a2de8db102',
-								'label' => __('facebooksidans id'),
+								'label' => 'facebooksidans id',
 								'name' => 'id',
 								'type' => 'text',
-								'instructions' => __('Hitta sidans id på denna länk http://findmyfacebookid.com/'),
+								'instructions' => 'Hitta sidans id på denna länk http://findmyfacebookid.com/',
 								'column_width' => '',
 								'default_value' => '',
 								'placeholder' => '',
@@ -707,20 +763,20 @@ if(function_exists("register_field_group"))
 						),
 					),
 					array (
-						'label' => __('Program'),
+						'label' => 'Program',
 						'name' => 'program',
 						'display' => 'row',
 						'sub_fields' => array (
 						),
 					),
 					array (
-						'label' => __('Text'),
+						'label' => 'Text',
 						'name' => 'text',
 						'display' => 'row',
 						'sub_fields' => array (
 							array (
 								'key' => 'field_52651cd97fd68',
-								'label' => __('Text'),
+								'label' => 'Text',
 								'name' => 'text',
 								'type' => 'wysiwyg',
 								'column_width' => '',
@@ -730,7 +786,7 @@ if(function_exists("register_field_group"))
 							),
 							array (
 								'key' => 'field_527b96d558a3e',
-								'label' => __('Bakgrundsfärg'),
+								'label' => 'Bakgrundsfärg',
 								'name' => 'background-color',
 								'type' => 'color_picker',
 								'column_width' => '',
@@ -738,7 +794,7 @@ if(function_exists("register_field_group"))
 							),
 							array (
 								'key' => 'field_527b97c2837ad',
-								'label' => __('Textfärg'),
+								'label' => 'Textfärg',
 								'name' => 'color',
 								'type' => 'color_picker',
 								'column_width' => '',
@@ -786,7 +842,7 @@ if(function_exists("register_field_group"))
 		'fields' => array (
 			array (
 				'key' => 'field_527b8e2972545',
-				'label' => __('Kontakt'),
+				'label' => 'Kontakt',
 				'name' => 'kontakt',
 				'type' => 'post_object',
 				'post_type' => array (
@@ -824,7 +880,7 @@ if(function_exists("register_field_group"))
 		'fields' => array (
 			array (
 				'key' => 'field_524aa14691e27',
-				'label' => __('Bubbla'),
+				'label' => 'Bubbla',
 				'name' => 'hg_bubbla',
 				'type' => 'image',
 				'save_format' => 'id',
@@ -833,7 +889,7 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_524aa18f91e28',
-				'label' => __('Pictogram'),
+				'label' => 'Pictogram',
 				'name' => 'hg_pictogram',
 				'type' => 'image',
 				'save_format' => 'id',
@@ -842,7 +898,7 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_525d448c3f07b',
-				'label' => __('Vilken plats i Programbild'),
+				'label' => 'Vilken plats i Programbild',
 				'name' => 'hg_imageplace',
 				'type' => 'number',
 				'default_value' => '',
@@ -879,7 +935,7 @@ if(function_exists("register_field_group"))
 		'fields' => array (
 			array (
 				'key' => 'field_528b0727c4917',
-				'label' => __('Klasser'),
+				'label' => 'Klasser',
 				'name' => 'klasser',
 				'type' => 'wysiwyg',
 				'default_value' => '',
@@ -888,7 +944,7 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_528b06dac4915',
-				'label' => __('Salar'),
+				'label' => 'Salar',
 				'name' => 'salar',
 				'type' => 'wysiwyg',
 				'default_value' => '',
@@ -897,7 +953,7 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_528b06f6c4916',
-				'label' => __('Lärare'),
+				'label' => 'Lärare',
 				'name' => 'larare',
 				'type' => 'wysiwyg',
 				'default_value' => '',
@@ -925,6 +981,4 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 }
-
-
 ?>
