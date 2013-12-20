@@ -613,7 +613,18 @@ jQuery(document).ready(function($) {
 		'</div>'+
 		'<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5296fb5504f93612"></script>'+
 		'<!-- AddThis Button END -->');
-
+	
+	/* 
+	 * load matsedel 
+	 */
+	/*
+	$(".todaysfood").append('<!-- Matsedel BEGIN -->' +
+		'<div class="matsedel_todayfood">' +
+		'</div>' +
+		'<script type="text/javascript">var matsedel_config = {"path":"//matsedel.hfred.se/mat/"};</script>' +
+		'<script type="text/javascript" src="//matsedel.hfred.se/wp-content/themes/matsedel/js/site.js"></script>' +
+		'<!-- Matsedel END -->');
+	*/
 });
 
 

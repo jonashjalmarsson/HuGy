@@ -77,6 +77,17 @@
 	add_action( 'wp_enqueue_scripts', 'starkers_script_enqueuer' );
 
 	add_filter( 'body_class', array( 'Starkers_Utilities', 'add_slug_to_body_class' ) );
+	
+	// [matsedel]
+	function matsedel_shortcode_func( $atts ) {
+		/*extract( shortcode_atts( array(
+			'foo' => 'something',
+			'bar' => 'something else',
+		), $atts ) );*/
+
+		return "<div class='matsedel_weekfood'></div>";
+	}
+	add_shortcode( 'matsedel', 'matsedel_shortcode_func' );
 
 	/* ========================================================================================================================
 	

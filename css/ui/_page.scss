@@ -46,6 +46,18 @@ article.page {
 		margin-top: 24px;
 		margin-bottom: 24px;
 	}
+	.mat.current-item {
+		@extend .green;
+		padding: 0 12px;
+		margin-bottom: 24px;
+		font-size: 18px;
+		border-radius: 4px;
+		.mat_content {
+			@extend  .italic;
+			display: block;
+			font-size: 36px;
+		}
+	}
 }
 
 @include media-query(palm) {
@@ -104,3 +116,4 @@ article.page {
 	}
 	
 }
+

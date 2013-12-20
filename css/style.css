@@ -813,7 +813,8 @@ textarea:focus {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf:after, .nav:after, .top-wrapper .top .top-links-wrapper .weektext .quicklinks:after,
+.cf:after, .nav:after, .top-wrapper .top .top-links-wrapper .todaysfood .quicklinks:after,
+.top-wrapper .top .top-links-wrapper .weektext .quicklinks:after,
 .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks:after, .program-icons:after, .media:after, .island:after, article.page:after, .filter.tool:after, .search-wrapper:after,
 .pre-footer-search:after,
 .islet:after,
@@ -1058,7 +1059,8 @@ h5, .epsilon, .main-menu-wrapper, .module-wrapper.facebook-module-wrapper .fb-fe
   line-height: 1.5;
 }
 
-h6, .zeta, .up-icon span, .top-wrapper .top .top-links-wrapper .weektext, article .columntext, .author,
+h6, .zeta, .up-icon span, .top-wrapper .top .top-links-wrapper .todaysfood,
+.top-wrapper .top .top-links-wrapper .weektext, article .columntext, .author,
 .time, .slide-wrapper .caption,
 .active .caption {
   font-size: 14px;
@@ -1877,14 +1879,17 @@ article .block-wrapper .contacts-wrapper {
  * Demo: jsfiddle.net/inuitcss/Vnph4
  *
  */
-.nav, .top-wrapper .top .top-links-wrapper .weektext .quicklinks,
+.nav, .top-wrapper .top .top-links-wrapper .todaysfood .quicklinks,
+.top-wrapper .top .top-links-wrapper .weektext .quicklinks,
 .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks, .program-icons {
   list-style: none;
   margin-left: 0;
 }
-.nav > li, .top-wrapper .top .top-links-wrapper .weektext .quicklinks > li,
+.nav > li, .top-wrapper .top .top-links-wrapper .todaysfood .quicklinks > li,
+.top-wrapper .top .top-links-wrapper .weektext .quicklinks > li,
 .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks > li, .program-icons > li,
 .nav > li > a,
+.top-wrapper .top .top-links-wrapper .todaysfood .quicklinks > li > a,
 .top-wrapper .top .top-links-wrapper .weektext .quicklinks > li > a,
 .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks > li > a,
 .program-icons > li > a {
@@ -1937,7 +1942,8 @@ article .block-wrapper .contacts-wrapper {
    </ul>
  *
  */
-.nav--block, .top-wrapper .top .top-links-wrapper .weektext .quicklinks,
+.nav--block, .top-wrapper .top .top-links-wrapper .todaysfood .quicklinks,
+.top-wrapper .top .top-links-wrapper .weektext .quicklinks,
 .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks, .program-icons {
   line-height: 1;
   /**
@@ -1947,12 +1953,14 @@ article .block-wrapper .contacts-wrapper {
   word-spacing: -0.43em;
   white-space: nowrap;
 }
-.nav--block > li, .top-wrapper .top .top-links-wrapper .weektext .quicklinks > li,
+.nav--block > li, .top-wrapper .top .top-links-wrapper .todaysfood .quicklinks > li,
+.top-wrapper .top .top-links-wrapper .weektext .quicklinks > li,
 .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks > li, .program-icons > li {
   letter-spacing: normal;
   word-spacing: normal;
 }
-.nav--block > li > a, .top-wrapper .top .top-links-wrapper .weektext .quicklinks > li > a,
+.nav--block > li > a, .top-wrapper .top .top-links-wrapper .todaysfood .quicklinks > li > a,
+.top-wrapper .top .top-links-wrapper .weektext .quicklinks > li > a,
 .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks > li > a, .program-icons > li > a {
   padding: 12px;
 }
@@ -3053,7 +3061,8 @@ article .block-wrapper .contacts-wrapper {
   margin-right: 0 !important;
 }
 
-.flush--bottom, .contacts-wrapper h2, .footer-div .footer-container h2, .top-wrapper .top .top-links-wrapper .weektext .quicklinks,
+.flush--bottom, .contacts-wrapper h2, .footer-div .footer-container h2, .top-wrapper .top .top-links-wrapper .todaysfood .quicklinks,
+.top-wrapper .top .top-links-wrapper .weektext .quicklinks,
 .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks, .firstpage-menu-wrapper .firstpage-menu, .module-wrapper.nyheter-module-wrapper .items .item .item-content h2, .search-wrapper,
 .pre-footer-search, .program-icons, .related-wrapper h2 {
   margin-bottom: 0 !important;
@@ -3241,6 +3250,7 @@ article .block-wrapper .contacts-wrapper {
 @media only screen and (max-width: 680px) {
   .accessibility--palm,
   .visuallyhidden--palm,
+  .top-wrapper .top .top-links-wrapper .todaysfood,
   .top-wrapper .top .top-links-wrapper .weektext,
   .top-search-form,
   article.page .slideshow-wrapper .slideshow .slidesjs-pagination {
@@ -3365,11 +3375,11 @@ article .block-wrapper .contacts-wrapper {
   color: white;
 }
 
-.green, .filter.toggle .selected {
+.green, article.page .mat.current-item, .filter.toggle .selected {
   background-color: #14a585;
   color: white;
 }
-.green a, .filter.toggle .selected a {
+.green a, article.page .mat.current-item a, .filter.toggle .selected a {
   color: white;
 }
 
@@ -3624,7 +3634,8 @@ article .block-wrapper .contacts-wrapper {
 .italic, .contacts-wrapper h2, h1,
 .header,
 .content-wrapper .author h2,
-.single-hugy_kontakt .content-wrapper .contact h2, .footer-div .footer-container h2, .top-wrapper .top .top-links-wrapper .weektext, .main-menu-wrapper .menu-head, .filter.tool, .top-search-form .search-field, .top-search-form .search-submit, .search-wrapper input,
+.single-hugy_kontakt .content-wrapper .contact h2, .footer-div .footer-container h2, .top-wrapper .top .top-links-wrapper .todaysfood,
+.top-wrapper .top .top-links-wrapper .weektext, .main-menu-wrapper .menu-head, article.page .mat.current-item .mat_content, .filter.tool, .top-search-form .search-field, .top-search-form .search-submit, .search-wrapper input,
 .pre-footer-search input, .slide-wrapper .caption,
 .active .caption, .related-wrapper h2 {
   font-family: Georgia;
@@ -3971,15 +3982,18 @@ article.page .slideshow-wrapper:after {
   display: inline-block;
   float: right;
 }
+.top-wrapper .top .top-links-wrapper .todaysfood,
 .top-wrapper .top .top-links-wrapper .weektext,
 .top-wrapper .top .top-links-wrapper .quicklinks-wrapper {
   text-align: right;
   overflow: hidden;
 }
+.top-wrapper .top .top-links-wrapper .todaysfood .quicklinks > li > a,
 .top-wrapper .top .top-links-wrapper .weektext .quicklinks > li > a,
 .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks > li > a {
   padding: 0;
 }
+.top-wrapper .top .top-links-wrapper .todaysfood .quicklinks img,
 .top-wrapper .top .top-links-wrapper .weektext .quicklinks img,
 .top-wrapper .top .top-links-wrapper .quicklinks-wrapper .quicklinks img {
   max-height: 24px;
@@ -4819,6 +4833,16 @@ article.page {
 article.page .content-wrapper {
   margin-top: 24px;
   margin-bottom: 24px;
+}
+article.page .mat.current-item {
+  padding: 0 12px;
+  margin-bottom: 24px;
+  font-size: 18px;
+  border-radius: 4px;
+}
+article.page .mat.current-item .mat_content {
+  display: block;
+  font-size: 36px;
 }
 
 @media only screen and (max-width: 680px) {

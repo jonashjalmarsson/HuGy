@@ -761,6 +761,7 @@
 			$date = date_i18n('j F\, \v\e\c\k\a W');
 			$retValue .= $date;
 			$retValue .= '</div>';
+			$retValue .= '<div class="todaysfood"></div>';
 			return $retValue;
 		}
 		
