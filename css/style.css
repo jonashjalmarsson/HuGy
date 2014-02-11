@@ -4717,8 +4717,11 @@ article.page .slideshow-wrapper:after {
   color: inherit !important;
 }
 .module-wrapper.bildspel-module-wrapper {
-  padding-top: 6px !important;
+  padding-top: 0px !important;
   padding-bottom: 0px !important;
+}
+.module-wrapper.bildspel-module-wrapper:first-child {
+  padding-top: 6px !important;
 }
 .module-wrapper.bildspel-module-wrapper .bildspel-module {
   max-width: 100%;
