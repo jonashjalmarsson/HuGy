@@ -502,7 +502,14 @@ jQuery(document).ready(function($) {
 		$("body,html").softscroll(0, 600);
 	});
 	
-	
+	/* picto function on program pages */
+	$(".picto img.hover-image").each(function() {
+		$(this).hover(function() {
+			$(this).attr("data-org-src",$(this).attr("src")).attr("src",$(this).attr("data-hover"));
+		},function() {
+			$(this).attr("src",$(this).attr("data-org-src"));
+		});
+	});
 	
 	/* teaser function on firstpage */
 	$(".teaser img").each(function() {

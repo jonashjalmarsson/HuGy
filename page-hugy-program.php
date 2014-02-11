@@ -13,16 +13,16 @@
 <div class="slideshow-wrapper">
 	<?php /* pictogram */ ?>
 	<?php 
-	$bubbla = wp_get_attachment_image_src( get_field('hg_bubbla',get_the_ID()), "program");
+	$bubbla = wp_get_attachment_image_src( get_field('hg_pictogram',get_the_ID()), "program");
 	if (isset($bubbla) && is_array($bubbla) && count($bubbla) > 0)
 		$bubbla = $bubbla[0];
-	$picto = wp_get_attachment_image_src( get_field('hg_pictogram',get_the_ID()), "program");
-	if (isset($picto) && is_array($picto) && count($picto) > 0)
-		$picto = "data-hover-src='" . $picto[0] . "'";
+	$hover = wp_get_attachment_image_src( get_field('hg_bubbla',get_the_ID()), "program");
+	if (isset($hover) && is_array($hover) && count($hover) > 0)
+		$hover = "data-hover='" . $hover[0] . "'";
 	?>
 	<?php if (isset($bubbla) && $bubbla != "") : ?>
 	<div class="picto">
-		<img alt='<?php the_title(); ?>' src='<?php echo $bubbla; ?>' <?php echo $picto ?> />
+		<img class="hover-image" alt='<?php the_title(); ?>' src='<?php echo $bubbla; ?>' <?php echo $hover ?> />
 	</div>
 	<?php endif; ?>
 	<?php /* slideshow */ ?>
