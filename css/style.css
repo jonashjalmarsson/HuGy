@@ -4716,6 +4716,13 @@ article.page .slideshow-wrapper:after {
 .module-wrapper.text-module-wrapper h1, .module-wrapper.text-module-wrapper h2, .module-wrapper.text-module-wrapper a {
   color: inherit !important;
 }
+.module-wrapper.bildspel-module-wrapper {
+  padding-top: 6px !important;
+  padding-bottom: 0px !important;
+}
+.module-wrapper.bildspel-module-wrapper .bildspel-module {
+  max-width: 100%;
+}
 .module-wrapper.nyheter-module-wrapper .items .item {
   position: relative;
 }

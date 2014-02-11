@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-<!-- generator="WordPress/3.8.1" created="2014-02-11 11:45" -->
+<!-- generator="WordPress/3.8" created="2013-12-19 18:01" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.1/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -29,7 +29,7 @@
 	<title>LOKAL Hultsfreds gymnasium</title>
 	<link>http://127.0.0.1/wp/hugy</link>
 	<description>En till My Blog webbplats</description>
-	<pubDate>Tue, 11 Feb 2014 11:45:56 +0000</pubDate>
+	<pubDate>Thu, 19 Dec 2013 18:01:12 +0000</pubDate>
 	<language></language>
 	<wp:wxr_version>1.1</wp:wxr_version>
 	<wp:base_site_url>http://127.0.0.1/wp/</wp:base_site_url>
@@ -38,25 +38,21 @@
 	<wp:author><wp:author_id>2</wp:author_id><wp:author_login>hultsfred</wp:author_login><wp:author_email>jonas.hjalmarsson@hultsfred.se</wp:author_email><wp:author_display_name><![CDATA[hultsfred]]></wp:author_display_name><wp:author_first_name><![CDATA[]]></wp:author_first_name><wp:author_last_name><![CDATA[]]></wp:author_last_name></wp:author>
 	<item>
 		<title>Inställningar</title>
-		<link>http://127.0.0.1/wp/hugy/?acf=acf_installningar</link>
+		<link>http://127.0.0.1/wp/hugy/?acf=acf_inst%c3%a4llningar</link>
 		<pubDate>Tue, 01 Oct 2013 09:56:03 +0000</pubDate>
-		<dc:creator>hultsfred</dc:creator>
+		<dc:creator>jonas.hjalmarsson</dc:creator>
 		<guid isPermaLink="false">http://127.0.0.1/wp/hugy/?post_type=acf&#038;p=18</guid>
 		<wp:post_id>18</wp:post_id>
 		<wp:post_date>2013-10-01 11:56:03</wp:post_date>
 		<wp:post_date_gmt>2013-10-01 09:56:03</wp:post_date_gmt>
 		<wp:comment_status>closed</wp:comment_status>
 		<wp:ping_status>closed</wp:ping_status>
-		<wp:post_name>acf_installningar</wp:post_name>
+		<wp:post_name>acf_inst%c3%a4llningar</wp:post_name>
 		<wp:status>publish</wp:status>
 		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>1</wp:menu_order>
+		<wp:menu_order>0</wp:menu_order>
 		<wp:post_type>acf</wp:post_type>
 		<wp:post_password></wp:post_password>
-		<wp:postmeta>
-			<wp:meta_key>_relevanssi_hide_post</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_relevanssi_hide_post</wp:meta_key>
 			<wp:meta_value><![CDATA[]]></wp:meta_value>
@@ -78,36 +74,48 @@
 			<wp:meta_value><![CDATA[]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
+			<wp:meta_key>field_52526201085f3</wp:meta_key>
+			<wp:meta_value><![CDATA[a:10:{s:3:"key";s:19:"field_52526201085f3";s:5:"label";s:20:"Bildspel förstasida";s:4:"name";s:22:"hg_firstpage_slideshow";s:4:"type";s:7:"gallery";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_5252624b7bfbd</wp:meta_key>
+			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_5252624b7bfbd";s:5:"label";s:25:"Facebook eller annan info";s:4:"name";s:30:"hg_firstpage_extra_information";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
 			<wp:meta_key>field_52526290e9423</wp:meta_key>
-			<wp:meta_value><![CDATA[a:13:{s:3:"key";s:19:"field_52526290e9423";s:5:"label";s:14:"Snabbgenvägar";s:4:"name";s:13:"hg_quicklinks";s:4:"type";s:8:"repeater";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:10:"sub_fields";a:3:{i:0;a:15:{s:3:"key";s:19:"field_525262b1e9424";s:5:"label";s:5:"Titel";s:4:"name";s:5:"title";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:0:"";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}i:1;a:15:{s:3:"key";s:19:"field_525262d0e9426";s:5:"label";s:5:"Länk";s:4:"name";s:3:"url";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:0:"";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}i:2;a:16:{s:3:"key";s:19:"field_525d435285d1a";s:5:"label";s:21:"Vilken plats i bilden";s:4:"name";s:10:"imageplace";s:4:"type";s:6:"number";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:3:"min";s:1:"1";s:3:"max";s:2:"20";s:4:"step";s:1:"1";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:0:"";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}}s:7:"row_min";s:0:"";s:9:"row_limit";s:0:"";s:6:"layout";s:5:"table";s:12:"button_label";s:10:"Lägg till";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:13:{s:3:"key";s:19:"field_52526290e9423";s:5:"label";s:14:"Snabbgenvägar";s:4:"name";s:13:"hg_quicklinks";s:4:"type";s:8:"repeater";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:10:"sub_fields";a:3:{i:0;a:15:{s:3:"key";s:19:"field_525262b1e9424";s:5:"label";s:5:"Titel";s:4:"name";s:5:"title";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:0:"";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}i:1;a:15:{s:3:"key";s:19:"field_525262d0e9426";s:5:"label";s:5:"Länk";s:4:"name";s:3:"url";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:0:"";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}i:2;a:16:{s:3:"key";s:19:"field_525d435285d1a";s:5:"label";s:21:"Vilken plats i bilden";s:4:"name";s:10:"imageplace";s:4:"type";s:6:"number";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:3:"min";s:1:"1";s:3:"max";s:2:"20";s:4:"step";s:1:"1";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:0:"";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}}s:7:"row_min";s:0:"";s:9:"row_limit";s:0:"";s:6:"layout";s:5:"table";s:12:"button_label";s:10:"Lägg till";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:4;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_525d45e01120a</wp:meta_key>
-			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_525d45e01120a";s:5:"label";s:19:"Programikoner (svg)";s:4:"name";s:20:"hg_program_icons_svg";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_525d45e01120a";s:5:"label";s:19:"Programikoner (svg)";s:4:"name";s:20:"hg_program_icons_svg";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_525d47871120b</wp:meta_key>
-			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_525d47871120b";s:5:"label";s:19:"Programikoner (png)";s:4:"name";s:20:"hg_program_icons_png";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_525d47871120b";s:5:"label";s:19:"Programikoner (png)";s:4:"name";s:20:"hg_program_icons_png";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_525d479e1120c</wp:meta_key>
-			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_525d479e1120c";s:5:"label";s:17:"Snabbikoner (svg)";s:4:"name";s:18:"hg_quick_icons_svg";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_525d479e1120c";s:5:"label";s:17:"Snabbikoner (svg)";s:4:"name";s:18:"hg_quick_icons_svg";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:5;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_525d47bb1120d</wp:meta_key>
-			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_525d47bb1120d";s:5:"label";s:17:"Snabbikoner (png)";s:4:"name";s:18:"hg_quick_icons_svg";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:4;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_525d47bb1120d";s:5:"label";s:17:"Snabbikoner (png)";s:4:"name";s:18:"hg_quick_icons_svg";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:6;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_526e5ade9814a</wp:meta_key>
+			<wp:meta_value><![CDATA[a:12:{s:3:"key";s:19:"field_526e5ade9814a";s:5:"label";s:30:"Direktlänkar på förstasidan";s:4:"name";s:24:"hg_firstpage_teaser_link";s:4:"type";s:16:"flexible_content";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:7:"layouts";a:1:{i:0;a:6:{s:5:"label";s:5:"Länk";s:4:"name";s:6:"teaser";s:7:"display";s:3:"row";s:3:"min";s:0:"";s:3:"max";s:0:"";s:10:"sub_fields";a:7:{i:0;a:15:{s:3:"key";s:19:"field_526f80bc9ae25";s:5:"label";s:5:"Länk";s:4:"name";s:4:"link";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:0:"";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}i:1;a:12:{s:3:"key";s:19:"field_526f80ca9ae26";s:5:"label";s:4:"Bild";s:4:"name";s:5:"image";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:11:"save_format";s:3:"url";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:0:"";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}i:2;a:12:{s:3:"key";s:19:"field_526f80dd9ae27";s:5:"label";s:19:"Hover bild (valfri)";s:4:"name";s:11:"hover_image";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:11:"save_format";s:3:"url";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:0:"";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}i:3;a:13:{s:3:"key";s:19:"field_526f83ee9e92b";s:5:"label";s:10:"Left/Right";s:4:"name";s:7:"x_align";s:4:"type";s:6:"select";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:7:"choices";a:2:{s:4:"left";s:4:"left";s:5:"right";s:5:"right";}s:13:"default_value";s:0:"";s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:0:"";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}i:4;a:16:{s:3:"key";s:19:"field_526f810538082";s:5:"label";s:8:"position";s:4:"name";s:5:"x_pos";s:4:"type";s:6:"number";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:3:"min";s:0:"";s:3:"max";s:0:"";s:4:"step";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:0:"";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:4;}i:5;a:13:{s:3:"key";s:19:"field_526f83b09e92a";s:5:"label";s:10:"Top/Bottom";s:4:"name";s:7:"y_align";s:4:"type";s:6:"select";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:7:"choices";a:2:{s:3:"top";s:3:"top";s:6:"bottom";s:6:"bottom";}s:13:"default_value";s:0:"";s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:0:"";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:5;}i:6;a:16:{s:3:"key";s:19:"field_526f812038083";s:5:"label";s:8:"position";s:4:"name";s:5:"y_pos";s:4:"type";s:6:"number";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:3:"min";s:0:"";s:3:"max";s:0:"";s:4:"step";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:0:"";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:6;}}}}s:12:"button_label";s:10:"Lägg till";s:3:"min";s:0:"";s:3:"max";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:7;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_528b8119cf59c</wp:meta_key>
-			<wp:meta_value><![CDATA[a:12:{s:3:"key";s:19:"field_528b8119cf59c";s:5:"label";s:21:"Direktlänkar i menyn";s:4:"name";s:20:"direktlankar_i_menyn";s:4:"type";s:16:"flexible_content";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:7:"layouts";a:2:{i:0;a:6:{s:5:"label";s:12:"Intern länk";s:4:"name";s:11:"intern_lank";s:7:"display";s:3:"row";s:3:"min";s:0:"";s:3:"max";s:0:"";s:10:"sub_fields";a:1:{i:0;a:13:{s:3:"key";s:19:"field_528b818acf59d";s:5:"label";s:12:"Intern länk";s:4:"name";s:11:"intern_lank";s:4:"type";s:11:"post_object";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:9:"post_type";a:3:{i:0;s:4:"post";i:1;s:4:"page";i:2;s:12:"hugy_kontakt";}s:8:"taxonomy";a:1:{i:0;s:3:"all";}s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}}}i:1;a:6:{s:5:"label";s:12:"Extern länk";s:4:"name";s:11:"extern_lank";s:7:"display";s:3:"row";s:3:"min";s:0:"";s:3:"max";s:0:"";s:10:"sub_fields";a:3:{i:0;a:15:{s:3:"key";s:19:"field_528b81f9cf5a1";s:5:"label";s:5:"Titel";s:4:"name";s:5:"titel";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}i:1;a:15:{s:3:"key";s:19:"field_528b81d2cf5a0";s:5:"label";s:3:"Url";s:4:"name";s:3:"url";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}i:2;a:15:{s:3:"key";s:19:"field_528b8204cf5a2";s:5:"label";s:11:"Beskrivning";s:4:"name";s:11:"beskrivning";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}}}}s:12:"button_label";s:18:"Lägg till genväg";s:3:"min";s:0:"";s:3:"max";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:5;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:12:{s:3:"key";s:19:"field_528b8119cf59c";s:5:"label";s:21:"Direktlänkar i menyn";s:4:"name";s:20:"direktlankar_i_menyn";s:4:"type";s:16:"flexible_content";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:7:"layouts";a:2:{i:0;a:6:{s:5:"label";s:12:"Intern länk";s:4:"name";s:11:"intern_lank";s:7:"display";s:3:"row";s:3:"min";s:0:"";s:3:"max";s:0:"";s:10:"sub_fields";a:1:{i:0;a:13:{s:3:"key";s:19:"field_528b818acf59d";s:5:"label";s:12:"Intern länk";s:4:"name";s:11:"intern_lank";s:4:"type";s:11:"post_object";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:9:"post_type";a:3:{i:0;s:4:"post";i:1;s:4:"page";i:2;s:12:"hugy_kontakt";}s:8:"taxonomy";a:1:{i:0;s:3:"all";}s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}}}i:1;a:6:{s:5:"label";s:12:"Extern länk";s:4:"name";s:11:"extern_lank";s:7:"display";s:3:"row";s:3:"min";s:0:"";s:3:"max";s:0:"";s:10:"sub_fields";a:3:{i:0;a:15:{s:3:"key";s:19:"field_528b81f9cf5a1";s:5:"label";s:5:"Titel";s:4:"name";s:5:"titel";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}i:1;a:15:{s:3:"key";s:19:"field_528b81d2cf5a0";s:5:"label";s:3:"Url";s:4:"name";s:3:"url";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}i:2;a:15:{s:3:"key";s:19:"field_528b8204cf5a2";s:5:"label";s:11:"Beskrivning";s:4:"name";s:11:"beskrivning";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}}}}s:12:"button_label";s:18:"Lägg till genväg";s:3:"min";s:0:"";s:3:"max";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:8;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_528d1ff2ce0b7</wp:meta_key>
-			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_528d1ff2ce0b7";s:5:"label";s:23:"Visa inte sidor i menyn";s:4:"name";s:23:"visa_inte_sidor_i_menyn";s:4:"type";s:12:"relationship";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"return_format";s:2:"id";s:9:"post_type";a:1:{i:0;s:4:"page";}s:8:"taxonomy";a:1:{i:0;s:3:"all";}s:7:"filters";a:1:{i:0;s:6:"search";}s:15:"result_elements";a:1:{i:0;s:9:"post_type";}s:3:"max";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:6;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_528d1ff2ce0b7";s:5:"label";s:23:"Visa inte sidor i menyn";s:4:"name";s:23:"visa_inte_sidor_i_menyn";s:4:"type";s:12:"relationship";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"return_format";s:2:"id";s:9:"post_type";a:1:{i:0;s:4:"page";}s:8:"taxonomy";a:1:{i:0;s:3:"all";}s:7:"filters";a:1:{i:0;s:6:"search";}s:15:"result_elements";a:1:{i:0;s:9:"post_type";}s:3:"max";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:9;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_528d215b3440e</wp:meta_key>
-			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_528d215b3440e";s:5:"label";s:18:"Innehåll i sidfot";s:4:"name";s:17:"innehall_i_sidfot";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:7;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_528d215b3440e";s:5:"label";s:18:"Innehåll i sidfot";s:4:"name";s:17:"innehall_i_sidfot";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:9:"maxlength";s:0:"";s:10:"formatting";s:2:"br";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:10;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>rule</wp:meta_key>
@@ -118,7 +126,7 @@
 		<title>Programsida</title>
 		<link>http://127.0.0.1/wp/hugy/?acf=acf_programsida</link>
 		<pubDate>Tue, 01 Oct 2013 10:20:45 +0000</pubDate>
-		<dc:creator>hultsfred</dc:creator>
+		<dc:creator>jonas.hjalmarsson</dc:creator>
 		<guid isPermaLink="false">http://127.0.0.1/wp/hugy/?post_type=acf&#038;p=19</guid>
 		<wp:post_id>19</wp:post_id>
 		<wp:post_date>2013-10-01 12:20:45</wp:post_date>
@@ -136,12 +144,8 @@
 			<wp:meta_value><![CDATA[]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
-			<wp:meta_key>_relevanssi_hide_post</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
 			<wp:meta_key>_edit_last</wp:meta_key>
-			<wp:meta_value><![CDATA[2]]></wp:meta_value>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_524aa14691e27</wp:meta_key>
@@ -176,7 +180,7 @@
 		<title>Alla sidor</title>
 		<link>http://127.0.0.1/wp/hugy/?acf=acf_alla-sidor</link>
 		<pubDate>Tue, 01 Oct 2013 10:23:33 +0000</pubDate>
-		<dc:creator>hultsfred</dc:creator>
+		<dc:creator>jonas.hjalmarsson</dc:creator>
 		<guid isPermaLink="false">http://127.0.0.1/wp/hugy/?post_type=acf&#038;p=20</guid>
 		<wp:post_id>20</wp:post_id>
 		<wp:post_date>2013-10-01 12:23:33</wp:post_date>
@@ -194,12 +198,8 @@
 			<wp:meta_value><![CDATA[]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
-			<wp:meta_key>_relevanssi_hide_post</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
 			<wp:meta_key>_edit_last</wp:meta_key>
-			<wp:meta_value><![CDATA[2]]></wp:meta_value>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>position</wp:meta_key>
@@ -246,7 +246,7 @@
 		<title>Moduler</title>
 		<link>http://127.0.0.1/wp/hugy/?acf=acf_moduler</link>
 		<pubDate>Mon, 21 Oct 2013 12:11:10 +0000</pubDate>
-		<dc:creator>hultsfred</dc:creator>
+		<dc:creator>jonas.hjalmarsson</dc:creator>
 		<guid isPermaLink="false">http://127.0.0.1/wp/hugy/?post_type=acf&#038;p=78</guid>
 		<wp:post_id>78</wp:post_id>
 		<wp:post_date>2013-10-21 14:11:10</wp:post_date>
@@ -264,16 +264,12 @@
 			<wp:meta_value><![CDATA[]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
-			<wp:meta_key>_relevanssi_hide_post</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
 			<wp:meta_key>_edit_last</wp:meta_key>
 			<wp:meta_value><![CDATA[1]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_5265193457019</wp:meta_key>
-			<wp:meta_value><![CDATA[a:12:{s:3:"key";s:19:"field_5265193457019";s:5:"label";s:9:"Innehåll";s:4:"name";s:10:"hg_modules";s:4:"type";s:16:"flexible_content";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:7:"layouts";a:5:{i:0;a:6:{s:5:"label";s:7:"Nyheter";s:4:"name";s:7:"nyheter";s:7:"display";s:3:"row";s:3:"min";s:0:"";s:3:"max";s:0:"";s:10:"sub_fields";a:1:{i:0;a:16:{s:3:"key";s:19:"field_52f9fe53136a0";s:5:"label";s:13:"Antal nyheter";s:4:"name";s:11:"number_news";s:4:"type";s:6:"number";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:1:"3";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:3:"min";s:1:"3";s:3:"max";s:1:"9";s:4:"step";s:1:"3";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}}}i:1;a:6:{s:5:"label";s:8:"Facebook";s:4:"name";s:8:"facebook";s:7:"display";s:3:"row";s:3:"min";s:0:"";s:3:"max";s:0:"";s:10:"sub_fields";a:1:{i:0;a:15:{s:3:"key";s:19:"field_526a2de8db102";s:5:"label";s:17:"facebooksidans id";s:4:"name";s:2:"id";s:4:"type";s:4:"text";s:12:"instructions";s:60:"Hitta sidans id på denna länk http://findmyfacebookid.com/";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:0:"";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}}}i:2;a:6:{s:5:"label";s:7:"Program";s:4:"name";s:7:"program";s:7:"display";s:3:"row";s:3:"min";s:0:"";s:3:"max";s:0:"";s:10:"sub_fields";a:0:{}}i:3;a:6:{s:5:"label";s:4:"Text";s:4:"name";s:4:"text";s:7:"display";s:3:"row";s:3:"min";s:0:"";s:3:"max";s:0:"";s:10:"sub_fields";a:3:{i:0;a:12:{s:3:"key";s:19:"field_52651cd97fd68";s:5:"label";s:4:"Text";s:4:"name";s:4:"text";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:0:"";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}i:1;a:10:{s:3:"key";s:19:"field_527b96d558a3e";s:5:"label";s:14:"Bakgrundsfärg";s:4:"name";s:16:"background-color";s:4:"type";s:12:"color_picker";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:0:"";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}i:2;a:10:{s:3:"key";s:19:"field_527b97c2837ad";s:5:"label";s:9:"Textfärg";s:4:"name";s:5:"color";s:4:"type";s:12:"color_picker";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:0:"";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}}}i:4;a:6:{s:5:"label";s:8:"Bildspel";s:4:"name";s:8:"bildspel";s:7:"display";s:3:"row";s:3:"min";s:0:"";s:3:"max";s:0:"";s:10:"sub_fields";a:1:{i:0;a:11:{s:3:"key";s:19:"field_52fa09b40912f";s:5:"label";s:8:"Bildspel";s:4:"name";s:9:"slideshow";s:4:"type";s:7:"gallery";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}}}}s:12:"button_label";s:16:"Lägg till modul";s:3:"min";s:0:"";s:3:"max";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:10:{s:3:"key";s:19:"field_5265193457019";s:5:"label";s:9:"Innehåll";s:4:"name";s:10:"hg_modules";s:4:"type";s:16:"flexible_content";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:7:"layouts";a:4:{i:0;a:4:{s:5:"label";s:7:"Nyheter";s:4:"name";s:7:"nyheter";s:7:"display";s:3:"row";s:10:"sub_fields";a:0:{}}i:1;a:4:{s:5:"label";s:8:"Facebook";s:4:"name";s:8:"facebook";s:7:"display";s:3:"row";s:10:"sub_fields";a:1:{i:0;a:13:{s:3:"key";s:19:"field_526a2de8db102";s:5:"label";s:17:"facebooksidans id";s:4:"name";s:2:"id";s:4:"type";s:4:"text";s:12:"instructions";s:60:"Hitta sidans id på denna länk http://findmyfacebookid.com/";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:8:"order_no";i:0;}}}i:2;a:4:{s:5:"label";s:7:"Program";s:4:"name";s:7:"program";s:7:"display";s:3:"row";s:10:"sub_fields";a:0:{}}i:3;a:4:{s:5:"label";s:4:"Text";s:4:"name";s:4:"text";s:7:"display";s:3:"row";s:10:"sub_fields";a:3:{i:0;a:10:{s:3:"key";s:19:"field_52651cd97fd68";s:5:"label";s:4:"Text";s:4:"name";s:4:"text";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:8:"order_no";i:0;}i:1;a:8:{s:3:"key";s:19:"field_527b96d558a3e";s:5:"label";s:14:"Bakgrundsfärg";s:4:"name";s:16:"background-color";s:4:"type";s:12:"color_picker";s:12:"instructions";s:0:"";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:8:"order_no";i:1;}i:2;a:8:{s:3:"key";s:19:"field_527b97c2837ad";s:5:"label";s:9:"Textfärg";s:4:"name";s:5:"color";s:4:"type";s:12:"color_picker";s:12:"instructions";s:0:"";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:8:"order_no";i:2;}}}}s:12:"button_label";s:16:"Lägg till modul";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>position</wp:meta_key>
@@ -300,7 +296,7 @@
 		<title>Kontakt</title>
 		<link>http://127.0.0.1/wp/hugy/?acf=acf_kontakt</link>
 		<pubDate>Fri, 01 Nov 2013 07:27:49 +0000</pubDate>
-		<dc:creator>hultsfred</dc:creator>
+		<dc:creator>jonas.hjalmarsson</dc:creator>
 		<guid isPermaLink="false">http://127.0.0.1/wp/hugy/?post_type=acf&#038;p=90</guid>
 		<wp:post_id>90</wp:post_id>
 		<wp:post_date>2013-11-01 08:27:49</wp:post_date>
@@ -318,12 +314,8 @@
 			<wp:meta_value><![CDATA[]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
-			<wp:meta_key>_relevanssi_hide_post</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
 			<wp:meta_key>_edit_last</wp:meta_key>
-			<wp:meta_value><![CDATA[2]]></wp:meta_value>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_5273576313976</wp:meta_key>
@@ -386,7 +378,7 @@
 		<title>Profil</title>
 		<link>http://127.0.0.1/wp/hugy/?acf=acf_profil</link>
 		<pubDate>Thu, 07 Nov 2013 12:57:42 +0000</pubDate>
-		<dc:creator>hultsfred</dc:creator>
+		<dc:creator>jonas.hjalmarsson</dc:creator>
 		<guid isPermaLink="false">http://127.0.0.1/wp/hugy/?post_type=acf&#038;p=30996</guid>
 		<wp:post_id>30996</wp:post_id>
 		<wp:post_date>2013-11-07 13:57:42</wp:post_date>
@@ -404,12 +396,8 @@
 			<wp:meta_value><![CDATA[]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
-			<wp:meta_key>_relevanssi_hide_post</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
 			<wp:meta_key>_edit_last</wp:meta_key>
-			<wp:meta_value><![CDATA[2]]></wp:meta_value>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_527b8e2972545</wp:meta_key>
@@ -436,7 +424,7 @@
 		<title>Schema</title>
 		<link>http://127.0.0.1/wp/hugy/?acf=acf_schema</link>
 		<pubDate>Tue, 19 Nov 2013 06:38:10 +0000</pubDate>
-		<dc:creator>hultsfred</dc:creator>
+		<dc:creator>jonas.hjalmarsson</dc:creator>
 		<guid isPermaLink="false">http://127.0.0.1/wp/hugy/?post_type=acf&#038;p=31023</guid>
 		<wp:post_id>31023</wp:post_id>
 		<wp:post_date>2013-11-19 07:38:10</wp:post_date>
@@ -454,12 +442,8 @@
 			<wp:meta_value><![CDATA[]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
-			<wp:meta_key>_relevanssi_hide_post</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
 			<wp:meta_key>_edit_last</wp:meta_key>
-			<wp:meta_value><![CDATA[2]]></wp:meta_value>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_528b06dac4915</wp:meta_key>
@@ -494,7 +478,7 @@
 		<title>Direktlänk</title>
 		<link>http://127.0.0.1/wp/hugy/?acf=acf_direktlank</link>
 		<pubDate>Tue, 10 Dec 2013 10:54:05 +0000</pubDate>
-		<dc:creator>hultsfred</dc:creator>
+		<dc:creator>jonas.hjalmarsson</dc:creator>
 		<guid isPermaLink="false">http://127.0.0.1/wp/hugy/?post_type=acf&#038;p=31064</guid>
 		<wp:post_id>31064</wp:post_id>
 		<wp:post_date>2013-12-10 11:54:05</wp:post_date>
@@ -512,12 +496,8 @@
 			<wp:meta_value><![CDATA[]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
-			<wp:meta_key>_relevanssi_hide_post</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
 			<wp:meta_key>_edit_last</wp:meta_key>
-			<wp:meta_value><![CDATA[2]]></wp:meta_value>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_52a6f2926c913</wp:meta_key>

@@ -31,7 +31,7 @@
 	<?php 
 	if (is_home()) :
 		/* slideshow */
-		echo '<div class="slideshow-wrapper">';
+		/*echo '<div class="slideshow-wrapper">';
 			echo HuGy::get_filmroll_slideshow(get_field('hg_firstpage_slideshow','option'),'firstpage  filmroll','firstpage');
 		
 			//echo "<div class='teaser-1 teaser-icon teaser'></div>";
@@ -42,6 +42,7 @@
 			echo "<a class='facebook' href='#facebook'></a>";
 			echo "</div></div>";
 		echo '</div>';
+		*/
 
 	endif; ?>
 

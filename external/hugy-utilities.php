@@ -440,28 +440,31 @@
 				$style = '';
 				if ($background != '' || $color != '')
 					$style = " style='background-color:$background;color:$color;'";
+				
 				$retValue .= "<div class='" . get_row_layout() . "-module-wrapper module-wrapper'$style>";
-					$retValue .= "<div class='" . get_row_layout() . "-module module' data-fb-url='http://www.facebook.com/" . get_sub_field("id",$field) . "'>";
-					if (get_row_layout() == "facebook"):
-						$retValue .= "<a class='menu-margin' id='facebook'></a><h1>Vad händer mer...<a class='fb-logo' href='http://www.facebook.com/" . get_sub_field("id",$field) . "'><img src='".get_stylesheet_directory_uri()."/images/facebook.png' alt='Facebook logga' /></a></h1>";
-						if (function_exists("fb_feed")) :
-							$retValue .= fb_feed(get_sub_field("id",$field),array('container' => 'div',
-													'container_class' => 'items',
-													'container_id' => 'fb-feed',
-													'echo' => false));
-							$retValue .= "<div class='fb-loader'></div>";
-						else :
-							$retValue .= "<div class='hidden'>Du beh&ouml;ver installera <i>Facebook Feed Grabber</i> f&ouml;r att detta ska fungera.</div>";
-						endif;
-					elseif (get_row_layout() == "program"):
-						$retValue .= HuGy::get_program_links();
-					elseif (get_row_layout() == "nyheter"):
-						$retValue .= HuGy::get_news();
-					elseif (get_row_layout() == "text"):
-						$retValue .= get_sub_field('text');
+				$retValue .= "<div class='" . get_row_layout() . "-module module' data-fb-url='http://www.facebook.com/" . get_sub_field("id",$field) . "'>";
+				if (get_row_layout() == "facebook"):
+					$retValue .= "<a class='menu-margin' id='facebook'></a><h1>Vad händer mer...<a class='fb-logo' href='http://www.facebook.com/" . get_sub_field("id",$field) . "'><img src='".get_stylesheet_directory_uri()."/images/facebook.png' alt='Facebook logga' /></a></h1>";
+					if (function_exists("fb_feed")) :
+						$retValue .= fb_feed(get_sub_field("id",$field),array('container' => 'div',
+												'container_class' => 'items',
+												'container_id' => 'fb-feed',
+												'echo' => false));
+						$retValue .= "<div class='fb-loader'></div>";
+					else :
+						$retValue .= "<div class='hidden'>Du beh&ouml;ver installera <i>Facebook Feed Grabber</i> f&ouml;r att detta ska fungera.</div>";
 					endif;
-					$retValue .= "</div>";
-					$retValue .= "</div>";
+				elseif (get_row_layout() == "program"):
+					$retValue .= HuGy::get_program_links();
+				elseif (get_row_layout() == "nyheter"):
+					$retValue .= HuGy::get_news(get_sub_field("number_news",$field));
+				elseif (get_row_layout() == "text"):
+					$retValue .= get_sub_field('text');
+				elseif (get_row_layout() == "bildspel"):
+					$retValue .= HuGy::get_filmroll_slideshow(get_sub_field('slideshow','option'),'firstpage  filmroll','firstpage');
+				endif;
+				$retValue .= "</div>";
+				$retValue .= "</div>";
 			endwhile;
 			return $retValue;
 		}
@@ -470,12 +473,13 @@
 		/*
 		 * Return news, used in get_modules()
 		 */
-		function get_news() {
+		function get_news($number_news = 3) {
 			$retValue = "<a class='menu-margin' id='nyheter'></a><h1>Nytt på skolan</h1>";
+			 
 			// The Query
 			$the_query = new WP_Query( array(
 											'post_type' => 'post',
-											'posts_per_page' => 3 ));
+											'posts_per_page' => $number_news ));
 
 			// The Loop
 			if ( $the_query->have_posts() ) {
@@ -508,7 +512,7 @@
 		/*
 		 * Return teasers, used on home right now
 		 */
-		function get_teasers($page_id = "") {
+		/*function get_teasers($page_id = "") {
 			$retValue = "";
 			if ($page_id != "") {
 				$field = $page_id;
@@ -529,7 +533,7 @@
 			endwhile;
 			$retValue .= "</div></div>";
 			return $retValue;
-		}
+		}*/
 		
 		
 		

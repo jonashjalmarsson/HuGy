@@ -10,6 +10,13 @@
 			color: inherit!important;
 		}
 	}
+	&.bildspel-module-wrapper {
+		padding-top: 6px!important;
+		padding-bottom: 0px!important;
+		.bildspel-module {
+			max-width: 100%;
+		}
+	}
 	&.nyheter-module-wrapper {
 		h1 {
 			@extend .black-text;
