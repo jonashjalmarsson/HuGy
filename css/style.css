@@ -4825,7 +4825,8 @@ article .columntext {
   margin-left: 12px;
 }
 
-h1, h2 {
+.page-template-page-hugy-nyheter-php h1, .page-template-page-hugy-nyheter-php h2,
+.content h1, .content h2 {
   margin-bottom: 0;
   padding-top: 24px;
 }
