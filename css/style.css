@@ -4825,11 +4825,20 @@ article .columntext {
   margin-left: 12px;
 }
 
+h1, h2 {
+  margin-bottom: 0;
+  padding-top: 24px;
+}
+
+.addthis_toolbox.addthis_default_style {
+  display: inline-block;
+  margin-left: 12px;
+  width: 90px;
+}
+
 .author,
 .time {
-  margin-top: -28px;
   display: block;
-  padding-bottom: 28px;
 }
 .author, .author a,
 .time,
