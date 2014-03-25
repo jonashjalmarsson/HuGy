@@ -21,7 +21,7 @@
 		<?php endwhile; ?>
 
 		<?php $args = array(
-			
+			'paged'			   => $paged,
 			'offset'           => 0,
 			'category'         => '',
 			'orderby'          => 'post_date',
@@ -35,7 +35,6 @@
 			'post_parent'      => '',
 			'post_status'      => 'publish',
 			'suppress_filters' => true ); 
-			
 			
 		query_posts( $args ); ?>
 		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>

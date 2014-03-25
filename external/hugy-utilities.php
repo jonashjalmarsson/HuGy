@@ -502,6 +502,10 @@
 			} else {
 				// no posts found
 			}
+			$archive = HuGy::get_hugy_nyheter_page();
+			if ($archive != '')
+				$retValue .= "<div class='text--center'><a href='" . get_page_link($archive->ID) . "' title='" . $archive->post_title . "'>Gå till nyhetsarkivet</a></div>";
+
 			/* Restore original Post Data */
 			wp_reset_postdata();
 			return $retValue;
