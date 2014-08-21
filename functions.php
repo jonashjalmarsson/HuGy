@@ -78,16 +78,22 @@
 
 	add_filter( 'body_class', array( 'Starkers_Utilities', 'add_slug_to_body_class' ) );
 	
-	// [matsedel]
-	function matsedel_shortcode_func( $atts ) {
-		/*extract( shortcode_atts( array(
-			'foo' => 'something',
-			'bar' => 'something else',
-		), $atts ) );*/
 
-		return "<div class='matsedel_weekfood'></div>";
+	// add mime extensions 
+	function custom_upload_mimes ( $existing_mimes=array() ) {
+		// add your extension to the array
+		$existing_mimes['eps'] = 'image/eps';
+		$existing_mimes['svg'] = 'image/svg';
+		
+		if (current_user_can('manage_options')) {
+			$existing_mimes['exe'] = 'application/exe';
+		}
+		else {
+			unset($existing_mimes['exe']);
+		}
+		return $existing_mimes;
 	}
-	add_shortcode( 'matsedel', 'matsedel_shortcode_func' );
+	add_filter('upload_mimes', 'custom_upload_mimes');
 
 	/* ========================================================================================================================
 	

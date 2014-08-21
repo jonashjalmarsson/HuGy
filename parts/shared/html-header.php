@@ -15,29 +15,46 @@
 		<link rel="icon" type="image/x-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" />
 		<link rel="apple-touch-icon" type="image/x-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon_144x144.png" />
 		<meta name="msapplication-TileImage" content="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon_144x144.png"/>
-		
+		<?php 
+		$hg_program_icons_svg = "";
+		if ( get_field("hg_program_icons_svg","option") ){
+			$hg_program_icons_svg = get_field("hg_program_icons_svg","option")["url"];
+		} 
+		$hg_program_icons_png = "";
+		if ( get_field("hg_program_icons_png","option") ){
+			$hg_program_icons_png = get_field("hg_program_icons_png","option")["url"];
+		} 
+		$hg_quick_icons_svg = "";
+		if ( get_field("hg_quick_icons_svg","option") ){
+			$hg_quick_icons_svg = get_field("hg_quick_icons_svg","option")["url"];
+		} 
+		$hg_quick_icons_png = "";
+		if ( get_field("hg_quick_icons_png","option") ){
+			$hg_quick_icons_png = get_field("hg_quick_icons_png","option")["url"];
+		} 
+		?>
 		<?php wp_head(); ?>
 		<style><?php
-		if (get_field("hg_program_icons_svg","option") != "") { ?>
+		if ($hg_program_icons_svg != "") { ?>
 			.program-icon {
-				background-image: <?php echo get_field("hg_program_icons_svg","option"); ?>
+				background-image: url(<?php echo $hg_program_icons_svg; ?>);
 			}
 		<?php }
-		if (get_field("hg_program_icons_png","option") != "") { ?>
+		if ($hg_program_icons_png != "") { ?>
 			#ie7 .program-icon,
 			#ie8 .program-icon {
-				background-image: <?php echo get_field("hg_program_icons_svg","option"); ?>
+				background-image: url(<?php echo $hg_program_icons_png; ?>);
 			}
 		<?php }
-		if (get_field("hg_quick_icons_svg","option") != "") { ?>
+		if ($hg_quick_icons_svg != "") { ?>
 			.quick-icon {
-				background-image: <?php echo get_field("hg_quick_icons_svg","option"); ?>
+				background-image: url(<?php echo $hg_quick_icons_svg; ?>);
 			}
 		<?php }
-		if (get_field("hg_quick_icons_png","option") != "") { ?>
+		if ($hg_quick_icons_png != "") { ?>
 			#ie7 .quick-icon,
 			#ie8 .quick-icon {
-				background-image: <?php echo get_field("hg_quick_icons_svg","option"); ?>
+				background-image: url(<?php echo $hg_quick_icons_png; ?>);
 			}
 		<?php } ?>
 		</style>
