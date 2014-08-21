@@ -18,19 +18,19 @@
 		<?php 
 		$hg_program_icons_svg = "";
 		if ( get_field("hg_program_icons_svg","option") ){
-			$hg_program_icons_svg = get_field("hg_program_icons_svg","option")["url"];
+			//$hg_program_icons_svg = get_field("hg_program_icons_svg","option")["url"];
 		} 
 		$hg_program_icons_png = "";
 		if ( get_field("hg_program_icons_png","option") ){
-			$hg_program_icons_png = get_field("hg_program_icons_png","option")["url"];
+			//$hg_program_icons_png = get_field("hg_program_icons_png","option")["url"];
 		} 
 		$hg_quick_icons_svg = "";
 		if ( get_field("hg_quick_icons_svg","option") ){
-			$hg_quick_icons_svg = get_field("hg_quick_icons_svg","option")["url"];
+			//$hg_quick_icons_svg = get_field("hg_quick_icons_svg","option")["url"];
 		} 
 		$hg_quick_icons_png = "";
 		if ( get_field("hg_quick_icons_png","option") ){
-			$hg_quick_icons_png = get_field("hg_quick_icons_png","option")["url"];
+			//$hg_quick_icons_png = get_field("hg_quick_icons_png","option")["url"];
 		} 
 		?>
 		<?php wp_head(); ?>
