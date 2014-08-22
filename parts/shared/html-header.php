@@ -28,7 +28,7 @@
 		$hg_program_icons_svg = "";
 		$hg_program_icons_svg_var = get_field("hg_program_icons_svg","option");
 		if ( is_array($hg_program_icons_svg_var) && isset($hg_program_icons_svg_var) && isset($hg_program_icons_svg_var["url"]) ){
-			$hg_program_icons_svg = get_field("hg_program_icons_svg","option")["url"];
+			$hg_program_icons_svg = $hg_program_icons_svg_var["url"];
 		} 
 		
 		$hg_program_icons_png = "";
@@ -40,13 +40,13 @@
 		$hg_quick_icons_svg = "";
 		$hg_quick_icons_svg_var = get_field("hg_quick_icons_svg","option");		
 		if ( is_array($hg_quick_icons_svg_var) && isset($hg_quick_icons_svg_var) && isset($hg_quick_icons_svg_var["url"]) ){
-			$hg_quick_icons_svg = get_field("hg_quick_icons_svg","option")["url"];
+			$hg_quick_icons_svg = $hg_quick_icons_svg_var["url"];
 		} 
 		
 		$hg_quick_icons_png = "";
 		$hg_quick_icons_png_var = get_field("hg_quick_icons_png","option");
 		if ( is_array($hg_quick_icons_png_var) && isset($hg_quick_icons_png_var) && isset($hg_quick_icons_png_var["url"]) ){
-			$hg_quick_icons_png = get_field("hg_quick_icons_png","option")["url"];
+			$hg_quick_icons_png = $hg_quick_icons_png_var["url"];
 		} 
 		?>
 		<?php wp_head(); ?>
