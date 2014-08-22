@@ -3817,7 +3817,7 @@ a:hover {
     margin-right: 12px;
   }
 }
-.small-max-width--center, .module-wrapper.facebook-module-wrapper .module, article.page .content-wrapper {
+.small-max-width--center, .module-wrapper.program-module-wrapper .program-module.module, .module-wrapper.facebook-module-wrapper .module, article.page .content-wrapper {
   max-width: 700px;
   margin: 0 auto;
 }
@@ -4613,7 +4613,7 @@ article.page .slideshow-wrapper:after {
 .ie7 .max-width--center, .ie7 .footer-div, .ie7 .top-wrapper .top, .top-wrapper .ie7 .top, .ie7 .top-navigation-wrapper .top-navigation, .top-navigation-wrapper .ie7 .top-navigation, .ie7 .teaser-wrapper .teaser-content, .teaser-wrapper .ie7 .teaser-content, .ie7 .firstpage-menu-wrapper .firstpage-menu, .firstpage-menu-wrapper .ie7 .firstpage-menu, .ie7 .main-menu-wrapper, .ie7 .module-wrapper .module, .module-wrapper .ie7 .module, .ie7 article.page, .ie8 .max-width--center, .ie8 .footer-div, .ie8 .top-wrapper .top, .top-wrapper .ie8 .top, .ie8 .top-navigation-wrapper .top-navigation, .top-navigation-wrapper .ie8 .top-navigation, .ie8 .teaser-wrapper .teaser-content, .teaser-wrapper .ie8 .teaser-content, .ie8 .firstpage-menu-wrapper .firstpage-menu, .firstpage-menu-wrapper .ie8 .firstpage-menu, .ie8 .main-menu-wrapper, .ie8 .module-wrapper .module, .module-wrapper .ie8 .module, .ie8 article.page {
   width: 1100px;
 }
-.ie7 .small-max-width--center, .ie7 .module-wrapper.facebook-module-wrapper .module, .module-wrapper.facebook-module-wrapper .ie7 .module, .ie7 article.page .content-wrapper, article.page .ie7 .content-wrapper, .ie8 .small-max-width--center, .ie8 .module-wrapper.facebook-module-wrapper .module, .module-wrapper.facebook-module-wrapper .ie8 .module, .ie8 article.page .content-wrapper, article.page .ie8 .content-wrapper {
+.ie7 .small-max-width--center, .ie7 .module-wrapper.program-module-wrapper .program-module.module, .module-wrapper.program-module-wrapper .ie7 .program-module.module, .ie7 .module-wrapper.facebook-module-wrapper .module, .module-wrapper.facebook-module-wrapper .ie7 .module, .ie7 article.page .content-wrapper, article.page .ie7 .content-wrapper, .ie8 .small-max-width--center, .ie8 .module-wrapper.program-module-wrapper .program-module.module, .module-wrapper.program-module-wrapper .ie8 .program-module.module, .ie8 .module-wrapper.facebook-module-wrapper .module, .module-wrapper.facebook-module-wrapper .ie8 .module, .ie8 article.page .content-wrapper, article.page .ie8 .content-wrapper {
   width: 700px;
 }
 .ie7 .top-menu-button, .ie8 .top-menu-button {

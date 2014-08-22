@@ -442,7 +442,8 @@
 					$style = " style='background-color:$background;color:$color;'";
 				
 				$retValue .= "<div class='" . get_row_layout() . "-module-wrapper module-wrapper'$style>";
-				$retValue .= "<div class='" . get_row_layout() . "-module module' data-fb-url='http://www.facebook.com/" . get_sub_field("id",$field) . "'>";
+				$fb_data_url = (get_row_layout() == "facebook")?" data-fb-url='http://www.facebook.com/" . get_sub_field("id",$field) . "' ":"";
+				$retValue .= "<div class='" . get_row_layout() . "-module module' $fb_data_url>";
 				if (get_row_layout() == "facebook"):
 					$retValue .= "<a class='menu-margin' id='facebook'></a><h1>Vad händer mer...<a class='fb-logo' href='http://www.facebook.com/" . get_sub_field("id",$field) . "'><img src='".get_stylesheet_directory_uri()."/images/facebook.png' alt='Facebook logga' /></a></h1>";
 					if (function_exists("fb_feed")) :

@@ -65,6 +65,11 @@
 			}
 		}
 	}
+	&.program-module-wrapper {
+		.program-module.module {
+			@extend .small-max-width--center;
+		}
+	}
 	&.facebook-module-wrapper {
 		.module {
 			@extend .small-max-width--center;
