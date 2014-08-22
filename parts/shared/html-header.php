@@ -16,21 +16,37 @@
 		<link rel="apple-touch-icon" type="image/x-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon_144x144.png" />
 		<meta name="msapplication-TileImage" content="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon_144x144.png"/>
 		<?php 
+		
+		/*
+		print_r(get_field("hg_program_icons_svg","option"));
+		echo "<br>[url]";
+		echo get_field("hg_program_icons_svg","option")["url"];
+		echo "<br>->url";
+		echo get_field("hg_program_icons_svg","option")->url;
+		*/
+		
 		$hg_program_icons_svg = "";
-		if ( is_array(get_field("hg_program_icons_svg","option")) ){
-			//$hg_program_icons_svg = get_field("hg_program_icons_svg","option")["url"];
+		$hg_program_icons_svg_var = get_field("hg_program_icons_svg","option");
+		if ( is_array($hg_program_icons_svg_var) && isset($hg_program_icons_svg_var) && isset($hg_program_icons_svg_var["url"]) ){
+			$hg_program_icons_svg = get_field("hg_program_icons_svg","option")["url"];
 		} 
+		
 		$hg_program_icons_png = "";
-		if ( is_array(get_field("hg_program_icons_png","option")) ){
-			//$hg_program_icons_png = get_field("hg_program_icons_png","option")["url"];
+		$hg_program_icons_png_var = get_field("hg_program_icons_png","option");
+		if ( is_array($hg_program_icons_png_var) && isset($hg_program_icons_png_var) && isset($hg_program_icons_png_var["url"]) ){
+			$hg_program_icons_png = $hg_program_icons_png_var["url"];
 		} 
+		
 		$hg_quick_icons_svg = "";
-		if ( is_array(get_field("hg_quick_icons_svg","option")) ){
-			//$hg_quick_icons_svg = get_field("hg_quick_icons_svg","option")["url"];
+		$hg_quick_icons_svg_var = get_field("hg_quick_icons_svg","option");		
+		if ( is_array($hg_quick_icons_svg_var) && isset($hg_quick_icons_svg_var) && isset($hg_quick_icons_svg_var["url"]) ){
+			$hg_quick_icons_svg = get_field("hg_quick_icons_svg","option")["url"];
 		} 
+		
 		$hg_quick_icons_png = "";
-		if ( is_array(get_field("hg_quick_icons_png","option")) ){
-			//$hg_quick_icons_png = get_field("hg_quick_icons_png","option")["url"];
+		$hg_quick_icons_png_var = get_field("hg_quick_icons_png","option");
+		if ( is_array($hg_quick_icons_png_var) && isset($hg_quick_icons_png_var) && isset($hg_quick_icons_png_var["url"]) ){
+			$hg_quick_icons_png = get_field("hg_quick_icons_png","option")["url"];
 		} 
 		?>
 		<?php wp_head(); ?>
