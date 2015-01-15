@@ -19,6 +19,9 @@
 	require_once( 'external/hugy-utilities.php' );
 	require_once( 'external/acf-includes.php' );
 
+	if (function_exists('acf_add_options_page')) {
+		acf_add_options_page();
+	}
 	/* ========================================================================================================================
 	
 	Theme specific settings
