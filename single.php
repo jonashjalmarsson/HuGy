@@ -19,6 +19,7 @@
 	<div class='content-wrapper'>
 		<div class="content">
 			<h1><?php the_title(); ?></h1>
+			<?php echo HuGy::get_tags(); ?>
 			<time class='time' datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate>DATUM: <?php the_date(); ?> <?php the_time(); ?></time>
 			<?php echo HuGy::get_author(); ?>
 			<?php the_content(); ?>			

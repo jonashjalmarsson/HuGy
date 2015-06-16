@@ -39,6 +39,7 @@
 		query_posts( $args ); ?>
 		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 		<h2><a class='nolink' href='<?php echo get_post_permalink(get_the_ID()); ?>'><?php the_title(); ?></a></h2>
+		<?php echo HuGy::get_tags(); ?>
 		<time class='time' datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate>DATUM: <?php echo get_the_date(); ?> <?php the_time(); ?></time>
 		<?php echo HuGy::get_author(); ?>
 		<div class="slideshow-wrapper">

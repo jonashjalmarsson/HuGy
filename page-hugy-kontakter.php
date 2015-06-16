@@ -17,6 +17,7 @@
 <div class="content-wrapper">
 	<div class="content">
 		<h1><?php the_title(); ?></h1>
+		<?php echo HuGy::get_tags(); ?>
 		<?php echo HuGy::get_author(); ?>
 		<?php echo HuGy::get_columntext(); ?>
 		<?php the_content(); ?>

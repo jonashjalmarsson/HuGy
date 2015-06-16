@@ -30,6 +30,11 @@
 	
 	======================================================================================================================== */
 
+	add_action('init', 'hugy_tags_support_page');
+	function hugy_tags_support_page() {
+		register_taxonomy_for_object_type('post_tag', 'page');
+	}
+
 	add_theme_support('post-thumbnails');
 	add_theme_support('html5', array('search-form'));
 	if ( function_exists( 'add_image_size' ) ) { 

@@ -488,6 +488,7 @@
 				while ( $the_query->have_posts() ) {
 					$retValue .= "<div class='item'>";
 					$the_query->the_post();
+					$retValue .=  HuGy::get_tags();
 					//$retValue .= "<div class='item-img'>";
 					//$retValue .=  get_the_post_thumbnail(get_the_ID(), 'news'); 
 					$retValue .= "<a href='" . get_permalink() . "'>";
@@ -504,9 +505,9 @@
 				// no posts found
 			}
 			$archive = HuGy::get_hugy_nyheter_page();
-			if ($archive != '')
+			if ($archive != '') {
 				$retValue .= "<div class='text--center'><a href='" . get_page_link($archive->ID) . "' title='" . $archive->post_title . "'>Gå till nyhetsarkivet</a></div>";
-
+			}
 			/* Restore original Post Data */
 			wp_reset_postdata();
 			return $retValue;
@@ -616,8 +617,10 @@
 			$contacts = get_field('hg_kontakter', $page_id);
 			if (!empty($contacts) && $contacts != "") :
 				$retValue .= "<div class='contacts-wrapper'>";
-				if ($vars['title'] != '')
-					$retValue .= "<h2>" . $vars['title'] . "</h2>";
+				if ($vars['title'] != '') {
+					$retValue .= "<h2>" . $vars['title'] . "</h2>";				
+				}
+				$retValue .= HuGy::get_tags();
 				$retValue .= "<div class='" . $vars['class'] . "'>";
 				foreach ($contacts as $contact) :
 					$retValue .= HuGy::get_contact( $contact->ID, $args );
@@ -638,7 +641,6 @@
 			$excerpt = $vars['excerpt'];
 			$retValue .= "<div class='media contact contact-".$contact_id."'>";
 
-			
 			if (!$excerpt) {
 				$bild = get_field("bild",$contact_id);	
 				if ($bild) {
@@ -652,7 +654,8 @@
 			$title = get_the_title($contact_id);
 			$retValue .= "<h2 class='title'>$title</h2>";
 			$retValue .= "</a>";
-			
+			$retValue .=  HuGy::get_tags($contact_id);
+
 			$titel = get_field("titel",$contact_id);	
 			if ($titel)
 				$retValue .= "<span class='titel'>$titel</span>";
@@ -784,5 +787,24 @@
 				return "<div class='columntext'>" . get_field('hg_columntext',get_the_ID()) . "</div>";
 			endif;
 		}
+
+		function get_tags($contact_id = "") {
+			if ($contact_id == "") {
+				$tags_array = get_the_tags();
+			}
+			else {
+				$tags_array = get_the_tags($contact_id);
+			}
+			$retValue = "";
+			if (!empty($tags_array)) {
+				$retValue .=  "<div class='tags'>";
+				foreach ($tags_array as $tag){
+					$retValue .=  "<span class='tag " . $tag->name . "'>".$tag->name."</span>\n";
+				}
+				$retValue .=  "</div>";
+			}
+			return $retValue;
+		}
+
 	}
  ?>

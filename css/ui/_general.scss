@@ -151,3 +151,20 @@ img.wp-smiley,
    -o-transform:rotate(3deg);
    transform:rotate(3deg);
 }
+
+/* tag colors and visual */
+.tags {
+	margin: 5px 0;
+	.tag {
+		display: inline!important;
+		margin: 0 10px 0 0;
+		padding: 4px;
+		@extend .italic;
+		&.Komvux {
+			@extend .gray-dark;
+		}
+		&.Gymnasium {
+			@extend .green;
+		}
+	}
+}

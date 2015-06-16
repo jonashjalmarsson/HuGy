@@ -25,6 +25,7 @@ function hugy_contacts_init() {
 				'query_var' => true,
 				'supports' => array('title','revisions','author'),
 			));
+		register_taxonomy_for_object_type('post_tag', 'hugy_kontakt');
 
 	//}
 }
