@@ -153,12 +153,22 @@ img.wp-smiley,
 }
 
 /* tag colors and visual */
+.pre-footer .menu .tags {
+	@extend .micro;
+	display: inline-block;
+	.tag {
+		padding: 2px 4px;
+		margin: 3px;
+	}
+}
 .tags {
 	margin: 5px 0;
+	@extend .epsilon;
 	.tag {
+		border-radius: 16px;
 		display: inline!important;
 		margin: 0 10px 0 0;
-		padding: 4px;
+		padding: 2px 8px;
 		@extend .italic;
 		&.Komvux {
 			@extend .gray-dark;
