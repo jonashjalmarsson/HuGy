@@ -8,7 +8,7 @@
  	 * @subpackage 	Starkers
  	 * @since 		Starkers 4.0
 	 */
-	define("HUGY_VERSION", get_bloginfo("version")."-1.0");
+	define("HUGY_VERSION", get_bloginfo("version")."-1.1");
 	/* ========================================================================================================================
 	
 	Required external files

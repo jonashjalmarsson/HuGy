@@ -403,9 +403,14 @@
 
 					$retValue .= "<li><span class='menu-title-wrapper'><a class='menu-head picto-icon'></a><span class='menu-title'>Gymnasium</span></span><ul class='children'>";
 					$retValue .= HuGy::get_program_links(false,false);
-					$retValue .= "</ul><span class='menu-title-wrapper'><a class='menu-head picto-icon'></a><span class='menu-title'>Komvux</span></span><ul class='children'>";
-					$retValue .= HuGy::get_program_links(false,false,"page-hugy-komvux.php");
-					$retValue .= "</ul></li>";
+					$retValue .= "</ul>";
+					$komvuxlinks = HuGy::get_program_links(false,false,"page-hugy-komvux.php");
+					if ($komvuxlinks != "") :
+						$retValue .= "<span class='menu-title-wrapper'><a class='menu-head picto-icon'></a><span class='menu-title'>Komvux</span></span><ul class='children'>";
+						$retValue .= $komvuxlinks;
+						$retValue .= "</ul>";
+					endif;
+					$retValue .= "</li>";
 
 					// quickmenu
 					$retValue .= "<li><a class='menu-head quick-menu-icon'></a><ul class='children'>";
