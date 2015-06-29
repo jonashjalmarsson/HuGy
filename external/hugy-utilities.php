@@ -80,7 +80,7 @@
 		/*
 		 *
 		 */
-		function get_program_links( $icon = true, $wrapping_ul = true ) {
+		function get_program_links( $icon = true, $wrapping_ul = true, $page_template = "page-hugy-program.php" ) {
 			$retValue = "";
 			$args = array(
 				'order' => 'ASC',
@@ -98,7 +98,7 @@
 				'post_status' => 'publish',
 				'posts_per_page' => -1,
 				'meta_key' => '_wp_page_template',
-				'meta_value' => 'page-hugy-program.php'
+				'meta_value' => $page_template,
 			); 
 			$pages = get_posts($args);
 			
@@ -401,8 +401,10 @@
 					$retValue .= HuGy::get_page_tree();
 					$retValue .= "</ul></li>";
 
-					$retValue .= "<li><a class='menu-head picto-icon'></a><ul class='children'>";
+					$retValue .= "<li><span class='menu-title-wrapper'><a class='menu-head picto-icon'></a><span class='menu-title'>Gymnasium</span></span><ul class='children'>";
 					$retValue .= HuGy::get_program_links(false,false);
+					$retValue .= "</ul><span class='menu-title-wrapper'><a class='menu-head picto-icon'></a><span class='menu-title'>Komvux</span></span><ul class='children'>";
+					$retValue .= HuGy::get_program_links(false,false,"page-hugy-komvux.php");
 					$retValue .= "</ul></li>";
 
 					// quickmenu
