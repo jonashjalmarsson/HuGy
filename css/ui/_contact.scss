@@ -2,12 +2,14 @@
 .single-hugy_kontakt .content-wrapper .contact {
 	h2 {
 		@extend .header;
+		//margin-bottom: 24px;
+		padding-top: 0px;
 	}
 	.titel {
-		margin-top: -28px;
-		padding-bottom: 28px;
+		//margin-top: -28px;
+		//padding-bottom: 28px;
 	}
-	margin-bottom: 12px;
+	//margin-bottom: 12px;
 	position: relative;
 	span {
 		display: block;
@@ -18,8 +20,8 @@
 		.contact {
 			border-bottom: 1px dashed #ccc;
 			cursor: pointer;
-			margin-bottom: 24px!important;
-			padding-bottom: 24px!important;
+			//margin-bottom: 24px!important;
+			//padding-bottom: 24px!important;
 			.bild img {
 				width: 100px;
 			}
@@ -34,6 +36,7 @@
 		@extend .flush--bottom;
 		font-weight: normal;
 		padding-bottom: 6px;
+		padding-top: 0px!important;
 	}
 	.contacts {
 		@extend .black-text;
@@ -55,7 +58,7 @@
 	.contactlist,
 	.contacts {
 		.contact {
-			margin-bottom: 12px;
+			//margin-bottom: 12px;
 			position: relative;
 			h2.title {
 				@extend .delta;
@@ -63,6 +66,9 @@
 			}
 			span {
 				display: block;
+			}
+			.tags {
+				font-size: 10px;
 			}
 			/*&:hover {
 				.contact-data {	
