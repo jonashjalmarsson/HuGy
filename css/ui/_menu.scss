@@ -80,6 +80,9 @@
 			}
 		}
 	}
+	.tags {
+		margin: 0px 0 -10px;
+	}
 	.current_page_item > a {
 		@extend .white-background;
 		@extend .black-text;
