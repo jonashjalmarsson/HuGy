@@ -871,13 +871,13 @@
 	
 	                /** This filter is documented in wp-includes/post-template.php */
 	                $output .= $indent . sprintf(
-	                        '<li class="%s">%s<a href="%s">%s%s%s</a>',
+	                        '<li class="%s"><a href="%s">%s%s%s%s</a>',
 	                        $css_classes,
-							HuGy::get_tags( $page->ID ),
 	                        get_permalink( $page->ID ),
 	                        $args['link_before'],
 	                        apply_filters( 'the_title', $page->post_title, $page->ID ),
-	                        $args['link_after']
+	                        $args['link_after'],
+							HuGy::get_tags( $page->ID )
 							);
 	
 	                if ( ! empty( $args['show_date'] ) ) {

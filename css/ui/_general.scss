@@ -155,7 +155,18 @@ img.wp-smiley,
 /* tag colors and visual */
 .pre-footer .menu .tags {
 	@extend .micro;
+	display: inline;
+	clear: none;
+	
+	/* NEW 
 	display: inline-block;
+    margin: 0 0 0px 6px;
+    position: absolute;
+    top: -12px;
+    right: -49px;
+    opacity: 0.8;
+	 END NEW */
+	
 	.tag {
 		padding: 2px 4px;
 		margin: 3px;

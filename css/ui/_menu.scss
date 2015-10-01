@@ -84,8 +84,10 @@
 		margin: 0px 0 -10px;
 	}
 	.current_page_item > a {
-		@extend .white-background;
-		@extend .black-text;
+		//@extend .white-background;
+		//@extend .black-text;
+		font-weight: bold;
+		text-decoration: underline;
 	}
 }
 @include media-query(palm){

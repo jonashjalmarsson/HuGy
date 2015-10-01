@@ -8,7 +8,7 @@
  	 * @subpackage 	Starkers
  	 * @since 		Starkers 4.0
 	 */
-	define("HUGY_VERSION", get_bloginfo("version")."-1.3");
+	define("HUGY_VERSION", get_bloginfo("version")."-1.4");
 	/* ========================================================================================================================
 	
 	Required external files
@@ -524,3 +524,34 @@
 		}
 
 	} // end if
+	
+	/* shortcodes */
+	//[program]
+	function hugy_program_func( $atts ){
+		$a = shortcode_atts( array(
+			'type' => 'gymnasium',
+			), $atts );
+		if ($atts["type"] == "komvux") {
+			return "<ul>".HuGy::get_program_links(false,false,"page-hugy-komvux.php")."</ul>";
+		}
+		else {
+			return "<ul>".HuGy::get_program_links()."</ul>";
+		}
+	}
+	add_shortcode( 'program', 'hugy_program_func' );
+
+	//[sidlistning]
+	function hugy_pagelist_func( $atts ){
+		global $id;
+		$a = shortcode_atts( array(
+			'type' => 'gymnasium',
+			), $atts );
+			
+		$returnval = "<ul>";
+		$returnval .= wp_list_pages("echo=0&title_li=&child_of=".$id."");
+		$returnval .= "</ul>";
+		
+		return $returnval;
+		
+	}
+	add_shortcode( 'sidlistning', 'hugy_pagelist_func' );

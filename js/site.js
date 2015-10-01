@@ -476,16 +476,17 @@ jQuery(document).ready(function($) {
 			if (!($(this).hasClass("menu-head") || $(this).parent().hasClass("current_page_item") || $(this).parent().hasClass("current_page_ancestor") || $(this).parent().hasClass("current_page_parent"))) {
 				if ($(this).next().hasClass("children"))
 					$(this).next().hide();
-				expand = $("<span />").addClass("expand").html("+").click( function() {
+				expand = $("<span />").addClass("expand").html("+").click( function(ev) {
+					ev.preventDefault();
 					if ($(this).html() == "+")
 						$(this).html("-");
 					else
 						$(this).html("+");
-					if ($(this).next().hasClass("children")) {
-						$(this).next().slideToggle();
+					if ($(this).parent().next().hasClass("children")) {
+						$(this).parent().next().slideToggle();
 					}
 				});
-				$(this).after(expand);
+				$(this).append(expand);
 			}
 		}           
 	});
