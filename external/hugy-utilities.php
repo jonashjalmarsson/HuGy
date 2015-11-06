@@ -713,6 +713,19 @@
 		}
 		
 		/*
+		 * Return the date
+		 */
+		function get_date() {
+			$retValue .= " <time class='time' datetime='";
+			$retValue .= get_the_time( 'Y-m-d' );
+			$retValue .= "' pubdate>";
+			$retValue .= get_the_date();
+			$retValue .= " " . get_the_time();
+			$retValue .= "</time>";
+			return $retValue;
+		}
+
+		/*
 		 * Return the author
 		 */
 		function get_author() {
@@ -727,7 +740,7 @@
 				$name = get_the_author_meta('first_name') . ' ' . get_the_author_meta('last_name');
 			}
 			
-			$retValue .= "UPPDATERAD AV: $prelink$name$postlink";
+			$retValue .= "$prelink$name$postlink";
 			$retValue .= '</div>';
 			return $retValue;
 		}

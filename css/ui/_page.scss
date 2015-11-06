@@ -44,6 +44,10 @@ article {
 		color: #999;
 	}
 }
+.author {
+	margin-bottom: 12px;
+}
+
 article.page {
 	@extend .max-width--center;
  	@extend .island;
