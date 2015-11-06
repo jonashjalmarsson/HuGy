@@ -25,8 +25,12 @@ wp_reset_query();
 	<li>
 		<article class="search-<?php echo get_post_type(); ?>">
 			<h2><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-			<?php echo HuGy::get_date(); ?>
-			<?php echo HuGy::get_author(); ?>
+			<?php if (get_post_type() == "post") :
+				echo HuGy::get_date(); 
+			endif;
+			if (get_post_type() == "hugy_kontakt") :
+				echo HuGy::get_author(); 
+			endif; ?>
 			<?php the_excerpt(); ?>
 		</article>
 	</li>
