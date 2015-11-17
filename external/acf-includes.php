@@ -60,7 +60,7 @@ if(function_exists("register_field_group"))
 						),
 					),
 					array (
-						'label' => 'Länk',
+						'label' => 'L&auml;nk',
 						'name' => 'lank',
 						'display' => 'row',
 						'min' => '',
@@ -182,11 +182,11 @@ if(function_exists("register_field_group"))
 	));
 	register_field_group(array (
 		'id' => 'acf_direktlank',
-		'title' => 'Direktlänk',
+		'title' => 'Direktl&auml;nk',
 		'fields' => array (
 			array (
 				'key' => 'field_52a6f2926c913',
-				'label' => 'Direktlänk',
+				'label' => 'Direktl&auml;nk',
 				'name' => 'redirect_url',
 				'type' => 'text',
 				'default_value' => '',
@@ -340,9 +340,9 @@ if(function_exists("register_field_group"))
 				'type' => 'checkbox',
 				'required' => 1,
 				'choices' => array (
-					'Administration' => 'Administration (Kansli, Studie och yrkesvägledning, Elevhälsa o dyl)',
+					'Administration' => 'Administration (Kansli, Studie och yrkesv&auml;gledning, Elevh&auml;lsa o dyl)',
 					'Pedagoger' => 'Pedagoger och elevassistenter',
-					'Servicefunktion' => 'Servicefunktioner (Cafeteria, Kost, Vaktmästeri, Lokalvård o dyl)',
+					'Servicefunktion' => 'Servicefunktioner (Cafeteria, Kost, Vaktm&auml;steri, Lokalv&aring;rd o dyl)',
 					'Skolledning' => 'Skolledning',
 				),
 				'default_value' => '',
@@ -374,7 +374,7 @@ if(function_exists("register_field_group"))
 		'fields' => array (
 			array (
 				'key' => 'field_5265193457019',
-				'label' => 'Innehåll',
+				'label' => 'Inneh&aring;ll',
 				'name' => 'hg_modules',
 				'type' => 'flexible_content',
 				'layouts' => array (
@@ -413,7 +413,7 @@ if(function_exists("register_field_group"))
 								'label' => 'facebooksidans id',
 								'name' => 'id',
 								'type' => 'text',
-								'instructions' => 'Hitta sidans id på denna länk http://findmyfacebookid.com/',
+								'instructions' => 'Hitta sidans id p&aring; denna l&auml;nk http://findmyfacebookid.com/',
 								'column_width' => '',
 								'default_value' => '',
 								'placeholder' => '',
@@ -452,7 +452,7 @@ if(function_exists("register_field_group"))
 							),
 							array (
 								'key' => 'field_527b96d558a3e',
-								'label' => 'Bakgrundsfärg',
+								'label' => 'Bakgrundsf&auml;rg',
 								'name' => 'background-color',
 								'type' => 'color_picker',
 								'column_width' => '',
@@ -460,7 +460,7 @@ if(function_exists("register_field_group"))
 							),
 							array (
 								'key' => 'field_527b97c2837ad',
-								'label' => 'Textfärg',
+								'label' => 'Textf&auml;rg',
 								'name' => 'color',
 								'type' => 'color_picker',
 								'column_width' => '',
@@ -487,7 +487,7 @@ if(function_exists("register_field_group"))
 						),
 					),
 				),
-				'button_label' => 'Lägg till modul',
+				'button_label' => 'L&auml;gg till modul',
 				'min' => '',
 				'max' => '',
 			),
@@ -637,7 +637,7 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_528b06f6c4916',
-				'label' => 'Lärare',
+				'label' => 'L&auml;rare',
 				'name' => 'larare',
 				'type' => 'wysiwyg',
 				'default_value' => '',
@@ -666,7 +666,7 @@ if(function_exists("register_field_group"))
 	));
 	register_field_group(array (
 		'id' => 'acf_installningar',
-		'title' => 'Inställningar',
+		'title' => 'Inst&auml;llningar',
 		'fields' => array (
 			array (
 				'key' => 'field_525d45e01120a',
@@ -688,7 +688,7 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_52526290e9423',
-				'label' => 'Snabbgenvägar',
+				'label' => 'Snabbgenv&auml;gar',
 				'name' => 'hg_quicklinks',
 				'type' => 'repeater',
 				'sub_fields' => array (
@@ -707,7 +707,7 @@ if(function_exists("register_field_group"))
 					),
 					array (
 						'key' => 'field_525262d0e9426',
-						'label' => 'Länk',
+						'label' => 'L&auml;nk',
 						'name' => 'url',
 						'type' => 'text',
 						'column_width' => '',
@@ -736,7 +736,7 @@ if(function_exists("register_field_group"))
 				'row_min' => '',
 				'row_limit' => '',
 				'layout' => 'table',
-				'button_label' => 'Lägg till',
+				'button_label' => 'L&auml;gg till',
 			),
 			array (
 				'key' => 'field_525d479e1120c',
@@ -758,12 +758,12 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_528b8119cf59c',
-				'label' => 'Direktlänkar i menyn',
+				'label' => 'Direktl&auml;nkar i menyn',
 				'name' => 'direktlankar_i_menyn',
 				'type' => 'flexible_content',
 				'layouts' => array (
 					array (
-						'label' => 'Intern länk',
+						'label' => 'Intern l&auml;nk',
 						'name' => 'intern_lank',
 						'display' => 'row',
 						'min' => '',
@@ -771,7 +771,7 @@ if(function_exists("register_field_group"))
 						'sub_fields' => array (
 							array (
 								'key' => 'field_528b818acf59d',
-								'label' => 'Intern länk',
+								'label' => 'Intern l&auml;nk',
 								'name' => 'intern_lank',
 								'type' => 'post_object',
 								'column_width' => '',
@@ -789,7 +789,7 @@ if(function_exists("register_field_group"))
 						),
 					),
 					array (
-						'label' => 'Extern länk',
+						'label' => 'Extern l&auml;nk',
 						'name' => 'extern_lank',
 						'display' => 'row',
 						'min' => '',
@@ -837,7 +837,7 @@ if(function_exists("register_field_group"))
 						),
 					),
 				),
-				'button_label' => 'Lägg till genväg',
+				'button_label' => 'L&auml;gg till genv&auml;g',
 				'min' => '',
 				'max' => '',
 			),
@@ -863,8 +863,15 @@ if(function_exists("register_field_group"))
 				'max' => '',
 			),
 			array (
+				'key' => 'field_528d215b34499',
+				'label' => 'Inneh&aring;ll direkt efter &lt;body&gt;',
+				'name' => 'innehall_i_topp_body',
+				'type' => 'textarea',
+				'default_value' => '',
+			),
+			array (
 				'key' => 'field_528d215b3440e',
-				'label' => 'Innehåll i sidfot',
+				'label' => 'Inneh&aring;ll i sidfot',
 				'name' => 'innehall_i_sidfot',
 				'type' => 'wysiwyg',
 				'default_value' => '',
