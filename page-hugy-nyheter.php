@@ -41,7 +41,7 @@
 		<h2><a class='nolink' href='<?php echo get_post_permalink(get_the_ID()); ?>'><?php the_title(); ?></a></h2>
 		<?php echo HuGy::get_tags(); ?>
 		<?php echo HuGy::get_date(); ?>
-		<?php echo HuGy::get_author(); ?>
+		<?php //echo HuGy::get_author(); ?>
 		<div class="slideshow-wrapper">
 			<?php /* slideshow */ ?>
 			<?php //echo HuGy::get_slideshow(get_field('hg_slideshow',get_the_ID()),'program slideshow','slideshow'); ?>

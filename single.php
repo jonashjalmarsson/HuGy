@@ -21,7 +21,7 @@
 			<h1><?php the_title(); ?></h1>
 			<?php echo HuGy::get_tags(); ?>
 			<?php echo HuGy::get_date(); ?>
-			<?php echo HuGy::get_author(); ?>
+			<?php //echo HuGy::get_author(); ?>
 			<?php the_content(); ?>			
 		</div>
 		<div class="block-wrapper">

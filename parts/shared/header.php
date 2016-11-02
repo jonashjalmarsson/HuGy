@@ -7,7 +7,7 @@
 			</div><div class="logo-space">
 				<a href="<?php echo home_url(); ?>"><img class="logo" title="Hultsfreds gymnasium" src="<?php echo get_template_directory_uri() . "/images/hultsfreds-gymnasium.png"; ?>" alt='Hultsfreds gymnasium' /></a>
 				<h1><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-			</div><div class="logo-space2"><div class="tags"><span class="tag Gymnasium">Gymnasium</span><span class="tag Komvux">Komvux</span></div></div>
+			</div><div class="logo-space2 hidden"></div>
 		</div>
 		
 	</div>

@@ -478,7 +478,7 @@
 		 * Return news, used in get_modules()
 		 */
 		function get_news($number_news = 3) {
-			$retValue = "<a class='menu-margin' id='nyheter'></a><h1>Nytt på skolan</h1>";
+			$retValue = "<a class='menu-margin' id='nyheter'></a>";
 			 
 			// The Query
 			$the_query = new WP_Query( array(
@@ -509,7 +509,7 @@
 			}
 			$archive = HuGy::get_hugy_nyheter_page();
 			if ($archive != '') {
-				$retValue .= "<div class='text--center'><a href='" . get_page_link($archive->ID) . "' title='" . $archive->post_title . "'>Gå till nyhetsarkivet</a></div>";
+				$retValue .= "<div class='text--center'><a href='" . get_page_link($archive->ID) . "' title='" . $archive->post_title . "'>Gå till arkivet</a></div>";
 			}
 			/* Restore original Post Data */
 			wp_reset_postdata();

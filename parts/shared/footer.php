@@ -22,7 +22,7 @@
 		<?php endif; ?>
 		</div>
 		
-		<div class="tech-logos">
+		<div class="tech-logos hidden">
 			<a class='wordpress-logo logo' target="_blank" href="http://www.wordpress.org"><img alt="WordPress logo" src="<?php echo  get_stylesheet_directory_uri(); ?>/images/wordpress-logo-32-blue.png" /></a>
 			<a class='html5-logo logo' target="_blank" href="http://validator.w3.org/check?uri=<?php echo home_url(add_query_arg(array(),$wp->request)); ?>"><img alt="HTML5 logo" src="<?php echo  get_stylesheet_directory_uri(); ?>/images/HTML5_Logo_32.png" /></a>
 			<a class='github-logo logo' target="_blank" href="https://github.com/hultsfredskommun/HuGy"><img alt="GitHub logo" src="<?php echo  get_stylesheet_directory_uri(); ?>/images/GitHub-Mark-32px.png" /></a>
