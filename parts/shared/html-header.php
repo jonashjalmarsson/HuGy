@@ -73,5 +73,5 @@
 	</head>
 	<body <?php body_class((is_home()) ? 'home' : ''); ?>>
 	<?php if ( get_field( 'innehall_i_topp_body', 'option' ) ) : ?>
-		<!-- START innehall_i_topp_body --><?php echo get_field( 'innehall_i_topp_body', 'option' ) ?><!-- END innehall_i_topp_body -->
+		<!-- START innehall_i_topp_body --><script><?php echo get_field( 'innehall_i_topp_body', 'option' ) ?></script><!-- END innehall_i_topp_body -->
 	<?php endif; ?>

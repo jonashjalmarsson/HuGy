@@ -1,8 +1,8 @@
 <?php
-/* 
- * REGISTER post_type hugy_kontakt 
+/*
+ * REGISTER post_type hugy_kontakt
  */
-add_action('init', hugy_contacts_init);
+add_action('init', 'hugy_contacts_init');
 function hugy_contacts_init() {
 	// only if in admin and is administrator
     //if (is_admin() && current_user_can("administrator")) {
@@ -44,10 +44,10 @@ add_action( 'manage_hugy_kontakt_posts_custom_column' , 'custom_hugy_kontakt_col
 function custom_hugy_kontakt_column( $column, $post_id ) {
     switch ( $column ) {
         case 'arbetsplats' :
-            echo get_field( 'arbetsplats', $post_id); 
+            echo get_field( 'arbetsplats', $post_id);
             break;
         case 'titel' :
-            echo get_field( 'titel', $post_id); 
+            echo get_field( 'titel', $post_id);
             break;
     }
 }

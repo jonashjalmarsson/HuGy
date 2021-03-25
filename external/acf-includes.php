@@ -864,7 +864,7 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_528d215b34499',
-				'label' => 'Inneh&aring;ll direkt efter &lt;body&gt;',
+				'label' => 'Script direkt efter &lt;body&gt; (ska inte inneh&aring;lla script-taggar)',
 				'name' => 'innehall_i_topp_body',
 				'type' => 'textarea',
 				'default_value' => '',
