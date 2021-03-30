@@ -22,7 +22,8 @@
 
 		<?php $args = array(
 			'paged'			   => $paged,
-			'offset'           => 0,
+			'posts_per_page'		=> 5,
+			/*'offset'           => 0,*/
 			'category'         => '',
 			'orderby'          => 'post_date',
 			'order'            => 'DESC',
@@ -34,8 +35,8 @@
 			'post_mime_type'   => '',
 			'post_parent'      => '',
 			'post_status'      => 'publish',
-			'suppress_filters' => true ); 
-			
+			'suppress_filters' => true );
+
 		query_posts( $args ); ?>
 		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 		<h2><a class='nolink' href='<?php echo get_post_permalink(get_the_ID()); ?>'><?php the_title(); ?></a></h2>
@@ -48,7 +49,7 @@
 		</div>
 		<?php (get_option('rss_use_excerpt'))?the_excerpt():the_content(); ?>
 		<?php endwhile; ?>
-		
+
 		<div class="navigation"><p><?php posts_nav_link('|',' F&ouml;reg&aring;ende ',' N&auml;sta '); ?></p></div>
 	</div>
 
