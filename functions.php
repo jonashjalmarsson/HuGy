@@ -26,14 +26,16 @@
 	// if rank math og image is active
 	if (function_exists('rank_math')) {
 		// get first image in slideshow and use as og:image
-		add_filter( "rank_math/opengraph/facebook/image", function( $attachment_url ) {
+		add_filter( "rank_math/opengraph/facebook/image", "hugy_og_image", 10, 1 );
+		add_filter( "rank_math/opengraph/twitter/image", "hugy_og_image", 10, 1 );
+		function hugy_og_image( $attachment_url ) {
 			$first_image = "";
 			$first_image_var = get_field("hg_slideshow",get_the_ID());
 			if ( is_array($first_image_var) && isset($first_image_var) && isset($first_image_var[0]) && isset($first_image_var[0]["url"]) ){
 				return $first_image_var[0]["url"];
 			}
 			return $attachment_url;
-		});
+		}
 	}
 	
 	/* ========================================================================================================================
