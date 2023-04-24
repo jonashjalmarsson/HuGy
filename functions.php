@@ -22,6 +22,20 @@
 	if (function_exists('acf_add_options_page')) {
 		acf_add_options_page();
 	}
+
+	// if rank math og image is active
+	if (function_exists('rank_math')) {
+		// get first image in slideshow and use as og:image
+		add_filter( "rank_math/opengraph/facebook/image", function( $attachment_url ) {
+			$first_image = "";
+			$first_image_var = get_field("hg_slideshow",get_the_ID());
+			if ( is_array($first_image_var) && isset($first_image_var) && isset($first_image_var[0]) && isset($first_image_var[0]["url"]) ){
+				return $first_image_var[0]["url"];
+			}
+			return $attachment_url;
+		});
+	}
+	
 	/* ========================================================================================================================
 	
 	Theme specific settings
