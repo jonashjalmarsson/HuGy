@@ -135,7 +135,7 @@
 		/*
 		 *
 		 */
-		function get_program_links( $icon = true, $wrapping_ul = true, $page_template = "page-hugy-program.php" ) {
+		static public function get_program_links( $wrapping_ul = true, $page_template = "page-hugy-program.php" ) {
 			$retValue = "";
 			$args = array(
 				'order' => 'ASC',
@@ -166,12 +166,8 @@
 					if (get_the_ID() == $page->ID)
 						$current_class = ' current_page_item';
 					$retValue .= "<li class='page_item$current_class'>";
-					$retValue .= "<a title='" . $page->post_title . "' href='" . get_page_link($page->ID) . "'>";
-			
-					if ($icon) 
-						$retValue .= "<span class='program-icon program-" . get_field("hg_imageplace",$page->ID) . "'></span>";
-					else
-						$retValue .= "<span class='program'>" . $page->post_title . "</span>";
+					$retValue .= "<a title='" . $page->post_title . "' href='" . get_page_link($page->ID) . "'>";			
+					$retValue .= "<span class='program'>" . $page->post_title . "</span>";
 					$retValue .= "</a></li>";
 				endforeach;
 				if ($wrapping_ul)

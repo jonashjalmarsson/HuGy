@@ -669,24 +669,6 @@ if(function_exists("register_field_group"))
 		'title' => 'Inst&auml;llningar',
 		'fields' => array (
 			array (
-				'key' => 'field_525d45e01120a',
-				'label' => 'Programikoner (svg)',
-				'name' => 'hg_program_icons_svg',
-				'type' => 'image',
-				'save_format' => 'object',
-				'preview_size' => 'thumbnail',
-				'library' => 'all',
-			),
-			array (
-				'key' => 'field_525d47871120b',
-				'label' => 'Programikoner (png)',
-				'name' => 'hg_program_icons_png',
-				'type' => 'image',
-				'save_format' => 'object',
-				'preview_size' => 'thumbnail',
-				'library' => 'all',
-			),
-			array (
 				'key' => 'field_52526290e9423',
 				'label' => 'Snabbgenv&auml;gar',
 				'name' => 'hg_quicklinks',
@@ -737,24 +719,7 @@ if(function_exists("register_field_group"))
 				'layout' => 'table',
 				'button_label' => 'L&auml;gg till',
 			),
-			array (
-				'key' => 'field_525d479e1120c',
-				'label' => 'Snabbikoner (svg)',
-				'name' => 'hg_quick_icons_svg',
-				'type' => 'image',
-				'save_format' => 'object',
-				'preview_size' => 'thumbnail',
-				'library' => 'all',
-			),
-			array (
-				'key' => 'field_525d47bb1120d',
-				'label' => 'Snabbikoner (png)',
-				'name' => 'hg_quick_icons_svg',
-				'type' => 'image',
-				'save_format' => 'object',
-				'preview_size' => 'thumbnail',
-				'library' => 'all',
-			),
+
 			array (
 				'key' => 'field_528b8119cf59c',
 				'label' => 'Direktl&auml;nkar i menyn',

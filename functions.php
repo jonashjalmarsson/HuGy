@@ -547,12 +547,7 @@
 		$a = shortcode_atts( array(
 			'type' => 'gymnasium',
 			), $atts );
-		if ($atts["type"] == "komvux") {
-			return "<ul>".HuGy::get_program_links(false,false,"page-hugy-komvux.php")."</ul>";
-		}
-		else {
-			return "<ul>".HuGy::get_program_links()."</ul>";
-		}
+		return "<ul>".HuGy::get_program_links()."</ul>";
 	}
 	add_shortcode( 'program', 'hugy_program_func' );
 

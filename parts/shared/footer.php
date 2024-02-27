@@ -7,8 +7,8 @@
 	echo "<a id='search'></a><div class='pre-footer-search'>";
 	echo get_search_form();
 	echo "</div>";
-	echo "<div class='pre-footer-program'>" . HuGy::get_program_links() . "</div>"; ?>
-	<div class="up-icon"></div>
+	?>
+	<!-- <div class="up-icon"></div> -->
 	<footer class="footer">
 		<div class="footer-div">
 		<?php if ( is_active_sidebar( 'footer' ) ) : ?>
