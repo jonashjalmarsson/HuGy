@@ -147,6 +147,7 @@
 		wp_enqueue_script( 'site', get_template_directory_uri().'/js/site.js', ['jquery'], HUGY_VERSION );
 
 		wp_register_script( 'helpers', get_template_directory_uri().'/js/helpers.js', [], HUGY_VERSION );
+		wp_register_script( 'news', get_template_directory_uri().'/js/news.js', [], HUGY_VERSION );
 		
 		wp_enqueue_script( 'onload', get_template_directory_uri().'/js/onload.js', ['slideshow', 'helpers', 'news'], HUGY_VERSION );
 		wp_localize_script( 'onload', 'hugy_obj', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );

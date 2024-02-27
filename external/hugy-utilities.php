@@ -528,31 +528,34 @@
 		/*
 		 * Return news, used in get_modules()
 		 */
-		function get_news($number_news = 3) {
+		static public function get_news($number_news = 3) {
 			$retValue = "<a class='menu-margin' id='nyheter'></a>";
 			 
 			// The Query
 			$the_query = new WP_Query( array(
 											'post_type' => 'post',
 											'posts_per_page' => $number_news ));
-
+			$num_news = 0;
 			// The Loop
 			if ( $the_query->have_posts() ) {
 				$retValue .= "<div class='items'>";
 				while ( $the_query->have_posts() ) {
+					if  ($num_news >= $number_news) break;
+
 					$retValue .= "<div class='item'>";
 					$the_query->the_post();
 					$retValue .=  HuGy::get_tags();
 					//$retValue .= "<div class='item-img'>";
 					//$retValue .=  get_the_post_thumbnail(get_the_ID(), 'news'); 
 					$retValue .= "<a href='" . get_permalink() . "'>";
-					$retValue .=  HuGy::get_first_image(get_field('hg_slideshow',get_the_ID()), 'wp-post-image', 'news', true);
+					$retValue .=  HuGy::get_first_image(get_field('hg_slideshow',get_the_ID()), 'wp-post-image', 'news-large', true);
 					//$retValue .= "</div>";
 					$retValue .= "</a><div class='item-content'>";
 					$retValue .= "<a href='" . get_permalink() . "'><h2>" . get_the_title() . "</h2>";
 					//$retValue .= get_the_excerpt();
 					$retValue .= "</a></div>";
 					$retValue .= "</div>";
+					$num_news++;
 				}
 				$retValue .= "</div>";
 			} else {
@@ -560,13 +563,43 @@
 			}
 			$archive = HuGy::get_hugy_nyheter_page();
 			if ($archive != '') {
-				$retValue .= "<div class='text--center'><a href='" . get_page_link($archive->ID) . "' title='" . $archive->post_title . "'>Gå till arkivet</a></div>";
+				$retValue .= "<div class='text--center news-navigation'><a href='" . get_page_link($archive->ID) . "' title='" . $archive->post_title . "'>Gå till arkivet</a></div>";
 			}
 			/* Restore original Post Data */
 			wp_reset_postdata();
 			return $retValue;
 		}
 		
+		static public function get_text_news($news_per_page = 3, $paged = 1) {
+
+			$args = array(
+				'paged'			   => $paged,
+				'posts_per_page'   => $news_per_page,
+				'category'         => '',
+				'orderby'          => 'post_date',
+				'order'            => 'DESC',
+				'include'          => '',
+				'exclude'          => '',
+				'meta_key'         => '',
+				'meta_value'       => '',
+				'post_type'        => 'post',
+				'post_mime_type'   => '',
+				'post_parent'      => '',
+				'post_status'      => 'publish',
+				// 'suppress_filters' => true,
+			);
+	
+			query_posts( $args ); 
+			$retValue = "";
+			if ( have_posts() ) while ( have_posts() ) : the_post();
+				$retValue .= "<div class='news' data-id='" . get_the_ID() . "'>"
+				. "<h2><a class='nolink' href='" . get_post_permalink(get_the_ID()) . "'>" . get_the_title() . "</a></h2>"
+				. "<div class='news-meta'>" . HuGy::get_tags() . HuGy::get_date() . "</div>"
+				. "<div class='news-content'>"
+				. get_the_excerpt() . "</div></div>";
+			endwhile; 
+			return $retValue;
+		}
 		
 		
 		/*
