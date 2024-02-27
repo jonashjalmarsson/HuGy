@@ -220,45 +220,6 @@ jQuery(document).ready(function ($) {
   });
 
 
-  /* what to do when scrolling */
-  $(window).scroll(function () {
-
-    /* show/hide up-icon */
-    // if ($(window).scrollTop() < 100)
-    //   $(".up-icon").css("opacity", 0).hide();
-    // else if ($(window).scrollTop() > 300)
-    //   $(".up-icon").css("opacity", 1).show();
-    // else if ($(window).scrollTop() > 100)
-    //   $(".up-icon").css("opacity", ($(window).scrollTop() - 100) / 200).show();
-
-
-    /* reset selected */
-    // $(".top-menu-button").removeClass("selected");
-    // $(".top-navigation-wrapper").removeClass("selected");
-
-    /* make menu fixed */
-
-    // // remove fixed menu when top of page
-    // if ($(window).scrollTop() - $(".top").height() <= 0) {
-    //   $(".top-navigation-wrapper, .top-menu-button").removeClass("fixed");
-    //   $(".top-wrapper").css('margin-bottom', 0);
-    // }
-    // // show selected menu and stick to menu when at menu place in footer
-    // else if ($(window).scrollTop() - $(".main-menu-wrapper").position().top + $(".top-navigation-wrapper").height() > -5) {
-    //   $(".top-navigation-wrapper").css("top", -($(window).scrollTop() - $(".main-menu-wrapper").position().top + $(".top-navigation-wrapper").height()));
-    //   if (!$("body").hasClass("home"))
-    //     $(".top-wrapper").css('margin-bottom', $(".top-navigation-wrapper").height());
-    //   $(".top-menu-button").addClass("selected");
-    //   $(".top-navigation-wrapper").addClass("selected");
-    // }
-    // // else show menu
-    // else { // if ($(window).scrollTop() - $(".top").height() > 0) {
-    //   $(".top-navigation-wrapper, .top-menu-button").addClass("fixed").show().css("top", "0");
-    //   if (!$("body").hasClass("home"))
-    //     $(".top-wrapper").css('margin-bottom', $(".top-navigation-wrapper").height());
-    // }
-
-  });
 
   /* filter table in schema page */
   if ($("body").hasClass("page-template-page-hugy-schema-php")) {
@@ -391,11 +352,6 @@ jQuery(document).ready(function ($) {
     }
   });
 
-
-  /* up icon click */
-  // $(".up-icon").hide().click(function () {
-  //   $("body,html").softscroll(0, 600);
-  // });
 
   /* picto function on program pages */
   $(".picto img.hover-image").each(function () {
