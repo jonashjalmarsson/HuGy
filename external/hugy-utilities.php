@@ -766,8 +766,8 @@
 		/*
 		 * Return the date
 		 */
-		function get_date() {
-			$retValue .= " <time class='time' datetime='";
+		static public function get_date() {
+			$retValue = " <time class='time' datetime='";
 			$retValue .= get_the_time( 'Y-m-d' );
 			$retValue .= "' pubdate>";
 			$retValue .= get_the_date();
