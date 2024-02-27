@@ -4,10 +4,13 @@
 	/*background: white url("../images/background.png") repeat;*/
 	padding-bottom: 30px;
 }
+
 article {
 	@extend .white-background;
+
 	.block-wrapper {
 		@extend .grid;
+
 		.related-wrapper,
 		.contacts-wrapper {
 			@extend .grid__item;
@@ -15,6 +18,7 @@ article {
 			@extend .palm-one-whole;
 		}
 	}
+
 	.columntext {
 		@extend .desk-one-third;
 		@extend .lap-one-third;
@@ -26,46 +30,58 @@ article {
 		margin-left: 12px;
 	}
 }
-.single-hugy_kontakt h2, .page-template-page-hugy-nyheter-php h1, .page-template-page-hugy-nyheter-php h2,
-.content h1, .content h2 {
+
+.single-hugy_kontakt h2,
+.page-template-page-hugy-nyheter-php h1,
+.page-template-page-hugy-nyheter-php h2,
+.content h1,
+.content h2 {
 	margin-bottom: 0;
 	padding-top: 24px;
 }
+
 .addthis_toolbox.addthis_default_style {
 	display: inline-block;
 	margin-left: 12px;
 	width: 90px;
 }
+
 .author,
 .time {
 	@extend .zeta;
 	display: block;
-	&, & a {
+
+	&,
+	& a {
 		color: #999;
 	}
 }
+
 .author {
 	margin-bottom: 12px;
 }
 
 article.page {
 	@extend .max-width--center;
- 	@extend .island;
+	// @extend .island;
 	box-shadow: 0px 0px 15px #999;
 
 	.content-wrapper {
 		@extend .small-max-width--center;
-		margin-top: 24px;
-		margin-bottom: 24px;
+		@extend .island;
+		// margin-top: 24px;
+		// margin-bottom: 24px;
 	}
+
 	.mat.current-item {
 		@extend .green;
 		padding: 0 12px;
 		margin-bottom: 24px;
 		font-size: 18px;
 		border-radius: 4px;
+
 		.mat_content {
-			@extend  .italic;
+			@extend .italic;
 			display: block;
 			font-size: 36px;
 		}
@@ -74,23 +90,25 @@ article.page {
 
 @include media-query(palm) {
 	.gallery-item {
-		width: 100%!important;
+		width: 100% !important;
 	}
 }
 
 /* schema page */
 
 .page-template-page-hugy-schema-php {
+
 	td:nth-child(2),
 	td:nth-child(3),
 	td:nth-child(4) {
 		width: 10%;
 	}
-	
+
 	.tool {
 		padding-left: 12px;
 	}
 }
+
 .filter {
 	&.tool {
 		@extend .island;
@@ -98,34 +116,40 @@ article.page {
 		padding-bottom: 24px;
 		background: #ddd;
 		display: inline-block;
+
 		.rensa {
 			font-family: Arial;
 			font-style: normal;
 		}
+
 		span {
 			padding-right: 12px;
 		}
 	}
-	&.toggle {				
+
+	&.toggle {
 		margin-bottom: 24px;
+
 		.selected {
 			@extend .green;
 			border: 1px solid $green;
 		}
-	}		
+	}
+
 	input {
 		border-radius: 4px;
 		border: 1px solid #999;
 		padding: 2px 6px;
 		margin-right: 12px;
 		margin-bottom: 6px;
+
 		&:focus {
 			outline: none;
 		}
 	}
+
 	#filter {
 		border: 1px solid #999;
 	}
-	
-}
 
+}

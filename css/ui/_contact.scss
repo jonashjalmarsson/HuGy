@@ -5,43 +5,52 @@
 		//margin-bottom: 24px;
 		padding-top: 0px;
 	}
+
 	.titel {
 		//margin-top: -28px;
 		//padding-bottom: 28px;
 	}
+
 	//margin-bottom: 12px;
 	position: relative;
+
 	span {
 		display: block;
 	}
 }
+
 .contacts-wrapper {
 	.contactlist {
 		.contact {
 			border-bottom: 1px dashed #ccc;
 			cursor: pointer;
+
 			//margin-bottom: 24px!important;
 			//padding-bottom: 24px!important;
 			.bild img {
 				width: 100px;
 			}
+
 			.contact-data {
 				@extend .hidden;
 			}
 		}
 	}
+
 	h2 {
 		@extend .italic;
 		@extend .green-text;
 		@extend .flush--bottom;
 		font-weight: normal;
 		padding-bottom: 6px;
-		padding-top: 0px!important;
+		padding-top: 0px !important;
 	}
+
 	.contacts {
 		@extend .black-text;
 		@extend .green-light-background;
 		@extend .islet;
+
 		.contact {
 			.contact-data {
 				@extend .islet;
@@ -49,27 +58,32 @@
 				box-shadow: 2px 2px 10px #666;
 				display: none;
 				left: 40px;
-				position: absolute;	
+				position: absolute;
 				top: 10px;
 				z-index: 200;
 			}
 		}
 	}
+
 	.contactlist,
 	.contacts {
 		.contact {
 			//margin-bottom: 12px;
 			position: relative;
+
 			h2.title {
 				@extend .delta;
 				@extend .black-text;
 			}
+
 			span {
 				display: block;
 			}
+
 			.tags {
 				font-size: 10px;
 			}
+
 			/*&:hover {
 				.contact-data {	
 					display: block;
@@ -78,6 +92,7 @@
 		}
 	}
 }
+
 @include media-query(palm) {
 	.contact {
 		.media__img {

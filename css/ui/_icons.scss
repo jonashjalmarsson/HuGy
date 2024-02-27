@@ -4,7 +4,9 @@
 	background-repeat: no-repeat;
 	vertical-align: text-bottom;
 }
-.ie7, .ie8 {
+
+.ie7,
+.ie8 {
 	.clip {
 		background-image: url("../images/ikoner.png");
 	}
@@ -13,7 +15,7 @@
 $clip-sizes: 80 54 48 40 30 24 20 16 12;
 
 @each $size in $clip-sizes {
-    .clip_#{$size}x#{$size} {
+	.clip_#{$size}x#{$size} {
 		@extend .clip;
 		width: #{$size}px;
 		height: #{$size}px;
@@ -25,24 +27,29 @@ $clip-sizes: 80 54 48 40 30 24 20 16 12;
 	margin-right: 6px;
 	background-position: -82px -42px;
 }
+
 .white .menu-icon {
 	@extend .clip_24x24;
 	margin-right: 6px;
 	background-position: -82px -2px;
 }
+
 .selected-menu-icon {
 	@extend .clip_24x24;
 	margin-right: 6px;
 	background-position: -122px -42px;
 }
+
 .home-icon {
 	@extend .clip_24x24;
 	background-position: -2px -42px;
 }
+
 .search-icon {
 	@extend .clip_24x24;
 	background-position: -162px -42px;
 }
+
 .white .home-icon {
 	@extend .clip_24x24;
 	background-position: -2px -2px;
@@ -52,18 +59,22 @@ $clip-sizes: 80 54 48 40 30 24 20 16 12;
 	@extend .clip_16x16;
 	margin: 6px;
 }
+
 .play-icon {
 	@extend .slideshow-navigation;
 	background-position: -62px -82px;
 }
+
 .pause-icon {
 	@extend .slideshow-navigation;
 	background-position: -92px -82px;
 }
+
 .dot-icon {
 	@extend .slideshow-navigation;
 	background-position: -32px -82px;
 }
+
 .active-dot-icon {
 	@extend .slideshow-navigation;
 	background-position: -2px -82px;
@@ -75,18 +86,22 @@ $clip-sizes: 80 54 48 40 30 24 20 16 12;
 	@extend .clip_20x20;
 	background-position: -920px -0px;
 }
+
 .external-link-icon {
 	@extend .clip_20x20;
 	background-position: -950px -0px;
 }
+
 .pdf-doc-icon {
 	@extend .clip_20x20;
 	background-position: -680px -0px;
 }
+
 .xls-doc-icon {
 	@extend .clip_20x20;
 	background-position: -800px -0px;
 }
+
 .doc-doc-icon {
 	@extend .clip_20x20;
 	background-position: -770px -0px;
@@ -96,12 +111,13 @@ $clip-sizes: 80 54 48 40 30 24 20 16 12;
 
 
 
-.up-icon {
-	@extend .clip;
-	width: 39px;
-	height: 53px;
-	background-position: 0px -140px;
-}
+// .up-icon {
+// 	@extend .clip;
+// 	width: 39px;
+// 	height: 53px;
+// 	background-position: 0px -140px;
+// }
+
 .teaser-1 {
 	@extend .clip;
 	width: 312px;
@@ -113,24 +129,30 @@ $clip-sizes: 80 54 48 40 30 24 20 16 12;
 	a {
 		@extend .clip_48x48;
 	}
+
 	.menu {
 		background-position: -190px -50px;
 	}
+
 	.facebook {
 		background-position: -240px -50px;
 	}
+
 	.nyheter {
 		background-position: -290px -50px;
 	}
 }
+
 .menu-head.menu-icon {
 	@extend .clip_54x54;
 	background-position: -130px -110px;
 }
+
 .menu-head.picto-icon {
 	@extend .clip_54x54;
 	background-position: -250px -110px;
 }
+
 .menu-head.quick-menu-icon {
 	@extend .clip_54x54;
 	background-position: -190px -110px;
@@ -142,14 +164,13 @@ $clip-sizes: 80 54 48 40 30 24 20 16 12;
 
 
 
-
-
-
 /* program ikoner */
 .program-icon {
 	background-image: url("../images/program-ikoner.svg");
 }
-.ie7, .ie8 {
+
+.ie7,
+.ie8 {
 	.program-icon {
 		background-image: url("../images/program-ikoner.png");
 	}
@@ -158,14 +179,18 @@ $clip-sizes: 80 54 48 40 30 24 20 16 12;
 .quick-icon {
 	background-image: url("../images/quick-ikoner.svg");
 }
-.ie7, .ie8 {
+
+.ie7,
+.ie8 {
 	.quick-icon {
 		background-image: url("../images/quick-ikoner.png");
 	}
 }
+
 .quick-icon {
 	@extend .clip_40x40;
 }
+
 .program-icon {
 	@extend .clip_80x80;
 }
@@ -173,32 +198,38 @@ $clip-sizes: 80 54 48 40 30 24 20 16 12;
 .quick-expand-icon {
 	@extend .clip_40x40;
 	background-position: -760px 0px;
+
 	&.hover,
 	&:hover {
-		background-position: -760px -40px; 
+		background-position: -760px -40px;
 	}
 }
+
 .expanded .quick-expand-icon {
 	background-position: -720px 0px;
+
 	&.hover,
 	&:hover {
-		background-position: -720px -40px; 
+		background-position: -720px -40px;
 	}
 }
 
 @for $i from 0 through 18 {
 	.quick-#{$i+1} {
-		background-position: -$i*40px 0px; 
+		background-position: -$i*40px 0px;
+
 		&.hover,
 		&:hover {
-			background-position: -$i*40px -40px; 
+			background-position: -$i*40px -40px;
 		}
 	}
+
 	.program-#{$i+1} {
-		background-position: -$i*79.8px 0px; 
+		background-position: -$i*79.8px 0px;
+
 		&.hover,
 		&:hover {
-			background-position: -$i*79.8px -80px; 
+			background-position: -$i*79.8px -80px;
 		}
 	}
-} 
+}

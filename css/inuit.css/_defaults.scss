@@ -221,5 +221,5 @@ $use-greybox:       false!default;
  * Assign our `$base-line-height` to a new spacing var for more transparency.
  */
 $base-spacing-unit: $base-line-height!default;
-$half-spacing-unit: $base-spacing-unit / 2!default;
-$line-height-ratio: $base-line-height / $base-font-size;
+$half-spacing-unit: $base-spacing-unit * 0.5!default;
+$line-height-ratio: math.div($base-line-height, $base-font-size);

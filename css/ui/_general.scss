@@ -3,9 +3,11 @@ body {
 	font-family: Trebuchet MS;
 	word-break: break-word;
 }
+
 a {
 	color: #d9050d;
 	text-decoration: none;
+
 	&:hover {
 		text-decoration: underline;
 	}
@@ -14,14 +16,16 @@ a {
 .hidden {
 	display: none;
 }
+
 .force-hidden {
-	display: none!important;
+	display: none !important;
 }
 
 .max-width--center {
 	max-width: $max-width;
 	margin: 0 auto;
 }
+
 @include media-query(portable) {
 	.max-width--center {
 		margin-left: 12px;
@@ -40,20 +44,25 @@ a {
 }
 
 .nounderline {
-	&, a {
+
+	&,
+	a {
 		text-decoration: none;
 	}
 }
+
 .link {
 	cursor: pointer;
 }
 
 
-th, td {
+th,
+td {
 	padding: 6px 6px 6px 0;
 }
+
 /* search results */
-.search .page-wrapper .page > ol {
+.search .page-wrapper .page>ol {
 	list-style-type: none;
 	margin-left: 0;
 }
@@ -114,42 +123,42 @@ img.wp-smiley,
 	padding: 0;
 }
 
-.wp-caption.alignleft + ul,
-.wp-caption.alignleft + ol  {
+.wp-caption.alignleft+ul,
+.wp-caption.alignleft+ol {
 	list-style-position: inside;
 }
 
 /* dropshadow */
 .drop-shadow {
-   position:relative;
+	position: relative;
 }
 
 .drop-shadow:before,
 .drop-shadow:after {
-   content:"";
-   position:absolute;
-   z-index:-1;
-   bottom:15px;
-   left:10px;
-   width:50%;
-   height:20%;
-   max-width:300px;
-   -webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
-   -moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
-   box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
-   -webkit-transform:rotate(-3deg);
-   -moz-transform:rotate(-3deg);
-   -o-transform:rotate(-3deg);
-   transform:rotate(-3deg);
+	content: "";
+	position: absolute;
+	z-index: -1;
+	bottom: 15px;
+	left: 10px;
+	width: 50%;
+	height: 20%;
+	max-width: 300px;
+	-webkit-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+	-moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+	box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+	-webkit-transform: rotate(-3deg);
+	-moz-transform: rotate(-3deg);
+	-o-transform: rotate(-3deg);
+	transform: rotate(-3deg);
 }
 
-.drop-shadow:after{
-   right:10px;
-   left:auto;
-   -webkit-transform:rotate(3deg);
-   -moz-transform:rotate(3deg);
-   -o-transform:rotate(3deg);
-   transform:rotate(3deg);
+.drop-shadow:after {
+	right: 10px;
+	left: auto;
+	-webkit-transform: rotate(3deg);
+	-moz-transform: rotate(3deg);
+	-o-transform: rotate(3deg);
+	transform: rotate(3deg);
 }
 
 /* tag colors and visual */
@@ -157,7 +166,7 @@ img.wp-smiley,
 	@extend .micro;
 	display: inline;
 	clear: none;
-	
+
 	/* NEW 
 	display: inline-block;
     margin: 0 0 0px 6px;
@@ -166,24 +175,28 @@ img.wp-smiley,
     right: -49px;
     opacity: 0.8;
 	 END NEW */
-	
+
 	.tag {
 		padding: 2px 4px;
 		margin: 3px;
 	}
 }
+
 .tags {
 	margin: 5px 0;
 	@extend .epsilon;
+
 	.tag {
 		border-radius: 16px;
-		display: inline!important;
+		display: inline !important;
 		margin: 0 10px 0 0;
 		padding: 2px 8px;
 		@extend .italic;
+
 		&.Komvux {
 			@extend .gray-dark;
 		}
+
 		&.Gymnasium {
 			@extend .green;
 		}

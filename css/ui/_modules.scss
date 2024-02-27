@@ -1,90 +1,166 @@
-
 .module-wrapper {
 	padding-top: 24px;
 	padding-bottom: 24px;
+
 	.module {
 		@extend .max-width--center;
 	}
+
 	&.text-module-wrapper {
-		h1, h2, a {
-			color: inherit!important;
+
+		h1,
+		h2,
+		a {
+			color: inherit !important;
 		}
 	}
+
 	&.bildspel-module-wrapper {
 		&:first-child {
-			padding-top: 6px!important;
+			padding-top: 6px !important;
 		}
-		padding-top: 0px!important;
-		padding-bottom: 0px!important;
+
+		padding-top: 0px !important;
+		padding-bottom: 0px !important;
+
 		.bildspel-module {
 			max-width: 100%;
+			margin-left: 0;
+			margin-right: 0;
 		}
 	}
+
 	&.nyheter-module-wrapper {
 		.nyheter-module.module {
-			@extend .small-max-width--center;
+			@extend .max-width--center;
 		}
 
 		h1 {
 			@extend .black-text;
 		}
+
 		.items {
-			@extend .grid;
+			// @extend .grid;
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-gap: 12px;
+			@include media-query(lap-and-up) {
+				grid-template-columns: repeat(3, 1fr);
+				grid-gap: 5px;
+			}
+
+			
 			.item {
-				@extend .grid__item;
-				@extend .one-third;
-				@extend .palm-one-whole;
+				// @extend .grid__item;
+				// @extend .one-third;
+				// @extend .palm-one-whole;
 				position: relative;
+
 				.tags {
 					position: absolute;
 					top: 0;
 					right: 0;
 					margin: 0;
 					font-size: 12px;
+
 					.tag {
 						float: left;
 						margin: 2px 2px 2px 0;
 					}
 				}
+
 				.wp-post-image {
 					max-width: 100%;
+
 					img {
 						margin: 0 auto;
 						display: block;
+						width: 100%;
 					}
+
 					//@extend .drop-shadow;
 				}
+				h2 {
+					background-color: rgba(0, 0, 0, 0.3);
+					transition: background-color 0.3s ease;
+				}
+				
+				a::after {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					z-index: 98;
+					transition: background-color 0.3s ease;
 
-				.item-content {
-					@include media-query(palm) {
-						text-align: center;
+				}
+				&:hover {
+					> a::after {
+						background-color: rgba(0, 0, 0, 0.3);
 					}
-					@extend .white;
-					@extend .one-whole;
-					bottom: 6px;
-					left: 24px;
+					h2 {
+						background-color: rgba(0, 0, 0, 0.0);
+					}
+				}
+			
+				// a:hover .item-content h2 {
+				// 	background-color: rgba(0, 0, 0, 0.0);
+				// }
+
+				// @include media-query(lap-and-up) {
+				// 	a:after {
+				// 		content: "";
+				// 		position: absolute;
+				// 		top: 0;
+				// 		left: 0;
+				// 		width: 100%;
+				// 		height: 100%;
+				// 		z-index: 98;
+						
+				// 		transition: background-color 0.3s ease;
+				// 	}
+				// }
+				.item-content {
+					// @include media-query(palm) {
+					// 	text-align: center;
+					// }
+
+					// @extend .white;
+					// @extend .one-whole;
 					
-					//position: absolute;
+					bottom: 0px;
+					left: 0px;
+					width: 100%;
+					
+					position: absolute;
 					z-index: 99;
 					
 					a {
 						@extend .nounderline;
 					}
+					
 					h2 {
-						@extend .delta;
+						@extend .beta;
 						@extend .islet;
 						@extend .flush--bottom;
+						color: $white!important;
+						text-align: center;
+						text-shadow: 2px 2px 3px rgba(0,0,0,.8);
 						font-weight: normal;
 					}
 				}
 			}
 		}
 	}
+
 	&.program-module-wrapper {
 		.program-module.module {
 			@extend .small-max-width--center;
 		}
 	}
+
 	&.facebook-module-wrapper {
 		.module {
 			@extend .small-max-width--center;
@@ -93,10 +169,10 @@
 		/* facebook colors */
 		//background: #3b5998 url('../images/facebook.png') no-repeat 90% 10px;
 		background: #3b5998;
-		
+
 		/*border-bottom: 1px solid #133783;
 		box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .52);*/
-		
+
 		h1 {
 			@extend .white-text;
 			margin-left: 6px;
@@ -107,6 +183,7 @@
 			margin-bottom: 0;
 			margin-top: 0px;
 			position: relative;
+
 			.fb-logo {
 				position: absolute;
 				bottom: 0px;
@@ -114,9 +191,11 @@
 			}
 
 		}
+
 		.fb-page-name {
 			@extend .hidden;
 		}
+
 		.fb-feed-item {
 			@extend .white;
 			@extend .islet;
@@ -126,24 +205,28 @@
 			position: relative;
 			border-left: 4px solid #3b5998;
 			border-right: 4px solid #3b5998;
+
 			.expand-item {
 				@extend .one-whole;
-				background: rgba(255,255,255,0.9);
+				background: rgba(255, 255, 255, 0.9);
 				cursor: pointer;
 				left: 0px;
 				padding: 0 12px;
 				position: absolute;
 				top: 186px;
 			}
+
 			.item-content {
 				@extend .cf;
 				overflow: hidden;
 				padding: 12px;
 			}
+
 			img {
 				float: left;
 				margin-right: 12px;
 			}
+
 			blockquote {
 				@extend .epsilon;
 				@extend .cf;
@@ -152,10 +235,9 @@
 				/*border: 1px solid #ccc;*/
 				/*background: rgba(230,230,230,0.7);*/
 			}
-			.caption {
-				
-			}
-			
+
+			.caption {}
+
 			&.fb-item-3,
 			&.fb-item-4,
 			&.fb-item-5,
@@ -166,6 +248,7 @@
 				@extend .hidden;
 			}
 		}
+
 		.fb-loader {
 			background-image: url('../images/fb-loader.gif');
 			background-repeat: no-repeat;
@@ -173,9 +256,10 @@
 			border-left: 4px solid #3b5998;
 			border-right: 4px solid #3b5998;
 		}
+
 		.fb-load-button {
 			@extend .islet;
-			background-color: rgba(230,230,230,0.9);
+			background-color: rgba(230, 230, 230, 0.9);
 			border-left: 4px solid #3b5998;
 			border-right: 4px solid #3b5998;
 			cursor: pointer;

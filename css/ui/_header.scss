@@ -1,17 +1,5 @@
-.home {
-	.header-wrapper {
-		left: 0;
-		/*position: absolute;*/
-		top: 0;
-		z-index: 200;
-	}
-}
 .header-wrapper {
 	@extend .gray-light;
-	opacity: 0.8;
-	position: relative;
-	width: 100%;
-	z-index: 9999;
 	a {
 		@extend .nounderline;
 	}
@@ -28,80 +16,49 @@
 }
 	
 
-#betaicon {
-	top: -16px;
-	position: absolute;
-	cursor: pointer;
-	right: 46%;
-	z-index: 250;
-}
-	
 .top-wrapper {
-	
-	//background-image: url("../images/slide-layer.png");
-	//background-repeat: repeat;
-	
-	//position: relative;
 	.top {
 		@extend .max-width--center;
+		display: flex;
+		justify-content: space-between;
 		.logo-space {
-			@extend .desk-one-fifth;
-			@extend .palm-one-whole;
-			display: inline-block;
-			position: relative;
-			h1 {
-				@extend .visuallyhidden;
-			}
-			.logo {
-				padding-bottom: 12px;
-				padding-top: 12px;
-				//width: 250px;
-				//@extend .green;
-				//position: absolute;
-				//top: 12px;
-				//border-radius: $border-radius;
-				
-			}
-		}
-		.logo-space2 {
-			@extend .desk-one-fifth;
-			@extend .visuallyhidden--portable;
-			display: inline-block;
-			position: relative;
-			.tags {
-				padding-bottom: 12px;
-				padding-top: 12px;
-				.tag {
-					margin: 2px 0 0 12px;
-					float: left;
-				}
-			}
+			width: 220px;
+			padding: 12px 0;
 		}
 		.top-links-wrapper {
-			//padding-left: 250px;
-			//width: 100%;
-			@extend .three-fifths;
-			@extend .palm-one-whole;
-			display: inline-block;
-			float: right;
-			.todaysfood,
-			.weektext,
-			.quicklinks-wrapper {	
-				text-align: right;
-				overflow: hidden;
-				.quicklinks {
-					@extend .nav;
-					@extend .nav--block;
-					@extend .flush--bottom;
-					& > li > a {
-						padding: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-end;
+
+			.quicklinks-wrapper {
+				display: flex;
+				gap: 2px;
+				.quick-svg {
+					display: block;
+					padding: 4px;
+					line-height: 0;
+					transition: all 0.3s ease;
+					background-color: rgba(0, 0, 0, 0.1);
+					
+					svg {
+						width: 40px;
+						height: 40px;
+						fill: black;
 					}
-					img {
-						max-height: 24px;
+					.st0{fill:none;stroke:black;stroke-width:3;stroke-miterlimit:10;}
+
+					&:hover {
+						background-color: rgba(0, 0, 0, 0.9);
+						svg {
+							fill: white;
+						}
+						.st0{fill:none;stroke:white;}
 					}
-				} 
+					
+
+				}
 			}
-			.todaysfood,
 			.weektext {
 				@extend .visuallyhidden--palm;
 				@extend .italic;
@@ -110,30 +67,20 @@
 
 		}
 	}
+	
 }
 
 
 
-
 .top-navigation-wrapper {
-
-	&.fixed {
-		box-shadow: 0px 0px 10px #999;
-		position: fixed;
-		top: 0px;
-		left: 0px;
-		width: 100%;
-		z-index: 1000;
-	}
-	&.selected {
-		box-shadow: none!important;
-		border-bottom: 0!important;
-	}
 	@extend .gray-dark;
+	position: sticky;
+	top: 0;
+	z-index: 999;
 	.top-navigation {
 		@extend .max-width--center;
-		overflow: hidden;
-		position: relative;
+		display: flex;
+		justify-content: flex-start;
 		.top-menu-button.selected {
 			@extend .black;
 			.menu-icon {
@@ -149,6 +96,7 @@
 		}
 		.breadcrumb {
 			margin-left: 12px;
+			flex-grow: 1;
 		}
 	}
 }
@@ -156,7 +104,17 @@
 
 
 @include media-query(palm){
-	
+	.top-wrapper .top {
+		flex-direction: column-reverse;
+		margin: 0;
+		.top-links-wrapper {
+			padding-bottom: 12px;
+		}
+		.logo-space {
+			width: 100%;
+			padding: 12px 0;
+		}
+	}
 	.top-links-wrapper {
 		&.expanded {
 			width: auto!important;

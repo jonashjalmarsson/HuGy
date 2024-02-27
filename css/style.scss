@@ -20,6 +20,7 @@
 /**
   *  Setup
   */
+@use "sass:math";
 @import "vars";
 @import "inuit.css/inuit";
 @import "ui/color";
@@ -35,7 +36,5 @@
 @import "ui/modules";
 @import "ui/page";
 @import "ui/search";
-@import "ui/slideshow";
 @import "ui/program-icons";
 @import "ui/related";
-
