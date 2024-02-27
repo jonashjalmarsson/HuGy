@@ -18,7 +18,8 @@
 	require_once( 'external/starkers-utilities.php' );
 	require_once( 'external/hugy-utilities.php' );
 	require_once( 'external/acf-includes.php' );
-
+	require_once( 'ajax.php' );
+	
 	if (function_exists('acf_add_options_page')) {
 		acf_add_options_page();
 	}
@@ -56,8 +57,10 @@
 	if ( function_exists( 'add_image_size' ) ) { 
 		$image_sizes = array();
 		$image_sizes["news"] = array("375","210",true);
+		$image_sizes["news-large"] = array("750","420",true);
 		$image_sizes["program"] = array("150","9999",false);
 		$image_sizes["slideshow"] = array("1100","400",true);
+		$image_sizes["slideshow-large"] = array("1650","600",true);
 		$image_sizes["firstpage"] = array("9999","518",false);
 		
 		foreach($image_sizes as $key => $size) {
@@ -146,7 +149,10 @@
 	function starkers_script_enqueuer() {
 		wp_enqueue_script( 'site', get_template_directory_uri().'/js/site.js', ['jquery'], HUGY_VERSION );
 
+		wp_register_script( 'slideshow', get_template_directory_uri().'/js/slideshow.js', [], HUGY_VERSION );
+
 		wp_register_script( 'helpers', get_template_directory_uri().'/js/helpers.js', [], HUGY_VERSION );
+		
 		wp_register_script( 'news', get_template_directory_uri().'/js/news.js', [], HUGY_VERSION );
 		
 		wp_enqueue_script( 'onload', get_template_directory_uri().'/js/onload.js', ['slideshow', 'helpers', 'news'], HUGY_VERSION );
@@ -155,6 +161,7 @@
 		wp_enqueue_style( 'screen', get_stylesheet_directory_uri().'/css/style.css', '', HUGY_VERSION, 'screen' );
 		wp_enqueue_style( 'print', get_stylesheet_directory_uri().'/style-print.css', '', HUGY_VERSION, 'print' );
 
+		wp_enqueue_style( 'slideshow', get_stylesheet_directory_uri().'/css/slideshow.css', ['screen'], HUGY_VERSION, 'screen' );
 	}	
 
 	/* ========================================================================================================================

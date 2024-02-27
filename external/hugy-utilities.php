@@ -106,7 +106,7 @@
 		/*
 		 * Get quick menu. Placed in menu.
 		 */
-		function get_quickmenu() {
+		static public function get_quickmenu() {
 			$retValue = "";
 
 			if(get_field('direktlankar_i_menyn', 'option')): 
@@ -181,109 +181,98 @@
 		/*
 		 * Get slideshow images
 		 */
-		function get_slideshow( $images, $wrapper_class_name = "slideshow", $size = "thumbnail" ) {
-			global $image_sizes;
-			$retValue = "";
-			if ( $images ): 
-				$retValue .= "<div class='$wrapper_class_name'>";
-				$retValue .= "<div class='slides'>";
-				foreach ( $images as $image ) :
-					if ( ( $image_sizes[$size][0] == "9999" || $image_sizes[$size][0] == $image["sizes"][$size."-width"] )
-					 && ($image_sizes[$size][1] == "9999" || $image_sizes[$size][1] == $image["sizes"][$size."-height"] ) ) {
-						$url = $image["sizes"][$size];
-						$retValue .= "<div class='slide-item slide-wrapper'><img src='" . $url ."' alt='" . $image['alt'] . "' />";
-						if ($image['alt'] != '')
-							$retValue .= "<div class='caption'>". $image['alt'] . "</div>";
-						$retValue .= "</div>";
-					}
-				endforeach;
-				$retValue .= "</div></div>";
-			endif;
-			return $retValue;
-		}
-		/*
-		 * Get slideshow images
-		 */
-		function get_filmroll_slideshow($images, $wrapper_class_name = "slideshow", $size = "thumbnail") {
+		static public function get_slideshow($images, $size = "thumbnail", $show_progress = true) {
 			global $image_sizes;
 			$retValue = "";
 			if( $images ): 
-				$retValue .= "<div class='$wrapper_class_name'>";
+				$only_one_class = count($images) == 1 ? " only-one-slide" : "";
+				$retValue .= "<div class='slideshow-wrapper " . $only_one_class . " as'>";
+				$retValue .= "<div class='slideshow'>";
 				$addedimages = 0;
+
 				foreach( $images as $image ) :
-					if (($image_sizes[$size][0] == "9999" || $image_sizes[$size][0] == $image["sizes"][$size."-width"] )
-					 && ($image_sizes[$size][1] == "9999" || $image_sizes[$size][1] == $image["sizes"][$size."-height"])) {
-						$url = $image["sizes"][$size];
-						$retValue .= "<div class='slide-item'><img src='" . $url ."' alt='" . $image['alt'] . "' />";
-						if ($image['alt'] != '')
-							$retValue .= "<div class='caption'>". $image['alt'] . "</div>";
-						$retValue .= "</div>";
-						$addedimages++;
-					}
+					$img = self::get_image($image, $size);
+					$url = $image["sizes"][$size];
+					$retValue .= "<div class='slide-item' data-size='{$size}'>"; //<img src='" . $url ."' alt='" . $image['alt'] . "' />";
+					$retValue .= $img;
+					if (trim($image['caption']) != '')
+						$retValue .= "<div class='caption'>". $image['caption'] . "</div>";
+					$retValue .= "</div>";
+					$addedimages++;
 				endforeach;
-				// add images one more time if less than 5 to make filmroll
-				if ( $addedimages > 1 && $addedimages < 5 )
-					foreach( $images as $image ) :
-						if (($image_sizes[$size][0] == "9999" || $image_sizes[$size][0] == $image["sizes"][$size."-width"] )
-						 && ($image_sizes[$size][1] == "9999" || $image_sizes[$size][1] == $image["sizes"][$size."-height"])) {
-							$url = $image["sizes"][$size];
-							$retValue .= "<div class='slide-item'><img src='" . $url ."' alt='" . $image['alt'] . "' />";
-							if ($image['alt'] != '')
-								$retValue .= "<div class='caption'>". $image['alt'] . "</div>";
-							$retValue .= "</div>";
-						}
-					endforeach;
+				// add right left arrows
+				$retValue .= "<div class='arrows'><a class='left-arrow arrow' href='#'></a><a class='right-arrow arrow' href='#'></a></div>";
+				if ($show_progress) {
+					$retValue .= "<div class='progress-bar'><div class='progress'></div></div>";
+				}
+				$retValue .= "</div>";
 				$retValue .= "</div>";
 			endif;
 			return $retValue;
 		}
 
-		/*
-		 * Get special firstpage slideshow
-		 */
-		function get_firstpage_slideshow($images, $wrapper_class_name = "slideshow", $size = "thumbnail") {
-			global $image_sizes;
-			$imagearray = array();
-			if( $images ): 
-				foreach( $images as $image ) :
-					if (($image_sizes[$size][0] == "9999" || $image_sizes[$size][0] == $image["sizes"][$size."-width"] )
-					 && ($image_sizes[$size][1] == "9999" || $image_sizes[$size][1] == $image["sizes"][$size."-height"])) {
-						$url = $image["sizes"][$size];
-						$imagearray[] = array("url" => $url, 'alt' => $image['alt'], 'description' => $image['description']);
-					}
-				endforeach;
-			endif;
+		static public function get_image($image, $size) {
+			$large_size = $size . "-large";
+			$small_size = $size;
+			$large_url = $small_url = '';
+			$large_width = $small_width = $large_height = $small_height = $large_ratio = $small_ratio = 0;
 			
-			$retValue = "";
-			// right now only echo first image
-			if (count($imagearray) > 0) {
-				$retValue .= "<div class='$wrapper_class_name' style='background-image: url(" . $imagearray[0]["url"] . ")'>&nbsp;</div>";
+			if (isset($image["sizes"][$large_size])) {
+				$large_url = $image["sizes"][$large_size];
+				$large_width = $image["sizes"][$large_size."-width"];
+				$large_height = $image["sizes"][$large_size."-height"];
+				$large_ratio = $large_width / $large_height;
 			}
-			return $retValue;
+			if (isset($image["sizes"][$small_size])) {
+				$small_url = $image["sizes"][$small_size];
+				$small_width = $image["sizes"][$small_size."-width"];
+				$small_height = $image["sizes"][$small_size."-height"];
+				$small_ratio = $small_width / $small_height;
+			}
+			// add responsive image srcset
+			if ($large_url && $small_url && $large_width > $small_width && $large_ratio == $small_ratio) {
+				return "<img src='" . $small_url ."' srcset='" . $small_url . " 1100w, " . $large_url . " 2200w' alt='" . $image['alt'] . "' />";
+			}
+			else if ($small_url) {
+				return "<img src='" . $small_url ."' alt='" . $image['alt'] . "' />";
+			}
+		
+
 		}
 
 
 		/*
 		 * Get first image of slideshow images
 		 */
-		function get_first_image($images, $wrapper_class_name = "wp-post-image", $size = "thumbnail", $fill_if_empty = false) {
+		static public function get_first_image($images, $wrapper_class_name = "wp-post-image", $size = "thumbnail", $fill_if_empty = false) {
 			global $image_sizes;
 			$retValue = "";
 			$found = false;
+			$img = $large_url = $small_url = '';
 			if( $images ): 
-				$retValue .= "<div class='$wrapper_class_name'>";
 				foreach( $images as $image ) :
-					if (($image_sizes[$size][0] == "9999" || $image_sizes[$size][0] == $image["sizes"][$size."-width"] )
-					 && ($image_sizes[$size][1] == "9999" || $image_sizes[$size][1] == $image["sizes"][$size."-height"])) {
-						$url = $image["sizes"][$size];
-						$retValue .= "<img src='" . $url ."' alt='" . $image['alt'] . "' />";
-						$found = true;
+					if (($image_sizes[$size][0] == "9999" || $image_sizes[$size][0] == $image["sizes"][$size."-width"] ) && ($image_sizes[$size][1] == "9999" || $image_sizes[$size][1] == $image["sizes"][$size."-height"])) {
+						$large_url = $image["sizes"][$size];
+					}
+					$size = str_replace("-large","",$size);
+					if (($image_sizes[$size][0] == "9999" || $image_sizes[$size][0] == $image["sizes"][$size."-width"] ) && ($image_sizes[$size][1] == "9999" || $image_sizes[$size][1] == $image["sizes"][$size."-height"])) {
+						$small_url = $image["sizes"][$size];
+					}
+					// add responsive image srcset
+					if ($large_url && $small_url) {
+						$img = "<img src='" . $small_url ."' srcset='" . $small_url . " 1x, " . $large_url . " 2x' alt='" . $image['alt'] . "' />";
+						break;
+					}
+					else if ($small_url) {
+						$img = "<img src='" . $small_url ."' alt='" . $image['alt'] . "' />";
 						break;
 					}
 				endforeach;
-				$retValue .= "</div>";
 			endif;
-			if (!$found && $fill_if_empty) {
+			if (!empty($img)) {
+				$retValue .= "<div class='$wrapper_class_name'>$img</div>";
+			}
+			else if ($fill_if_empty) {
 				$retValue .= "<div class='$wrapper_class_name'><img src='" . get_stylesheet_directory_uri() ."/images/empty.png' alt='Ingen bild' /></div>";
 			}
 			return $retValue;
@@ -293,7 +282,7 @@
 		/*
 		 *
 		 */
-		function get_top_parent($page_id = "") {
+		static public function get_top_parent($page_id = "") {
 			$retValue = "";
 			if (!isset($page_id) || $page_id == "") {
 				$page_id = get_the_ID();
@@ -312,7 +301,7 @@
 		/*
 		 * return the breadbrumb
 		 */
-		function get_breadcrumb($page_id = "") {
+		static public function get_breadcrumb($page_id = "") {
 			$retValue = "";
 			if (!isset($page_id) || $page_id == "") {
 				$page_id = get_the_ID();
@@ -351,7 +340,7 @@
 		/*
 		 * return pages below parent
 		 */
-		function get_page_tree($parent_id = "") {
+		static public function get_page_tree($parent_id = "") {
 			$retValue = "";
 			//if (!isset($parent_id) || $parent_id == "") {
 				//$parent_id = get_the_ID();
@@ -388,7 +377,7 @@
 		/*
 		 *
 		 */
-		function get_main_navigation() {
+		static public function get_main_navigation() {
 			$retValue = "";
 			if (has_nav_menu('primary')) {
 				$args = array( 
@@ -452,15 +441,9 @@
 					$retValue .= HuGy::get_page_tree();
 					$retValue .= "</ul></li>";
 
-					$retValue .= "<li><span class='menu-title-wrapper'><a class='menu-head picto-icon'></a><span class='menu-title'>Gymnasium</span></span><ul class='children'>";
-					$retValue .= HuGy::get_program_links(false,false);
+					$retValue .= "<li><span class='menu-title-wrapper'><a class='menu-head picto-icon'></a><span class='menu-title'>Program</span></span><ul class='children'>";
+					$retValue .= HuGy::get_program_links(false);
 					$retValue .= "</ul>";
-					$komvuxlinks = HuGy::get_program_links(false,false,"page-hugy-komvux.php");
-					if ($komvuxlinks != "") :
-						$retValue .= "<span class='menu-title-wrapper'><a class='menu-head picto-icon'></a><span class='menu-title'>Komvux</span></span><ul class='children'>";
-						$retValue .= $komvuxlinks;
-						$retValue .= "</ul>";
-					endif;
 					$retValue .= "</li>";
 
 					// quickmenu
@@ -479,7 +462,7 @@
 		/*
 		 * Return module built part of page
 		 */
-		function get_modules($page_id = "") {
+		static public function get_modules($page_id = "") {
 			$retValue = "";
 			if ($page_id != "") {
 				$field = $page_id;
@@ -516,7 +499,7 @@
 				elseif (get_row_layout() == "text"):
 					$retValue .= get_sub_field('text');
 				elseif (get_row_layout() == "bildspel"):
-					$retValue .= HuGy::get_filmroll_slideshow(get_sub_field('slideshow','option'),'firstpage  filmroll','firstpage');
+					$retValue .= HuGy::get_slideshow(get_sub_field('slideshow','option'), 'slideshow', true);
 				endif;
 				$retValue .= "</div>";
 				$retValue .= "</div>";
@@ -633,7 +616,7 @@
 		/*
 		 * Return related
 		 */
-		function get_related($page_id = "") {
+		static public function get_related($page_id = "") {
 			$retValue = "";
 			if ($page_id != "") {
 				$field = $page_id;
@@ -689,7 +672,7 @@
 		/*
 		 * Return contacts on page
 		 */
-		function get_contacts($page_id = "", $args = array()) {
+		static public function get_contacts($page_id = "", $args = array()) {
 			global $contact_vars;
 
 			$vars = array_merge( $contact_vars, $args );
@@ -720,13 +703,13 @@
 		/*
 		 * Return one contact
 		 */
-		function get_contact( $contact_id = "", $args = array() ) {
+		static public function get_contact( $contact_id = "", $args = array() ) {
 			global $contact_vars;
 			if ($contact_id == '') return;
 			
 			$vars = array_merge( $contact_vars, $args );
 			$excerpt = $vars['excerpt'];
-			$retValue .= "<div class='media contact contact-".$contact_id."'>";
+			$retValue = "<div class='media contact contact-".$contact_id."'>";
 
 			if (!$excerpt) {
 				$bild = get_field("bild",$contact_id);	
@@ -812,8 +795,8 @@
 		/*
 		 * Return the author
 		 */
-		function get_author() {
-			$retValue .= '<div class="author">';
+		static public function get_author() {
+			$retValue = '<div class="author">';
 
 			if (get_the_author_meta('kontakt') != '') {
 				$prelink = "<a href='".get_permalink(get_the_author_meta('kontakt'))."'>";
@@ -833,7 +816,7 @@
 		/*
 		 * Return the first hugy_nyheter page
 		 */
-		function get_hugy_nyheter_page() {
+		static public function get_hugy_nyheter_page() {
 			$pages = get_posts(array(
 				'post_type' => 'page',
 				'meta_key' => '_wp_page_template',
@@ -850,7 +833,7 @@
 		/*
 		 * Return the first hugy_kontakter page
 		 */
-		function get_hugy_kontakter_page() {
+		static public function get_hugy_kontakter_page() {
 			$pages = get_posts(array(
 				'post_type' => 'page',
 				'meta_key' => '_wp_page_template',
@@ -867,13 +850,9 @@
 		/*
 		 * Return text with todays date and week
 		 */
-		function get_todaysdate_text() {
-			setlocale(LC_ALL, 'sv_SE');
-			$retValue = '<div class="weektext">';
-			$date = date_i18n('j F\, \v\e\c\k\a W');
-			$retValue .= $date;
-			$retValue .= '</div>';
-			$retValue .= '<div class="todaysfood"></div>';
+		static public function get_todaysdate_text() {
+			$retValue = '<div class="weektext"></div>';
+			// $retValue .= '<div class="todaysfood"></div>';
 			return $retValue;
 		}
 		
@@ -882,13 +861,13 @@
 		/*
 		 * Return text with todays date and week
 		 */
-		function get_columntext() {
+		static public function get_columntext() {
 			if (get_field('hg_columntext',get_the_ID())) :
 				return "<div class='columntext'>" . get_field('hg_columntext',get_the_ID()) . "</div>";
 			endif;
 		}
 
-		function get_tags($contact_id = "") {
+		static public function get_tags($contact_id = "") {
 			if ($contact_id == "") {
 				$tags_array = get_the_tags();
 			}

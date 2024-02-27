@@ -20,7 +20,7 @@ if ($posts) {
 
 		<div class="slideshow-wrapper">
 			<?php /* slideshow */ ?>
-			<?php echo HuGy::get_slideshow(get_field('hg_slideshow',get_the_ID()),'program slideshow','slideshow'); ?>
+			<?php echo HuGy::get_slideshow(get_field('hg_slideshow',get_the_ID()), 'slideshow'); ?>
 		</div>
 		<div class="content-wrapper">
 			<div class="content">

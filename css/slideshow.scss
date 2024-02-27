@@ -1,0 +1,146 @@
+@import "ui/color";
+
+.bildspel-module-wrapper {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.slideshow-wrapper {
+    --slide-height: 400px;
+    @media only screen and (max-width: 768px) {
+        --slide-height: 300px;
+    }
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    overflow: hidden;
+    height: var(--slide-height);
+    background-color: $gray-dark;
+    position: relative;
+    .slideshow {
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scrollbar-width: none;
+        // max-height: calc(var(--slide-height)*1.5);
+        max-height: var(--slide-height);
+        scroll-snap-type: x mandatory;
+        transition: all 0.3s ease-in-out;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        .slide-item {
+            position: relative;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            scroll-snap-align: center;
+            flex: none;
+            width: 100%;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+            img {
+                object-fit: cover;
+                // width: 100%;
+                height: var(--slide-height);
+                transition: all 0.3s ease-in-out;
+            }
+            .caption {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                bottom: 5px;
+                left: 0;
+                width: 100%;
+                min-height: 20%;
+                background-color: rgba(0, 0, 0, 0.5);
+                color: white;
+                padding: 10px 20px;
+                font-size: 24px;
+                @media screen and (max-width: 768px) {
+                    padding: 5px 10px;
+                    font-size: 14px;
+                }
+            
+            }
+        }
+        .arrows {
+            position: absolute;
+            top: 50%;
+            // transform: translateY(-50%);
+            z-index: 99;
+            width: 100%;
+            .arrow {
+                position: absolute;
+                transform: translateY(-50%);
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                width: 50px;
+                height: 70px;
+                color: transparent;
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.4);
+                }
+                                
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 25px;
+                    height: 25px;
+                    // width: 0;
+                    // height: 0;
+                    border: solid rgba(0, 0, 0, 0.6);
+                    border-width: 0 4px 4px 0;
+                    display: inline-block;
+                    margin: 10px 0;
+                }
+
+                &.left-arrow {
+                    left: 0px;
+                    &::after {
+                        transform: translate(75%, 50%) rotate(135deg);
+                    }
+                }
+                &.right-arrow {
+                    right: 0px;
+                    &::after {
+                        transform: translate(25%, 50%) rotate(-45deg);
+                    }
+                }
+            }
+        }
+        .progress-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: rgba(255, 255, 255, 0.3);
+            .progress {
+                position: absolute;
+                height: 100%;
+                width: 10px;
+                background-color: rgba(0, 0, 0, 0.9);
+                transition: all 0.3s ease-in-out;
+            }
+        }
+        
+    }
+    &.only-one-slide {
+        .arrows {
+            display: none;
+        }
+        .progress-bar {
+            display: none;
+        }
+        .slide-item {
+            .caption {
+                display: none;
+            }
+        }
+    }
+}
