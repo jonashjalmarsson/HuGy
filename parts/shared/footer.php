@@ -1,6 +1,6 @@
 	
 
-	</article></div>
+	</article></div></div>
 	<?php 
 	/* main navigation */
 	echo "<div class='pre-footer'>" . HuGy::get_main_navigation() . "</div>";
