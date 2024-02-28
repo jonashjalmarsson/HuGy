@@ -186,7 +186,7 @@
 			$retValue = "";
 			if( $images ): 
 				$only_one_class = count($images) == 1 ? " only-one-slide" : "";
-				$retValue .= "<div class='slideshow-wrapper " . $only_one_class . " as'>";
+				$retValue .= "<div class='slideshow-wrapper" . $only_one_class . "'>";
 				$retValue .= "<div class='slideshow'>";
 				$addedimages = 0;
 

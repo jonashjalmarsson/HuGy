@@ -8,7 +8,10 @@
 .slideshow-wrapper {
     --slide-height: 400px;
     @media only screen and (max-width: 768px) {
-        --slide-height: 300px;
+        // --slide-height: 273px;
+    }
+    @media only screen and (max-width: 1124px) {
+        --slide-height: 35.6vw;
     }
     max-width: 100%;
     margin-left: 0;
@@ -24,8 +27,13 @@
         scrollbar-width: none;
         // max-height: calc(var(--slide-height)*1.5);
         max-height: var(--slide-height);
+        overflow: hidden;
         scroll-snap-type: x mandatory;
+        @media only screen and (max-width: 768px) {
+            // overflow: scroll;
+        }
         transition: all 0.3s ease-in-out;
+        gap: 5px;
         &::-webkit-scrollbar {
             display: none;
         }
@@ -36,7 +44,7 @@
             justify-content: center;
             scroll-snap-align: center;
             flex: none;
-            width: 100%;
+            // width: 100%;
             overflow: hidden;
             transition: all 0.3s ease-in-out;
             img {
@@ -58,17 +66,12 @@
                 color: white;
                 padding: 10px 20px;
                 font-size: 24px;
-                @media screen and (max-width: 768px) {
-                    padding: 5px 10px;
-                    font-size: 14px;
-                }
             
             }
         }
         .arrows {
             position: absolute;
             top: 50%;
-            // transform: translateY(-50%);
             z-index: 99;
             width: 100%;
             .arrow {
@@ -79,9 +82,6 @@
                 width: 50px;
                 height: 70px;
                 color: transparent;
-                @media screen and (max-width: 768px) {
-                    display: none;
-                }
                 &:hover {
                     background-color: rgba(255, 255, 255, 0.4);
                 }
@@ -113,6 +113,7 @@
                 }
             }
         }
+
         .progress-bar {
             position: absolute;
             bottom: 0;
@@ -126,6 +127,34 @@
                 width: 10px;
                 background-color: rgba(0, 0, 0, 0.9);
                 transition: all 0.3s ease-in-out;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .slide-item {
+                width: 100%;
+                .caption {
+                    display: none;
+                    padding: 5px 10px;
+                    font-size: 14px;
+                }
+            }
+            .arrows {
+                top: 0;
+                .arrow {
+                    display: block;
+                    width: 50%;
+                    transform: none;
+                    height: var(--slide-height);
+                    &:hover {
+                        background-color: transparent;
+                    }
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+            .progress-bar {
+                height: 2px;
             }
         }
         
@@ -142,5 +171,15 @@
                 display: none;
             }
         }
+    }
+}
+
+.home .slideshow-wrapper {
+    --slide-height: 400px;
+    @media only screen and (max-width: 768px) {
+        --slide-height: 250px;
+    }
+    @media only screen and (min-width: 1125px) {
+        --slide-height: 400px;
     }
 }
