@@ -449,7 +449,7 @@
 					$retValue .= HuGy::get_page_tree();
 					$retValue .= "</ul></li>";
 
-					$retValue .= "<li><span class='menu-title-wrapper'><a class='menu-head picto-icon'></a><span class='menu-title'>Program</span></span><ul class='children'>";
+					$retValue .= "<li><span class='menu-title-wrapper'><a class='menu-head picto-icon'></a><span class='menu-title'>V&aring;ra program</span></span><ul class='children'>";
 					$retValue .= HuGy::get_program_links(false);
 					$retValue .= "</ul>";
 					$retValue .= "</li>";
@@ -554,7 +554,7 @@
 			}
 			$archive = HuGy::get_hugy_nyheter_page();
 			if ($archive != '') {
-				$retValue .= "<div class='text--center news-navigation'><a href='" . get_page_link($archive->ID) . "' title='" . $archive->post_title . "'>Gå till arkivet</a></div>";
+				$retValue .= "<div class='text--center news-navigation'><a href='" . get_page_link($archive->ID) . "' title='" . $archive->post_title . "'>Fler nyheter</a></div>";
 			}
 			/* Restore original Post Data */
 			wp_reset_postdata();
