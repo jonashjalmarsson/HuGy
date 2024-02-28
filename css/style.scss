@@ -24,6 +24,31 @@
 @import "vars";
 @import "inuit.css/inuit";
 @import "ui/color";
+
+
+:root {
+  // OLD
+  // --hugy-link-color: #{$red};
+  // --hugy-menu-bg: #{$gray-dark};
+  // --hugy-menu-color: #{$white};
+  // --hugy-news-bg: rgba(0, 0, 0, 0.3);
+  // --hugy-icon-color: #{$black};
+  // --hugy-icon-color-hover: #{$white};
+  // --hugy-icon-bg: rgba(0, 0, 0, 0.1);
+  // --hugy-icon-bg-hover: rgba(0, 0, 0, 0.9);
+  
+  // NEW
+  --hugy-link-color: #{$green};
+  --hugy-menu-bg: #{$green};
+  --hugy-menu-color: #{$white};
+  --hugy-news-bg: #{$green-70};
+  --hugy-icon-color: #{$white};
+  --hugy-icon-color-hover: #{$green};
+  --hugy-icon-bg: #{$green};
+  --hugy-icon-bg-hover: #{$green-30};
+  
+}
+
 @import "ui/contact";
 @import "ui/fonts";
 @import "ui/footer";
@@ -38,3 +63,4 @@
 @import "ui/search";
 @import "ui/program-icons";
 @import "ui/related";
+

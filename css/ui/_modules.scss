@@ -55,6 +55,7 @@
 				// @extend .one-third;
 				// @extend .palm-one-whole;
 				position: relative;
+				min-height: 120px;
 
 				.tags {
 					position: absolute;
@@ -81,7 +82,7 @@
 					//@extend .drop-shadow;
 				}
 				h2 {
-					background-color: rgba(0, 0, 0, 0.3);
+					background-color: var(--hugy-news-bg);
 					transition: background-color 0.3s ease;
 				}
 				
@@ -98,7 +99,7 @@
 				}
 				&:hover {
 					> a::after {
-						background-color: rgba(0, 0, 0, 0.3);
+						background-color: var(--hugy-news-bg);
 					}
 					h2 {
 						background-color: rgba(0, 0, 0, 0.0);
