@@ -16,15 +16,17 @@
 
 	<div class="top-navigation-wrapper">
 		<div class="top-navigation">
-			<div class="top-menu-button">
-				<a href="#menu" title="&Ouml;ppna meny"><span class='menu-icon'></span><span class='text'>Meny</span></a>
+			<div class="top-navigation-left">
+				<a class="top-menu-button" href="#menu" title="&Ouml;ppna meny"><?php echo HuGySVG::get('menu') ?>Meny</a>
+				<div class="breadcrumb"><?php echo HuGy::get_breadcrumb(); ?></div>
 			</div>
-			<div class="breadcrumb"><?php echo HuGy::get_breadcrumb(); ?></div>
-			<div class="top-search-form">
-				<?php echo get_search_form(); ?>
-			</div>
-			<div class="top-search-button">
-				<a href="#search" title="S&ouml;k efter inneh&aring;ll p&aring; sidan"><span class='search-icon'></span></a>
+			<div class="top-navigation-right">
+				<div class="top-search-form">
+					<?php echo get_search_form(); ?>
+				</div>
+				<div class="top-search-button">
+					<a href="#search" title="S&ouml;k efter inneh&aring;ll p&aring; sidan"><span class='search-icon'></span></a>
+				</div>
 			</div>
 		</div>
 	</div>

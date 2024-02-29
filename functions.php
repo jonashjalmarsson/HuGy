@@ -8,7 +8,7 @@
  	 * @subpackage 	Starkers
  	 * @since 		Starkers 4.0
 	 */
-	define("HUGY_VERSION", get_bloginfo("version")."-1.4");
+	define("HUGY_VERSION", get_bloginfo("version")."-5");
 	/* ========================================================================================================================
 	
 	Required external files
@@ -16,6 +16,7 @@
 	======================================================================================================================== */
 
 	require_once( 'external/starkers-utilities.php' );
+	require_once( 'external/hugy-svg.php' );
 	require_once( 'external/hugy-utilities.php' );
 	require_once( 'external/acf-includes.php' );
 	require_once( 'ajax.php' );

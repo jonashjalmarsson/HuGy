@@ -3,7 +3,19 @@
 }
 
 .pre-footer {
-	@extend .gray-dark;
+	// @extend .gray-dark;
+	background-color: var(--hugy-footer-bg);
+	.quick-svg {
+		display: block;
+		background-color: var(--hugy-footer-icon-bg);
+		width: 54px;
+		height: 54px;
+		svg {
+			fill: var(--hugy-footer-icon-color);
+		}
+		.st1{fill:none;stroke:var(--hugy-footer-bg);}
+		.st2{fill:var(--hugy-footer-bg);stroke:none;}
+	}
 }
 
 // .up-icon {

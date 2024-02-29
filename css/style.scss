@@ -41,12 +41,13 @@
   --hugy-link-color: #{$green};
   --hugy-menu-bg: #{$green};
   --hugy-menu-color: #{$white};
-  --hugy-news-bg: #{$green-70};
-  --hugy-icon-color: #{$white};
-  --hugy-icon-color-hover: #{$green};
-  --hugy-icon-bg: #{$green};
-  --hugy-icon-bg-hover: #{$green-30};
-  
+  --hugy-news-bg: #{$black-30};
+  --hugy-top-icon-color: #{$white};
+  --hugy-top-icon-color-hover: #{$green};
+  --hugy-top-icon-bg: #{$green};
+  --hugy-top-icon-bg-hover: #{$green-30};
+  --hugy-footer-bg: #{$gray-dark};
+  --hugy-footer-icon-color: #{$white};
 }
 
 @import "ui/contact";

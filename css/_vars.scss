@@ -17,6 +17,11 @@ $max-width: 1100px!default;
 $small-max-width: 700px!default;
 $border-radius: 4px!default;
 
+:root {
+    --hugy-max-width: #{$max-width};
+    --hugy-small-max-width: #{$small-max-width};
+    --hugy-border-radius: #{$border-radius};
+}
 
 $h1-size:           36px; // .alpha
 $h2-size:           24px; // .beta

@@ -5,12 +5,12 @@
 	vertical-align: text-bottom;
 }
 
-.ie7,
-.ie8 {
-	.clip {
-		background-image: url("../images/ikoner.png");
-	}
-}
+// .ie7,
+// .ie8 {
+// 	.clip {
+// 		background-image: url("../images/ikoner.png");
+// 	}
+// }
 
 $clip-sizes: 80 54 48 40 30 24 20 16 12;
 
@@ -22,63 +22,63 @@ $clip-sizes: 80 54 48 40 30 24 20 16 12;
 	}
 }
 
-.menu-icon {
-	@extend .clip_24x24;
-	margin-right: 6px;
-	background-position: -82px -42px;
-}
+// .menu-icon {
+// 	@extend .clip_24x24;
+// 	margin-right: 6px;
+// 	background-position: -82px -42px;
+// }
 
-.white .menu-icon {
-	@extend .clip_24x24;
-	margin-right: 6px;
-	background-position: -82px -2px;
-}
+// .white .menu-icon {
+// 	@extend .clip_24x24;
+// 	margin-right: 6px;
+// 	background-position: -82px -2px;
+// }
 
-.selected-menu-icon {
-	@extend .clip_24x24;
-	margin-right: 6px;
-	background-position: -122px -42px;
-}
+// .selected-menu-icon {
+// 	@extend .clip_24x24;
+// 	margin-right: 6px;
+// 	background-position: -122px -42px;
+// }
 
-.home-icon {
-	@extend .clip_24x24;
-	background-position: -2px -42px;
-}
+// .home-icon {
+// 	@extend .clip_24x24;
+// 	background-position: -2px -42px;
+// }
 
 .search-icon {
 	@extend .clip_24x24;
 	background-position: -162px -42px;
 }
 
-.white .home-icon {
-	@extend .clip_24x24;
-	background-position: -2px -2px;
-}
+// .white .home-icon {
+// 	@extend .clip_24x24;
+// 	background-position: -2px -2px;
+// }
 
-.slideshow-navigation {
-	@extend .clip_16x16;
-	margin: 6px;
-}
+// .slideshow-navigation {
+// 	@extend .clip_16x16;
+// 	margin: 6px;
+// }
 
-.play-icon {
-	@extend .slideshow-navigation;
-	background-position: -62px -82px;
-}
+// .play-icon {
+// 	@extend .slideshow-navigation;
+// 	background-position: -62px -82px;
+// }
 
-.pause-icon {
-	@extend .slideshow-navigation;
-	background-position: -92px -82px;
-}
+// .pause-icon {
+// 	@extend .slideshow-navigation;
+// 	background-position: -92px -82px;
+// }
 
-.dot-icon {
-	@extend .slideshow-navigation;
-	background-position: -32px -82px;
-}
+// .dot-icon {
+// 	@extend .slideshow-navigation;
+// 	background-position: -32px -82px;
+// }
 
-.active-dot-icon {
-	@extend .slideshow-navigation;
-	background-position: -2px -82px;
-}
+// .active-dot-icon {
+// 	@extend .slideshow-navigation;
+// 	background-position: -2px -82px;
+// }
 
 
 /* related icons */
@@ -125,38 +125,38 @@ $clip-sizes: 80 54 48 40 30 24 20 16 12;
 	background-position: 0px -200px;
 }
 
-.firstpage-menu {
-	a {
-		@extend .clip_48x48;
-	}
+// .firstpage-menu {
+// 	a {
+// 		@extend .clip_48x48;
+// 	}
 
-	.menu {
-		background-position: -190px -50px;
-	}
+// 	.menu {
+// 		background-position: -190px -50px;
+// 	}
 
-	.facebook {
-		background-position: -240px -50px;
-	}
+// 	.facebook {
+// 		background-position: -240px -50px;
+// 	}
 
-	.nyheter {
-		background-position: -290px -50px;
-	}
-}
+// 	.nyheter {
+// 		background-position: -290px -50px;
+// 	}
+// }
 
-.menu-head.menu-icon {
-	@extend .clip_54x54;
-	background-position: -130px -110px;
-}
+// .menu-head.menu-icon {
+// 	@extend .clip_54x54;
+// 	background-position: -130px -110px;
+// }
 
-.menu-head.picto-icon {
-	@extend .clip_54x54;
-	background-position: -250px -110px;
-}
+// .menu-head.picto-icon {
+// 	@extend .clip_54x54;
+// 	background-position: -250px -110px;
+// }
 
-.menu-head.quick-menu-icon {
-	@extend .clip_54x54;
-	background-position: -190px -110px;
-}
+// .menu-head.quick-menu-icon {
+// 	@extend .clip_54x54;
+// 	background-position: -190px -110px;
+// }
 
 
 
@@ -165,71 +165,71 @@ $clip-sizes: 80 54 48 40 30 24 20 16 12;
 
 
 /* program ikoner */
-.program-icon {
-	background-image: url("../images/program-ikoner.svg");
-}
+// .program-icon {
+// 	background-image: url("../images/program-ikoner.svg");
+// }
 
-.ie7,
-.ie8 {
-	.program-icon {
-		background-image: url("../images/program-ikoner.png");
-	}
-}
+// .ie7,
+// .ie8 {
+// 	.program-icon {
+// 		background-image: url("../images/program-ikoner.png");
+// 	}
+// }
 
 .quick-icon {
 	background-image: url("../images/quick-ikoner.svg");
 }
 
-.ie7,
-.ie8 {
-	.quick-icon {
-		background-image: url("../images/quick-ikoner.png");
-	}
-}
+// .ie7,
+// .ie8 {
+// 	.quick-icon {
+// 		background-image: url("../images/quick-ikoner.png");
+// 	}
+// }
 
-.quick-icon {
-	@extend .clip_40x40;
-}
+// .quick-icon {
+// 	@extend .clip_40x40;
+// }
 
-.program-icon {
-	@extend .clip_80x80;
-}
+// .program-icon {
+// 	@extend .clip_80x80;
+// }
 
-.quick-expand-icon {
-	@extend .clip_40x40;
-	background-position: -760px 0px;
+// .quick-expand-icon {
+// 	@extend .clip_40x40;
+// 	background-position: -760px 0px;
 
-	&.hover,
-	&:hover {
-		background-position: -760px -40px;
-	}
-}
+// 	&.hover,
+// 	&:hover {
+// 		background-position: -760px -40px;
+// 	}
+// }
 
-.expanded .quick-expand-icon {
-	background-position: -720px 0px;
+// .expanded .quick-expand-icon {
+// 	background-position: -720px 0px;
 
-	&.hover,
-	&:hover {
-		background-position: -720px -40px;
-	}
-}
+// 	&.hover,
+// 	&:hover {
+// 		background-position: -720px -40px;
+// 	}
+// }
 
-@for $i from 0 through 18 {
-	.quick-#{$i+1} {
-		background-position: -$i*40px 0px;
+// @for $i from 0 through 18 {
+// 	.quick-#{$i+1} {
+// 		background-position: -$i*40px 0px;
 
-		&.hover,
-		&:hover {
-			background-position: -$i*40px -40px;
-		}
-	}
+// 		&.hover,
+// 		&:hover {
+// 			background-position: -$i*40px -40px;
+// 		}
+// 	}
 
-	.program-#{$i+1} {
-		background-position: -$i*79.8px 0px;
+// 	.program-#{$i+1} {
+// 		background-position: -$i*79.8px 0px;
 
-		&.hover,
-		&:hover {
-			background-position: -$i*79.8px -80px;
-		}
-	}
-}
+// 		&.hover,
+// 		&:hover {
+// 			background-position: -$i*79.8px -80px;
+// 		}
+// 	}
+// }

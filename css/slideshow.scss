@@ -45,6 +45,7 @@
             scroll-snap-align: center;
             flex: none;
             // width: 100%;
+            max-width: 100%;
             overflow: hidden;
             transition: all 0.3s ease-in-out;
             img {
@@ -131,7 +132,6 @@
         }
         @media screen and (max-width: 768px) {
             .slide-item {
-                width: 100%;
                 .caption {
                     display: none;
                     padding: 5px 10px;
