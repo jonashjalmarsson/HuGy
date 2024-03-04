@@ -6,7 +6,7 @@ class SlideShow {
         this.rightArrow = this.slideshow.querySelector(".right-arrow")
         this.progressBar = this.slideshow.querySelector(".progress-bar")
         this.progress = this.slideshow.querySelector(".progress")
-        console.log(this.slides.length)
+        // console.log(this.slides.length)
         if (this.slides.length > 1) {
             this.init()
             this.run()
@@ -46,7 +46,7 @@ class SlideShow {
         return this.slides.length - 3
     }
     do() {
-        console.log(this.slideIndex)
+        // console.log(this.slideIndex)
         let nextScroll = this.slides[this.slideIndex + 1].offsetLeft
         this.slideshow.scroll({
             left: nextScroll,
