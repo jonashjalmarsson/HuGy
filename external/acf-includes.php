@@ -702,6 +702,7 @@ if(function_exists("register_field_group"))
 							'facebook' => 'Facebook',
 							'instagram' => 'Instagram',
 							'tiktok' => 'TikTok',
+							'schoolsoft' => 'Schoolsoft',
 						),
 
 					),
